@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
+  <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
+  <meta name="generator" content="bookdown 0.3.14 and GitBook 2.6.7">
+
+  <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
+  
+  
+  
+
+<meta name="author" content="ChanYub Park">
+
+
+<meta name="date" content="2017-04-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="section-1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="dabrp.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>안녕하세요</a></li>
+<li class="chapter" data-level="1" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>1</b> 소개</a></li>
+<li class="chapter" data-level="2" data-path="rstudio-.html"><a href="rstudio-.html"><i class="fa fa-check"></i><b>2</b> RStudio에 사용하기 좋은 기능 소개</a></li>
+<li class="chapter" data-level="3" data-path="-.html"><a href="-.html"><i class="fa fa-check"></i><b>3</b> 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해</a></li>
+<li class="chapter" data-level="4" data-path="-for-apply-.html"><a href="-for-apply-.html"><i class="fa fa-check"></i><b>4</b> 단순 반복 업무를 위한 for문과 apply류 맛보기</a></li>
+<li class="chapter" data-level="5" data-path="-sql-.html"><a href="-sql-.html"><i class="fa fa-check"></i><b>5</b> 데이터 원본/의존성의 개념과 SQL 문법 익히기</a></li>
+<li class="chapter" data-level="6" data-path="tidy-data-dplyrtidyr-.html"><a href="tidy-data-dplyrtidyr-.html"><i class="fa fa-check"></i><b>6</b> tidy data 개념과 dplyr+tidyr로 데이터 다루기</a></li>
+<li class="chapter" data-level="7" data-path="-ggplot2-.html"><a href="-ggplot2-.html"><i class="fa fa-check"></i><b>7</b> 보고용 차트를 위한 ggplot2 사용하기</a></li>
+<li class="chapter" data-level="8" data-path="-knitr-.html"><a href="-knitr-.html"><i class="fa fa-check"></i><b>8</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a></li>
+<li class="chapter" data-level="9" data-path="shiny-.html"><a href="shiny-.html"><i class="fa fa-check"></i><b>9</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
+<li class="chapter" data-level="10" data-path="section-10.html"><a href="section-10.html"><i class="fa fa-check"></i><b>10</b> 마치며</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</h1>
+<h4 class="author"><em>ChanYub Park</em></h4>
+<h4 class="date"><em>2017-04-06</em></h4>
+</div>
+<div id="ec9588eb8595ed9598ec84b8ec9a94" class="section level1 unnumbered">
+<h1>안녕하세요</h1>
+<p>이 책은 <a href="http://www.fastcampus.co.kr">패스트캠퍼스</a>의 <a href="http://www.fastcampus.co.kr/category_data_camp/">데이터 사이언스 캠프</a> 코스의 <a href="http://www.fastcampus.co.kr/data_camp_dabrp/">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a>의 수업용으로 제작되었습니다. 수업에 대해 더 자세히 알고 싶으신 분은 <a href="http://www.fastcampus.co.kr/data_camp_dabrp_instructor_1/">강사 인터뷰</a>를 참고하세요.</p>
+<p>책은 각각 R의 IDE로 사실상 표준인 <a href="http://www.rstudio.org/">RStudio</a>에 사용하기 좋은 기능 소개, 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해, 단순 반복 업무를 위한 for문과 apply류 맛보기, 데이터 원본/의존성의 개념과 SQL 문법 익히기, <a href="http://vita.had.co.nz/papers/tidy-data.pdf">tidy data</a> 개념과 dplyr+tidyr로 데이터 다루기, 보고용 차트를 위한 ggplot2 사용하기, 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기, <a href="https://shiny.rstudio.com/">shiny</a> 패키지를 활용한 인터렉티프 웹 만들기로 구성되어 있습니다.</p>
+<p>데이터 분석은 많은 단계들과 업무들로 나누어져 있습니다. 개인적으로 1. 데이터 확보 2. 데이터 정제 3. 분석 4. 시각화의 단계를 거친다고 생각합니다. 데이터란 사내에서 관리하고 있는 내부 데이터와 외부 인터넷에 공개되어 있는 데이터로 구분할 수 있습니다. 이런 데이터들 중 분석과 업무 목적에 맞는 데이터를 찾고, 활용하기 위에 확보하는 과정이 1단계 입니다. 분석 방법과 내용에 따라 확보된 데이터를 정리하거나 고쳐야 하는 일도 있습니다. 2 단계는 그것을 뜻합니다. 3 단계인 분석은 다양한 통계적 방법들을 통해 분석 목적을 이루는 것입니다. 4단계는 이렇게 이루어낸 결과물을 다른 사람에게 전달하기 위해 필요합니다.</p>
+<p>본 책은 그 중 2단계인 정제와 4단계인 시각화에 초점이 맞춰져 있습니다. 1단계중 외부 데이터 확보를 위한 웹크롤링은 준비중입니다.</p>
+<p>본 저작물은 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">크리에이티브 커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))</a>을 따릅니다.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="section-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mrchypark/data_camp_dabrp/edit/master/index.rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+ 
+html, body, h1, h2, h3, h4, h5, h6, li, p {font-family:'Nanum Gothic';}
+
+.book .book-header h1 {
+  opacity: 1;
+  text-align: left;
+}
+
+#header .title {
+  margin-bottom: 0em;
+}
+#header h4.author {
+  margin: 0;
+  color: #666;
+}
+#header h4.author em {
+  font-style: normal;
+}
