@@ -1,3 +1,3 @@
-# 소개
+# 시작하기 전에 {#before-start}
 
-시작해보는 것
+## 준비된 데이터 {#data-for-class}

@@ -1,0 +1,335 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP},
+            pdfauthor={ChanYub Park},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{ChanYub Park}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{2017-04-06}
+
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{머리말}
+\addcontentsline{toc}{chapter}{머리말}
+
+이 책은 \href{http://www.fastcampus.co.kr}{패스트캠퍼스}의
+\href{http://www.fastcampus.co.kr/category_data_camp/}{데이터 사이언스
+캠프} 코스의 \href{http://www.fastcampus.co.kr/data_camp_dabrp/}{실무
+빅데이터 분석을 위한 SQL과 R의 활용 CAMP}의 수업용으로 제작되었습니다.
+수업에 대해 더 자세히 알고 싶으신 분은
+\href{http://www.fastcampus.co.kr/data_camp_dabrp_instructor_1/}{강사
+인터뷰}를 참고하세요.
+
+책은 각각 R의 IDE로 사실상 표준인
+\href{http://www.rstudio.org/}{RStudio}에 사용하기 좋은 기능 소개,
+대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해, 단순 반복
+업무를 위한 for문과 apply류 맛보기, 데이터 원본/의존성의 개념과 SQL 문법
+익히기, \href{http://vita.had.co.nz/papers/tidy-data.pdf}{tidy data}
+개념과 dplyr+tidyr로 데이터 다루기, 보고용 차트를 위한 ggplot2 사용하기,
+정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기,
+\href{https://shiny.rstudio.com/}{shiny} 패키지를 활용한 인터렉티프 웹
+만들기로 구성되어 있습니다. 많은 부분
+\href{https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf}{rstudio-IDE-cheatsheet},
+\href{http://r4ds.had.co.nz/}{R for Data Science},
+\href{https://bookdown.org/rdpeng/rprogdatascience/}{R Programming for
+Data Science}, \href{http://had.co.nz/ggplot2/}{ggplot2-book},
+\href{https://shiny.rstudio.com/tutorial/}{shiny-tutorial},
+\href{https://courses.edx.org/courses/course-v1:Microsoft+DAT204x+1T2017/info}{Microsoft's
+DAT204x},
+\href{https://www.datacamp.com/community/tutorials/}{datacamp},
+\href{https://www.programiz.com/r-programming/}{programiz}을
+참고하였습니다.
+
+데이터 분석은 많은 단계들과 업무들로 나누어져 있습니다. 개인적으로 1.
+데이터 확보 2. 데이터 정제 3. 분석 4. 시각화의 단계를 거친다고
+생각합니다. 데이터란 사내에서 관리하고 있는 내부 데이터와 외부 인터넷에
+공개되어 있는 데이터로 구분할 수 있습니다. 이런 데이터들 중 분석과 업무
+목적에 맞는 데이터를 찾고, 활용하기 위에 확보하는 과정이 1단계 입니다.
+분석 방법과 내용에 따라 확보된 데이터를 정리하거나 고쳐야 하는 일도
+있습니다. 2 단계는 그것을 뜻합니다. 3 단계인 분석은 다양한 통계적
+방법들을 통해 분석 목적을 이루는 것입니다. 4단계는 이렇게 이루어낸
+결과물을 다른 사람에게 전달하기 위해 필요합니다.
+
+이 책은 그 중 2단계인 정제와 4단계인 시각화에 초점이 맞춰져 있습니다.
+1단계중 외부 데이터 확보를 위한 웹크롤링은 준비중입니다.
+
+저작물 라이선스로
+\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{크리에이티브
+커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))}를 따릅니다.
+
+\chapter*{정보}
+\addcontentsline{toc}{chapter}{정보}
+
+이 책의 소스는
+\href{https://github.com/mrchypark/data_camp_dabrp}{여기}에서 확인하실
+수 있으며 아래 주어진 R 패키지(및 종속 패키지)의 버전으로
+제작되었습니다. 저작물의 재현을 위해서 필요합니다.
+
+\begin{longtable}{lllll}
+\toprule
+package & * & version & date & source\\
+\midrule
+backports &  & 1.0.5 & 2017-01-18 & CRAN (R 3.3.2)\\
+bookdown &  & 0.3.14 & 2017-03-22 & Github (rstudio/bookdown@f427fdf)\\
+devtools &  & 1.12.0 & 2016-06-24 & CRAN (R 3.3.3)\\
+digest &  & 0.6.12 & 2017-01-27 & CRAN (R 3.3.3)\\
+evaluate &  & 0.10 & 2016-10-11 & CRAN (R 3.3.3)\\
+\addlinespace
+htmltools &  & 0.3.5 & 2016-03-21 & CRAN (R 3.3.3)\\
+knitr &  & 1.15.1 & 2016-11-22 & CRAN (R 3.3.3)\\
+magrittr &  & 1.5 & 2014-11-22 & CRAN (R 3.3.3)\\
+memoise &  & 1.0.0 & 2016-01-29 & CRAN (R 3.3.3)\\
+packrat &  & 0.4.8-1 & 2016-09-07 & CRAN (R 3.3.3)\\
+\addlinespace
+Rcpp &  & 0.12.9 & 2017-01-14 & CRAN (R 3.3.3)\\
+rmarkdown &  & 1.3 & 2016-12-21 & CRAN (R 3.3.3)\\
+rprojroot &  & 1.2 & 2017-01-16 & CRAN (R 3.3.3)\\
+stringi &  & 1.1.2 & 2016-10-01 & CRAN (R 3.3.3)\\
+stringr &  & 1.2.0 & 2017-02-18 & CRAN (R 3.3.3)\\
+\addlinespace
+withr &  & 1.0.2 & 2016-06-20 & CRAN (R 3.3.3)\\
+yaml &  & 2.1.14 & 2016-11-12 & CRAN (R 3.3.3)\\
+\bottomrule
+\end{longtable}
+
+이 책은 by mrchypark on 목요일, 3월 23, 2017 오전 1:52:18 KST에
+마지막으로 업데이트 했습니다.
+
+\chapter{시작하기 전에}\label{before-start}
+
+\section{준비된 데이터}\label{data-for-class}
+
+\chapter{RStudio에 사용하기 좋은 기능 소개}\label{rstudio}
+
+\section{RStudio 소개}\label{introduce-rstudio}
+
+\subsection{IDE 란}\label{ide}
+
+\subsection{다른 IDE 소개}\label{ide-others}
+
+\subsection{Rstudio}\label{rstudio}
+
+\section{구조와 기능들}\label{structures}
+
+\subsection{source 창}\label{source-pane}
+
+\subsection{console 창}\label{console-pane}
+
+\subsection{Environment 창}\label{env-pane}
+
+\subsection{help 창}\label{help-pane}
+
+\section{프로젝트와 버전관리}\label{project-git}
+
+\subsection{폴더와 프로젝트}\label{use-project}
+
+\subsection{버전관리도구 git}\label{introduce-git}
+
+\subsection{오픈소스와 github}\label{introduce-github}
+
+\section{도움말}\label{help-page}
+
+\subsection{도움말 설명}\label{introduce-help}
+
+\subsection{도움말 사용법}\label{help-usage}
+
+\subsection{함수의 옵션 설명}\label{help-param}
+
+\subsection{함수의 상세 설명}\label{help-detail}
+
+\subsection{예시 코드}\label{help-example}
+
+\chapter{대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한
+이해}\label{data-type}
+
+\section{기초 자료형}\label{basic-data-type}
+
+\section{벡터}\label{vector}
+
+\section{메트릭스}\label{metrix}
+
+\section{팩터}\label{factor}
+
+\section{리스트}\label{list}
+
+\section{데이터프레임}\label{data-frame}
+
+\section{날짜}\label{date-time}
+
+\chapter{단순 반복 업무를 위한 for문과 apply류 맛보기}\label{for-apply}
+
+\section{반복문}\label{introduce-for}
+
+\subsection{for}\label{for}
+
+\subsection{while}\label{while}
+
+\subsection{repeat}\label{repeat}
+
+\subsection{break}\label{break}
+
+\subsection{next}\label{next}
+
+\section{조건문}\label{introduce-if}
+
+\subsection{if}\label{if}
+
+\subsection{else}\label{else}
+
+\subsection{ifelse}\label{ifelse}
+
+\subsection{switch}\label{switch}
+
+\section{apply류의 함수들}\label{introduce-apply}
+
+\subsection{apply}\label{apply}
+
+\subsection{*apply \{\#applys\}}\label{apply-applys}
+
+\subsection{aggregate}\label{aggregate}
+
+\chapter{데이터 원본/의존성의 개념과 SQL 문법 익히기}\label{sql}
+
+\section{사전 준비}\label{prerequisite}
+
+\subsection{mariaDB 설치}\label{install-mariadb}
+
+\subsubsection{windows}\label{mariadb-windows}
+
+\subsubsection{mac}\label{mariadb-mac}
+
+\subsubsection{docker}\label{mariadb-docker}
+
+\section{데이터를 바라보는 시선}\label{for-data}
+
+\subsection{데이터 원본}\label{original-data}
+
+\subsection{데이터 의존성}\label{data-dependency}
+
+\section{기본 SQL 문법}\label{basic-sql}
+
+\subsection{CRUD와 데이터베이스}\label{crud}
+
+\subsection{Read 문법}\label{read}
+
+\subsection{Join}\label{join}
+
+\chapter{tidy data 개념과 dplyr+tidyr로 데이터 다루기}\label{tidyr}
+
+\section{tidy data}\label{tidy-data}
+
+\section{tidyverse}\label{tidyverse}
+
+\chapter{보고용 차트를 위한 ggplot2 사용하기}\label{ggplot}
+
+\section{test}\label{test}
+
+\chapter{정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로
+자동화하기}\label{knitr}
+
+\section{Markdown 문법}\label{markdown}
+
+\section{Rmd로 문서 작성}\label{rmd}
+
+\section{스케줄러}\label{scheduler}
+
+\chapter{shiny 패키지를 활용한 인터렉티프 웹 만들기}\label{shiny}
+
+\chapter{마치며}\label{outro}
+
+
+\end{document}

@@ -7,8 +7,8 @@ bookdown::gitbook:
     edit:
       link: https://github.com/mrchypark/data_camp_dabrp/edit/master/%s
       text: "Edit"
-    sharing: no
+    sharing: yes
   css: dabrp.css
 
-bookdown::pdf_book:
-  latex_engine: "xelatex"
+#bookdown::pdf_book:
+#  latex_engine: "miktex"
