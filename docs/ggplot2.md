@@ -1,5 +1,0 @@
-
-# 보고용 차트를 위한 ggplot2 사용하기 {#ggplot}
-
-## test
-

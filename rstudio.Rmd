@@ -1,12 +1,20 @@
 # RStudio에 사용하기 좋은 기능 소개 {#rstudio}
 
+첫 수업은 RStudio를, 정확하게는 IDE에서 받을 수 있는 기능적 혜택들을 소개하려고 합니다.
+
 ## RStudio 소개 {#introduce-rstudio}
 
 ### IDE 란 {#ide}
 
-### 다른 IDE 소개 {#ide-others}
+IDE란 _통합 개발 환경_의 영어 줄임말로 텍스트 편집이외에도 디버깅, 컴파일, 배포등 개발의 위한 기능을 통합적으로 제공하는 프로그램을 지칭합니다. R 또한 개발언어의 일종으로 여러 IDE에서 사용할 수 있게 기능을 지원하고 있습니다.
 
 ### Rstudio {#rstudio}
+
+![]("./_images/rstudio-home.PNG")
+
+### 다른 IDE 소개 {#ide-others}
+
+
 
 
 ## 구조와 기능들 {#structures}
@@ -40,3 +48,6 @@
 ### 함수의 상세 설명 {#help-detail}
 
 ### 예시 코드 {#help-example}
+
+[201]: 
+[202]: 
