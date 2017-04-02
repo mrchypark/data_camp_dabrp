@@ -60,7 +60,7 @@ knitr::kable(devtools::session_info()$packages,
              longtable = TRUE)
 ```
 
- 이 책은 `r paste(Sys.info()[["user"]],"가 ", format(Sys.time(), "%A, %B %d, %Y %X %Z"))`에 마지막으로 업데이트 했습니다.
+ 이 책은 [박찬엽][123]이 `r paste(format(Sys.time(), "%A, %B %d, %Y %X %Z"))`에 마지막으로 업데이트 했습니다.
 
 [101]: http://hadley.nz/
 [102]: http://scienceon.hani.co.kr/?document_srl=396048
@@ -84,3 +84,4 @@ knitr::kable(devtools::session_info()$packages,
 [120]: https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC%EB%9E%80%3F
 [121]: https://github.com/
 [122]: https://rogerdudler.github.io/git-guide/index.ko.html
+[123]: https://rcoholic.github.io/
