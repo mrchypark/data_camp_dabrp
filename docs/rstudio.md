@@ -18,7 +18,7 @@ IDE란 _통합 개발 환경_의 영어 줄임말로 텍스트 편집이외에�
 
 IDE는 메모장 처럼 가벼운 [Sublime Text][201]부터 본격적인 [Visual Studio][202]까지 다양합니다. 개발자들이 많이 사용하는 IDE를 몇개 소개하겠습니다.
 
-![Sublime Text](http://microsoft.github.io/RTVS-docs/media/RTVS-Installation-data-scientist-layout-result.png)
+![Sublime Text](https://www.drupal.org/files/sublime.png)
 [Sublime Text][201]는 꽤 오랫동안 사랑받은 텍스트 에디터 형 IDE입니다. 몇 가지 설정을 진행하면 R 코드도 실행하게 만들 수 있어 기존 개발자 분들 중 R을 공부하실 때 사용하는 경우가 종종 있습니다.
 
 ![Atom](https://joshuajangblog.files.wordpress.com/2016/09/atom_editor.png?w=840)
