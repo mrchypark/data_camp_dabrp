@@ -1,3 +1,4 @@
+
 # 시작하기 전에 {#before-start}
 
 수업에서 사용하는 자료와 기반하는 생각들을 작성하고자 합니다. 
@@ -7,7 +8,8 @@
 데이터 과학을 진행하는데에는 아래의 과정을 따릅니다. 
 ###### 공부를 위해 작성하는 자료니 만큼 코드로 생산되는 모든 내용에 대한 코드는 숨기지 않고 같이 출력할 것입니다.
 
-```{r ds_work}
+
+```r
 library("visNetwork")
 nodes <- data.frame(id = 1:7,label=c("1. 데이터 확보","2. 데이터 정제",
                                      "3. 분석","데이터 핸들링","분석","결과 검증","4. 시각화"),
@@ -20,6 +22,9 @@ visNetwork(nodes, edges, width = "100%") %>%
   visEdges(arrows =list(to = list(enabled = TRUE, scaleFactor = 1))) %>% 
   visLayout(randomSeed = -0.9261698*10000)
 ```
+
+<!--html_preserve--><div id="htmlwidget-14d5992801777f4abbc5" style="width:100%;height:355.968px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-14d5992801777f4abbc5">{"x":{"nodes":{"id":[1,2,3,4,5,6,7],"label":["1. 데이터 확보","2. 데이터 정제","3. 분석","데이터 핸들링","분석","결과 검증","4. 시각화"],"shape":["box","box","box","box","box","box","box"],"font.size":[25,25,25,25,25,25,25]},"edges":{"from":[1,2,3,4,5,3,6],"to":[2,3,7,5,6,4,4],"dashes":[false,false,false,false,false,true,false],"length":[100,100,100,100,100,100,100]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1}}},"layout":{"randomSeed":-9261.698}},"groups":null,"width":"100%","height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 위 표는 [해들리 위컴][101]의 [R for Data Science](http://r4ds.had.co.nz/)에 소개에 작성된 표이기도 합니다. 각각 Import, Tidy, Transform, Visualise, Model, Communicate라고 되어 있는 것을 제 상황에 맞게 각색하였습니다.
 
@@ -54,13 +59,31 @@ R은 [여기][116]에서 다운로드 할 수 있습니다. [Rstudio][118]은 R�
 
  이 책의 소스는 [여기][117]에서 확인하실 수 있으며 아래 주어진 R 패키지(및 종속 패키지)의 버전으로 제작되었습니다. 저작물의 재현을 위해서 필요합니다.
 
-```{r colophon, echo=FALSE}
-knitr::kable(devtools::session_info()$packages, 
-             booktabs = TRUE,
-             longtable = TRUE)
-```
 
- 이 책은 `r paste(Sys.info()[["user"]],"가 ", format(Sys.time(), "%A, %B %d, %Y %X %Z"))`에 마지막으로 업데이트 했습니다.
+package       *    version   date         source         
+------------  ---  --------  -----------  ---------------
+backports          1.0.5     2017-01-18   CRAN (R 3.3.3) 
+bookdown           0.3       2016-11-28   CRAN (R 3.3.3) 
+codetools          0.2-15    2016-10-05   CRAN (R 3.3.3) 
+devtools           1.12.0    2016-12-05   CRAN (R 3.3.3) 
+digest             0.6.12    2017-01-27   CRAN (R 3.3.3) 
+evaluate           0.10      2016-10-11   CRAN (R 3.3.3) 
+htmltools          0.3.5     2016-03-21   CRAN (R 3.3.3) 
+htmlwidgets        0.8       2016-11-09   CRAN (R 3.3.3) 
+jsonlite           1.3       2017-02-28   CRAN (R 3.3.3) 
+knitr              1.15.1    2016-11-22   CRAN (R 3.3.3) 
+magrittr           1.5       2014-11-22   CRAN (R 3.3.3) 
+memoise            1.0.0     2016-01-29   CRAN (R 3.3.3) 
+Rcpp               0.12.10   2017-03-19   CRAN (R 3.3.3) 
+rmarkdown          1.3       2016-12-21   CRAN (R 3.3.3) 
+rprojroot          1.2       2017-01-16   CRAN (R 3.3.3) 
+stringi            1.1.2     2016-10-01   CRAN (R 3.3.3) 
+stringr            1.2.0     2017-02-18   CRAN (R 3.3.3) 
+visNetwork    *    1.0.3     2016-12-22   CRAN (R 3.3.3) 
+withr              1.0.2     2016-06-20   CRAN (R 3.3.3) 
+yaml               2.1.14    2016-11-12   CRAN (R 3.3.3) 
+
+ 이 책은 rstudio 가  Sunday, April 02, 2017 04:26:39 PM UTC에 마지막으로 업데이트 했습니다.
 
 [101]: http://hadley.nz/
 [102]: http://scienceon.hani.co.kr/?document_srl=396048
