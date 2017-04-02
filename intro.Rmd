@@ -6,8 +6,8 @@
 library("visNetwork")
 tem<-rnorm(1)
 print(tem)
-nodes <- data.frame(id = 1:7,label=c("1. 가져오기","2. 정리하기","3. 이해하기","변경하기","시각화하기","모델세우기","4. 소통하기"),shape="box")
-edges <- data.frame(from = c(1,2,3,4,5,3,6), to = c(2,3,7,5,6,4,4),dashes = c(F,F,F,F,F,T,F))
+nodes <- data.frame(id = 1:7,label=c("1. 가져오기","2. 정리하기","3. 이해하기","변경하기","시각화하기","모델세우기","4. 소통하기"),shape="box",font.size=25)
+edges <- data.frame(from = c(1,2,3,4,5,3,6), to = c(2,3,7,5,6,4,4),dashes = c(F,F,F,F,F,T,F),length=100)
 visNetwork(nodes, edges, width = "100%") %>% visEdges(arrows =list(to = list(enabled = TRUE, scaleFactor = 1))) %>% 
 visLayout(randomSeed = -0.9261698*10000)
 

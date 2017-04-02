@@ -1,19 +1,19 @@
 new_session: yes
 
 rmd_files: [
-  "index.rmd",
-  "intro.rmd",
+  "index.Rmd",
+  "intro.Rmd",
   
-  "rstudio.rmd",
-  "dataType.rmd",
-  "forApply.rmd",
-  "SQL.rmd",
-  "tidyr.rmd",
-  "ggplot2.rmd",
-  "knitr.rmd",
-  "shiny.rmd",
+  "rstudio.Rmd",
+  "dataType.Rmd",
+  "forApply.Rmd",
+  "SQL.Rmd",
+  "tidyr.Rmd",
+  "ggplot2.Rmd",
+  "knitr.Rmd",
+  "shiny.Rmd",
   
-  "outro.rmd",
+  "outro.Rmd",
   ]
 
 before_chapter_script: "_common.R"
