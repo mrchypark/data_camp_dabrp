@@ -44,7 +44,7 @@ stringr          1.2.0     2017-02-18   CRAN (R 3.3.3)
 withr            1.0.2     2016-06-20   CRAN (R 3.3.3)                    
 yaml             2.1.14    2016-11-12   CRAN (R 3.3.3)                    
 
- 이 책은 by mrchypark on 일요일, 4월 02, 2017 오후 6:44:28 KST에 마지막으로 업데이트 했습니다.
+ 이 책은 by mrchypark on 일요일, 4월 02, 2017 오후 7:49:41 KST에 마지막으로 업데이트 했습니다.
 
 
 [1]: http://www.fastcampus.co.kr
