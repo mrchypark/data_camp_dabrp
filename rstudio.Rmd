@@ -36,16 +36,21 @@ IDE는 메모장 처럼 가벼운 [Sublime Text][201]부터 본격적인 [Visual
 
 RStudio는 처음부터 R을 지원하기 때문에 설치 이외의 작업을 할 필요 없고, 사용자층이 많아 사용법을 배우기도 좋고 검색도 쉽게 됩니다. 그래서 IDE를 RStudio로 선정하고 기능에 대해 설명하겠습니다. 여기 설명하는 기능은 RStudio만의 기능이 아니며 다른 IDE도 구성에 따라 같은 기능 혹은 더 나은 기능을 사용할 수 있습니다.
 ![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-run.png)
-처음 실행하면 전부 4개면(pane)으로 구성되어 있으며 각부의 이름 은 위 그림과 같습니다.
+처음 실행하면 전부 4개면(pane)으로 구성되어 있으며 각부의 이름은 위 그림과 같습니다.
 
 
 ### source 창 {#source-pane}
+![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-source.png)
 
 ### console 창 {#console-pane}
+![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-console.png)
 
 ### environment 창 {#env-pane}
+![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-env.png)
 
 ### help 창 {#help-pane}
+![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-help.png)
+
 
 
 ## 프로젝트와 버전관리 {#project-git}

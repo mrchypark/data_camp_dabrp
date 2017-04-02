@@ -5,6 +5,9 @@ date: "2017-04-06"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 documentclass: book
+output:
+  html_document:
+    self_contained: false
 ---
 # 머리말 {-}
 
