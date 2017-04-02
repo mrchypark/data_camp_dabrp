@@ -1,3 +1,16 @@
 # 시작하기 전에 {#before-start}
 
+수업에서 사용하는 자료와 기반하는 생각들을 작성하고자 합니다. 
+
+```{r ds_work}
+library("visNetwork")
+tem<-rnorm(1)
+print(tem)
+nodes <- data.frame(id = 1:7,label=c("1. 가져오기","2. 정리하기","3. 이해하기","변경하기","시각화하기","모델세우기","4. 소통하기"),shape="box")
+edges <- data.frame(from = c(1,2,3,4,5,3,6), to = c(2,3,7,5,6,4,4),dashes = c(F,F,F,F,F,T,F))
+visNetwork(nodes, edges, width = "100%") %>% visEdges(arrows =list(to = list(enabled = TRUE, scaleFactor = 1))) %>% 
+visLayout(randomSeed = -0.9261698*10000)
+
+```
+
 ## 준비된 데이터 {#data-for-class}
