@@ -19,7 +19,6 @@ documentclass: book
 
  저작물 라이선스로 [크리에이티브 커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))][8]를 따릅니다.
 
-
 [1]: http://www.fastcampus.co.kr
 [2]: http://www.fastcampus.co.kr/category_data_camp/
 [3]: http://www.fastcampus.co.kr/data_camp_dabrp/
