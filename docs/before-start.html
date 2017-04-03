@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
+  
+  
+  
+
+<meta name="author" content="ChanYub Park">
+
+
+<meta name="date" content="2017-04-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="rstudio.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<link href="libs/vis-4.17.0/vis.css" rel="stylesheet" />
+<script src="libs/vis-4.17.0/vis.min.js"></script>
+<script src="libs/visNetwork-binding-1.0.3/visNetwork.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="dabrp.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>머리말</a></li>
+<li class="chapter" data-level="1" data-path="before-start.html"><a href="before-start.html"><i class="fa fa-check"></i><b>1</b> 시작하기 전에</a><ul>
+<li class="chapter" data-level="1.1" data-path="before-start.html"><a href="before-start.html#content-intro"><i class="fa fa-check"></i><b>1.1</b> 데이터를 다루는 것</a></li>
+<li class="chapter" data-level="1.2" data-path="before-start.html"><a href="before-start.html#data-for-class"><i class="fa fa-check"></i><b>1.2</b> 준비된 데이터</a></li>
+<li class="chapter" data-level="1.3" data-path="before-start.html"><a href="before-start.html#rstudio-intro"><i class="fa fa-check"></i><b>1.3</b> R과 Rstudio</a></li>
+<li class="chapter" data-level="1.4" data-path="before-start.html"><a href="before-start.html#github-intro"><i class="fa fa-check"></i><b>1.4</b> git과 github</a></li>
+<li class="chapter" data-level="1.5" data-path="before-start.html"><a href="before-start.html#database-for-class"><i class="fa fa-check"></i><b>1.5</b> 사용할 데이터베이스</a></li>
+<li class="chapter" data-level="1.6" data-path="before-start.html"><a href="before-start.html#docker-for-reproducible"><i class="fa fa-check"></i><b>1.6</b> 환경 통일을 위한 도구 도커</a></li>
+<li class="chapter" data-level="1.7" data-path="before-start.html"><a href="before-start.html#Colophon"><i class="fa fa-check"></i><b>1.7</b> 정보</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>2</b> RStudio에 사용하기 좋은 기능 소개</a><ul>
+<li class="chapter" data-level="2.1" data-path="rstudio.html"><a href="rstudio.html#introduce-rstudio"><i class="fa fa-check"></i><b>2.1</b> RStudio 소개</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="rstudio.html"><a href="rstudio.html#ide"><i class="fa fa-check"></i><b>2.1.1</b> IDE 란</a></li>
+<li class="chapter" data-level="2.1.2" data-path="rstudio.html"><a href="rstudio.html#rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Rstudio</a></li>
+<li class="chapter" data-level="2.1.3" data-path="rstudio.html"><a href="rstudio.html#ide-others"><i class="fa fa-check"></i><b>2.1.3</b> 다른 IDE 소개</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="rstudio.html"><a href="rstudio.html#structures"><i class="fa fa-check"></i><b>2.2</b> 구조와 기능들</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>2.2.1</b> source 창</a></li>
+<li class="chapter" data-level="2.2.2" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>2.2.2</b> console 창</a></li>
+<li class="chapter" data-level="2.2.3" data-path="rstudio.html"><a href="rstudio.html#env-pane"><i class="fa fa-check"></i><b>2.2.3</b> environment 창</a></li>
+<li class="chapter" data-level="2.2.4" data-path="rstudio.html"><a href="rstudio.html#help-pane"><i class="fa fa-check"></i><b>2.2.4</b> help 창</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="rstudio.html"><a href="rstudio.html#project-git"><i class="fa fa-check"></i><b>2.3</b> 프로젝트와 버전관리</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="rstudio.html"><a href="rstudio.html#use-project"><i class="fa fa-check"></i><b>2.3.1</b> 폴더와 프로젝트</a></li>
+<li class="chapter" data-level="2.3.2" data-path="rstudio.html"><a href="rstudio.html#introduce-git"><i class="fa fa-check"></i><b>2.3.2</b> 버전관리도구 git</a></li>
+<li class="chapter" data-level="2.3.3" data-path="rstudio.html"><a href="rstudio.html#introduce-github"><i class="fa fa-check"></i><b>2.3.3</b> 오픈소스와 github</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="rstudio.html"><a href="rstudio.html#help-page"><i class="fa fa-check"></i><b>2.4</b> 도움말</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="rstudio.html"><a href="rstudio.html#introduce-help"><i class="fa fa-check"></i><b>2.4.1</b> 도움말 설명</a></li>
+<li class="chapter" data-level="2.4.2" data-path="rstudio.html"><a href="rstudio.html#help-usage"><i class="fa fa-check"></i><b>2.4.2</b> 도움말 사용법</a></li>
+<li class="chapter" data-level="2.4.3" data-path="rstudio.html"><a href="rstudio.html#help-param"><i class="fa fa-check"></i><b>2.4.3</b> 함수의 옵션 설명</a></li>
+<li class="chapter" data-level="2.4.4" data-path="rstudio.html"><a href="rstudio.html#help-detail"><i class="fa fa-check"></i><b>2.4.4</b> 함수의 상세 설명</a></li>
+<li class="chapter" data-level="2.4.5" data-path="rstudio.html"><a href="rstudio.html#help-example"><i class="fa fa-check"></i><b>2.4.5</b> 예시 코드</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>3</b> 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-type.html"><a href="data-type.html#basic-data-type"><i class="fa fa-check"></i><b>3.1</b> 기초 자료형</a></li>
+<li class="chapter" data-level="3.2" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>3.2</b> 벡터</a></li>
+<li class="chapter" data-level="3.3" data-path="data-type.html"><a href="data-type.html#metrix"><i class="fa fa-check"></i><b>3.3</b> 메트릭스</a></li>
+<li class="chapter" data-level="3.4" data-path="data-type.html"><a href="data-type.html#factor"><i class="fa fa-check"></i><b>3.4</b> 팩터</a></li>
+<li class="chapter" data-level="3.5" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>3.5</b> 리스트</a></li>
+<li class="chapter" data-level="3.6" data-path="data-type.html"><a href="data-type.html#data-frame"><i class="fa fa-check"></i><b>3.6</b> 데이터프레임</a></li>
+<li class="chapter" data-level="3.7" data-path="data-type.html"><a href="data-type.html#date-time"><i class="fa fa-check"></i><b>3.7</b> 날짜</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="for-apply.html"><a href="for-apply.html"><i class="fa fa-check"></i><b>4</b> 단순 반복 업무를 위한 for문과 apply류 맛보기</a><ul>
+<li class="chapter" data-level="4.1" data-path="for-apply.html"><a href="for-apply.html#introduce-for"><i class="fa fa-check"></i><b>4.1</b> 반복문</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="for-apply.html"><a href="for-apply.html#for"><i class="fa fa-check"></i><b>4.1.1</b> for</a></li>
+<li class="chapter" data-level="4.1.2" data-path="for-apply.html"><a href="for-apply.html#while"><i class="fa fa-check"></i><b>4.1.2</b> while</a></li>
+<li class="chapter" data-level="4.1.3" data-path="for-apply.html"><a href="for-apply.html#repeat"><i class="fa fa-check"></i><b>4.1.3</b> repeat</a></li>
+<li class="chapter" data-level="4.1.4" data-path="for-apply.html"><a href="for-apply.html#break"><i class="fa fa-check"></i><b>4.1.4</b> break</a></li>
+<li class="chapter" data-level="4.1.5" data-path="for-apply.html"><a href="for-apply.html#next"><i class="fa fa-check"></i><b>4.1.5</b> next</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="for-apply.html"><a href="for-apply.html#introduce-if"><i class="fa fa-check"></i><b>4.2</b> 조건문</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="for-apply.html"><a href="for-apply.html#if"><i class="fa fa-check"></i><b>4.2.1</b> if</a></li>
+<li class="chapter" data-level="4.2.2" data-path="for-apply.html"><a href="for-apply.html#else"><i class="fa fa-check"></i><b>4.2.2</b> else</a></li>
+<li class="chapter" data-level="4.2.3" data-path="for-apply.html"><a href="for-apply.html#ifelse"><i class="fa fa-check"></i><b>4.2.3</b> ifelse</a></li>
+<li class="chapter" data-level="4.2.4" data-path="for-apply.html"><a href="for-apply.html#switch"><i class="fa fa-check"></i><b>4.2.4</b> switch</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="for-apply.html"><a href="for-apply.html#introduce-apply"><i class="fa fa-check"></i><b>4.3</b> apply류의 함수들</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="for-apply.html"><a href="for-apply.html#apply"><i class="fa fa-check"></i><b>4.3.1</b> apply</a></li>
+<li class="chapter" data-level="4.3.2" data-path="for-apply.html"><a href="for-apply.html#apply-applys"><i class="fa fa-check"></i><b>4.3.2</b> *apply {#applys}</a></li>
+<li class="chapter" data-level="4.3.3" data-path="for-apply.html"><a href="for-apply.html#aggregate"><i class="fa fa-check"></i><b>4.3.3</b> aggregate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>5</b> 데이터 원본/의존성의 개념과 SQL 문법 익히기</a><ul>
+<li class="chapter" data-level="5.1" data-path="sql.html"><a href="sql.html#prerequisite"><i class="fa fa-check"></i><b>5.1</b> 사전 준비</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="sql.html"><a href="sql.html#install-mariadb"><i class="fa fa-check"></i><b>5.1.1</b> mariaDB 설치</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="sql.html"><a href="sql.html#for-data"><i class="fa fa-check"></i><b>5.2</b> 데이터를 바라보는 시선</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="sql.html"><a href="sql.html#original-data"><i class="fa fa-check"></i><b>5.2.1</b> 데이터 원본</a></li>
+<li class="chapter" data-level="5.2.2" data-path="sql.html"><a href="sql.html#data-dependency"><i class="fa fa-check"></i><b>5.2.2</b> 데이터 의존성</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="sql.html"><a href="sql.html#basic-sql"><i class="fa fa-check"></i><b>5.3</b> 기본 SQL 문법</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="sql.html"><a href="sql.html#crud"><i class="fa fa-check"></i><b>5.3.1</b> CRUD와 데이터베이스</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sql.html"><a href="sql.html#read"><i class="fa fa-check"></i><b>5.3.2</b> Read 문법</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sql.html"><a href="sql.html#join"><i class="fa fa-check"></i><b>5.3.3</b> Join</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>6</b> tidy data 개념과 dplyr+tidyr로 데이터 다루기</a><ul>
+<li class="chapter" data-level="6.1" data-path="tidyr.html"><a href="tidyr.html#tidy-data"><i class="fa fa-check"></i><b>6.1</b> tidy data</a></li>
+<li class="chapter" data-level="6.2" data-path="tidyr.html"><a href="tidyr.html#tidyverse"><i class="fa fa-check"></i><b>6.2</b> tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>7</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
+<li class="chapter" data-level="7.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>7.1</b> test</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>8</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
+<li class="chapter" data-level="8.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>8.1</b> Markdown 문법</a></li>
+<li class="chapter" data-level="8.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>8.2</b> Rmd로 문서 작성</a></li>
+<li class="chapter" data-level="8.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>8.3</b> 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>9</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
+<li class="chapter" data-level="10" data-path="outro.html"><a href="outro.html"><i class="fa fa-check"></i><b>10</b> 마치며</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="before-start" class="section level1">
+<h1><span class="header-section-number">1</span> 시작하기 전에</h1>
+<p>수업에서 사용하는 자료와 기반하는 생각들을 작성하고자 합니다.</p>
+<div id="content-intro" class="section level2">
+<h2><span class="header-section-number">1.1</span> 데이터를 다루는 것</h2>
+<p>데이터 과학을 진행하는데에는 아래의 과정을 따릅니다. ###### 공부를 위해 작성하는 자료니 만큼 자료를 생산하는 모든 코드는 숨기지 않고 같이 출력할 것입니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;visNetwork&quot;</span>)
+nodes &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="dv">1</span>:<span class="dv">7</span>,<span class="dt">label=</span><span class="kw">c</span>(<span class="st">&quot;1. 데이터 확보&quot;</span>,<span class="st">&quot;2. 데이터 정제&quot;</span>,
+                                     <span class="st">&quot;3. 분석&quot;</span>,<span class="st">&quot;데이터 핸들링&quot;</span>,<span class="st">&quot;분석&quot;</span>,<span class="st">&quot;결과 검증&quot;</span>,<span class="st">&quot;4. 시각화&quot;</span>),
+                    <span class="dt">shape=</span><span class="st">&quot;box&quot;</span>, <span class="dt">font.size=</span><span class="dv">25</span>)
+edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">from =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>), 
+                    <span class="dt">to =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">4</span>),
+                    <span class="dt">dashes =</span> <span class="kw">c</span>(F,F,F,F,F,T,F),
+                    <span class="dt">length=</span><span class="dv">100</span>)
+<span class="kw">visNetwork</span>(nodes, edges, <span class="dt">width =</span> <span class="st">&quot;100%&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span><span class="kw">list</span>(<span class="dt">to =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, <span class="dt">scaleFactor =</span> <span class="dv">1</span>))) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">visLayout</span>(<span class="dt">randomSeed =</span> -<span class="fl">0.9261698</span>*<span class="dv">10000</span>)</code></pre></div>
+<div id="htmlwidget-14d5992801777f4abbc5" style="width:100%;height:355.968px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-14d5992801777f4abbc5">{"x":{"nodes":{"id":[1,2,3,4,5,6,7],"label":["1. 데이터 확보","2. 데이터 정제","3. 분석","데이터 핸들링","분석","결과 검증","4. 시각화"],"shape":["box","box","box","box","box","box","box"],"font.size":[25,25,25,25,25,25,25]},"edges":{"from":[1,2,3,4,5,3,6],"to":[2,3,7,5,6,4,4],"dashes":[false,false,false,false,false,true,false],"length":[100,100,100,100,100,100,100]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1}}},"layout":{"randomSeed":-9261.698}},"groups":null,"width":"100%","height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null},"evals":[],"jsHooks":[]}</script>
+<p>위 표는 <a href="http://hadley.nz/">해들리 위컴</a>의 <a href="http://r4ds.had.co.nz/">R for Data Science</a>에 소개에 작성된 표이기도 합니다. 각각 Import, Tidy, Transform, Visualise, Model, Communicate라고 되어 있는 것을 제 상황에 맞게 각색하였습니다.</p>
+<p><strong>데이터 확보</strong>는 분석 목적에 맞는 데이터를 확보하는 것입니다. 보통 기업인의 입장에서 기업 내부에서 생산, 관리되고 있는 데이터, 외부에서 찾아야 하는 데이터, 없기 때문에 실험등을 통해 생산해야 하는 데이터 정도로 데이터를 나눌 수 있습니다. 이 때 내부 데이터를 사용하기 위해서는 두 가지 진입장벽이 있는데, 정책적인 접근 권한과 데이터를 다룰 줄 아는 능력입니다. 이 후 과정에서 데이터를 다루고, 그것으로 통계적 분석을 거쳐 필요한 결과물을 만드는 것에서 가장 보편적인 도구는 엑셀입니다. 데부분은 엑셀을 잘 사용하는 것으로 해결할 수 있습니다. 하지만 데이터가 커지고, 통계적 분석에 대한 수요가 높아지면서 R에 대한 관심으로 이어지고 있는 상황입니다.</p>
+<p><strong>데이터 정제</strong>는 <a href="http://hadley.nz/">해들리 위컴</a>이 이야기한 Tidy data를 만드는 과정에 해당합니다. 이것을 위해서 Tidy data에 대해서 이야기 해야 하는데 그건 6장에서 다루려고 합니다. 간단하게는 컴퓨터에게 일을 시키기 좋은 상태로 데이터를 정리하는 것을 뜻합니다. 시간이 많이 드는 과정입니다.</p>
+<p><strong>분석</strong>은 데이터 핸들링, 분석, 결과 검증의 사이클을 따라 반복합니다. EDA나 데이터 이해를 위한 시각화 등이 이루어지고, 분석을 진행하며 얻는 결과물들을 만드는 과정이 진행됩니다. 이 때 개발에서 재현성의 개념을 가져오면 일을 좀 수월하게 할 수 있습니다. 여기서 말하는 재현성이란 <a href="http://scienceon.hani.co.kr/?document_srl=396048">연구 재현성</a>보다는 실행 재현성을 뜻합니다. 실행 재현성은 어떤 결과물을 만드는 작업을 실행했을 때 다시 그것을 그대로 실행할 수 있는 것을 뜻합니다. 코드로 분석을 진행하는 것은 실행 재현성과 자동화에 매우 도움이 됩니다.</p>
+<p><strong>시각화</strong>는 앞서 반복적인 연구를 통해 알게된 사실을 다른 사람들에게 전달하는 과정 전체를 뜻합니다. 본 자료에서는 그래서 차트그리기 뿐만 아니라 Rmd를 활용한 문서화와 shiny를 활용한 앱 또한 시각화의 일부로써 다루고 있습니다.</p>
+<p>위 4개 과정을 모두 다룰 줄 알면, 이제 도구를 다룰줄 알게 되는 것입니다. 연구나 분석 능력은 또 별개이지 않나 싶습니다. 이 책을 지속적으로 업데이트해서 연구와 분석, 데이터 과학에 대해 모두 다루는 책이 되기를 희망합니다.</p>
+</div>
+<div id="data-for-class" class="section level2">
+<h2><span class="header-section-number">1.2</span> 준비된 데이터</h2>
+<p>수업을 위해 준비한 데이터는 <a href="http://jaesan.newstapa.org/#data">고위 공직자 재산</a>, <a href="http://www.sejongdata.com/">세종기업데이터</a>를 크롤링한 <a href="https://github.com/mrchypark/sejongFinData">깃헙 저장소</a>, outbrain이 <a href="https://www.kaggle.com/">캐글</a>에 공개한 <a href="https://www.kaggle.com/c/outbrain-click-prediction/data">사용자 웹 클릭 데이터</a> 입니다. <a href="https://www.kaggle.com/c/outbrain-click-prediction/data">웹 클릭 데이터</a>는 특별히 sql로 데이터 핸들링을 하는 것에 대한 경험을 확보하기 위해서 찾아보았으며 전체 데이터는 약 100GB에 달하는 방대한 양입니다. 수업에서 실제로 다루기 보다는 다루어 보실 수 있게 데이터를 준비했습니다.</p>
+</div>
+<div id="rstudio-intro" class="section level2">
+<h2><span class="header-section-number">1.3</span> R과 Rstudio</h2>
+<p>R은 <a href="https://cloud.r-project.org/">여기</a>에서 다운로드 할 수 있습니다. <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>은 R을 사용하기 위한 <a href="https://ko.wikipedia.org/wiki/%ED%86%B5%ED%95%A9_%EA%B0%9C%EB%B0%9C_%ED%99%98%EA%B2%BD">IDE</a>로 여러 편의성을 제공합니다. 자세한 사용법은 2장에서 소개합니다.</p>
+</div>
+<div id="github-intro" class="section level2">
+<h2><span class="header-section-number">1.4</span> git과 github</h2>
+<p><a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC%EB%9E%80%3F">git</a>은 코드의 버전관리 도구로 <a href="https://github.com/">github</a>의 인기에 힘입어 많은 개발자들이 사용하고 있습니다. 코드를 공개해 사용하면 무료이며, 이 책을 호스팅 하는 것처럼 각 아이디의 서브도메인을 무료로 사용할 수 있게 제공해줍니다. 수업에서는 자료 공유의 목적과 다른 사용자의 코드를 사용하는 수준으로 사용을 권장할 예정이며 깊게 공부하고 싶다면 <a href="https://rogerdudler.github.io/git-guide/index.ko.html">한글자료</a>가 많이 준비되어 있으니 참고하시기 바랍니다.</p>
+</div>
+<div id="database-for-class" class="section level2">
+<h2><span class="header-section-number">1.5</span> 사용할 데이터베이스</h2>
+<p>오픈소스인 <a href="https://downloads.mariadb.org/">mariaDB</a>을 사용하려고 합니다. 사용한 이유는 <a href="http://www.bloter.net/archives/172930">이 기사</a>가 잘 설명하는 것 같습니다. 기본적으로는 전통적인 RDBMS이면서 많은 사람들이 사용하는 제품이기 때문입니다. 수업에 사용하는 모든 서비스, 패키지 등 일체는 모두 1. 오픈 소스이고 2. 많은 사용자를 확보해서 활발히 발달하고 있으며 3. 참고할 자료가 많은 것을 선택하려고 노력했습니다. 데이터베이스의 설치는 <a href="http://pyonji.tistory.com/11">windows</a>, <a href="https://cpuu.postype.com/post/24270/">mac</a>을 참고해 주세요. mariaDB와 함께 인터페이스로 설치되는 <a href="https://www.heidisql.com/">HeidiSQL</a>은 데이터베이스를 관리하는데 사용하는 GUI 툴입니다. 맥에서는 WINE을 통해서 사용할 수 있다고 하는데, <a href="http://www.sequelpro.com/">Sequel Pro</a>라는 도구도 있고, 설치를 소개하는 <a href="http://wingsnote.com/22">블로그</a>가 있으니 참고하시기 바랍니다.</p>
+</div>
+<div id="docker-for-reproducible" class="section level2">
+<h2><span class="header-section-number">1.6</span> 환경 통일을 위한 도구 도커</h2>
+<p>수업에서 다루지는 않지만 설치나 다른 환경 세팅으로 인한 시간 소모를 줄이기 위해서 <a href="http://www.docker.com/">docker</a>를 사용할 수 있습니다. 수업 데이터가 준비되어 있는 마리아디비 도커 이미지를 준비하고 있습니다. 윈도우에서 하이퍼바이저(pro 버전 등에서 사용가능)가 있지 않은 경우 버추얼박스를 통해서 동작하므로 성능이 떨어질 수 있습니다.</p>
+</div>
+<div id="Colophon" class="section level2">
+<h2><span class="header-section-number">1.7</span> 정보</h2>
+<p>이 책의 소스는 <a href="https://github.com/mrchypark/data_camp_dabrp">여기</a>에서 확인하실 수 있으며 아래 주어진 R 패키지(및 종속 패키지)의 버전으로 제작되었습니다. 저작물의 재현을 위해서 필요합니다.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">package</th>
+<th align="left">*</th>
+<th align="left">version</th>
+<th align="left">date</th>
+<th align="left">source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">backports</td>
+<td align="left"></td>
+<td align="left">1.0.5</td>
+<td align="left">2017-01-18</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">bookdown</td>
+<td align="left"></td>
+<td align="left">0.3</td>
+<td align="left">2016-11-28</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">codetools</td>
+<td align="left"></td>
+<td align="left">0.2-15</td>
+<td align="left">2016-10-05</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">devtools</td>
+<td align="left"></td>
+<td align="left">1.12.0</td>
+<td align="left">2016-12-05</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">digest</td>
+<td align="left"></td>
+<td align="left">0.6.12</td>
+<td align="left">2017-01-27</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">evaluate</td>
+<td align="left"></td>
+<td align="left">0.10</td>
+<td align="left">2016-10-11</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">htmltools</td>
+<td align="left"></td>
+<td align="left">0.3.5</td>
+<td align="left">2016-03-21</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">htmlwidgets</td>
+<td align="left"></td>
+<td align="left">0.8</td>
+<td align="left">2016-11-09</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">jsonlite</td>
+<td align="left"></td>
+<td align="left">1.3</td>
+<td align="left">2017-02-28</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">knitr</td>
+<td align="left"></td>
+<td align="left">1.15.1</td>
+<td align="left">2016-11-22</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">magrittr</td>
+<td align="left"></td>
+<td align="left">1.5</td>
+<td align="left">2014-11-22</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">memoise</td>
+<td align="left"></td>
+<td align="left">1.0.0</td>
+<td align="left">2016-01-29</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">Rcpp</td>
+<td align="left"></td>
+<td align="left">0.12.10</td>
+<td align="left">2017-03-19</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">rmarkdown</td>
+<td align="left"></td>
+<td align="left">1.3</td>
+<td align="left">2016-12-21</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">rprojroot</td>
+<td align="left"></td>
+<td align="left">1.2</td>
+<td align="left">2017-01-16</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">stringi</td>
+<td align="left"></td>
+<td align="left">1.1.2</td>
+<td align="left">2016-10-01</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">stringr</td>
+<td align="left"></td>
+<td align="left">1.2.0</td>
+<td align="left">2017-02-18</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">visNetwork</td>
+<td align="left">*</td>
+<td align="left">1.0.3</td>
+<td align="left">2016-12-22</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="odd">
+<td align="left">withr</td>
+<td align="left"></td>
+<td align="left">1.0.2</td>
+<td align="left">2016-06-20</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+<tr class="even">
+<td align="left">yaml</td>
+<td align="left"></td>
+<td align="left">2.1.14</td>
+<td align="left">2016-11-12</td>
+<td align="left">CRAN (R 3.3.3)</td>
+</tr>
+</tbody>
+</table>
+<p>이 책은 <a href="https://rcoholic.github.io/">박찬엽</a>이 Sunday, April 02, 2017 08:58:15 PM UTC에 마지막으로 업데이트 했습니다.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rstudio.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": true,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mrchypark/data_camp_dabrp/edit/master/intro.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

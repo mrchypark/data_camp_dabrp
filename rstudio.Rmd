@@ -17,7 +17,7 @@ IDE란 _통합 개발 환경_의 영어 줄임말로 텍스트 편집이외에�
 
 IDE는 메모장 처럼 가벼운 [Sublime Text][201]부터 본격적인 [Visual Studio][202]까지 다양합니다. 개발자들이 많이 사용하는 IDE를 몇개 소개하겠습니다.
 
-![Sublime Text](http://microsoft.github.io/RTVS-docs/media/RTVS-Installation-data-scientist-layout-result.png)
+![Sublime Text](https://www.drupal.org/files/sublime.png)
 [Sublime Text][201]는 꽤 오랫동안 사랑받은 텍스트 에디터 형 IDE입니다. 몇 가지 설정을 진행하면 R 코드도 실행하게 만들 수 있어 기존 개발자 분들 중 R을 공부하실 때 사용하는 경우가 종종 있습니다.
 
 ![Atom](https://joshuajangblog.files.wordpress.com/2016/09/atom_editor.png?w=840)
@@ -36,28 +36,57 @@ IDE는 메모장 처럼 가벼운 [Sublime Text][201]부터 본격적인 [Visual
 
 RStudio는 처음부터 R을 지원하기 때문에 설치 이외의 작업을 할 필요 없고, 사용자층이 많아 사용법을 배우기도 좋고 검색도 쉽게 됩니다. 그래서 IDE를 RStudio로 선정하고 기능에 대해 설명하겠습니다. 여기 설명하는 기능은 RStudio만의 기능이 아니며 다른 IDE도 구성에 따라 같은 기능 혹은 더 나은 기능을 사용할 수 있습니다.
 ![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-run.png)
-처음 실행하면 전부 4개면(pane)으로 구성되어 있으며 각부의 이름은 위 그림과 같습니다.
+처음 실행하면 전부 4개면(pane)으로 구성되어 있으며 각부의 이름 은 위 그림과 같습니다. source  창은 코드와 그 순서를 저장하는 script를 보여주는 곳입니다. console 창은 R의 엔진과 대화(!)를 할 수 있는 공간합니다. 명령어를 입력하면, 바로 콘솔창이 대답을 줍니다. console 창에 직접 입력을 해도 되고, source 창의 코드를 여러 방법을 통해서 console 창으로 전달해서 결과를 받을 수 도 있습니다. environment 창(이하 env 창)은 console 창에 입력이 되어서 현재 메모리에 기록되어 있는 상황을 보여주는 곳입니다. R은 변수가 메모리에 저장되어 있는 상태여야만 변수로써 사용할 수 있습니다. 그래서 env 창에서는 그렇게 메모리에 저장되어 있는 변수들의 이름과 내용을 확인할 수 있습니다. help 창은 window 탐색기와 같은 files, 차트 결과를 보여주는 plots, 설치나 불러온 패키지 상태를 보는 packages, 도움말을 보는 help 등 다양한 창으로 구성되어 있습니다.
+
+아래에서 하나하나 중요한 기능을 보겠습니다.
 
 
 ### source 창 {#source-pane}
-![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-source.png)
+
+![source창](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-source.png)
+
+source 창에서 가장 중요한 기능은 `ctrl+enter` 입니다. `ctrl+enter`는 커서가 위치한 줄의 코드를 console 창으로 전달해서 R 엔진이 결과물을 주도록 하는 단축키입니다. 코드를 드래그해서 선택한 만큼의 코드를 실행할 때도 같은 단축키를 사용합니다. `File > New File` 로 들어가시면 여러 종류의 파일을 만들 수 있는데, 각 파일에 따라 다른 추가 기능들이 나오기도 합니다.
 
 ### console 창 {#console-pane}
-![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-console.png)
+
+![console창](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-console.png)
+console 창은 실제로 실행이 이루어지는 곳입니다. 여기서 가장 중요한 것은 아래 보이는 `workding directory`위치 입니다.
+
+![workingdir](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-console-wd.png)
+R도 다른 개발 언어들 처럼 R 엔진이 실행되는 폴더의 위치가 지정되어 있습니다. R 엔진이 실행되는 위치를 `workding directory`라고 합니다. 그래서 파일을 불러오거나 하는 명령어는 `workding directory`를 기준으로 실행이 됩니다. 폴더의 위치를 입력하는 양식을 보통 `경로`라는 단어를 사용하고, 편의에 따라 `절대경로`와 `상대경로`를 사용합니다. `workding directory`가 문제가 되는 경우는 `상대경로`일 때 입니다. 상대경로는 `.` 이라는 표시를 `현재 폴더`라는 뜻으로 사용합니다. `workding directory`를 잘 모르고 실행하다 문제가 생기면 가장 해결하기 좋은 방법은 절대경로를 사용하는 것입니다. 혼자 사용하면 문제가 없지만 같이 사용하거나 다른 환경에서 사용해야 할 경우는 매번 경로를 수정해야 되는 문제가 생깁니다. 그렇다면 `상대경로`로 작성하되 동작방식을 하는게 중요합니다. 보통은 파일을 실행하는 위치로 결정되는데, console의 경우 처음 언어 엔진을 실행한 위치로 결정되기도 합니다. 처음 시작하시는 분들이 크게 하는 실수는 help 창 부분에서 사용하는 files에서 보는 위치로 `workding directory`가 계속 따라 바뀌는 것으로 오해하는 것입니다. files 창 내에서 실행하는 것 이외의 실행들은 대부분 위 사진의 위치에 있는 `workding directory`에서 실행된다고 알고 계시는 것이 중요합니다.
+
 
 ### environment 창 {#env-pane}
-![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-env.png)
+
+![env창](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-env.png)
+
+environment 창은 Environment 창과 History 창, git을 사용한다면 git 창이 보입니다. Build 창이 보일때가 있는데 이것은 package를 만들거나 소스를 가져와 컴파일할 때 사용하는 창으로 사용할 일이 있으시면 [R packages][207]을 참고하세요. env 창은 위에서 설명한 것 처럼 메모리에 등록한 변수들을 각 이름과 내용에 대해 간략히 보여줍니다. console 창에 `ls()`를 입력하면 나타나는 등록된 변수들의 이름과 같습니다. HIstory 창은 console 창에 입력한 순서대로 기록을 해주는 공간입니다. 이 곳에서는 명령어를 클릭한 후 To Console과 To Source를 사용할 수 있습니다. 어떻게 동작하는지는 한번 실행해봐주세요. git 창은 git의 기능을 GUI로 사용할 수 있게 제공합니다. commit, pull, push, log 등의 기능을 사용할 수 있습니다. 다음 장에서 git과 github에 대해 간단히 사용하는 법을 설명드리겠습니다.
 
 ### help 창 {#help-pane}
-![실행화면](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-help.png)
 
+![help창](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-help.png)
+help 창은 다른 곳에 비해 다양한 기능을 수행합니다. files는 윈도우에서의 탐색기와 같이 파일들을 찾아볼 수 있습니다. 조금 불편하긴 하지만 이름 바꾸기, 복사, 이동 등을 할 수 있습니다. 그리고 메모리에 올릴 데이터(csv, xlsx 등)를 왼쪽 클릭하면 아래 화면과 같이 view와 import를 할 수 있습니다. 물론 저는 명령어로 불러오는 것을 권장합니다.
+![gui-import](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-import.png)
+plot 창은 plot과 그 계열의 차트나 그림을 그리는 명령어의 결과물이 표시되는 곳입니다. 전에 그렸던 결과물이 계속 저장되서 전에 그렸던 그림을 다시 볼 수 도 있습니다.
 
+packages 창은 현재 시스템에 설치되어 있는 package들을 리스트로 보여주고, 현재 불러와져서 사용할 수 있는 package들을 체크 박스로 표시해줍니다. install, update 버튼도 있습니다. Packrat은 패키지 의존성 관리 도구로써 패키지들을 프로젝트 별로 독립적으로 관리해서 다른 환경에서 사용할 때 최대한 실행 환경을 유지할 수 있게 도와주는 역할을 합니다.
+
+help 창은 `help(함수명)`, `?함수명` 같이 함수의 설명서를 요구하는 명령어를 console 창에 입력했을 때 설명 문서를 보여주는 곳입니다. help에 대해서는 다음 다음장에서 다루도록 하겠습니다.
+
+각 세부적인 기능에 대해 계속 업데이트 하겠습니다.
 
 ## 프로젝트와 버전관리 {#project-git}
 
+RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형태의 IDE 입니다. 그렇다 보니 RStudio에서 직접 프로젝트라는 기능을 제공합니다. 프로젝트란 어떤 분석 프로젝트 단위 하나를 의미하며 그 프로젝트를 관리하는 것을 도와주는 도구들을 제공합니다. 
+
 ### 폴더와 프로젝트 {#use-project}
 
+가장 간단하게는 `.proj` 파일을 생성하는 것입니다. 왼쪽 위에 **File > New Project > New Diractory > Empty Project** 를 선택하신 후 폴더 이름을 입력하고 프로젝트를 만듭니다. 
+![proj](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-proj.png)
+그러면 프로젝트 이름과 같은 폴더가 만들어 지고 그 안에 `프로젝트이름.porj`파일이 함께 생성됩니다. `.proj` 파일은 **Tools > Project Options**에서 조절할 수 있는 정보들을 저장하고 있습니다. 그리고 더블 클릭을 통해 프로젝트을 오픈하면서 RStudio를 실행시킬 수 있습니다. 또한 `workding directory`를 프로젝트 폴더로 자동 지정해 줍니다. 프로젝트 내의 코드 작업물을 모두 `상대경로`를 편하게 사용할 수 있게 해줍니다. 다른 사람들에게 공유할 때 도 폴더 째로 공유하고, `.proj`파일로 실행하면 다른 곳에서도 어느 정도 코드가 동작하도록 해줍니다.
+
 ### 버전관리도구 git {#introduce-git}
+
 
 ### 오픈소스와 github {#introduce-github}
 
@@ -80,3 +109,4 @@ RStudio는 처음부터 R을 지원하기 때문에 설치 이외의 작업을 �
 [204]: https://atom.io/
 [205]: https://code.visualstudio.com/
 [206]: https://nuclide.io/
+[207]: http://r-pkgs.had.co.nz/

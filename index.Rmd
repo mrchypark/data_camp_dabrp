@@ -5,9 +5,6 @@ date: "2017-04-06"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 documentclass: book
-output:
-  html_document:
-    self_contained: false
 ---
 # 머리말 {-}
 
@@ -20,7 +17,6 @@ output:
  이 책은 그 중 2단계인 정제와 4단계인 시각화에 초점이 맞춰져 있습니다. 계속 업데이트되므로 정보 챕터 하단에 업데이트 날짜를 확인하세요.
 
  저작물 라이선스로 [크리에이티브 커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))][8]를 따릅니다.
-
 
 [1]: http://www.fastcampus.co.kr
 [2]: http://www.fastcampus.co.kr/category_data_camp/
