@@ -125,7 +125,7 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 위와 같은 과정을 통해 `github`이 동작합니다. `github`은 `git`의 인기와 공개 저장소의 무제한 제공으로 세계에서 가장 인기있는 서비스가 되었고, 대부분의 오픈소스가 저장되고 개발되는 공간이 되었습니다. 오픈소스는 라이선스를 잘 지킨다면 소스코드를 사용해도 좋다고 선언한 코드들입니다. 많은 분들이 자신들의 코드를 공개하고, 결과물을 공유합니다. RStudio 또한 [코드][210]를 `github`에 공개하고 관리하고 있습니다. RStudio는 조금 복잡한 라이선스로 선언해서 편하게 사용할 수 있는 것은 아니지만 이렇게 코드를 공개하고 라이선스를 선언한 것을 오픈소스라고 합니다. 
 
 ### github과 패키지 생태계 {#packages-with-github}
-![packagerepo](https://i0.wp.com/rud.is/b/wp-content/uploads/2017/02/hieRarchy.png?zoom=2&resize=456%2C393&ssl=1)
+![packagerepo](https://i0.wp.com/rud.is/b/wp-content/uploads/2017/02/hieRarchy.png?zoom=2&resize=456%2C393&ssl=1 "출처 : https://www.r-bloggers.com/on-watering-holes-trust-defensible-systems-and-data-science-community-security/")
 R-core 팀이 관리하는 패키지 배포 서버인 [cran][211]은 매우 엄격한 패키지 사전 검열을 합니다. 그렇기 때문에 console에서 `install.packeges()` 한번에 편하게 패키지를 설치하고 사용할 수 있는 것입니다. 최근에는 사전 검열을 통과하기 전 버전의 패키지들이 코드 관리를 위해 `github`에 저장소를 운영하기도 합니다. `github`은 인기있는 저장소이기 때문에 구글 검색을 통해 사용자들이 유입되기 좋은 곳입니다. 특히 패키지 운영을 위한 홈페이지, wiki, readme 파일 관리등의 기능을 충분히 지원하는 등 좋은 점이 많습니다. 많은 R 패키지 개발자들도 코드 관리를 `github`에서 하고 있습니다. 최근에는 개발 버전은 `github`에, 안정화 버전은 cran에 등록해서 사용할 수 있게 하는 문화가 자리잡혀 있습니다. 
 
 ### 실습 진행
