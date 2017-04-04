@@ -133,7 +133,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="rstudio.html"><a href="rstudio.html#project-git"><i class="fa fa-check"></i><b>2.3</b> 프로젝트와 버전관리</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="rstudio.html"><a href="rstudio.html#use-project"><i class="fa fa-check"></i><b>2.3.1</b> 폴더와 프로젝트</a></li>
 <li class="chapter" data-level="2.3.2" data-path="rstudio.html"><a href="rstudio.html#introduce-git"><i class="fa fa-check"></i><b>2.3.2</b> 버전관리도구 git</a></li>
-<li class="chapter" data-level="2.3.3" data-path="rstudio.html"><a href="rstudio.html#introduce-github"><i class="fa fa-check"></i><b>2.3.3</b> 오픈소스와 github</a></li>
+<li class="chapter" data-level="2.3.3" data-path="rstudio.html"><a href="rstudio.html#introduce-github"><i class="fa fa-check"></i><b>2.3.3</b> github</a></li>
+<li class="chapter" data-level="2.3.4" data-path="rstudio.html"><a href="rstudio.html#packages-with-github"><i class="fa fa-check"></i><b>2.3.4</b> github과 패키지 생태계</a></li>
+<li class="chapter" data-level="2.3.5" data-path="rstudio.html"><a href="rstudio.html#-"><i class="fa fa-check"></i><b>2.3.5</b> 실습 진행</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="rstudio.html"><a href="rstudio.html#help-page"><i class="fa fa-check"></i><b>2.4</b> 도움말</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="rstudio.html"><a href="rstudio.html#introduce-help"><i class="fa fa-check"></i><b>2.4.1</b> 도움말 설명</a></li>
@@ -236,7 +238,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="https://www.drupal.org/files/sublime.png" alt="Sublime Text" /> <a href="https://www.sublimetext.com/">Sublime Text</a>는 꽤 오랫동안 사랑받은 텍스트 에디터 형 IDE입니다. 몇 가지 설정을 진행하면 R 코드도 실행하게 만들 수 있어 기존 개발자 분들 중 R을 공부하실 때 사용하는 경우가 종종 있습니다.</p>
 <p><img src="https://joshuajangblog.files.wordpress.com/2016/09/atom_editor.png?w=840" alt="Atom" /> <a href="https://atom.io/">Atom</a>은 웹기술을 활용해서 어느 컴퓨터에서든 사용할 수 있는 범용성을 가진 IDE입니다. 가장 큰 강점은 plugin 제작이 쉬워서 사용자층이 폭발적으로 늘어나서 최근 많은 개발자들이 사용하고 있습니다. 대부분 웹 개발에 사용되며 오픈소스여서 비용이 발생하지 않는 장점이 있습니다.</p>
 <p><img src="https://msdnshared.blob.core.windows.net/media/2016/03/vsc1.jpg" alt="Vs Code" /> <a href="https://code.visualstudio.com/">Vs Code</a>는 Atom의 소스를 사용해서 마이크로소프트에서 수정한 IDE입니다. 여전히 오픈소스이며 큰 기업이 지원하는 만큼 기능 정리를 통한 최적화가 강점입니다. github 연동, 자동 업데이트 등 사용자 편의에 조금 더 중점을 두었습니다.</p>
-<p><img src="https://nuclide.io/static/images/docs/promo-debugger.png" alt="Nuclide" /> <a href="https://nuclide.io/">Nuclide</a>도 역시 Atom의 소스를 사용해서 페이스북이 만든 IDE입니다. 역시 오픈소스이며 remote Development를 기본 제공하는 것이 큰 특징입니다. 페이스북 내에서 사용하기 위해 만들어졌다보니 웹개발에 조금더 최적화되어 있습니다.</p>
+<p><img src="https://nuclide.io/static/images/docs/promo-debugger.png" alt="Nuclide" /> <a href="https://nuclide.io/">Nuclide</a>도 역시 Atom의 소스를 사용해서 페이스북이 만든 IDE입니다. 역시 오픈소스이며 remote Development를 기본 제공하는 것이 특징입니다. 페이스북 내에서 사용하기 위해 만들어졌다보니 웹개발에 조금더 최적화되어 있습니다.</p>
 <p><img src="http://microsoft.github.io/RTVS-docs/media/RTVS-Installation-data-scientist-layout-result.png" alt="RTVS" /> 마이크로 소프트가 레볼루션 R을 인수하면서 R 생태계 흡수를 위해 여러 기능들을 지원하는데요. <a href="http://microsoft.github.io/RTVS-docs/installation.html">RTVS</a>이 대표적입니다. <a href="https://www.visualstudio.com/">Visual Studio</a>는 꽤 오랫동안 개발자들이 사용한 IDE입니다. IDE라는 말이 어울리게 수GB의 용량을 차지하고 매우 많은 기능들을 제공합니다. <a href="http://microsoft.github.io/RTVS-docs/installation.html">RTVS</a>는 이런 <a href="https://www.visualstudio.com/">Visual Studio</a>에서 R을 사용할 수 있게 만든 기능으로 무료로 공개한 Visual Studio 2015 커뮤니티 버전에 설치하여 R의 사용환경을 구성할 수 있습니다.</p>
 </div>
 </div>
@@ -278,17 +280,58 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형태의 IDE 입니다. 그렇다 보니 RStudio에서 직접 프로젝트라는 기능을 제공합니다. 프로젝트란 어떤 분석 프로젝트 단위 하나를 의미하며 그 프로젝트를 관리하는 것을 도와주는 도구들을 제공합니다.</p>
 <div id="use-project" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> 폴더와 프로젝트</h3>
-<p>가장 간단하게는 <code>.proj</code> 파일을 생성하는 것입니다. 왼쪽 위에 <strong>File &gt; New Project &gt; New Diractory &gt; Empty Project</strong> 를 선택하신 후 폴더 이름을 입력하고 프로젝트를 만듭니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-proj.png" alt="proj" /> 그러면 프로젝트 이름과 같은 폴더가 만들어 지고 그 안에 <code>프로젝트이름.porj</code>파일이 함께 생성됩니다. <code>.proj</code> 파일은 <strong>Tools &gt; Project Options</strong>에서 조절할 수 있는 정보들을 저장하고 있습니다. 그리고 더블 클릭을 통해 프로젝트을 오픈하면서 RStudio를 실행시킬 수 있습니다. 또한 <code>workding directory</code>를 프로젝트 폴더로 자동 지정해 줍니다. 프로젝트 내의 코드 작업물을 모두 <code>상대경로</code>를 편하게 사용할 수 있게 해줍니다. 다른 사람들에게 공유할 때 도 폴더 째로 공유하고, <code>.proj</code>파일로 실행하면 다른 곳에서도 어느 정도 코드가 동작하도록 해줍니다.</p>
+<p>가장 간단하게는 <code>.proj</code> 파일을 생성하는 것입니다. 왼쪽 위에 <strong>File &gt; New Project &gt; New Diractory &gt; Empty Project</strong> 를 선택하신 후 폴더 이름을 입력하고 프로젝트를 만듭니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-proj.png" alt="proj" /> 그러면 프로젝트 이름과 같은 폴더가 만들어 지고 그 안에 <code>프로젝트이름.porj</code>파일이 함께 생성됩니다. <code>.proj</code> 파일은 <strong>Tools &gt; Project Options</strong>에서 조절할 수 있는 정보들을 저장하고 있습니다. 그리고 더블 클릭을 통해 프로젝트을 오픈하면서 RStudio를 실행시킬 수 있습니다. 또한 <code>workding directory</code>를 프로젝트 폴더로 자동 지정해 줍니다. 프로젝트 내의 코드 작업물을 모두 <code>상대경로</code>를 편하게 사용할 수 있게 해줍니다. 다른 사람들에게 공유할 때도 폴더 째로 공유하고, <code>.proj</code>파일로 실행하면 다른 곳에서도 어느 정도 코드가 동작하는데 경로나 설정을 걱정하지 않을 수 있습니다.</p>
+<div id="Packrat" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> 재현성을 위한 패키지 의존성 관리도구 Packrat</h4>
+<p>각 프로젝트에서 사용하는 패키지를 프로젝트 폴더내에 관리할 수 있게 해줌으로써 더욱 코드 재현성을 보장하는 관리도구입니다. <strong>Tools &gt; Project Options</strong> 하위에 옵션이 있으며 체크박스를 체크하는 것으로 사용할 수 있습니다. 처음부터 프로젝트를 만들 때 선택할 수도 있습니다. 자세한 안내는 <a href="http://rstudio.github.io/packrat/">여기</a>를 참고하세요. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-packrat.png" alt="packrat" /></p>
+</div>
 </div>
 <div id="introduce-git" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> 버전관리도구 git</h3>
+<div id="intro-vcs" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> 버전관리도구란</h4>
+<center>
+<img src="http://mblogthumb2.phinf.naver.net/20160711_237/tmondev_1468203567567d9jTn_PNG/1.png?type=w800" alt="git" />
+</center>
+<p><code>git</code>은 현재 개발자들에게 가장 인기있는 버전관리도구 입니다. 버전관리도구란 파일의 변경사항을 저장하는 도구로 word 같은 곳에서 <code>Ctrl+z</code> 같은 것(되돌리기)을 수행하기 위해 변경이 생길때 마다 저장하는 것과 비슷한 기능을 수행합니다. 다른 점이라면 프로젝트와 같이 폴더별로 관리된다는 점, 변경상태에 대해서 추적할 파일을 git에게 알려주는 행위를 해야 한다는 점, 저장을 일부러 해야 한다는 점 정도가 차이점이라고 볼 수 있습니다. 각각 <code>git init</code>, <code>git add</code>, <code>git commit</code> 명령어에 대응되는 개념입니다.</p>
+</div>
+<div id="git-start" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> git으로 버전 관리하기</h4>
+<p><img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-git-init.png" alt="gitinit" /> <code>git init</code>은 명령을 실행한 위치의 폴더가 <code>git</code>이 관리하는 프로젝트 폴더임을 선언하는 명령어입니다. 위 그림처럼 .git이라는 폴더가 생기는데 여기에 버전관리를 위한 여러 정보들을 저장합니다. 앞에 .이 붙은 폴더는 unix 계열 OS에서 숨김파일을 뜻하고, 윈도우에서도 숨김 파일 옵션으로 생성됩니다. 숨김 파일을 보는 옵션을 설정하시면 확인하실 수 있습니다. 어쨌든 <code>git</code>을 사용하는 첫번째 방법을 배웠습니다.</p>
+</div>
+<div id="git-state" class="section level4">
+<h4><span class="header-section-number">2.3.2.3</span> git이 이해하는 세 가지 상태</h4>
+<p><code>git</code>은 폴더 내에 있는 파일들을 전부 3가지 상태로 구분합니다. 그것은 <code>tracked</code>, <code>modified</code>, <code>staged</code>입니다. 각각 살펴보겠습니다.</p>
+<center>
+<img src="https://git-scm.com/figures/18333fig0201-tn.png" title="출처 : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0" alt="gitstate" />
+</center>
+<p><code>tracked</code>는 말 그대로 파일이 추적되고 있는 상태다라는 뜻합니다. <code>git</code>이 추적할 파일을 지정해 주는 <code>git add [파일 or 폴더명]</code>을 통해 <code>untracked</code> 파일이 <code>tracked</code> 파일로 상태가 변경되고 <code>git</code>의 추적이 시작됩니다. 과거 용량 등의 관리가 중요할 때 의 기능으로 이해하고 있으며 최근의 <code>git</code>을 사용하기 위한 추가적인 지원도구들은 대부분 자동으로 <code>git add .</code>을 진행하여 폴더내의 모든 파일을 계속 <code>tracked</code> 상태를 유지해 줍니다.</p>
+<p><code>tracked</code> 상태의 파일을 수정하면 <code>modified</code> 상태가 됩니다. <code>track</code> 이 시작되면 파일의 <code>track</code> 시작할 때의 상태를 저장해 두는데, 그것과 비교해서 다른 점이 발생하면 <code>modified</code> 상태로 <code>git</code>은 인지하고 있습니다. 하지만 아직 <code>git</code>이 달라진 점을 저장하지 않습니다. 달라진 것만 알고 있는 상태입니다.</p>
+<p><code>modified</code> 상태의 파일은 아직 <code>commit</code>할 수 없습니다. <code>stage</code> 위에 올려서 <code>commit</code> 할 수 있는 상태로 만들어야 합니다. 즉, <code>staged</code> 상태는 <code>commit</code>을 할 대상 파일로 지정되었다는 뜻입니다. <code>commit</code>이란 처음 생성된 상태나 이전 <code>commit</code>된 상태와 현재 상태를 비교해서 달라진 점을 저장하는 것을 뜻합니다. 이 때 <code>git</code>은 달라진 점만 저장합니다. 저장하면서 주석과 같은 기능을 하는 <code>commit message</code>를 작성해 둘 수 있습니다. 이 메세지를 통해서 코드에서 주요하게 달라진 점이 무엇인지를 파악할 수 있습니다.</p>
+<p>이렇게 <code>git</code>은 코드의 상태를 정의하고, <code>commit</code>을 통해 변경되는 지점들을 저장합니다. 그럼 <code>git checkout</code>을 이용해 저장된 <code>commit</code>의 위치로 자유롭게 움직일 수 있습니다.</p>
+</div>
+<div id="local-remote" class="section level4">
+<h4><span class="header-section-number">2.3.2.4</span> 로컬과 리모트</h4>
+<p><code>git</code>은 협업을 위한 도구이기도 합니다. 그래서 직접 작업하는 프로젝트 공간인 <code>local</code>과 다른 사람들과 공유하기 위한 공동 프로젝트 공간인 <code>remote</code>가 있습니다. 모두 <code>repository</code>(줄여서 <code>repo</code>) 또는 <code>저장소</code>라는 표현을 씁니다. <code>remote</code>에 <code>git</code>으로 관리되고 있는 프로젝트가 있다고 생각해 봅시다. 그 <code>remote repo</code>의 주소를 가지고 <code>local</code>에 <code>git clone [remote repo 주소]</code>명령어로 복사를 합니다. 그리고 <code>local</code>에서 새로운 파일도 만들고 코드도 작성한 후에 위에서 말한 것 처럼 <code>git add</code>로 파일을 등록하고, <code>git commit</code>을 통해 변경 사항들을 저장합니다. 이제 <code>local</code>에 저장된 변경부분을 <code>remote</code>에 기록을 해야 하는데 <code>git push</code>라고 합니다.</p>
+</div>
 </div>
 <div id="introduce-github" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> 오픈소스와 github</h3>
+<h3><span class="header-section-number">2.3.3</span> github</h3>
+<p><code>github</code>은 현재 가장 인기있는 <code>git remote repository service</code>입니다. 많은 분들이 이렇게 헷갈리시는데, <code>github</code>는 정확히 <code>git</code>과 같은 것이 아닙니다. <code>github</code>은 <code>git</code>에서의 <code>remote repo</code>를 저장할 수 있는 공간을 제공하는 서비스입니다. 비슷한 서비스로는 <a href="https://bitbucket.org/product">bitbuket</a>,<a href="http://gitlab.com/">gitlab</a> 등이 있습니다. <code>git</code>과 비슷한 다른 버전관리 도구를 지원하기도 합니다. <code>github</code>은 <code>git</code>과 달리 <code>remote repo</code>끼리 <code>clone</code>과 <code>push</code>와 같은 기능을 수행하는 새로운 옵션을 제공합니다. 바로 <code>fork</code>와 <code>pull request</code>입니다. SNS처럼 좋아요를 의미하는 <code>star</code>도 있습니다. <code>fork</code>는 공유하기와 비슷한데, 자신의 <code>remote repo</code>에 다른 사람의 <code>remote repo</code>를 복사해 오는 것입니다. <code>git clone</code>과 비슷합니다. <code>github</code>내의 <code>remote repo</code>끼리 동작하는 것이기 때문에 <code>remote repo</code>와 <code>local repo</code>가 상호작용하는 동작과 다른 명령어를 사용합니다. <code>pull request</code>는 <code>fork</code>로 연결되어 있는 <code>remote repo</code>에 자신의 <code>remote repo</code>에 있는 코드를 <code>pull</code> 해가라고 요청하는 것입니다. <code>fork</code>를 한 후 수정한 코드를 원래 주인의 <code>remote repo</code>에 적용하는 것을 요청하는 명령입니다.</p>
+<p>위와 같은 과정을 통해 <code>github</code>이 동작합니다. <code>github</code>은 <code>git</code>의 인기와 공개 저장소의 무제한 제공으로 세계에서 가장 인기있는 서비스가 되었고, 대부분의 오픈소스가 저장되고 개발되는 공간이 되었습니다. 오픈소스는 라이선스를 잘 지킨다면 소스코드를 사용해도 좋다고 선언한 코드들입니다. 많은 분들이 자신들의 코드를 공개하고, 결과물을 공유합니다. RStudio 또한 <a href="https://github.com/rstudio/rstudio">코드</a>를 <code>github</code>에 공개하고 관리하고 있습니다. RStudio는 조금 복잡한 라이선스로 선언해서 편하게 사용할 수 있는 것은 아니지만 이렇게 코드를 공개하고 라이선스를 선언한 것을 오픈소스라고 합니다.</p>
+</div>
+<div id="packages-with-github" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> github과 패키지 생태계</h3>
+<p><img src="https://i0.wp.com/rud.is/b/wp-content/uploads/2017/02/hieRarchy.png?zoom=2&amp;resize=456%2C393&amp;ssl=1" title="출처 : https://www.r-bloggers.com/on-watering-holes-trust-defensible-systems-and-data-science-community-security/" alt="packagerepo" /> R-core 팀이 관리하는 패키지 배포 서버인 <a href="https://cran.r-project.org/">cran</a>은 매우 엄격한 패키지 사전 검열을 합니다. 그렇기 때문에 console에서 <code>install.packeges()</code> 한번에 편하게 패키지를 설치하고 사용할 수 있는 것입니다. 최근에는 사전 검열을 통과하기 전 버전의 패키지들이 코드 관리를 위해 <code>github</code>에 저장소를 운영하기도 합니다. <code>github</code>은 인기있는 저장소이기 때문에 구글 검색을 통해 사용자들이 유입되기 좋은 곳입니다. 특히 패키지 운영을 위한 홈페이지, wiki, readme 파일 관리등의 기능을 충분히 지원하는 등 좋은 점이 많습니다. 많은 R 패키지 개발자들도 코드 관리를 <code>github</code>에서 하고 있습니다. 최근에는 개발 버전은 <code>github</code>에, 안정화 버전은 cran에 등록해서 사용할 수 있게 하는 문화가 자리잡혀 있습니다.</p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.3.5</span> 실습 진행</h3>
 </div>
 </div>
 <div id="help-page" class="section level2">
 <h2><span class="header-section-number">2.4</span> 도움말</h2>
+<p><a href="https://cran.r-project.org/">cran</a>에 등록된 패키지들은 모두 도움말이 충분히 작성되어 있습니다. <code>Vignette</code>라는 세부 패키지 설명이나 아예 블로그 등에서 패키지 사용법이나 작업 순서들을 설명한 패키지도 있습니다. 모두 검색을 통해서 찾아야 되긴 하지만 최소한의 설명서가 내장되어 있으니 그 것을 먼저 확인하는 것이 좋습니다. 도움말은 <code>?함수명</code>이나 <code>help(함수명)</code>으로 실행할 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?함수명</code></pre></div>
 <div id="introduce-help" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> 도움말 설명</h3>
 </div>

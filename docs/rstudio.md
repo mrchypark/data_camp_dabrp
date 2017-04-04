@@ -28,7 +28,7 @@ IDE는 메모장 처럼 가벼운 [Sublime Text][201]부터 본격적인 [Visual
 [Vs Code][205]는 Atom의 소스를 사용해서 마이크로소프트에서 수정한 IDE입니다. 여전히 오픈소스이며 큰 기업이 지원하는 만큼 기능 정리를 통한 최적화가 강점입니다. github 연동, 자동 업데이트 등 사용자 편의에 조금 더 중점을 두었습니다.
 
 ![Nuclide](https://nuclide.io/static/images/docs/promo-debugger.png)
-[Nuclide][206]도 역시 Atom의 소스를 사용해서 페이스북이 만든 IDE입니다. 역시 오픈소스이며 remote Development를 기본 제공하는 것이 큰 특징입니다. 페이스북 내에서 사용하기 위해 만들어졌다보니 웹개발에 조금더 최적화되어 있습니다.
+[Nuclide][206]도 역시 Atom의 소스를 사용해서 페이스북이 만든 IDE입니다. 역시 오픈소스이며 remote Development를 기본 제공하는 것이 특징입니다. 페이스북 내에서 사용하기 위해 만들어졌다보니 웹개발에 조금더 최적화되어 있습니다.
 
 ![RTVS](http://microsoft.github.io/RTVS-docs/media/RTVS-Installation-data-scientist-layout-result.png)
 마이크로 소프트가 레볼루션 R을 인수하면서 R 생태계 흡수를 위해 여러 기능들을 지원하는데요. [RTVS][203]이 대표적입니다. [Visual Studio][202]는 꽤 오랫동안 개발자들이 사용한 IDE입니다. IDE라는 말이 어울리게 수GB의 용량을 차지하고 매우 많은 기능들을 제공합니다. [RTVS][203]는 이런 [Visual Studio][202]에서 R을 사용할 수 있게 만든 기능으로 무료로 공개한 Visual Studio 2015 커뮤니티 버전에 설치하여 R의 사용환경을 구성할 수 있습니다.
@@ -84,15 +84,62 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 
 가장 간단하게는 `.proj` 파일을 생성하는 것입니다. 왼쪽 위에 **File > New Project > New Diractory > Empty Project** 를 선택하신 후 폴더 이름을 입력하고 프로젝트를 만듭니다. 
 ![proj](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-proj.png)
-그러면 프로젝트 이름과 같은 폴더가 만들어 지고 그 안에 `프로젝트이름.porj`파일이 함께 생성됩니다. `.proj` 파일은 **Tools > Project Options**에서 조절할 수 있는 정보들을 저장하고 있습니다. 그리고 더블 클릭을 통해 프로젝트을 오픈하면서 RStudio를 실행시킬 수 있습니다. 또한 `workding directory`를 프로젝트 폴더로 자동 지정해 줍니다. 프로젝트 내의 코드 작업물을 모두 `상대경로`를 편하게 사용할 수 있게 해줍니다. 다른 사람들에게 공유할 때 도 폴더 째로 공유하고, `.proj`파일로 실행하면 다른 곳에서도 어느 정도 코드가 동작하도록 해줍니다.
+그러면 프로젝트 이름과 같은 폴더가 만들어 지고 그 안에 `프로젝트이름.porj`파일이 함께 생성됩니다. `.proj` 파일은 **Tools > Project Options**에서 조절할 수 있는 정보들을 저장하고 있습니다. 그리고 더블 클릭을 통해 프로젝트을 오픈하면서 RStudio를 실행시킬 수 있습니다. 또한 `workding directory`를 프로젝트 폴더로 자동 지정해 줍니다. 프로젝트 내의 코드 작업물을 모두 `상대경로`를 편하게 사용할 수 있게 해줍니다. 다른 사람들에게 공유할 때도 폴더 째로 공유하고, `.proj`파일로 실행하면 다른 곳에서도 어느 정도 코드가 동작하는데 경로나 설정을 걱정하지 않을 수 있습니다.
+
+#### 재현성을 위한 패키지 의존성 관리도구 Packrat {#Packrat}
+
+각 프로젝트에서 사용하는 패키지를 프로젝트 폴더내에 관리할 수 있게 해줌으로써 더욱 코드 재현성을 보장하는 관리도구입니다. **Tools > Project Options** 하위에 옵션이 있으며 체크박스를 체크하는 것으로 사용할 수 있습니다. 처음부터 프로젝트를 만들 때 선택할 수도 있습니다. 자세한 안내는 [여기][212]를 참고하세요.
+![packrat](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-packrat.png)
 
 ### 버전관리도구 git {#introduce-git}
 
+#### 버전관리도구란 {#intro-vcs}
+<center>![git](http://mblogthumb2.phinf.naver.net/20160711_237/tmondev_1468203567567d9jTn_PNG/1.png?type=w800)</center>
 
-### 오픈소스와 github {#introduce-github}
+`git`은 현재 개발자들에게 가장 인기있는 버전관리도구 입니다. 버전관리도구란 파일의 변경사항을 저장하는 도구로 word 같은 곳에서 `Ctrl+z` 같은 것(되돌리기)을 수행하기 위해 변경이 생길때 마다 저장하는 것과 비슷한 기능을 수행합니다. 다른 점이라면 프로젝트와 같이 폴더별로 관리된다는 점, 변경상태에 대해서 추적할 파일을 git에게 알려주는 행위를 해야 한다는 점, 저장을 일부러 해야 한다는 점 정도가 차이점이라고 볼 수 있습니다. 각각 `git init`, `git add`, `git commit` 명령어에 대응되는 개념입니다. 
 
+#### git으로 버전 관리하기 {#git-start}
+
+![gitinit](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/rstudio-git-init.png)
+`git init`은 명령을 실행한 위치의 폴더가 `git`이 관리하는 프로젝트 폴더임을 선언하는 명령어입니다. 위 그림처럼 .git이라는 폴더가 생기는데 여기에 버전관리를 위한 여러 정보들을 저장합니다. 앞에 .이 붙은 폴더는 unix 계열 OS에서 숨김파일을 뜻하고, 윈도우에서도 숨김 파일 옵션으로 생성됩니다. 숨김 파일을 보는 옵션을 설정하시면 확인하실 수 있습니다. 어쨌든 `git`을 사용하는 첫번째 방법을 배웠습니다.
+
+#### git이 이해하는 세 가지 상태 {#git-state}
+
+`git`은 폴더 내에 있는 파일들을 전부 3가지 상태로 구분합니다. 그것은 `tracked`, `modified`, `staged`입니다. 각각 살펴보겠습니다.
+
+<center>![gitstate](https://git-scm.com/figures/18333fig0201-tn.png "출처 : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0")</center>
+
+`tracked`는 말 그대로 파일이 추적되고 있는 상태다라는 뜻합니다. `git`이 추적할 파일을 지정해 주는 `git add [파일 or 폴더명]`을 통해 `untracked` 파일이 `tracked` 파일로 상태가 변경되고 `git`의 추적이 시작됩니다. 과거 용량 등의 관리가 중요할 때 의 기능으로 이해하고 있으며 최근의 `git`을 사용하기 위한 추가적인 지원도구들은 대부분 자동으로 `git add .`을 진행하여 폴더내의 모든 파일을 계속 `tracked` 상태를 유지해 줍니다.
+
+`tracked` 상태의 파일을 수정하면 `modified` 상태가 됩니다. `track` 이 시작되면 파일의 `track` 시작할 때의 상태를 저장해 두는데, 그것과 비교해서 다른 점이 발생하면 `modified` 상태로 `git`은 인지하고 있습니다. 하지만 아직 `git`이 달라진 점을 저장하지 않습니다. 달라진 것만 알고 있는 상태입니다.
+
+`modified` 상태의 파일은 아직 `commit`할 수 없습니다. `stage` 위에 올려서 `commit` 할 수 있는 상태로 만들어야 합니다. 즉,
+`staged` 상태는 `commit`을 할 대상 파일로 지정되었다는 뜻입니다. `commit`이란 처음 생성된 상태나 이전 `commit`된 상태와 현재 상태를 비교해서 달라진 점을 저장하는 것을 뜻합니다. 이 때 `git`은 달라진 점만 저장합니다. 저장하면서 주석과 같은 기능을 하는 `commit message`를 작성해 둘 수 있습니다. 이 메세지를 통해서 코드에서 주요하게 달라진 점이 무엇인지를 파악할 수 있습니다. 
+
+이렇게 `git`은 코드의 상태를 정의하고, `commit`을 통해 변경되는 지점들을 저장합니다. 그럼 `git checkout`을 이용해 저장된 `commit`의 위치로 자유롭게 움직일 수 있습니다. 
+
+#### 로컬과 리모트 {#local-remote}
+`git`은 협업을 위한 도구이기도 합니다. 그래서 직접 작업하는 프로젝트 공간인 `local`과 다른 사람들과 공유하기 위한 공동 프로젝트 공간인 `remote`가 있습니다. 모두 `repository`(줄여서 `repo`) 또는 `저장소`라는 표현을 씁니다. `remote`에 `git`으로 관리되고 있는 프로젝트가 있다고 생각해 봅시다. 그 `remote repo`의 주소를 가지고 `local`에 `git clone [remote repo 주소]`명령어로 복사를 합니다. 그리고 `local`에서 새로운 파일도 만들고 코드도 작성한 후에 위에서 말한 것 처럼 `git add`로 파일을 등록하고, `git commit`을 통해 변경 사항들을 저장합니다. 이제 `local`에 저장된 변경부분을 `remote`에 기록을 해야 하는데 `git push`라고 합니다. 
+
+### github {#introduce-github}
+
+`github`은 현재 가장 인기있는 `git remote repository service`입니다. 많은 분들이 이렇게 헷갈리시는데, `github`는 정확히 `git`과 같은 것이 아닙니다. `github`은 `git`에서의 `remote repo`를 저장할 수 있는 공간을 제공하는 서비스입니다. 비슷한 서비스로는 [bitbuket][208],[gitlab][209] 등이 있습니다. `git`과 비슷한 다른 버전관리 도구를 지원하기도 합니다. `github`은 `git`과 달리 `remote repo`끼리 `clone`과 `push`와 같은 기능을 수행하는 새로운 옵션을 제공합니다. 바로 `fork`와 `pull request`입니다. SNS처럼 좋아요를 의미하는 `star`도 있습니다. `fork`는 공유하기와 비슷한데, 자신의 `remote repo`에 다른 사람의 `remote repo`를 복사해 오는 것입니다. `git clone`과 비슷합니다. `github`내의 `remote repo`끼리 동작하는 것이기 때문에 `remote repo`와 `local repo`가 상호작용하는 동작과 다른 명령어를 사용합니다. `pull request`는 `fork`로 연결되어 있는 `remote repo`에 자신의 `remote repo`에 있는 코드를 `pull` 해가라고 요청하는 것입니다. `fork`를 한 후 수정한 코드를 원래 주인의 `remote repo`에 적용하는 것을 요청하는 명령입니다.
+
+위와 같은 과정을 통해 `github`이 동작합니다. `github`은 `git`의 인기와 공개 저장소의 무제한 제공으로 세계에서 가장 인기있는 서비스가 되었고, 대부분의 오픈소스가 저장되고 개발되는 공간이 되었습니다. 오픈소스는 라이선스를 잘 지킨다면 소스코드를 사용해도 좋다고 선언한 코드들입니다. 많은 분들이 자신들의 코드를 공개하고, 결과물을 공유합니다. RStudio 또한 [코드][210]를 `github`에 공개하고 관리하고 있습니다. RStudio는 조금 복잡한 라이선스로 선언해서 편하게 사용할 수 있는 것은 아니지만 이렇게 코드를 공개하고 라이선스를 선언한 것을 오픈소스라고 합니다. 
+
+### github과 패키지 생태계 {#packages-with-github}
+![packagerepo](https://i0.wp.com/rud.is/b/wp-content/uploads/2017/02/hieRarchy.png?zoom=2&resize=456%2C393&ssl=1 "출처 : https://www.r-bloggers.com/on-watering-holes-trust-defensible-systems-and-data-science-community-security/")
+R-core 팀이 관리하는 패키지 배포 서버인 [cran][211]은 매우 엄격한 패키지 사전 검열을 합니다. 그렇기 때문에 console에서 `install.packeges()` 한번에 편하게 패키지를 설치하고 사용할 수 있는 것입니다. 최근에는 사전 검열을 통과하기 전 버전의 패키지들이 코드 관리를 위해 `github`에 저장소를 운영하기도 합니다. `github`은 인기있는 저장소이기 때문에 구글 검색을 통해 사용자들이 유입되기 좋은 곳입니다. 특히 패키지 운영을 위한 홈페이지, wiki, readme 파일 관리등의 기능을 충분히 지원하는 등 좋은 점이 많습니다. 많은 R 패키지 개발자들도 코드 관리를 `github`에서 하고 있습니다. 최근에는 개발 버전은 `github`에, 안정화 버전은 cran에 등록해서 사용할 수 있게 하는 문화가 자리잡혀 있습니다. 
+
+### 실습 진행
 
 ## 도움말 {#help-page}
+
+[cran][211]에 등록된 패키지들은 모두 도움말이 충분히 작성되어 있습니다. `Vignette`라는 세부 패키지 설명이나 아예 블로그 등에서 패키지 사용법이나 작업 순서들을 설명한 패키지도 있습니다. 모두 검색을 통해서 찾아야 되긴 하지만 최소한의 설명서가 내장되어 있으니 그 것을 먼저 확인하는 것이 좋습니다. 도움말은 `?함수명`이나 `help(함수명)`으로 실행할 수 있습니다. 
+
+```r
+?함수명
+```
 
 ### 도움말 설명 {#introduce-help}
 
@@ -111,3 +158,8 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 [205]: https://code.visualstudio.com/
 [206]: https://nuclide.io/
 [207]: http://r-pkgs.had.co.nz/
+[208]: https://bitbucket.org/product
+[209]: http://gitlab.com/
+[210]: https://github.com/rstudio/rstudio
+[211]: https://cran.r-project.org/
+[212]: http://rstudio.github.io/packrat/

@@ -93,7 +93,8 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 ### 버전관리도구 git {#introduce-git}
 
 #### 버전관리도구란 {#intro-vcs}
-![git](http://mblogthumb2.phinf.naver.net/20160711_237/tmondev_1468203567567d9jTn_PNG/1.png?type=w800)
+<center>![git](http://mblogthumb2.phinf.naver.net/20160711_237/tmondev_1468203567567d9jTn_PNG/1.png?type=w800)</center>
+
 `git`은 현재 개발자들에게 가장 인기있는 버전관리도구 입니다. 버전관리도구란 파일의 변경사항을 저장하는 도구로 word 같은 곳에서 `Ctrl+z` 같은 것(되돌리기)을 수행하기 위해 변경이 생길때 마다 저장하는 것과 비슷한 기능을 수행합니다. 다른 점이라면 프로젝트와 같이 폴더별로 관리된다는 점, 변경상태에 대해서 추적할 파일을 git에게 알려주는 행위를 해야 한다는 점, 저장을 일부러 해야 한다는 점 정도가 차이점이라고 볼 수 있습니다. 각각 `git init`, `git add`, `git commit` 명령어에 대응되는 개념입니다. 
 
 #### git으로 버전 관리하기 {#git-start}
@@ -105,7 +106,8 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 
 `git`은 폴더 내에 있는 파일들을 전부 3가지 상태로 구분합니다. 그것은 `tracked`, `modified`, `staged`입니다. 각각 살펴보겠습니다.
 
-![gitstate](https://git-scm.com/figures/18333fig0201-tn.png "출처 : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0")
+<center>![gitstate](https://git-scm.com/figures/18333fig0201-tn.png "출처 : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0")</center>
+
 `tracked`는 말 그대로 파일이 추적되고 있는 상태다라는 뜻합니다. `git`이 추적할 파일을 지정해 주는 `git add [파일 or 폴더명]`을 통해 `untracked` 파일이 `tracked` 파일로 상태가 변경되고 `git`의 추적이 시작됩니다. 과거 용량 등의 관리가 중요할 때 의 기능으로 이해하고 있으며 최근의 `git`을 사용하기 위한 추가적인 지원도구들은 대부분 자동으로 `git add .`을 진행하여 폴더내의 모든 파일을 계속 `tracked` 상태를 유지해 줍니다.
 
 `tracked` 상태의 파일을 수정하면 `modified` 상태가 됩니다. `track` 이 시작되면 파일의 `track` 시작할 때의 상태를 저장해 두는데, 그것과 비교해서 다른 점이 발생하면 `modified` 상태로 `git`은 인지하고 있습니다. 하지만 아직 `git`이 달라진 점을 저장하지 않습니다. 달라진 것만 알고 있는 상태입니다.
