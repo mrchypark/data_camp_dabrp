@@ -121,16 +121,14 @@ RStudio는 사용 화면에 대화형 console 창을 항상 켜놓고 있는 형
 `git`은 협업을 위한 도구이기도 합니다. 그래서 직접 작업하는 프로젝트 공간인 `local`과 다른 사람들과 공유하기 위한 공동 프로젝트 공간인 `remote`가 있습니다. 모두 `repository`(줄여서 `repo`) 또는 `저장소`라는 표현을 씁니다. `remote`에 `git`으로 관리되고 있는 프로젝트가 있다고 생각해 봅시다. 그 `remote repo`의 주소를 가지고 `local`에 `git clone [remote repo 주소]`명령어로 복사를 합니다. 그리고 `local`에서 새로운 파일도 만들고 코드도 작성한 후에 위에서 말한 것 처럼 `git add`로 파일을 등록하고, `git commit`을 통해 변경 사항들을 저장합니다. 이제 `local`에 저장된 변경부분을 `remote`에 기록을 해야 하는데 `git push`라고 합니다. 
 
 ### github {#introduce-github}
-
-`github`은 현재 가장 인기있는 `git remote repository service`입니다. 많은 분들이 이렇게 헷갈리시는데, `github`는 정확히 `git`과 같은 것이 아닙니다. `github`은 `git`에서의 `remote repo`를 저장할 수 있는 공간을 제공하는 서비스입니다. 비슷한 서비스로는 [bitbuket][208],[gitlab][209] 등이 있습니다. `git`과 비슷한 다른 버전관리 도구를 지원하기도 합니다. `github`은 `git`과 달리 `remote repo`끼리 `clone`과 `push`와 같은 기능을 수행하는 새로운 옵션을 제공합니다. 바로 `fork`와 `pull request`입니다. SNS처럼 좋아요를 의미하는 `star`도 있습니다. `fork`는 공유하기와 비슷한데, 자신의 `remote repo`에 다른 사람의 `remote repo`를 복사해 오는 것입니다. `git clone`과 비슷합니다. `github`내의 `remote repo`끼리 동작하는 것이기 때문에 `remote repo`와 `local repo`가 상호작용하는 동작과 다른 명령어를 사용합니다. `pull request`는 `fork`로 연결되어 있는 `remote repo`에 자신의 `remote repo`에 있는 코드를 `pull` 해가라고 요청하는 것입니다. `fork`를 한 후 수정한 코드를 원래 주인의 `remote repo`에 적용하는 것을 요청하는 명령입니다.
+<center>![github](https://plus-sensing.omron.co.jp/egg-project/__wp/wp-content/uploads/github.png)</center>
+`github`은 현재 가장 인기있는 `git remote repository service`입니다. 많은 분들이 이렇게 헷갈리시는데, `github`는 정확히 `git`과 같은 것이 아닙니다. `github`은 `git`에서의 `remote repo`를 저장할 수 있는 공간을 제공하는 서비스입니다. 비슷한 서비스로는 [bitbuket][208], [gitlab][209] 등이 있습니다. `git`과 비슷한 다른 버전관리 도구를 지원하기도 합니다. `github`은 `git`과 달리 `remote repo`끼리 `clone`과 `push`와 같은 기능을 수행하는 새로운 옵션을 제공합니다. 바로 `fork`와 `pull request`입니다. SNS처럼 좋아요를 의미하는 `star`도 있습니다. `fork`는 공유하기와 비슷한데, 자신의 `remote repo`에 다른 사람의 `remote repo`를 복사해 오는 것입니다. `git clone`과 비슷합니다. `github`내의 `remote repo`끼리 동작하는 것이기 때문에 `remote repo`와 `local repo`가 상호작용하는 동작과 다른 명령어를 사용합니다. `pull request`는 `fork`로 연결되어 있는 `remote repo`에 자신의 `remote repo`에 있는 코드를 `pull` 해가라고 요청하는 것입니다. `fork`를 한 후 수정한 코드를 원래 주인의 `remote repo`에 적용하는 것을 요청하는 명령입니다.
 
 위와 같은 과정을 통해 `github`이 동작합니다. `github`은 `git`의 인기와 공개 저장소의 무제한 제공으로 세계에서 가장 인기있는 서비스가 되었고, 대부분의 오픈소스가 저장되고 개발되는 공간이 되었습니다. 오픈소스는 라이선스를 잘 지킨다면 소스코드를 사용해도 좋다고 선언한 코드들입니다. 많은 분들이 자신들의 코드를 공개하고, 결과물을 공유합니다. RStudio 또한 [코드][210]를 `github`에 공개하고 관리하고 있습니다. RStudio는 조금 복잡한 라이선스로 선언해서 편하게 사용할 수 있는 것은 아니지만 이렇게 코드를 공개하고 라이선스를 선언한 것을 오픈소스라고 합니다. 
 
 ### github과 패키지 생태계 {#packages-with-github}
 ![packagerepo](https://i0.wp.com/rud.is/b/wp-content/uploads/2017/02/hieRarchy.png?zoom=2&resize=456%2C393&ssl=1 "출처 : https://www.r-bloggers.com/on-watering-holes-trust-defensible-systems-and-data-science-community-security/")
 R-core 팀이 관리하는 패키지 배포 서버인 [cran][211]은 매우 엄격한 패키지 사전 검열을 합니다. 그렇기 때문에 console에서 `install.packeges()` 한번에 편하게 패키지를 설치하고 사용할 수 있는 것입니다. 최근에는 사전 검열을 통과하기 전 버전의 패키지들이 코드 관리를 위해 `github`에 저장소를 운영하기도 합니다. `github`은 인기있는 저장소이기 때문에 구글 검색을 통해 사용자들이 유입되기 좋은 곳입니다. 특히 패키지 운영을 위한 홈페이지, wiki, readme 파일 관리등의 기능을 충분히 지원하는 등 좋은 점이 많습니다. 많은 R 패키지 개발자들도 코드 관리를 `github`에서 하고 있습니다. 최근에는 개발 버전은 `github`에, 안정화 버전은 cran에 등록해서 사용할 수 있게 하는 문화가 자리잡혀 있습니다. 
-
-### 실습 진행
 
 ## 도움말 {#help-page}
 
@@ -140,15 +138,21 @@ R-core 팀이 관리하는 패키지 배포 서버인 [cran][211]은 매우 엄�
 ?함수명
 ```
 
-### 도움말 설명 {#introduce-help}
-
 ### 도움말 사용법 {#help-usage}
+
+
 
 ### 함수의 옵션 설명 {#help-param}
 
+
+
 ### 함수의 상세 설명 {#help-detail}
 
+
+
 ### 예시 코드 {#help-example}
+
+
 
 [201]: https://www.sublimetext.com/
 [202]: https://www.visualstudio.com/
