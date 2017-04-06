@@ -1,5 +1,5 @@
 
-# 시작하기 전에 {#before-start}
+# 시작하기 전에 {-}
 
 수업에서 사용하는 자료와 기반하는 생각들을 작성하고자 합니다. 
 
@@ -87,7 +87,7 @@ visNetwork    *    1.0.3     2016-12-22   CRAN (R 3.3.3)
 withr              1.0.2     2016-06-20   CRAN (R 3.3.3) 
 yaml               2.1.14    2016-11-12   CRAN (R 3.3.3) 
 
- 이 책은 [박찬엽][123]이 Tuesday, April 04, 2017 07:38:41 PM UTC에 마지막으로 업데이트 했습니다.
+ 이 책은 [박찬엽][123]이 Thursday, April 06, 2017 02:15:37 AM UTC에 마지막으로 업데이트 했습니다.
 
 [101]: http://hadley.nz/
 [102]: http://scienceon.hani.co.kr/?document_srl=396048
