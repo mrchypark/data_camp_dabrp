@@ -210,8 +210,8 @@ class(vec_test1)
 
 ```r
 vec_ind <- c("b","a","ab","b","o","ab")
-vec_ind[301]
-#> [1] NA
+vec_ind[1]
+#> [1] "b"
 ```
 
 위에서 지정해둔 이름으로 값을 부르는 방법이 있다고 했습니다. 그러면 우선 `vector`의 값에 이름을 부여하는 방법을 살펴보겠습니다. 새롭게 살펴볼 명령어는 `names`입니다. `?names`를 실행해서 살펴보세요.
@@ -433,8 +433,8 @@ m[,3]
 신기하게도, 1차원인 `vector`의 일부 데이터 불러로기의 문법도 사용할 수 있습니다. m[9]가 어느 위치의 값인지 잘 찾아보시기 바랍니다.
 
 ```r
-m[304]
-#> [1] NA
+m[4]
+#> [1] 15
 m[9]
 #> [1] 6
 ```
@@ -541,9 +541,9 @@ factor(blood, labels = c("BT_A", "BT_AB", "BT_B", "BT_O"))
 ```r
 blood <- c("B", "AB", "O", "A", "O", "O", "A", "B")
 blood_factor <- factor(blood)
-blood_factor[301] < blood_factor[302]
-#> Warning in Ops.factor(blood_factor[301], blood_factor[302]): 요인(factors)
-#> 에 대하여 의미있는 '<'가 아닙니다.
+blood_factor[1] < blood_factor[2]
+#> Warning in Ops.factor(blood_factor[1], blood_factor[2]): 요인(factors)에 대
+#> 하여 의미있는 '<'가 아닙니다.
 #> [1] NA
 ```
 
@@ -557,8 +557,8 @@ tshirt_factor
 #> [1] M L S S L M L M
 #> Levels: S < M < L
 
-tshirt_factor[301] < tshirt_factor[302]
-#> [1] NA
+tshirt_factor[1] < tshirt_factor[2]
+#> [1] TRUE
 ```
 
 ## 리스트 {#list}

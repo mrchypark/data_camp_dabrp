@@ -383,8 +383,8 @@ vec_test1
 <p>컴퓨터 언어에서 무엇을 언급하는 방법은 두 가지가 있습니다. 하나는 임의의 이름으로 지정된 주소값 자체를 언급하는 것이고, 다른 하나는 그 주소값에 이름을 부여해서 그 이름을 부르는 것입니다. 정확한 비유는 아닙니다만, <code>vector</code>에서 특정 위치에 있는 값을 부르는 것은 위치의 주소값이나 지정해둔 이름으로 값을 부르는 것과 비슷합니다. 값의 순서라고 볼 수 있는 주소값을 <code>index</code>라고 합니다.</p>
 <p><code>R</code>에서 <code>index</code>를 사용하는 방법은 <code>[ ](대괄호)</code>를 변수뒤에 붙여서 사용합니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_ind &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>,<span class="st">&quot;ab&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;o&quot;</span>,<span class="st">&quot;ab&quot;</span>)
-vec_ind[<span class="dv">301</span>]
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+vec_ind[<span class="dv">1</span>]
+<span class="co">#&gt; [1] &quot;b&quot;</span></code></pre></div>
 <p>위에서 지정해둔 이름으로 값을 부르는 방법이 있다고 했습니다. 그러면 우선 <code>vector</code>의 값에 이름을 부여하는 방법을 살펴보겠습니다. 새롭게 살펴볼 명령어는 <code>names</code>입니다. <code>?names</code>를 실행해서 살펴보세요.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_type1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">bob =</span> <span class="st">&quot;A&quot;</span>, <span class="dt">sam =</span> <span class="st">&quot;B&quot;</span>, <span class="dt">john=</span><span class="st">&quot;O&quot;</span>,<span class="dt">jim=</span><span class="st">&quot;AB&quot;</span>,<span class="dt">tom=</span><span class="st">&quot;A&quot;</span>)
 blood_type1
@@ -542,8 +542,8 @@ m[<span class="dv">3</span>,<span class="dv">2</span>]
 m[,<span class="dv">3</span>]
 <span class="co">#&gt; [1] 10  3  6</span></code></pre></div>
 <p>신기하게도, 1차원인 <code>vector</code>의 일부 데이터 불러로기의 문법도 사용할 수 있습니다. m<a href="http://r4ds.had.co.nz/">9</a>가 어느 위치의 값인지 잘 찾아보시기 바랍니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m[<span class="dv">304</span>]
-<span class="co">#&gt; [1] NA</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m[<span class="dv">4</span>]
+<span class="co">#&gt; [1] 15</span>
 m[<span class="dv">9</span>]
 <span class="co">#&gt; [1] 6</span></code></pre></div>
 <p>여전히 <code>vector</code>와 같이 어느 한 차원 내에서 여러개를 사용하기 위해서는 <code>c</code>와 함께 사용합니다.</p>
@@ -624,9 +624,9 @@ blood_factor
 <p><code>factor</code>는 명목형 변수여서 크기를 비교할 수 없습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)
 blood_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(blood)
-blood_factor[<span class="dv">301</span>] &lt;<span class="st"> </span>blood_factor[<span class="dv">302</span>]
-<span class="co">#&gt; Warning in Ops.factor(blood_factor[301], blood_factor[302]): 요인(factors)</span>
-<span class="co">#&gt; 에 대하여 의미있는 &#39;&lt;&#39;가 아닙니다.</span>
+blood_factor[<span class="dv">1</span>] &lt;<span class="st"> </span>blood_factor[<span class="dv">2</span>]
+<span class="co">#&gt; Warning in Ops.factor(blood_factor[1], blood_factor[2]): 요인(factors)에 대</span>
+<span class="co">#&gt; 하여 의미있는 &#39;&lt;&#39;가 아닙니다.</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
 <p>하지만 크기를 비교할 수 있는 형태로 선언할 수 도 있습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tshirt &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;S&quot;</span>, <span class="st">&quot;S&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;M&quot;</span>)
@@ -636,8 +636,8 @@ tshirt_factor
 <span class="co">#&gt; [1] M L S S L M L M</span>
 <span class="co">#&gt; Levels: S &lt; M &lt; L</span>
 
-tshirt_factor[<span class="dv">301</span>] &lt;<span class="st"> </span>tshirt_factor[<span class="dv">302</span>]
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+tshirt_factor[<span class="dv">1</span>] &lt;<span class="st"> </span>tshirt_factor[<span class="dv">2</span>]
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
 </div>
 </div>
 <div id="list" class="section level2">
