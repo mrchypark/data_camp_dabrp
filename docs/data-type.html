@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3.14 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="rstudio.html">
 <link rel="next" href="for-apply.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -99,6 +97,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <body>
 
 
+
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
@@ -139,12 +138,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.4" data-path="rstudio.html"><a href="rstudio.html#help-page"><i class="fa fa-check"></i><b>1.4</b> 도움말</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해</a><ul>
-<li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#basic-data-type"><i class="fa fa-check"></i><b>2.1</b> 기초 자료형</a></li>
-<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.2</b> 벡터</a></li>
-<li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#metrix"><i class="fa fa-check"></i><b>2.3</b> 메트릭스</a></li>
-<li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#factor"><i class="fa fa-check"></i><b>2.4</b> 팩터</a></li>
-<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.5</b> 리스트</a></li>
-<li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#data-frame"><i class="fa fa-check"></i><b>2.6</b> 데이터프레임</a></li>
+<li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#basic-data-type"><i class="fa fa-check"></i><b>2.1</b> 기초 자료형</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>2.1.1</b> 논리형 logical</a></li>
+<li class="chapter" data-level="2.1.2" data-path="data-type.html"><a href="data-type.html#numeric"><i class="fa fa-check"></i><b>2.1.2</b> 숫자형 numeric</a></li>
+<li class="chapter" data-level="2.1.3" data-path="data-type.html"><a href="data-type.html#character"><i class="fa fa-check"></i><b>2.1.3</b> 글자형 character</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.2</b> 벡터</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-type.html"><a href="data-type.html#vector-intro"><i class="fa fa-check"></i><b>2.2.1</b> 하나의 기초 자료형만으로 구성된 1차원 데이터 집합</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-type.html"><a href="data-type.html#vector-subset"><i class="fa fa-check"></i><b>2.2.2</b> vector에서 일부 데이터 불러오기</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.3</b> 메트릭스</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="data-type.html"><a href="data-type.html#matrix-intro"><i class="fa fa-check"></i><b>2.3.1</b> vector의 2차원 확장</a></li>
+<li class="chapter" data-level="2.3.2" data-path="data-type.html"><a href="data-type.html#matrix-subset"><i class="fa fa-check"></i><b>2.3.2</b> matrix에서 일부 데이터 불러오기</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#factor"><i class="fa fa-check"></i><b>2.4</b> 팩터</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="data-type.html"><a href="data-type.html#categorical-data"><i class="fa fa-check"></i><b>2.4.1</b> 명목형 변수</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.5</b> 리스트</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-type.html"><a href="data-type.html#list-intro"><i class="fa fa-check"></i><b>2.5.1</b> 다른 종류의 자료형들이 함께</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-type.html"><a href="data-type.html#list-subset"><i class="fa fa-check"></i><b>2.5.2</b> 리스트의 일부 데이터 불러오기</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#data-frame"><i class="fa fa-check"></i><b>2.6</b> 데이터프레임</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-type.html"><a href="data-type.html#data-frame-intro"><i class="fa fa-check"></i><b>2.6.1</b> 사람이 이해하기 쉬운 자료형</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-type.html"><a href="data-type.html#order-sort"><i class="fa fa-check"></i><b>2.6.2</b> 순서에 대해 작업하기</a></li>
+</ul></li>
 <li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#date-time"><i class="fa fa-check"></i><b>2.7</b> 날짜</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="for-apply.html"><a href="for-apply.html"><i class="fa fa-check"></i><b>3</b> 단순 반복 업무를 위한 for문과 apply류 맛보기</a><ul>
@@ -214,26 +231,1063 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="data-type" class="section level1">
 <h1><span class="header-section-number">2</span> 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해</h1>
+<p>자료형에 대해 알고 있는 것과 자료형을 파악하는 것은 매우 중요합니다. 함수가 입력 데이터로 사용이 가능한 데이터를 입력 데이터로 지정해 주어야 실행이 되기 때문인데요. 많은 분들이 여기에서 문제가 발생합니다. 특히 작업을 진행하면서 기대하지 않은 자료형으로 중간 결과물이 나오는 경우에는 이후에 생기는 문제에 대해서 이해하기 어려울 수 있습니다.<br />
+그렇기 때문에 기본 R에서 제공하는 자료형에 대해서 공부해 두는 것은 대부분의 함수가 사용하는 데이터의 형식을 공부하는 것과 같습니다. 물론 패키지마다 자체 자료형을 정의하기도 합니다. 하지만 지금 기초 자료형을 공부하면서 새로운 자료형을 파악하는 방법을 자연스럽게 배울 수 있을 거라 생각합니다.</p>
+<p>자료형을 파악하는 방법은 <code>class</code> 함수를 사용하는 것입니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
+<span class="kw">class</span>(<span class="dv">1</span>)
+<span class="co">#&gt; [1] &quot;numeric&quot;</span>
+<span class="kw">class</span>(x)
+<span class="co">#&gt; [1] &quot;numeric&quot;</span>
+<span class="kw">class</span>(<span class="st">&quot;x&quot;</span>)
+<span class="co">#&gt; [1] &quot;character&quot;</span></code></pre></div>
+<p><code>?class</code>를 입력해서 <code>class</code> 함수에 대해서 파악해 보세요.</p>
+<p>위에 <code>class</code> 함수의 결과로 나오는 것이 자료형의 종류입니다. <code>numeric</code>은 숫자를, <code>character</code>는 글자를 뜻합니다. 이제 아래에서 하나하나 확인해 보겠습니다. 기초 자료형에 대해서 <a href="https://courses.edx.org/courses/course-v1:Microsoft+DAT204x+1T2017/df2f6d24fa78436f999b42375cba9a9e/">MS의 edX 강의</a>, <a href="https://www.datacamp.com/courses/free-introduction-to-r">datacamp</a>, <a href="http://www.r-tutor.com/r-introduction/basic-data-types">r-tutor</a>의 내용을 참고했습니다.</p>
 <div id="basic-data-type" class="section level2">
 <h2><span class="header-section-number">2.1</span> 기초 자료형</h2>
+<div id="logical" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> 논리형 logical</h3>
+<p>logical(로지컬) 자료형은 기다 아니다 같이 <code>True</code>, <code>False</code>를 표현하기 위해 만들어진 자료형입니다. R에서는 각각 두 가지 표현법이 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">TRUE</span>
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">class</span>(<span class="ot">TRUE</span>)
+<span class="co">#&gt; [1] &quot;logical&quot;</span>
+T
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">class</span>(T)
+<span class="co">#&gt; [1] &quot;logical&quot;</span>
+<span class="ot">FALSE</span>
+<span class="co">#&gt; [1] FALSE</span>
+<span class="kw">class</span>(<span class="ot">FALSE</span>)
+<span class="co">#&gt; [1] &quot;logical&quot;</span>
+F
+<span class="co">#&gt; [1] FALSE</span>
+<span class="kw">class</span>(F)
+<span class="co">#&gt; [1] &quot;logical&quot;</span></code></pre></div>
+<p>언어에 따라 <code>True</code>, <code>False</code>를 채택하는 경우도 있습니다만 R의 경우 위와 같이 전부 대문자인 글자를 <code>logical</code> 자료형으로 인식합니다.</p>
+<p>이렇게 <code>class</code> 함수를 이용해서 자료형이 무엇인지 파악하는 것도 중요하지만, 조건문 등을 통해서 일을 자동적으로 수행하게 시키기 위해서는 <code>class</code> 같이 결과값이 다양한 것 보다는 <code>logical</code> 자료형으로 결과가 나오는 것이 앞으로 배우게 될 <code>if</code> 문 등에 조건으로 사용하기 좋습니다. 아래와 같은 <code>is.logical</code> 함수는 괄호안의 데이터가 <code>logical</code> 자료형이 맞는지를 물어보는 함수 입니다. 다른 자료형도 대부분 <code>is.자료형이름</code>을 함수로 사용할 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+<span class="kw">is.logical</span>(test)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.logical</span>(<span class="ot">TRUE</span>)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.logical</span>(<span class="st">&quot;test&quot;</span>)
+<span class="co">#&gt; [1] FALSE</span>
+
+test &lt;-<span class="st"> &quot;1&quot;</span>
+<span class="kw">is.logical</span>(test)
+<span class="co">#&gt; [1] FALSE</span></code></pre></div>
+<code>R Studio</code>에서는 함수의 자동완성 기능을 제공합니다. <code>is.</code>을 입력해서 다양한 자료형을 확인하는 명령어를 구경해보세요.
+<center>
+<img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/datatype-autocomplete.png" alt="autocomplete" />
+</center>
+</div>
+<div id="numeric" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> 숫자형 numeric</h3>
+<p>numeric(뉴메릭) 자료형은 그 영어 뜻이 <code>숫자의</code>인 것 같이 숫자를 표현하는 자료형입니다. 물론 복소수 같이 다른 여러 표현들도 사용할 수 있습니다만, R에서 숫자는 보통 <code>numeric</code> 자료형으로 처리합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span>
+<span class="co">#&gt; [1] 2</span>
+<span class="kw">class</span>(<span class="dv">2</span>)
+<span class="co">#&gt; [1] &quot;numeric&quot;</span>
+<span class="kw">is.numeric</span>(<span class="dv">2</span>)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p><code>numeric</code>은 소수점 이하 값을 가지는 숫자도 포함합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">2.5</span>
+<span class="co">#&gt; [1] 2.5</span>
+<span class="kw">class</span>(<span class="fl">2.5</span>)
+<span class="co">#&gt; [1] &quot;numeric&quot;</span>
+<span class="kw">is.numeric</span>(<span class="fl">2.5</span>)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>숫자를 표현하는 자료형으로 <code>integer</code>도 있습니다. 영어 뜻 그대로 <code>정수</code>를 표현하는 자료형인데요, 소수점이 없는 숫자를 표현할 때 사용합니다. R에서는 <code>integer</code>로 바로 인식시키기 위해서 정수인 숫자 뒤에 <code>L(대문자 엘)</code>을 붙여서 표현합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">2L
+<span class="co">#&gt; [1] 2</span>
+<span class="kw">class</span>(2L)
+<span class="co">#&gt; [1] &quot;integer&quot;</span>
+<span class="kw">is.numeric</span>(2L)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.integer</span>(2L)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p><code>integer</code>는 <code>numeric</code>에 비해 차지하는 메모리가 적으며 때문에 연산이 좀 더 빠르다는 장점이 있습니다.</p>
+</div>
+<div id="character" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> 글자형 character</h3>
+<p>character(캐릭터) 자료형은 그 영어 뜻이 <code>문자</code>인 것 같이 글자를 표현하는 자료형입니다. R에서는 변수와 글자를 구분하기 위해서 글자의 앞뒤에 <code>&quot;</code>를 붙이는데요. <code>'</code>도 같은 역할을 합니다. 그래서 <code>&quot;</code>나 <code>'</code> 사이에 있는 것은 모두 글자, 즉 character로 인식합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;2&quot;</span>
+<span class="co">#&gt; [1] &quot;2&quot;</span>
+<span class="kw">class</span>(<span class="st">&quot;2&quot;</span>)
+<span class="co">#&gt; [1] &quot;character&quot;</span>
+<span class="kw">is.numeric</span>(<span class="st">&quot;2&quot;</span>)
+<span class="co">#&gt; [1] FALSE</span>
+<span class="kw">is.character</span>(<span class="st">&quot;2&quot;</span>)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>한글도 됩니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.character</span>(<span class="st">&quot;한글&quot;</span>)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>심지어 <code>&quot;</code> 사이에 있는 <code>'</code>, <code>'</code> 사이에 있는 <code>&quot;</code>도 글자로 인식합니다. 이걸 이용해서 글자내에 <code>&quot;</code>나 <code>'</code>가 들어가야 할 경우, 안에 들어가지 않는 것을 글자로 인식시키기 위한 표시로 사용하기도 합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;&#39;&quot;</span>
+<span class="co">#&gt; [1] &quot;&#39;&quot;</span>
+<span class="kw">is.character</span>(<span class="st">&quot;&#39;&quot;</span>)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="st">&#39;&quot;&#39;</span>
+<span class="co">#&gt; [1] &quot;\&quot;&quot;</span>
+<span class="kw">is.character</span>(<span class="st">&#39;&quot;&#39;</span>)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>이렇게 다른 자료형의 기반이 되는 기초 자료형 3개에 대해 알아보았습니다. 이 각각은 지금까지 데이터가 한 개인 경우였습니다. 그렇다면 이 자료형들이 모여 이루는 새로운 자료형에 대해서 알아보겠습니다.</p>
+</div>
 </div>
 <div id="vector" class="section level2">
 <h2><span class="header-section-number">2.2</span> 벡터</h2>
+<div id="vector-intro" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> 하나의 기초 자료형만으로 구성된 1차원 데이터 집합</h3>
+<p>vector(벡터) 자료형은 가장 간단하게 하나의 자료형에 해당하는 데이터들의 1차원적인 집합입니다. <code>vector</code>를 만드는 가장 간단한 함수는 <code>c</code>입니다. <code>?c</code>를 실행해서 내용을 한 번 읽어주세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_char &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>)
+vec_char
+<span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</span>
+<span class="kw">class</span>(vec_char)
+<span class="co">#&gt; [1] &quot;character&quot;</span>
+<span class="kw">is.vector</span>(vec_char)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.character</span>(vec_char)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p><code>vec_char</code>는 <code>character</code>이기도 하면서 <code>vector</code>입니다. 그럼 이번엔 숫자 벡터를 한번 만들어 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_num &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)
+vec_num
+<span class="co">#&gt; [1] 1 2 3 4 5</span>
+<span class="kw">class</span>(vec_num)
+<span class="co">#&gt; [1] &quot;numeric&quot;</span>
+<span class="kw">is.vector</span>(vec_num)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.numeric</span>(vec_num)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>이번엔 <code>vec_num</code>이 <code>numeric</code>이기도 하면서 <code>vector</code>입니다. 마지막으로 논리 벡터를 만들어 볼까요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_logi &lt;-<span class="st"> </span><span class="kw">c</span>(T,T,T,F,F,T)
+vec_logi
+<span class="co">#&gt; [1]  TRUE  TRUE  TRUE FALSE FALSE  TRUE</span>
+<span class="kw">class</span>(vec_logi)
+<span class="co">#&gt; [1] &quot;logical&quot;</span>
+<span class="kw">is.vector</span>(vec_logi)
+<span class="co">#&gt; [1] TRUE</span>
+<span class="kw">is.logical</span>(vec_logi)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p>지금까지 살펴본 바에 따르면 <code>vector</code>라는 사실은 <code>class</code>로 파악할 수 없고, <code>is.vector</code>로 확인할 수 있습니다. 사실 파악할 수 없다보다는 파악할 필요가 없습니다. <code>vector</code>는 한 번에 같이 처리할 수 있는 데이터를 묶어둔 것이기 때문에 한 <code>vector</code>로 묶인 데이터들은 모두 자료형이 강제로 같게 만들어 집니다. 아래와 같이 다양한 시도를 해서 강제로 자료형이 통일되게 저장되는 것을 확인해 보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_test1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">&quot;test&quot;</span>)
+vec_test1
+<span class="co">#&gt; [1] &quot;1&quot;    &quot;2&quot;    &quot;3&quot;    &quot;test&quot;</span>
+<span class="kw">class</span>(vec_test1)
+<span class="co">#&gt; [1] &quot;character&quot;</span></code></pre></div>
+<p>이렇게 <code>vector</code>는 하나의 기초 자료형만으로 구성된 1차원 데이터 집합인 것을 알게 되었습니다. 그럼 이제 <code>vector</code>에서 일부의 데이터만 불러오는 방법을 알아보겠습니다.</p>
 </div>
-<div id="metrix" class="section level2">
+<div id="vector-subset" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> vector에서 일부 데이터 불러오기</h3>
+<p>데이터를 모아 놓은 것은 좋은 전략이지만 그 중 일부를 자유롭게 사용할 수 있을 때 더욱 빛을 발하는 것 같습니다. vector는 같은 종류의 데이터를 한 줄로 늘어뜨려 놓은 것으로 상상하시면 좋을 것 같은데, 왜냐면 위치로 데이터의 일부를 선택하기 위해서 입니다.</p>
+<p>컴퓨터 언어에서 무엇을 언급하는 방법은 두 가지가 있습니다. 하나는 임의의 이름으로 지정된 주소값 자체를 언급하는 것이고, 다른 하나는 그 주소값에 이름을 부여해서 그 이름을 부르는 것입니다. 정확한 비유는 아닙니다만, <code>vector</code>에서 특정 위치에 있는 값을 부르는 것은 위치의 주소값이나 지정해둔 이름으로 값을 부르는 것과 비슷합니다. 값의 순서라고 볼 수 있는 주소값을 <code>index</code>라고 합니다.</p>
+<p><code>R</code>에서 <code>index</code>를 사용하는 방법은 <code>[ ](대괄호)</code>를 변수뒤에 붙여서 사용합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec_ind &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>,<span class="st">&quot;ab&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;o&quot;</span>,<span class="st">&quot;ab&quot;</span>)
+vec_ind[<span class="dv">301</span>]
+<span class="co">#&gt; [1] NA</span></code></pre></div>
+<p>위에서 지정해둔 이름으로 값을 부르는 방법이 있다고 했습니다. 그러면 우선 <code>vector</code>의 값에 이름을 부여하는 방법을 살펴보겠습니다. 새롭게 살펴볼 명령어는 <code>names</code>입니다. <code>?names</code>를 실행해서 살펴보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_type1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">bob =</span> <span class="st">&quot;A&quot;</span>, <span class="dt">sam =</span> <span class="st">&quot;B&quot;</span>, <span class="dt">john=</span><span class="st">&quot;O&quot;</span>,<span class="dt">jim=</span><span class="st">&quot;AB&quot;</span>,<span class="dt">tom=</span><span class="st">&quot;A&quot;</span>)
+blood_type1
+<span class="co">#&gt;  bob  sam john  jim  tom </span>
+<span class="co">#&gt;  &quot;A&quot;  &quot;B&quot;  &quot;O&quot; &quot;AB&quot;  &quot;A&quot;</span>
+<span class="kw">names</span>(blood_type1)
+<span class="co">#&gt; [1] &quot;bob&quot;  &quot;sam&quot;  &quot;john&quot; &quot;jim&quot;  &quot;tom&quot;</span></code></pre></div>
+<p>위의 첫번째 방법은 처음 <code>vector</code>를 만들 때 부터 이름을 짓고 시작하는 것입니다. <code>=</code>를 기준으로 왼쪽이 이름, 오른쪽이 이름에 해당하는 값입니다. 그럼 다른 방법을 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_type2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;O&quot;</span>,<span class="st">&quot;AB&quot;</span>,<span class="st">&quot;A&quot;</span>)
+blood_type2
+<span class="co">#&gt; [1] &quot;A&quot;  &quot;B&quot;  &quot;O&quot;  &quot;AB&quot; &quot;A&quot;</span>
+<span class="kw">names</span>(blood_type2)
+<span class="co">#&gt; NULL</span>
+blood_type2_name &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;bob&quot;</span>, <span class="st">&quot;sam&quot;</span>, <span class="st">&quot;john&quot;</span>, <span class="st">&quot;jim&quot;</span>, <span class="st">&quot;tom&quot;</span>)
+blood_type2_name
+<span class="co">#&gt; [1] &quot;bob&quot;  &quot;sam&quot;  &quot;john&quot; &quot;jim&quot;  &quot;tom&quot;</span>
+<span class="kw">names</span>(blood_type2) &lt;-<span class="st"> </span>blood_type2_name
+blood_type2
+<span class="co">#&gt;  bob  sam john  jim  tom </span>
+<span class="co">#&gt;  &quot;A&quot;  &quot;B&quot;  &quot;O&quot; &quot;AB&quot;  &quot;A&quot;</span>
+<span class="kw">names</span>(blood_type2)
+<span class="co">#&gt; [1] &quot;bob&quot;  &quot;sam&quot;  &quot;john&quot; &quot;jim&quot;  &quot;tom&quot;</span></code></pre></div>
+<p><code>names</code> 함수가 <code>vector</code>의 이름을 보여주는 함수이기도 하면서 값을 지정받을 수 있는 변수의 기능도 합니다. <code>names(blood_type2)</code> 전체가 하나의 변수로 동작하는 것이지요. 그래서 처음 선언한 <code>vector</code>에 이름이 없는 것을 확인하고 새롭게 이름에 해당하는 변수 <code>blood_type2_name</code>을 선언한 후에 <code>names(blood_type2)</code>에 선언해줌으로써 이름을 작성했습니다. 두번째 방법을 보면 언제든 새롭게 이름을 지정해 줄 수 있음을 알 수 있습니다.</p>
+<p>원래 내용으로 돌아가서, 그럼 이제 이름으로 그 위치에 해당하는 값을 출력해 보겠습니다.</p>
+<pre><code>blood_type1 &lt;- c(bob = &quot;A&quot;, sam = &quot;B&quot;, john=&quot;O&quot;,jim=&quot;AB&quot;,tom=&quot;A&quot;)
+blood_type1[bob]</code></pre>
+<p>조금 이상합니다. <code>Error: object 'bob' not found</code>라고 하면서 동작하질 않네요. <code>Error</code> 메세지는 함수가 작동하는데 문제가 있어서 실행이 되질 않았다는 뜻입니다. (참고로 <code>Warning</code>은 실행은 됬지만 기대하는 결과가 아닐 수 있으니 확인해보라는 뜻입니다.) <code>object</code>는 지금까지 한글로 <code>변수</code>라고 불렀습니다. 그럼 변수인 bob이 없다는 에러가 발생한 겁니다. 글자형에서 R에서는 변수와 글자를 구분하기 위해서 글자의 앞뒤에 <code>&quot;</code>를 붙인다고 했습니다. 그렇다면 <code>blood_type1[bob]</code>에서 <code>bob</code>의 앞뒤에 <code>&quot;</code>표시를 하지 않았기 때문에 R이 변수로 인식한 듯합니다. 그럼 <code>&quot;</code>로 묶어서(앞뒤에 표시해서) 다시 실행해 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_type1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">bob =</span> <span class="st">&quot;A&quot;</span>, <span class="dt">sam =</span> <span class="st">&quot;B&quot;</span>, <span class="dt">john=</span><span class="st">&quot;O&quot;</span>,<span class="dt">jim=</span><span class="st">&quot;AB&quot;</span>,<span class="dt">tom=</span><span class="st">&quot;A&quot;</span>)
+blood_type1[<span class="st">&quot;bob&quot;</span>]
+<span class="co">#&gt; bob </span>
+<span class="co">#&gt; &quot;A&quot;</span></code></pre></div>
+<p>이제 원하는 결과가 나왔습니다. 이런 문법에 대해서는 규칙을 정확히 이해하는 것도 중요하지만 계속 <code>console</code>에 입력해보면서 테스트를 하는 것이 매우 중요합니다. 그렇게 하면 자주 사용하는 것은 익숙해지고, 기억이 흐릿한 것은 확인해가며 코드를 작성할 수 있게 됩니다.</p>
+<p>더 확인해봐야 할 것이 있습니다. 지금까지 한 개만 불러오는 것을 했는데, 여러 개를 동시에 해도 되는지를 확인해 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_type1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">bob =</span> <span class="st">&quot;A&quot;</span>, <span class="dt">sam =</span> <span class="st">&quot;B&quot;</span>, <span class="dt">john=</span><span class="st">&quot;O&quot;</span>,<span class="dt">jim=</span><span class="st">&quot;AB&quot;</span>,<span class="dt">tom=</span><span class="st">&quot;A&quot;</span>)
+blood_type1[<span class="kw">c</span>(<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;john&quot;</span>)]
+<span class="co">#&gt;  bob john </span>
+<span class="co">#&gt;  &quot;A&quot;  &quot;O&quot;</span></code></pre></div>
+<p>여러 개도 가능합니다. 여러 개를 지정하기 위해 <code>c</code>함수를 함께 사용한 것에 주목해 주세요. <code>c</code>로 이름을 묶어서 사용하지 않으면 어떻게 되는지 확인해 보세요.</p>
+<pre><code>blood_type1 &lt;- c(bob = &quot;A&quot;, sam = &quot;B&quot;, john=&quot;O&quot;,jim=&quot;AB&quot;,tom=&quot;A&quot;)
+blood_type1[&quot;bob&quot;,&quot;john&quot;]</code></pre>
+<p><code>Error in blood_type1[&quot;bob&quot;, &quot;john&quot;] : incorrect number of dimensions</code>이라는 <code>Error</code>를 보셨으면 맞게 동작하는 것입니다. 메세지를 한번 잘 보겠습니다. <code>dimension</code>은 차원이라는 뜻으로 제가 <code>vector</code>는 1차원 데이터 집합이라는 표현을 썼었습니다. 그렇다면 차원이 맞지 않게 요청이 되었다는 뜻입니다. R은 <code>[ ]</code>안에서 <code>,(쉼표)</code>는 차원을 구분하는 것으로 인식합니다. 예를 들어 <code>[ , , , ]</code>라고 하면 4차원 데이터를 뜻한다고 할 수 있습니다. 그렇기 때문에 <code>blood_type1[&quot;bob&quot;,&quot;john&quot;]</code>은 저희가 의도하지 않는 방식으로 R이 이해한 것입니다. R이 이해하는 대로 해석하면 <em>첫번째 차원은 이름이 ’bob’인 데이터를, 두번째 차원은 이름이 ’john’인 데이터를 불러옴</em>이 됩니다. 하지만 우리는 <em>첫번째 차원에서 이름이 ’bob’인 데이터와 이름이 ’john’인 데이터를 불러옴</em>을 실행하고 싶기 때문에 같은 차원에서 두 개의 이름을 사용했다는 것을 R에게 알려줘야 합니다. 그래서 <code>c</code> 함수를 사용해서 이름을 묶어, 여러 데이터를 불러오는 이름을 사용할 때 <code>vector</code>를 사용한 것입니다. 이 방법은 차원이 늘어나거나 하더라도 같은 문법을 사용합니다. 그럼 이제 2차원 데이터 집합인 <code>matrix</code>를 살펴보겠습니다.</p>
+</div>
+</div>
+<div id="matrix" class="section level2">
 <h2><span class="header-section-number">2.3</span> 메트릭스</h2>
+<div id="matrix-intro" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> vector의 2차원 확장</h3>
+<p><code>matrix</code>는 간단하게 1차원의 <code>vector</code>를 2차원으로 확장한 것입니다. 여기서 2차원이란 1차원 <code>vector</code>가 두 줄이 생겼다는 것이 아니라 행과 열로 2차원을 표현하게 됩니다. <code>matrix</code>는 많이 보시는 엑셀 시트와 같은 형태를 띕니다. 차원의 의미가 여러 가지가 가능하겠습니다만, 지금의 <a href="https://ko.wikipedia.org/wiki/%EC%B0%A8%EC%9B%90">차원</a>은 데이터를 표현하는 축의 갯수라고 이해하시면 좋을 것 같습니다.</p>
+<p>소개해야 할 자료형 중에 <code>array</code>가 있는데 <code>배열</code>이라는 뜻입니다. <code>vector</code>는 <code>1차원 array</code>의 특별한 이름이고, <code>matrix</code>는 <code>2차원 array</code>의 특별한 이름입니다. 3차원 이상 부터는 전부 <code>n차원 array</code>라고 합니다.</p>
+<p>그래서 <code>vector</code>와 <code>matrix</code>, <code>array</code>는 앞서 <code>vector</code>에서 확인했던 문법적 규칙과 모두 같은 규칙을 따릅니다. 그럼 이제 <code>matrix</code>를 한번 만들어 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    3    5</span>
+<span class="co">#&gt; [2,]    2    4    6</span>
+<span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    3    5</span>
+<span class="co">#&gt; [2,]    2    4    6</span>
+<span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    2    3</span>
+<span class="co">#&gt; [2,]    4    5    6</span></code></pre></div>
+<p>위에서 <code>1:6</code>은 1부터 6까지의 숫자 벡터를 뜻합니다. <code>c(1,2,3,4,5,6)</code>과 같습니다. <code>row</code>는 행을, <code>col</code>은 <code>column</code>의 줄임말로 열을 나타내구요. <code>byrow</code>옵션이 <code>TRUE</code>면 <code>row</code>방향으로 먼저 벡터를 나열하라는 뜻입니다.</p>
+<p><code>matrix</code>는 행열의 크기를 지정하기 때문에 지정된 크기보다 작은 양의 데이터를 선언할 때 어떻게 동작할 것인지 정해져 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    3    2</span>
+<span class="co">#&gt; [2,]    2    1    3</span>
+<span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">4</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+<span class="co">#&gt; Warning in matrix(1:4, nrow = 2, ncol = 3): 데이터의 길이[4]가 열의 개수[3]</span>
+<span class="co">#&gt; 의 배수가 되지 않습니다</span>
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    3    1</span>
+<span class="co">#&gt; [2,]    2    4    2</span></code></pre></div>
+<p>첫번째 명령에서는 부족한 갯수만큼 있던 것을 다시 사용해서 자동으로 채워줬네요. 두번째 명령에서도 같은 방식으로 동작한 것 같은데 <code>Warning</code> 메세지가 나왔습니다. 행의 갯수의 약수거나 배수이지 않다는 것을 알려줌으로써 의도적인 행동인지 확인할 수 있게 도와줍니다. 결과를 확인해보면, 4개까지 사용하고 다시 처음부터 1, 2를 사용하면서 행열의 크기만큼 데이터를 채웠습니다. <code>Warning</code>이 나오면 확인해보면 좋겠네요.</p>
+<p>행열의 모양을 배우면서 이제 <code>cbind</code>와 <code>rbind</code>를 확인해 보겠습니다. <code>cbind</code>는 <strong>열 방향으로 묶는다.</strong>라는 의미이구요. <code>rbind</code>는 <strong>행 방향으로 묶는다</strong>는 뜻입니다. 아래 코드로 어떻게 행열의 모양이 달라지는지 확인해 보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(<span class="dv">1</span>:<span class="dv">3</span>, <span class="dv">1</span>:<span class="dv">3</span>)
+<span class="co">#&gt;      [,1] [,2]</span>
+<span class="co">#&gt; [1,]    1    1</span>
+<span class="co">#&gt; [2,]    2    2</span>
+<span class="co">#&gt; [3,]    3    3</span>
+<span class="kw">rbind</span>(<span class="dv">1</span>:<span class="dv">3</span>, <span class="dv">1</span>:<span class="dv">3</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    2    3</span>
+<span class="co">#&gt; [2,]    1    2    3</span>
+
+m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">2</span>)
+m
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    2    3</span>
+<span class="co">#&gt; [2,]    4    5    6</span>
+<span class="kw">rbind</span>(m, <span class="dv">7</span>:<span class="dv">9</span>)
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    2    3</span>
+<span class="co">#&gt; [2,]    4    5    6</span>
+<span class="co">#&gt; [3,]    7    8    9</span>
+<span class="kw">cbind</span>(m, <span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>))
+<span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
+<span class="co">#&gt; [1,]    1    2    3   10</span>
+<span class="co">#&gt; [2,]    4    5    6   11</span></code></pre></div>
+<p><code>vector</code>에서 사용한 <code>names</code>처럼, 행열에 대응하는 함수가 있습니다. <code>rownames</code>, <code>colnames</code>가 그것인데요. <code>?rownames</code>와 <code>?colnames</code>로 자세한 내용을 더 확인해 보시기 바랍니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">2</span>)
+m
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    1    2    3</span>
+<span class="co">#&gt; [2,]    4    5    6</span>
+<span class="kw">rownames</span>(m)
+<span class="co">#&gt; NULL</span>
+<span class="kw">rownames</span>(m) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>)
+m
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; row1    1    2    3</span>
+<span class="co">#&gt; row2    4    5    6</span>
+<span class="kw">colnames</span>(m)
+<span class="co">#&gt; NULL</span>
+<span class="kw">colnames</span>(m) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>, <span class="st">&quot;col3&quot;</span>)
+m
+<span class="co">#&gt;      col1 col2 col3</span>
+<span class="co">#&gt; row1    1    2    3</span>
+<span class="co">#&gt; row2    4    5    6</span></code></pre></div>
+<p><code>vector</code>처럼 처음부터 만들 때 이름을 지정해 줄 수도 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">2</span>,
+            <span class="dt">dimnames =</span> <span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>),
+                            <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>, <span class="st">&quot;col3&quot;</span>)))
+m
+<span class="co">#&gt;      col1 col2 col3</span>
+<span class="co">#&gt; row1    1    2    3</span>
+<span class="co">#&gt; row2    4    5    6</span></code></pre></div>
+<p><code>matrix</code>도 <code>vector</code>와 같이 한 <code>matrix</code>내의 데이터는 모두 같은 자료형이어야 합니다. 이건 자연스럽다고 생각하는 건지 <code>Warning</code>도 주지 않으니 조심하셔야 합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">num &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">8</span>, <span class="dt">ncol =</span> <span class="dv">2</span>)
+char &lt;-<span class="st"> </span><span class="kw">matrix</span>(LETTERS[<span class="dv">1</span>:<span class="dv">6</span>], <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+<span class="kw">cbind</span>(num, char)
+<span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5]</span>
+<span class="co">#&gt; [1,] &quot;1&quot;  &quot;5&quot;  &quot;A&quot;  &quot;E&quot;  &quot;C&quot; </span>
+<span class="co">#&gt; [2,] &quot;2&quot;  &quot;6&quot;  &quot;B&quot;  &quot;F&quot;  &quot;D&quot; </span>
+<span class="co">#&gt; [3,] &quot;3&quot;  &quot;7&quot;  &quot;C&quot;  &quot;A&quot;  &quot;E&quot; </span>
+<span class="co">#&gt; [4,] &quot;4&quot;  &quot;8&quot;  &quot;D&quot;  &quot;B&quot;  &quot;F&quot;</span></code></pre></div>
+</div>
+<div id="matrix-subset" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> matrix에서 일부 데이터 불러오기</h3>
+<p><code>matrix</code>에서 일부 데이터를 불러오는 방법은 <code>vector</code>와 완전히 같습니다. <code>vector</code>에서 <code>[ ]</code>를 설명하면서 차원에 대해 이야기 했었는데요. <code>matrix</code>는 2차원이기 때문에 중간에 쉼표가 들어가야 합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">15</span>, <span class="dv">12</span>), <span class="dt">nrow =</span> <span class="dv">3</span>)
+m
+<span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
+<span class="co">#&gt; [1,]    2   15   10    9</span>
+<span class="co">#&gt; [2,]   12    1    3    7</span>
+<span class="co">#&gt; [3,]    8    5    6   11</span>
+m[<span class="dv">1</span>,<span class="dv">3</span>]
+<span class="co">#&gt; [1] 10</span>
+m[<span class="dv">3</span>,<span class="dv">2</span>]
+<span class="co">#&gt; [1] 5</span></code></pre></div>
+<p>쉼표만 사용하고 어느 하나의 차원을 지정하지 않으면, 모두 불러온 것으로 가정합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m[<span class="dv">3</span>,]
+<span class="co">#&gt; [1]  8  5  6 11</span>
+m[,<span class="dv">3</span>]
+<span class="co">#&gt; [1] 10  3  6</span></code></pre></div>
+<p>신기하게도, 1차원인 <code>vector</code>의 일부 데이터 불러로기의 문법도 사용할 수 있습니다. m<a href="http://r4ds.had.co.nz/">9</a>가 어느 위치의 값인지 잘 찾아보시기 바랍니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m[<span class="dv">304</span>]
+<span class="co">#&gt; [1] NA</span>
+m[<span class="dv">9</span>]
+<span class="co">#&gt; [1] 6</span></code></pre></div>
+<p>여전히 <code>vector</code>와 같이 어느 한 차원 내에서 여러개를 사용하기 위해서는 <code>c</code>와 함께 사용합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m[<span class="dv">2</span>, <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)]
+<span class="co">#&gt; [1] 1 3</span>
+m[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)]
+<span class="co">#&gt;      [,1] [,2]</span>
+<span class="co">#&gt; [1,]   15   10</span>
+<span class="co">#&gt; [2,]    1    3</span>
+m[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>)]
+<span class="co">#&gt;      [,1] [,2] [,3]</span>
+<span class="co">#&gt; [1,]    2   10    9</span>
+<span class="co">#&gt; [2,]    8    6   11</span></code></pre></div>
+<p>역시 이름을 사용해서 일부 데이터만 불러오는 것도 가능합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rownames</span>(m) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;r1&quot;</span>, <span class="st">&quot;r2&quot;</span>, <span class="st">&quot;r3&quot;</span>)
+<span class="kw">colnames</span>(m) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)
+m
+<span class="co">#&gt;     a  b  c  d</span>
+<span class="co">#&gt; r1  2 15 10  9</span>
+<span class="co">#&gt; r2 12  1  3  7</span>
+<span class="co">#&gt; r3  8  5  6 11</span>
+m[<span class="dv">2</span>,<span class="dv">3</span>]
+<span class="co">#&gt; [1] 3</span>
+m[<span class="st">&quot;r2&quot;</span>,<span class="st">&quot;c&quot;</span>]
+<span class="co">#&gt; [1] 3</span>
+m[<span class="dv">2</span>,<span class="st">&quot;c&quot;</span>]
+<span class="co">#&gt; [1] 3</span>
+m[<span class="dv">3</span>, <span class="kw">c</span>(<span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)]
+<span class="co">#&gt;  c  d </span>
+<span class="co">#&gt;  6 11</span></code></pre></div>
+</div>
 </div>
 <div id="factor" class="section level2">
 <h2><span class="header-section-number">2.4</span> 팩터</h2>
+<div id="categorical-data" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> 명목형 변수</h3>
+<p>R에 대해서 이야기 하면서 통계에 대한 이야기가 나오지 않을 수가 없는데요. <code>factor</code>는 <code>categorical data</code>를 표현하기 위해 만들어진 자료형이기 때문입니다. 통계에서 사용하는 자료형은 <a href="http://m.blog.naver.com/libido1014/120113775017">여기</a>를 참고하세요. 가장 대표적인 <code>categorical data</code>인 혈액형을 예시로 <code>factor</code>를 사용해 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)
+blood
+<span class="co">#&gt; [1] &quot;B&quot;  &quot;AB&quot; &quot;O&quot;  &quot;A&quot;  &quot;O&quot;  &quot;O&quot;  &quot;A&quot;  &quot;B&quot;</span>
+<span class="kw">str</span>(blood)
+<span class="co">#&gt;  chr [1:8] &quot;B&quot; &quot;AB&quot; &quot;O&quot; &quot;A&quot; &quot;O&quot; &quot;O&quot; &quot;A&quot; &quot;B&quot;</span>
+blood_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(blood)
+blood_factor
+<span class="co">#&gt; [1] B  AB O  A  O  O  A  B </span>
+<span class="co">#&gt; Levels: A AB B O</span>
+
+<span class="kw">str</span>(blood_factor)
+<span class="co">#&gt;  Factor w/ 4 levels &quot;A&quot;,&quot;AB&quot;,&quot;B&quot;,&quot;O&quot;: 3 2 4 1 4 4 1 3</span></code></pre></div>
+<p>자료의 상태를 파악하는 함수로 <code>str</code>를 사용했습니다. <code>str</code>은 변수의 구조가 어떻게 구성되어 있는지를 보여주는 함수로, 데이터를 파악하는데 좋은 방법입니다. 비슷한 다른 방법들로, <code>summary</code>, <code>head</code> 등이 있습니다. <code>?str</code>, <code>?summary</code>, <code>?head</code>를 입력해서 내용을 확인해 보세요.</p>
+<p><code>chr [1:8] &quot;B&quot; &quot;AB&quot; &quot;O&quot; &quot;A&quot; &quot;O&quot; &quot;O&quot; &quot;A&quot; &quot;B&quot;</code> 에서 <code>chr</code>는 <code>character</code>의 줄임 표현입니다. 그 다름 <code>[1:8]</code>은 데이터가 8개 있다는 뜻입니다. 그 이후에는 8개의 데이터가 모두 출력되었습니다.</p>
+<p><code>facter</code>는 <code>character</code>와 다르게 <code>Levels: A AB B O</code>라는 줄이 추가 되었습니다. 그리고 데이터를 표현할 때 <code>&quot;</code>가 없어졌네요. 우선 그것만으로도 <code>character</code>가 아님을 판단할 수 있습니다. <code>str(blood_factor)</code>의 결과도 보겠습니다. <code>Factor w/ 4 levels &quot;A&quot;,&quot;AB&quot;,&quot;B&quot;,&quot;O&quot;: 3 2 4 1 4 4 1 3</code>에서 독특한 부분이 있습니다. 데이터가 숫자로 되어 있네요.</p>
+<p>데이터와 비교해 보면 <code>levels &quot;A&quot;, &quot;AB&quot;, &quot;B&quot;, &quot;0&quot;</code>에서 3번째는 <code>&quot;B&quot;</code>입니다. 첫번째 데이터가 <code>&quot;B&quot;</code>인걸 보니 숫자는 <code>levels</code>에서 몇 번째 데이터인지를 뜻하는 것 같습니다. 다른 숫자들도 확인해 보세요.</p>
+<p><code>vector</code>처럼 변수에 선언할 때 처음부터 <code>levels</code>를 지정할 수 도 있습니다. 순서를 지정하는 것도 가능합니다. 처음에 만든 <code>blood_factor</code>와 <code>blood_factor2</code>가 어떻게 다른지 비교해 보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood_factor2 &lt;-<span class="st"> </span><span class="kw">factor</span>(blood,
+                        <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>))
+blood_factor2
+<span class="co">#&gt; [1] B  AB O  A  O  O  A  B </span>
+<span class="co">#&gt; Levels: O A B AB</span>
+<span class="kw">str</span>(blood_factor2)
+<span class="co">#&gt;  Factor w/ 4 levels &quot;O&quot;,&quot;A&quot;,&quot;B&quot;,&quot;AB&quot;: 3 4 1 2 1 1 2 3</span>
+<span class="kw">str</span>(blood_factor)
+<span class="co">#&gt;  Factor w/ 4 levels &quot;A&quot;,&quot;AB&quot;,&quot;B&quot;,&quot;O&quot;: 3 2 4 1 4 4 1 3</span></code></pre></div>
+<p><code>names</code>처럼 <code>levels</code>도 중간에 바꿀 수 있습니다. <code>labels</code>라는 것도 있는데, 이것은 데이터의 값을 뜻합니다. 어떻게 달라지는지 확인해 보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)
+blood_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(blood)
+blood_factor
+<span class="co">#&gt; [1] B  AB O  A  O  O  A  B </span>
+<span class="co">#&gt; Levels: A AB B O</span>
+
+<span class="kw">levels</span>(blood_factor) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;BT_A&quot;</span>, <span class="st">&quot;BT_AB&quot;</span>, <span class="st">&quot;BT_B&quot;</span>, <span class="st">&quot;BT_O&quot;</span>)
+blood_factor
+<span class="co">#&gt; [1] BT_B  BT_AB BT_O  BT_A  BT_O  BT_O  BT_A  BT_B </span>
+<span class="co">#&gt; Levels: BT_A BT_AB BT_B BT_O</span>
+<span class="kw">factor</span>(blood, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;BT_A&quot;</span>, <span class="st">&quot;BT_AB&quot;</span>, <span class="st">&quot;BT_B&quot;</span>, <span class="st">&quot;BT_O&quot;</span>))
+<span class="co">#&gt; [1] BT_B  BT_AB BT_O  BT_A  BT_O  BT_O  BT_A  BT_B </span>
+<span class="co">#&gt; Levels: BT_A BT_AB BT_B BT_O</span></code></pre></div>
+<p><code>factor</code>는 명목형 변수여서 크기를 비교할 수 없습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blood &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;O&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>)
+blood_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(blood)
+blood_factor[<span class="dv">301</span>] &lt;<span class="st"> </span>blood_factor[<span class="dv">302</span>]
+<span class="co">#&gt; Warning in Ops.factor(blood_factor[301], blood_factor[302]): 요인(factors)</span>
+<span class="co">#&gt; 에 대하여 의미있는 &#39;&lt;&#39;가 아닙니다.</span>
+<span class="co">#&gt; [1] NA</span></code></pre></div>
+<p>하지만 크기를 비교할 수 있는 형태로 선언할 수 도 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tshirt &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;S&quot;</span>, <span class="st">&quot;S&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;L&quot;</span>, <span class="st">&quot;M&quot;</span>)
+tshirt_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(tshirt, <span class="dt">ordered =</span> <span class="ot">TRUE</span>,
+                        <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;S&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;L&quot;</span>))
+tshirt_factor
+<span class="co">#&gt; [1] M L S S L M L M</span>
+<span class="co">#&gt; Levels: S &lt; M &lt; L</span>
+
+tshirt_factor[<span class="dv">301</span>] &lt;<span class="st"> </span>tshirt_factor[<span class="dv">302</span>]
+<span class="co">#&gt; [1] NA</span></code></pre></div>
+</div>
 </div>
 <div id="list" class="section level2">
 <h2><span class="header-section-number">2.5</span> 리스트</h2>
+<div id="list-intro" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> 다른 종류의 자료형들이 함께</h3>
+<p>지금까지 전부 같은 자료형의 데이터가 모여 있는 형태의 자료형을 알아봤습니다. 같은 자료형으로 구성하는 것은 계산의 효율등 분명한 장점도 있지만, 그것을 사용하는 사람이 이해하기 어렵거나 불편할 때가 있습니다. 특히 다양한 자료형으로 구성된 데이터일 때 하나의 변수로 관리하기 위해서는 <code>list</code>를 사용해 합니다. 아래 <code>c</code>와 <code>list</code>로 만든 데이터를 비교해 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;Rsome times&quot;</span>, <span class="dv">190</span>, <span class="dv">5</span>)
+<span class="co">#&gt; [1] &quot;Rsome times&quot; &quot;190&quot;         &quot;5&quot;</span>
+<span class="kw">list</span>(<span class="st">&quot;Rsome times&quot;</span>, <span class="dv">190</span>, <span class="dv">5</span>)
+<span class="co">#&gt; [[1]]</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[2]]</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[3]]</span>
+<span class="co">#&gt; [1] 5</span>
+song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;Rsome times&quot;</span>, <span class="dv">190</span>, <span class="dv">5</span>)
+<span class="kw">is.list</span>(song)
+<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<p><code>list</code> 역시 <code>is.list</code> 함수가 있네요. <code>c</code>로 만들어진 데이터는 자료형을 강제로 전부 <code>character</code>로 바꾸었습니다. <code>list</code>는 데이터가 주욱 늘어지고, 숫자들은 숫자 데이터로 표현된 것 같습니다. 이 때 처음 보는 것이 있는데요. <code>[[ ]]</code>입니다. 이것은 <code>vector</code>가 하나의 자료형으로만 이루어져야 하는 점에 착안하여, <code>vector</code>를 여러 개 합쳐 <code>list</code>를 만듬으로써 문제를 해결했습니다. 그렇기 때문에 일부의 데이터를 불러오는 <code>[ ]</code>과 비슷하지만 합쳐져 있는 그 내부의 <code>vector</code>를 불러오는 <code>[[  ]]</code> 문법이 만들어 지게 되었습니다. <code>[ ]</code>과 <code>[[ ]]</code>를 실험해 보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">song[<span class="dv">3</span>]
+<span class="co">#&gt; [[1]]</span>
+<span class="co">#&gt; [1] 5</span>
+<span class="kw">class</span>(song[<span class="dv">3</span>])
+<span class="co">#&gt; [1] &quot;list&quot;</span>
+
+song[[<span class="dv">3</span>]]
+<span class="co">#&gt; [1] 5</span>
+<span class="kw">class</span>(song[[<span class="dv">3</span>]])
+<span class="co">#&gt; [1] &quot;numeric&quot;</span></code></pre></div>
+<p><code>list</code>도 다른 자료형들 처럼 <code>names</code>를 사용합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;Rsome times&quot;</span>, <span class="dv">190</span>, <span class="dv">5</span>)
+<span class="kw">names</span>(song) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;title&quot;</span>, <span class="st">&quot;duration&quot;</span>, <span class="st">&quot;track&quot;</span>)
+song
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $track</span>
+<span class="co">#&gt; [1] 5</span></code></pre></div>
+<p>이번엔 <code>[[ ]]</code> 위치에 <code>$title</code> 같이 <code>$ + names</code>의 문법이 나타났습니다. 이것이 <code>list</code>의 이름을 짓는 방법입니다. 이름으로 데이터를 부르는 방법은 더 복잡한 모양의 데이터를 만들고 실습해보기로 하고, <code>list</code>가 가진 다른 특성을 확인해 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">title =</span> <span class="st">&quot;Rsome times&quot;</span>,
+             <span class="dt">duration =</span> <span class="dv">190</span>,
+             <span class="dt">track =</span> <span class="dv">5</span>)
+<span class="kw">str</span>(song)
+<span class="co">#&gt; List of 3</span>
+<span class="co">#&gt;  $ title   : chr &quot;Rsome times&quot;</span>
+<span class="co">#&gt;  $ duration: num 190</span>
+<span class="co">#&gt;  $ track   : num 5</span>
+
+similar_song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">title =</span> <span class="st">&quot;R you on time?&quot;</span>,
+                     <span class="dt">duration =</span> <span class="dv">230</span>)
+
+song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">title =</span> <span class="st">&quot;Rsome times&quot;</span>,
+             <span class="dt">duration =</span> <span class="dv">190</span>, <span class="dt">track =</span> <span class="dv">5</span>,
+             <span class="dt">similar =</span> similar_song)
+
+<span class="kw">str</span>(song)
+<span class="co">#&gt; List of 4</span>
+<span class="co">#&gt;  $ title   : chr &quot;Rsome times&quot;</span>
+<span class="co">#&gt;  $ duration: num 190</span>
+<span class="co">#&gt;  $ track   : num 5</span>
+<span class="co">#&gt;  $ similar :List of 2</span>
+<span class="co">#&gt;   ..$ title   : chr &quot;R you on time?&quot;</span>
+<span class="co">#&gt;   ..$ duration: num 230</span></code></pre></div>
+<p><code>list</code> 안에 <code>list</code>가 들어가 있네요 <code>str</code>로 확인해 보니 <code>list</code> 안에 <code>list</code>가 <code>..$</code>로 들여쓰기 되어 표현되어 있습니다. 데이터 표현도 <code>List of 2</code>라고 <code>str(song)</code>의 맨 윗줄(<code>List of 4</code>)과 같은 모양이 보입니다. 이것처럼 <code>list</code>는 대부분의 자료형을 요소로 가질 수 있습니다.</p>
+<p><code>list</code>는 인터넷에서 많이 사용하는 자료형인 <code>JSON</code>에 대응됩니다. 과거에는 <code>XML</code>도 사용했다고 알고 있는데, 최근에는 많은 곳에서 <code>JSON</code>으로 사용하고 있습니다. <code>JSON</code>에 대해서는 <a href="https://ko.wikipedia.org/wiki/JSON">이곳</a>의 <code>예제</code>를 참고하세요</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(N2H4)
+url&lt;-<span class="st">&quot;http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=437&amp;aid=0000152054&quot;</span>
+tem&lt;-<span class="kw">getComment</span>(url)
+<span class="co">#&gt; [1] &quot;success : TRUE&quot;</span>
+<span class="kw">str</span>(tem)
+<span class="co">#&gt; &#39;data.frame&#39;:    1 obs. of  7 variables:</span>
+<span class="co">#&gt;  $ success: logi TRUE</span>
+<span class="co">#&gt;  $ code   : chr &quot;1000&quot;</span>
+<span class="co">#&gt;  $ message: chr &quot;요청을 성공적으로 처리하였습니다.&quot;</span>
+<span class="co">#&gt;  $ lang   : chr &quot;ko&quot;</span>
+<span class="co">#&gt;  $ country: chr &quot;KR&quot;</span>
+<span class="co">#&gt;  $ result :&#39;data.frame&#39;: 1 obs. of  10 variables:</span>
+<span class="co">#&gt;   ..$ sort          : chr &quot;FAVORITE&quot;</span>
+<span class="co">#&gt;   ..$ graph         :&#39;data.frame&#39;:   1 obs. of  3 variables:</span>
+<span class="co">#&gt;   .. ..$ gender:&#39;data.frame&#39;:    1 obs. of  2 variables:</span>
+<span class="co">#&gt;   .. .. ..$ male  : int 73</span>
+<span class="co">#&gt;   .. .. ..$ female: int 27</span>
+<span class="co">#&gt;   .. ..$ old   :List of 1</span>
+<span class="co">#&gt;   .. .. ..$ :&#39;data.frame&#39;:   5 obs. of  5 variables:</span>
+<span class="co">#&gt;   .. .. .. ..$ age  : chr  &quot;10&quot; &quot;20&quot; &quot;30&quot; &quot;40&quot; ...</span>
+<span class="co">#&gt;   .. .. .. ..$ value: int  2 18 32 23 25</span>
+<span class="co">#&gt;   .. .. .. ..$ type : chr  &quot;exact&quot; &quot;exact&quot; &quot;exact&quot; &quot;exact&quot; ...</span>
+<span class="co">#&gt;   .. .. .. ..$ min  : logi  TRUE FALSE FALSE FALSE FALSE</span>
+<span class="co">#&gt;   .. .. .. ..$ max  : logi  FALSE FALSE TRUE FALSE FALSE</span>
+<span class="co">#&gt;   .. ..$ empty : logi FALSE</span>
+<span class="co">#&gt;   ..$ count         :&#39;data.frame&#39;:   1 obs. of  5 variables:</span>
+<span class="co">#&gt;   .. ..$ comment         : int 1232</span>
+<span class="co">#&gt;   .. ..$ reply           : int 552</span>
+<span class="co">#&gt;   .. ..$ exposeCount     : int 1272</span>
+<span class="co">#&gt;   .. ..$ delCommentByUser: int 298</span>
+<span class="co">#&gt;   .. ..$ total           : int 1784</span>
+<span class="co">#&gt;   ..$ config        :&#39;data.frame&#39;:   1 obs. of  73 variables:</span>
+<span class="co">#&gt;   .. ..$ useSnsLogin                : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ lineFeedOn                 : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useBest                    : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useVote                    : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useVoteSelf                : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useVoteGoodOnly            : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useReport                  : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useCommonReport            : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useSort                    : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ sortTypes                  :List of 1</span>
+<span class="co">#&gt;   .. .. ..$ : chr  &quot;FAVORITE&quot; &quot;NEW&quot;</span>
+<span class="co">#&gt;   .. ..$ defaultSort                : chr &quot;FAVORITE&quot;</span>
+<span class="co">#&gt;   .. ..$ useByteLength              : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useReply                   : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useAutoRefresh             : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ min                        : int 1</span>
+<span class="co">#&gt;   .. ..$ max                        : int 300</span>
+<span class="co">#&gt;   .. ..$ useSticker                 : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ stickerOnly                : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ stickerSupportedCategories : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerDefaultCategory     : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerCategory            : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerContentsUrl         : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerKeyUrl              : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerTabUrl              : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerType                : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerText                : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ stickerMarketUrl           : logi NA</span>
+<span class="co">#&gt;   .. ..$ stickerMobileResize        : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useProfile                 : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ profileEmptyImage          : logi NA</span>
+<span class="co">#&gt;   .. ..$ displayMaskedUserId        : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useManager                 : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ managerDelete              : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ managerBlock               : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ managerNotice              : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ contentsManagerIcon        : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ secretComment              : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ exposureConfig             : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ deleteAllAfterBlock        : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useFold                    : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ replyPreviewCount          : int 0</span>
+<span class="co">#&gt;   .. ..$ maxImageUploadCount        : int 0</span>
+<span class="co">#&gt;   .. ..$ maxImageUploadFileSize     : int 0</span>
+<span class="co">#&gt;   .. ..$ imageAutoRotate            : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ autoRefreshTime            : int 0</span>
+<span class="co">#&gt;   .. ..$ autoRefreshDefaultOff      : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ autoRefreshChat            : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ maxChatFPS                 : int 0</span>
+<span class="co">#&gt;   .. ..$ commentModify              : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useCommentModify           : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useViewAll                 : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useSnsComment              : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ snsCommentDefaultOn        : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useUserLevel               : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useUserBlind               : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ maxUserBlindCount          : int 0</span>
+<span class="co">#&gt;   .. ..$ useImageComment            : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useUrlLink                 : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useCommentListIncludeDelete: logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useStats                   : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useGpopCache               : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useEnterSubmit             : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useListReverse             : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useTranslation             : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ useDeletedList             : logi TRUE</span>
+<span class="co">#&gt;   .. ..$ useAudio                   : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ photoInfraUploadDomain     : logi NA</span>
+<span class="co">#&gt;   .. ..$ photoInfraSelectDomainHttp : logi NA</span>
+<span class="co">#&gt;   .. ..$ photoInfraSelectDomainHttps: logi NA</span>
+<span class="co">#&gt;   .. ..$ pcTempThumbnailType        : chr &quot;ff80_80&quot;</span>
+<span class="co">#&gt;   .. ..$ mobileTempThumbnailType    : chr &quot;ff50_50&quot;</span>
+<span class="co">#&gt;   .. ..$ realnameVerificationBlock  : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ realnameVerificationMessage: logi NA</span>
+<span class="co">#&gt;   ..$ exposureConfig:&#39;data.frame&#39;:   1 obs. of  2 variables:</span>
+<span class="co">#&gt;   .. ..$ reason: logi NA</span>
+<span class="co">#&gt;   .. ..$ status: chr &quot;COMMENT_ON&quot;</span>
+<span class="co">#&gt;   ..$ bestList      :List of 1</span>
+<span class="co">#&gt;   .. ..$ : list()</span>
+<span class="co">#&gt;   ..$ notice        :&#39;data.frame&#39;:   1 obs. of  4 variables:</span>
+<span class="co">#&gt;   .. ..$ noticeNo: int 10</span>
+<span class="co">#&gt;   .. ..$ title   : chr &quot;댓글정렬옵션 &#39;공감비율순&#39; 베타 서비스 안내&quot;</span>
+<span class="co">#&gt;   .. ..$ content : chr &quot;안녕하세요, 네이버 뉴스입니다.\r&lt;br&gt; \r&lt;br&gt;뉴스 댓글 순서를 더 다양한 방식으로 선택해 볼 수 있도록  \r&lt;br&gt;우선 경제, 사회 섹션 &quot;| __truncated__</span>
+<span class="co">#&gt;   .. ..$ regTime : chr &quot;2017-02-01T14:42:53+0900&quot;</span>
+<span class="co">#&gt;   ..$ userInfo      :&#39;data.frame&#39;:   1 obs. of  0 variables</span>
+<span class="co">#&gt;   ..$ pageModel     :&#39;data.frame&#39;:   1 obs. of  16 variables:</span>
+<span class="co">#&gt;   .. ..$ page          : int 1</span>
+<span class="co">#&gt;   .. ..$ pageSize      : int 10</span>
+<span class="co">#&gt;   .. ..$ indexSize     : int 10</span>
+<span class="co">#&gt;   .. ..$ startRow      : int 1</span>
+<span class="co">#&gt;   .. ..$ endRow        : int 10</span>
+<span class="co">#&gt;   .. ..$ totalRows     : int 1232</span>
+<span class="co">#&gt;   .. ..$ startIndex    : int 0</span>
+<span class="co">#&gt;   .. ..$ totalPages    : int 124</span>
+<span class="co">#&gt;   .. ..$ firstPage     : int 1</span>
+<span class="co">#&gt;   .. ..$ prevPage      : int 0</span>
+<span class="co">#&gt;   .. ..$ nextPage      : int 2</span>
+<span class="co">#&gt;   .. ..$ lastPage      : int 10</span>
+<span class="co">#&gt;   .. ..$ current       : logi NA</span>
+<span class="co">#&gt;   .. ..$ moveToLastPage: logi FALSE</span>
+<span class="co">#&gt;   .. ..$ moveToComment : logi FALSE</span>
+<span class="co">#&gt;   .. ..$ moveToLastPrev: logi FALSE</span>
+<span class="co">#&gt;   ..$ commentList   :List of 1</span>
+<span class="co">#&gt;   .. ..$ :&#39;data.frame&#39;:  10 obs. of  65 variables:</span>
+<span class="co">#&gt;   .. .. ..$ ticket          : chr  &quot;news&quot; &quot;news&quot; &quot;news&quot; &quot;news&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ objectId        : chr  &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ categoryId      : chr  &quot;*&quot; &quot;*&quot; &quot;*&quot; &quot;*&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ templateId      : chr  &quot;default&quot; &quot;view&quot; &quot;view&quot; &quot;view_politics&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ commentNo       : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032</span>
+<span class="co">#&gt;   .. .. ..$ parentCommentNo : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032</span>
+<span class="co">#&gt;   .. .. ..$ replyLevel      : int  1 1 1 1 1 1 1 1 1 1</span>
+<span class="co">#&gt;   .. .. ..$ replyCount      : int  52 34 16 31 15 8 4 1 1 10</span>
+<span class="co">#&gt;   .. .. ..$ replyPreviewNo  : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ replyList       : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ imageCount      : int  0 0 0 0 0 0 0 0 0 0</span>
+<span class="co">#&gt;   .. .. ..$ imageList       : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ imagePathList   : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ imageWidthList  : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ imageHeightList : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ commentType     : chr  &quot;txt&quot; &quot;txt&quot; &quot;txt&quot; &quot;txt&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ stickerId       : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ sticker         : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ sortValue       : num  1.49e+12 1.49e+12 1.49e+12 1.49e+12 1.49e+12 ...</span>
+<span class="co">#&gt;   .. .. ..$ contents        : chr  &quot;국회의원에게 권력을 나눠주느니 차라리 대통령중심제 해라. 각당 원내대표들이 돌아가며 총리 해먹는 꼴 못본다&quot; &quot;4년 중임제가 답이다&quot; &quot;대통령제하에서도 지금 이렇게 난장판을 만들고 있는 국개의원들에게 나라를 맡기라고요? 농담이겠지~ 사사건건 대통령이 일 못하게 방&quot;| __truncated__ &quot;의원내각제는 진짜로 박지원 상왕 만들자는 개헌이지&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userIdNo        : chr  &quot;oCJq&quot; &quot;5qcIZ&quot; &quot;6mKW&quot; &quot;9oKyX&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ lang            : chr  &quot;ko&quot; &quot;ko&quot; &quot;ko&quot; &quot;ko&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ country         : chr  &quot;KR&quot; &quot;KR&quot; &quot;KR&quot; &quot;KR&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ idType          : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ idProvider      : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userName        : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;yhan****&quot; &quot;tjto****&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userProfileImage: chr  &quot;http://profile.phinf.naver.net/47661/c2300c203d789c4761cb7256042c54e1434afc037bc9e510593d610b89108090.jpg&quot; &quot;http://profile.phinf.naver.net/27148/f77ca3b0a86973c627361a946e9ae3a198c8557fd608f07ead8df1f060808693.jpg&quot; &quot;http://profile.phinf.naver.net/45703/ba160172fc0d0e4a1b3e3c71fb92811a65220334ed0a3d80cabe21b205e13951.jpg&quot; &quot;http://profile.phinf.naver.net/43378/842d4ba6140c89c75e27abf1f0a48910de3c4f95bac6fe9e7347cbbf831e6f42.jpg&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ profileType     : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ modTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:05:58+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ modTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:05:58+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ regTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:05:58+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ regTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:05:58+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ sympathyCount   : int  2297 1854 1594 1865 1354 619 481 458 414 454</span>
+<span class="co">#&gt;   .. .. ..$ antipathyCount  : int  68 96 38 151 29 36 11 5 10 34</span>
+<span class="co">#&gt;   .. .. ..$ userBlind       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ hideReplyButton : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ status          : int  0 0 0 0 0 0 0 0 0 0</span>
+<span class="co">#&gt;   .. .. ..$ mine            : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ best            : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ mentions        : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ userStatus      : int  0 0 0 0 0 0 0 0 0 0</span>
+<span class="co">#&gt;   .. .. ..$ categoryImage   : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ open            : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ levelCode       : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ sympathy        : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ antipathy       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ snsList         : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ metaInfo        : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ extension       : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ audioInfoList   : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ translation     : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ visible         : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...</span>
+<span class="co">#&gt;   .. .. ..$ manager         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ deleted         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ shardTableNo    : int  144 144 144 144 144 144 144 144 144 144</span>
+<span class="co">#&gt;   .. .. ..$ blind           : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ secret          : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ expose          : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...</span>
+<span class="co">#&gt;   .. .. ..$ profileUserId   : logi  NA NA NA NA NA NA ...</span>
+<span class="co">#&gt;   .. .. ..$ containText     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...</span>
+<span class="co">#&gt;   .. .. ..$ maskedUserId    : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;yhan****&quot; &quot;tjto****&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ validateBanWords: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ maskedUserName  : chr  &quot;ss****&quot; &quot;za****&quot; &quot;yh****&quot; &quot;tj****&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ virtual         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ exposeByCountry : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;  $ date   : chr &quot;2017-04-13T09:14:04+0000&quot;</span></code></pre></div>
+<p><code>JSON</code>을 전문적으로 다루기 위한 <a href="https://github.com/jeremystan/tidyjson">패키지</a>도 있으니 확인해 보세요.</p>
+</div>
+<div id="list-subset" class="section level3">
+<h3><span class="header-section-number">2.5.2</span> 리스트의 일부 데이터 불러오기</h3>
+<p>이제 <code>list</code>에서 일부 데이터를 불러오는 실습을 해보겠습니다. 다른 자료형처럼 데이터의 일부를 불러오는 방법과 이름을 사용하는 방법, <code>[[ ]]</code>를 사용하고, <code>$ + 데이터의 이름</code>을 사용하는 방법들이 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">similar_song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">title =</span> <span class="st">&quot;R you on time?&quot;</span>,
+                     <span class="dt">duration =</span> <span class="dv">230</span>)
+song &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">title =</span> <span class="st">&quot;Rsome times&quot;</span>,
+             <span class="dt">duration =</span> <span class="dv">190</span>, <span class="dt">track =</span> <span class="dv">5</span>,
+             <span class="dt">similar =</span> similar_song)
+song
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $track</span>
+<span class="co">#&gt; [1] 5</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar</span>
+<span class="co">#&gt; $similar$title</span>
+<span class="co">#&gt; [1] &quot;R you on time?&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar$duration</span>
+<span class="co">#&gt; [1] 230</span>
+song[<span class="dv">1</span>]
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+song[[<span class="dv">1</span>]]
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+
+song[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)]
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $track</span>
+<span class="co">#&gt; [1] 5</span></code></pre></div>
+<pre><code>&gt; song[[c(1, 3)]]
+## Error in song[[c(1, 3)]] : subscript out of bounds
+
+&gt; song[[1]][[3]]
+## Error in song[[1]][[3]] : subscript out of bounds</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">song[[<span class="dv">3</span>]][[<span class="dv">1</span>]]
+<span class="co">#&gt; [1] 5</span>
+song[[<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>)]]
+<span class="co">#&gt; [1] &quot;R you on time?&quot;</span>
+
+song[[<span class="st">&quot;duration&quot;</span>]]
+<span class="co">#&gt; [1] 190</span>
+song[<span class="st">&quot;duration&quot;</span>]
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+song[<span class="kw">c</span>(<span class="st">&quot;duration&quot;</span>, <span class="st">&quot;similar&quot;</span>)]
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar</span>
+<span class="co">#&gt; $similar$title</span>
+<span class="co">#&gt; [1] &quot;R you on time?&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar$duration</span>
+<span class="co">#&gt; [1] 230</span>
+
+song$duration
+<span class="co">#&gt; [1] 190</span>
+friends &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Kurt&quot;</span>, <span class="st">&quot;Florence&quot;</span>, <span class="st">&quot;Patti&quot;</span>, <span class="st">&quot;Dave&quot;</span>)
+song$sent &lt;-<span class="st"> </span>friends
+song
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $track</span>
+<span class="co">#&gt; [1] 5</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar</span>
+<span class="co">#&gt; $similar$title</span>
+<span class="co">#&gt; [1] &quot;R you on time?&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar$duration</span>
+<span class="co">#&gt; [1] 230</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $sent</span>
+<span class="co">#&gt; [1] &quot;Kurt&quot;     &quot;Florence&quot; &quot;Patti&quot;    &quot;Dave&quot;</span>
+song[[<span class="st">&quot;sent&quot;</span>]] &lt;-<span class="st"> </span>friends
+song$similar$reason &lt;-<span class="st"> &quot;too long&quot;</span>
+song
+<span class="co">#&gt; $title</span>
+<span class="co">#&gt; [1] &quot;Rsome times&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $duration</span>
+<span class="co">#&gt; [1] 190</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $track</span>
+<span class="co">#&gt; [1] 5</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar</span>
+<span class="co">#&gt; $similar$title</span>
+<span class="co">#&gt; [1] &quot;R you on time?&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar$duration</span>
+<span class="co">#&gt; [1] 230</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $similar$reason</span>
+<span class="co">#&gt; [1] &quot;too long&quot;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $sent</span>
+<span class="co">#&gt; [1] &quot;Kurt&quot;     &quot;Florence&quot; &quot;Patti&quot;    &quot;Dave&quot;</span></code></pre></div>
+</div>
 </div>
 <div id="data-frame" class="section level2">
 <h2><span class="header-section-number">2.6</span> 데이터프레임</h2>
+<div id="data-frame-intro" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> 사람이 이해하기 쉬운 자료형</h3>
+<p>다양한 형태의 자료형을 묶어서 사용하는 <code>list</code>를 만들고 보니, 반대로 너무 자유도가 높아서 사용하기 어려운 문제들이 나타났습니다. 그렇다 보니 조금 제약사항을 만들어 보기로 합니다. 그렇게 해서 탄생한게 <code>data.frame</code>입니다. 기존에 알고 계시는 엑셀 시트나 설문조사를 정리한 표 같은 걸 생각하시면 도움이 되실 겁니다. <code>data.frame</code>은 <code>list</code>와 달리 <code>vector</code>를 각 열로 유지하여 합치는 방식을 사용했습니다. 그래서 하나의 열 내에서는 데이터가 <code>vector</code>와 같이 자료형이 모두 같아야 하고, 하나의 행에서는 자료형이 여러 개가 가능합니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">name &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Anne&quot;</span>, <span class="st">&quot;Pete&quot;</span>, <span class="st">&quot;Frank&quot;</span>, <span class="st">&quot;Julia&quot;</span>, <span class="st">&quot;Cath&quot;</span>)
+age &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">28</span>, <span class="dv">30</span>, <span class="dv">21</span>, <span class="dv">39</span>, <span class="dv">35</span>)
+child &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(name, age, child)
+df
+<span class="co">#&gt;    name age child</span>
+<span class="co">#&gt; 1  Anne  28 FALSE</span>
+<span class="co">#&gt; 2  Pete  30  TRUE</span>
+<span class="co">#&gt; 3 Frank  21  TRUE</span>
+<span class="co">#&gt; 4 Julia  39 FALSE</span>
+<span class="co">#&gt; 5  Cath  35  TRUE</span></code></pre></div>
+<p>물론 <code>names</code>도 사용합니다. <code>names</code>는 열의 이름을 뜻합니다. 똑같이 처음부터 지정해 줄수 있구요. 지정하지 않으면 임의로 <code>data.frame</code>이 선정해서 가지고 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(df)
+<span class="co">#&gt; [1] &quot;name&quot;  &quot;age&quot;   &quot;child&quot;</span>
+<span class="kw">names</span>(df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Child&quot;</span>)
+df
+<span class="co">#&gt;    Name Age Child</span>
+<span class="co">#&gt; 1  Anne  28 FALSE</span>
+<span class="co">#&gt; 2  Pete  30  TRUE</span>
+<span class="co">#&gt; 3 Frank  21  TRUE</span>
+<span class="co">#&gt; 4 Julia  39 FALSE</span>
+<span class="co">#&gt; 5  Cath  35  TRUE</span>
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Name =</span> name, <span class="dt">Age =</span> age, <span class="dt">Child =</span> child)
+df
+<span class="co">#&gt;    Name Age Child</span>
+<span class="co">#&gt; 1  Anne  28 FALSE</span>
+<span class="co">#&gt; 2  Pete  30  TRUE</span>
+<span class="co">#&gt; 3 Frank  21  TRUE</span>
+<span class="co">#&gt; 4 Julia  39 FALSE</span>
+<span class="co">#&gt; 5  Cath  35  TRUE</span>
+<span class="kw">str</span>(df)
+<span class="co">#&gt; &#39;data.frame&#39;:    5 obs. of  3 variables:</span>
+<span class="co">#&gt;  $ Name : chr  &quot;Anne&quot; &quot;Pete&quot; &quot;Frank&quot; &quot;Julia&quot; ...</span>
+<span class="co">#&gt;  $ Age  : num  28 30 21 39 35</span>
+<span class="co">#&gt;  $ Child: logi  FALSE TRUE TRUE FALSE TRUE</span></code></pre></div>
+<p><code>data.frame</code>은 각 열의 데이터 갯수가 맞지 않으면 만들어 지지 않습니다.</p>
+<pre><code>&gt; data.frame(name[-1], age, child)
+## Error in data.frame(name[-1], age, child) : 
+##   arguments imply differing number of rows: 4, 5</code></pre>
+<p>그리고 글자를 모두 <code>factor</code>를 기본 값으로 지정합니다. 그래서 <code>stringsAsFactors</code> 옵션을 <code>FALSE</code>로 해줘야 <code>charater</code>로 데이터를 만들 수 있습니다. <code>stringsAsFactors</code>는 <code>options</code>에서도 지정해서 사용할 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(name, age, child, 
+                 <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
+<span class="kw">str</span>(df)
+<span class="co">#&gt; &#39;data.frame&#39;:    5 obs. of  3 variables:</span>
+<span class="co">#&gt;  $ name : chr  &quot;Anne&quot; &quot;Pete&quot; &quot;Frank&quot; &quot;Julia&quot; ...</span>
+<span class="co">#&gt;  $ age  : num  28 30 21 39 35</span>
+<span class="co">#&gt;  $ child: logi  FALSE TRUE TRUE FALSE TRUE</span></code></pre></div>
+<p><code>list</code>와 같이 위치값이나 이름으로 데이터의 일부를 불러올 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">name &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Anne&quot;</span>, <span class="st">&quot;Pete&quot;</span>, <span class="st">&quot;Frank&quot;</span>, <span class="st">&quot;Julia&quot;</span>, <span class="st">&quot;Cath&quot;</span>)
+age &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">28</span>, <span class="dv">30</span>, <span class="dv">21</span>, <span class="dv">39</span>, <span class="dv">35</span>)
+child &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)
+people &lt;-<span class="st"> </span><span class="kw">data.frame</span>(name, age, child, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
+people
+<span class="co">#&gt;    name age child</span>
+<span class="co">#&gt; 1  Anne  28 FALSE</span>
+<span class="co">#&gt; 2  Pete  30  TRUE</span>
+<span class="co">#&gt; 3 Frank  21  TRUE</span>
+<span class="co">#&gt; 4 Julia  39 FALSE</span>
+<span class="co">#&gt; 5  Cath  35  TRUE</span>
+people[<span class="dv">3</span>,<span class="dv">2</span>]
+<span class="co">#&gt; [1] 21</span>
+people[<span class="dv">3</span>,<span class="st">&quot;age&quot;</span>]
+<span class="co">#&gt; [1] 21</span>
+people[<span class="dv">3</span>,]
+<span class="co">#&gt;    name age child</span>
+<span class="co">#&gt; 3 Frank  21  TRUE</span>
+people[,<span class="st">&quot;age&quot;</span>]
+<span class="co">#&gt; [1] 28 30 21 39 35</span>
+people[<span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>), <span class="kw">c</span>(<span class="st">&quot;age&quot;</span>, <span class="st">&quot;child&quot;</span>)]
+<span class="co">#&gt;   age child</span>
+<span class="co">#&gt; 3  21  TRUE</span>
+<span class="co">#&gt; 5  35  TRUE</span>
+people[<span class="dv">2</span>]
+<span class="co">#&gt;   age</span>
+<span class="co">#&gt; 1  28</span>
+<span class="co">#&gt; 2  30</span>
+<span class="co">#&gt; 3  21</span>
+<span class="co">#&gt; 4  39</span>
+<span class="co">#&gt; 5  35</span>
+people$age
+<span class="co">#&gt; [1] 28 30 21 39 35</span>
+people[[<span class="st">&quot;age&quot;</span>]]
+<span class="co">#&gt; [1] 28 30 21 39 35</span>
+people[[<span class="dv">2</span>]]
+<span class="co">#&gt; [1] 28 30 21 39 35</span>
+people[<span class="st">&quot;age&quot;</span>]
+<span class="co">#&gt;   age</span>
+<span class="co">#&gt; 1  28</span>
+<span class="co">#&gt; 2  30</span>
+<span class="co">#&gt; 3  21</span>
+<span class="co">#&gt; 4  39</span>
+<span class="co">#&gt; 5  35</span>
+people[<span class="dv">2</span>]
+<span class="co">#&gt;   age</span>
+<span class="co">#&gt; 1  28</span>
+<span class="co">#&gt; 2  30</span>
+<span class="co">#&gt; 3  21</span>
+<span class="co">#&gt; 4  39</span>
+<span class="co">#&gt; 5  35</span></code></pre></div>
+<p><code>data.frame</code>은 데이터를 추가하는 여러 가지 방법을 지원합니다. 이전에 한번씩 본 방식이니 테스트해보세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">height &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">163</span>, <span class="dv">177</span>, <span class="dv">163</span>, <span class="dv">162</span>, <span class="dv">157</span>)
+people$height &lt;-<span class="st"> </span>height
+people[[<span class="st">&quot;height&quot;</span>]] &lt;-<span class="st"> </span>height
+people
+<span class="co">#&gt;    name age child height</span>
+<span class="co">#&gt; 1  Anne  28 FALSE    163</span>
+<span class="co">#&gt; 2  Pete  30  TRUE    177</span>
+<span class="co">#&gt; 3 Frank  21  TRUE    163</span>
+<span class="co">#&gt; 4 Julia  39 FALSE    162</span>
+<span class="co">#&gt; 5  Cath  35  TRUE    157</span>
+
+weight &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">74</span>, <span class="dv">63</span>, <span class="dv">68</span>, <span class="dv">55</span>, <span class="dv">56</span>)
+<span class="kw">cbind</span>(people, weight)
+<span class="co">#&gt;    name age child height weight</span>
+<span class="co">#&gt; 1  Anne  28 FALSE    163     74</span>
+<span class="co">#&gt; 2  Pete  30  TRUE    177     63</span>
+<span class="co">#&gt; 3 Frank  21  TRUE    163     68</span>
+<span class="co">#&gt; 4 Julia  39 FALSE    162     55</span>
+<span class="co">#&gt; 5  Cath  35  TRUE    157     56</span></code></pre></div>
+<pre><code>&gt; tom &lt;- data.frame(&quot;Tom&quot;, 37, FALSE, 183)
+&gt; rbind(people, tom)
+## Error in match.names(clabs, names(xi)) : 
+##   names do not match previous names</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tom &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">name =</span> <span class="st">&quot;Tom&quot;</span>, <span class="dt">age =</span> <span class="dv">37</span>,
+                  <span class="dt">child =</span> <span class="ot">FALSE</span>, <span class="dt">height =</span> <span class="dv">183</span>)
+<span class="kw">rbind</span>(people, tom)
+<span class="co">#&gt;    name age child height</span>
+<span class="co">#&gt; 1  Anne  28 FALSE    163</span>
+<span class="co">#&gt; 2  Pete  30  TRUE    177</span>
+<span class="co">#&gt; 3 Frank  21  TRUE    163</span>
+<span class="co">#&gt; 4 Julia  39 FALSE    162</span>
+<span class="co">#&gt; 5  Cath  35  TRUE    157</span>
+<span class="co">#&gt; 6   Tom  37 FALSE    183</span></code></pre></div>
+</div>
+<div id="order-sort" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> 순서에 대해 작업하기</h3>
+<p>순서는 <code>data.frame</code>뿐만 아니라 다른 자료형에서도 그대로 적용되는 내용입니다. 여기서는 <code>sort</code>와 <code>order</code>에 대해서 알아보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(people$age)
+<span class="co">#&gt; [1] 21 28 30 35 39</span>
+ranks &lt;-<span class="st"> </span><span class="kw">order</span>(people$age)
+ranks
+<span class="co">#&gt; [1] 3 1 2 5 4</span>
+people$age
+<span class="co">#&gt; [1] 28 30 21 39 35</span>
+
+ranks &lt;-<span class="st"> </span><span class="kw">order</span>(people$age)
+ranks
+<span class="co">#&gt; [1] 3 1 2 5 4</span>
+
+people[ranks, ]
+<span class="co">#&gt;    name age child height</span>
+<span class="co">#&gt; 3 Frank  21  TRUE    163</span>
+<span class="co">#&gt; 1  Anne  28 FALSE    163</span>
+<span class="co">#&gt; 2  Pete  30  TRUE    177</span>
+<span class="co">#&gt; 5  Cath  35  TRUE    157</span>
+<span class="co">#&gt; 4 Julia  39 FALSE    162</span>
+
+people[<span class="kw">order</span>(people$age, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>), ]
+<span class="co">#&gt;    name age child height</span>
+<span class="co">#&gt; 4 Julia  39 FALSE    162</span>
+<span class="co">#&gt; 5  Cath  35  TRUE    157</span>
+<span class="co">#&gt; 2  Pete  30  TRUE    177</span>
+<span class="co">#&gt; 1  Anne  28 FALSE    163</span>
+<span class="co">#&gt; 3 Frank  21  TRUE    163</span></code></pre></div>
+<p><code>sort</code>는 순서가 있는 데이터(지금의 예시로는 나이)를 오름차순으로 정렬해줍니다. 글자라면 알파벳순으로 정렬해 줄 것입니다. 한 번 실험해 보세요.<br />
+<code>order</code>는 그 위치에 있는 데이터가 전체 데이터 내에서 몇 번째에 위치하는지를 알려줍니다. <code>sort</code>가 정렬이 끝난 결과를 보여주는 것이라면 <code>order</code>는 그 데이터의 순서값 자체를 보여주는 것이죠. 그렇기 때문에 <code>order</code>는 <code>[ ]</code>의 행부분 조건과 결합하여 많이 사용됩니다.</p>
+</div>
 </div>
 <div id="date-time" class="section level2">
 <h2><span class="header-section-number">2.7</span> 날짜</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dates &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2016/01/01&quot;</span>,<span class="st">&quot;2016/02/01&quot;</span>,<span class="st">&quot;2016/03/01&quot;</span>,<span class="st">&quot;2016/04/01&quot;</span>,<span class="st">&quot;2016/05/01&quot;</span>,<span class="st">&quot;2016/06/01&quot;</span>)
+dates
+<span class="co">#&gt; [1] &quot;2016/01/01&quot; &quot;2016/02/01&quot; &quot;2016/03/01&quot; &quot;2016/04/01&quot; &quot;2016/05/01&quot;</span>
+<span class="co">#&gt; [6] &quot;2016/06/01&quot;</span>
+<span class="kw">class</span>(dates)
+<span class="co">#&gt; [1] &quot;character&quot;</span>
+trans.dates &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dates)
+trans.dates
+<span class="co">#&gt; [1] &quot;2016-01-01&quot; &quot;2016-02-01&quot; &quot;2016-03-01&quot; &quot;2016-04-01&quot; &quot;2016-05-01&quot;</span>
+<span class="co">#&gt; [6] &quot;2016-06-01&quot;</span>
+<span class="kw">class</span>(trans.dates)
+<span class="co">#&gt; [1] &quot;Date&quot;</span>
+
+trans.dates[<span class="dv">303</span>]-trans.dates[<span class="dv">301</span>]
+<span class="co">#&gt; Time difference of NA days</span>
+
+dates2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2016-01-01&quot;</span>,<span class="st">&quot;2016-02-01&quot;</span>,<span class="st">&quot;2016-03-01&quot;</span>,<span class="st">&quot;2016-04-01&quot;</span>,<span class="st">&quot;2016-05-01&quot;</span>,<span class="st">&quot;2016-06-01&quot;</span>)
+trans.dates2 &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dates2)
+trans.dates2
+<span class="co">#&gt; [1] &quot;2016-01-01&quot; &quot;2016-02-01&quot; &quot;2016-03-01&quot; &quot;2016-04-01&quot; &quot;2016-05-01&quot;</span>
+<span class="co">#&gt; [6] &quot;2016-06-01&quot;</span>
+<span class="kw">class</span>(trans.dates2)
+<span class="co">#&gt; [1] &quot;Date&quot;</span></code></pre></div>
+<pre><code>&gt; as.Date(&quot;2016년 4월 5일&quot;)
+## Error in charToDate(x) : 문자열이 표준서식을 따르지 않습니다</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.Date</span>(<span class="st">&quot;2016년 4월 5일&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%Y년 %m월 %d일&quot;</span>)
+<span class="co">#&gt; [1] &quot;2016-04-05&quot;</span>
+
+<span class="co"># 양식 참고</span>
+<span class="co"># http://www.stat.berkeley.edu/classes/s133/dates.html</span>
+
+<span class="kw">as.Date</span>(<span class="dv">34519</span>, <span class="dt">origin=</span><span class="st">&quot;1900-01-01&quot;</span>)
+<span class="co">#&gt; [1] &quot;1994-07-06&quot;</span>
+
+<span class="co"># 시간 자료형</span>
+<span class="kw">as.POSIXct</span>(<span class="st">&quot;2017-04-12 12:00:00&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-04-12 12:00:00 KST&quot;</span>
+<span class="kw">as.POSIXlt</span>(<span class="st">&quot;2017-04-12 12:00:00&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-04-12 12:00:00 KST&quot;</span>
+
+<span class="kw">library</span>(lubridate)
+<span class="co">#&gt; 필요한 패키지를 로딩중입니다: methods</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;lubridate&#39;</span>
+<span class="co">#&gt; The following object is masked from &#39;package:base&#39;:</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     date</span>
+
+<span class="kw">ymd</span>(<span class="st">&quot;2017-05-05&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+<span class="kw">ymd</span>(<span class="st">&quot;170505&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+<span class="kw">ymd</span>(<span class="st">&quot;20170505&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+<span class="kw">dmy</span>(<span class="st">&quot;17-05-15&quot;</span>)
+<span class="co">#&gt; [1] &quot;2015-05-17&quot;</span>
+<span class="kw">ymd</span>(<span class="st">&quot;2017년 5월 5일&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+<span class="kw">dmy</span>(<span class="st">&quot;5일5월2017년&quot;</span>)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+
+dates &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2017-05-05&quot;</span>,<span class="st">&quot;170505&quot;</span>,<span class="st">&quot;20170505&quot;</span>,<span class="st">&quot;17-05-15&quot;</span>,<span class="st">&quot;2017년 5월 5일&quot;</span>)
+<span class="kw">ymd</span>(dates)
+<span class="co">#&gt; [1] &quot;2017-05-05&quot; &quot;2017-05-05&quot; &quot;2017-05-05&quot; &quot;2017-05-15&quot; &quot;2017-05-05&quot;</span>
+
+data &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-05-05&quot;</span>)
+data
+<span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
+
+<span class="kw">year</span>(data)
+<span class="co">#&gt; [1] 2017</span>
+<span class="kw">month</span>(data)
+<span class="co">#&gt; [1] 5</span>
+<span class="kw">month</span>(data, <span class="dt">label=</span>T)
+<span class="co">#&gt; [1] May</span>
+<span class="co">#&gt; 12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</span>
+<span class="kw">week</span>(data)
+<span class="co">#&gt; [1] 18</span>
+<span class="kw">yday</span>(data)
+<span class="co">#&gt; [1] 125</span>
+<span class="kw">mday</span>(data)
+<span class="co">#&gt; [1] 5</span>
+<span class="kw">wday</span>(data)
+<span class="co">#&gt; [1] 6</span>
+<span class="kw">wday</span>(data, <span class="dt">label=</span>T)
+<span class="co">#&gt; [1] Fri</span>
+<span class="co">#&gt; Levels: Sun &lt; Mon &lt; Tues &lt; Wed &lt; Thurs &lt; Fri &lt; Sat</span></code></pre></div>
 
 </div>
 </div>
@@ -243,8 +1297,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="for-apply.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="for-apply.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
