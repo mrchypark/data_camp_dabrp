@@ -449,6 +449,9 @@ song[c(1, 3)]
 ## Error in song[[1]][[3]] : subscript out of bounds
 ```
 
+
+devtools::install_github("forkonlp/N2H4")
+
 ```{r}
 song[[3]][[1]]
 song[[c(4, 1)]]
@@ -569,6 +572,8 @@ people[order(people$age, decreasing = TRUE), ]
 
 ## 날짜 {#date-time}
 
+날짜는 어느 곳에서든 다루기 어려운 데이터입니다. 불규칙적인 윤달이라던지 하는 여러 가지 문제로 실제로 사용할 때 많은 문제가 있는데요, R에서는 여러 형태의 날짜를 표현하는 데이터를 `Date`라는 자료형으로 관리하고 있습니다. 사람들이 관행적으로 사용하는 형태의 `character` 날짜를 `Date`형으로 바꿔보겠습니다.
+
 ```{r}
 dates <- c("2016/01/01","2016/02/01","2016/03/01","2016/04/01","2016/05/01","2016/06/01")
 dates
@@ -577,29 +582,49 @@ trans.dates <- as.Date(dates)
 trans.dates
 class(trans.dates)
 
-trans.dates[303]-trans.dates[301]
+```
 
+`Date`형 일때의 장점은 계산이 가능하다는 것입니다.
+```{r}
+trans.dates[3]-trans.dates[1]
+```
+
+다른 모양의 `character`도 되는지 한번 보겠습니다.
+```{r}
 dates2 <- c("2016-01-01","2016-02-01","2016-03-01","2016-04-01","2016-05-01","2016-06-01")
 trans.dates2 <- as.Date(dates2)
 trans.dates2
 class(trans.dates2)
 ```
+
+어려운 모양은 인식하지 못합니다. 그래서 일부러 양식을 알려주면 R이 고칠 수 있는데요.
 ```
 > as.Date("2016년 4월 5일")
 ## Error in charToDate(x) : 문자열이 표준서식을 따르지 않습니다
 ```
 ```{r}
 as.Date("2016년 4월 5일", format="%Y년 %m월 %d일")
+```
 
-# 양식 참고
-# http://www.stat.berkeley.edu/classes/s133/dates.html
+양식은 저도 다 외우지 못하고 매번 검색해서 사용합니다.
 
+http://www.stat.berkeley.edu/classes/s133/dates.html
+
+하지만 year의 y(4자 Y, 2자 y), month의 m, day의 d 로 생각하시면 우선 해결되고 나머지는 위에 링크를 참고해 보시면 좋을 것 같습니다.
+```{r}
 as.Date(34519, origin="1900-01-01")
+```
 
+시간은 `POSIXct`와 `POSIXlt` 두 가지로 준비되어 있습니다. 분석에 적용하는데 있어 특별히 구분해서 사용하지 않아서, 하나를 선택하셨다면 일관되게 한 가지만 계속 사용하시면 좋을 것 같습니다.
+```{r}
 # 시간 자료형
 as.POSIXct("2017-04-12 12:00:00")
 as.POSIXlt("2017-04-12 12:00:00")
 
+```
+
+날짜와 시간을 다루는 패키지로 유명한 `lubridate`가 있습니다. 아래 여러 코드의 실행결과를 보시면 그 유연한 기능에 감탄하시게 될 겁니다.
+```{r}
 library(lubridate)
 
 ymd("2017-05-05")

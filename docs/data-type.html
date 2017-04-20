@@ -165,18 +165,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#date-time"><i class="fa fa-check"></i><b>2.7</b> 날짜</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="for-apply.html"><a href="for-apply.html"><i class="fa fa-check"></i><b>3</b> 단순 반복 업무를 위한 for문과 apply류 맛보기</a><ul>
-<li class="chapter" data-level="3.1" data-path="for-apply.html"><a href="for-apply.html#introduce-for"><i class="fa fa-check"></i><b>3.1</b> 반복문</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="for-apply.html"><a href="for-apply.html#for"><i class="fa fa-check"></i><b>3.1.1</b> for</a></li>
-<li class="chapter" data-level="3.1.2" data-path="for-apply.html"><a href="for-apply.html#while"><i class="fa fa-check"></i><b>3.1.2</b> while</a></li>
-<li class="chapter" data-level="3.1.3" data-path="for-apply.html"><a href="for-apply.html#repeat"><i class="fa fa-check"></i><b>3.1.3</b> repeat</a></li>
-<li class="chapter" data-level="3.1.4" data-path="for-apply.html"><a href="for-apply.html#break"><i class="fa fa-check"></i><b>3.1.4</b> break</a></li>
-<li class="chapter" data-level="3.1.5" data-path="for-apply.html"><a href="for-apply.html#next"><i class="fa fa-check"></i><b>3.1.5</b> next</a></li>
+<li class="chapter" data-level="3.1" data-path="for-apply.html"><a href="for-apply.html#introduce-if"><i class="fa fa-check"></i><b>3.1</b> 조건문</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="for-apply.html"><a href="for-apply.html#if"><i class="fa fa-check"></i><b>3.1.1</b> if</a></li>
+<li class="chapter" data-level="3.1.2" data-path="for-apply.html"><a href="for-apply.html#else"><i class="fa fa-check"></i><b>3.1.2</b> else</a></li>
+<li class="chapter" data-level="3.1.3" data-path="for-apply.html"><a href="for-apply.html#ifelse"><i class="fa fa-check"></i><b>3.1.3</b> ifelse</a></li>
+<li class="chapter" data-level="3.1.4" data-path="for-apply.html"><a href="for-apply.html#try"><i class="fa fa-check"></i><b>3.1.4</b> try</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="for-apply.html"><a href="for-apply.html#introduce-if"><i class="fa fa-check"></i><b>3.2</b> 조건문</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="for-apply.html"><a href="for-apply.html#if"><i class="fa fa-check"></i><b>3.2.1</b> if</a></li>
-<li class="chapter" data-level="3.2.2" data-path="for-apply.html"><a href="for-apply.html#else"><i class="fa fa-check"></i><b>3.2.2</b> else</a></li>
-<li class="chapter" data-level="3.2.3" data-path="for-apply.html"><a href="for-apply.html#ifelse"><i class="fa fa-check"></i><b>3.2.3</b> ifelse</a></li>
-<li class="chapter" data-level="3.2.4" data-path="for-apply.html"><a href="for-apply.html#switch"><i class="fa fa-check"></i><b>3.2.4</b> switch</a></li>
+<li class="chapter" data-level="3.2" data-path="for-apply.html"><a href="for-apply.html#introduce-loop"><i class="fa fa-check"></i><b>3.2</b> 반복문</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="for-apply.html"><a href="for-apply.html#repeat"><i class="fa fa-check"></i><b>3.2.1</b> repeat</a></li>
+<li class="chapter" data-level="3.2.2" data-path="for-apply.html"><a href="for-apply.html#break"><i class="fa fa-check"></i><b>3.2.2</b> break</a></li>
+<li class="chapter" data-level="3.2.3" data-path="for-apply.html"><a href="for-apply.html#while"><i class="fa fa-check"></i><b>3.2.3</b> while</a></li>
+<li class="chapter" data-level="3.2.4" data-path="for-apply.html"><a href="for-apply.html#for"><i class="fa fa-check"></i><b>3.2.4</b> for</a></li>
+<li class="chapter" data-level="3.2.5" data-path="for-apply.html"><a href="for-apply.html#next"><i class="fa fa-check"></i><b>3.2.5</b> next</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="for-apply.html"><a href="for-apply.html#introduce-apply"><i class="fa fa-check"></i><b>3.3</b> apply류의 함수들</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="for-apply.html"><a href="for-apply.html#apply"><i class="fa fa-check"></i><b>3.3.1</b> apply</a></li>
@@ -954,6 +954,7 @@ song[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</sp
 
 &gt; song[[1]][[3]]
 ## Error in song[[1]][[3]] : subscript out of bounds</code></pre>
+<p>devtools::install_github(“forkonlp/N2H4”)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">song[[<span class="dv">3</span>]][[<span class="dv">1</span>]]
 <span class="co">#&gt; [1] 5</span>
 song[[<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>)]]
@@ -1201,6 +1202,7 @@ people[<span class="kw">order</span>(people$age, <span class="dt">decreasing =</
 </div>
 <div id="date-time" class="section level2">
 <h2><span class="header-section-number">2.7</span> 날짜</h2>
+<p>날짜는 어느 곳에서든 다루기 어려운 데이터입니다. 불규칙적인 윤달이라던지 하는 여러 가지 문제로 실제로 사용할 때 많은 문제가 있는데요, R에서는 여러 형태의 날짜를 표현하는 데이터를 <code>Date</code>라는 자료형으로 관리하고 있습니다. 사람들이 관행적으로 사용하는 형태의 <code>character</code> 날짜를 <code>Date</code>형으로 바꿔보겠습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dates &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2016/01/01&quot;</span>,<span class="st">&quot;2016/02/01&quot;</span>,<span class="st">&quot;2016/03/01&quot;</span>,<span class="st">&quot;2016/04/01&quot;</span>,<span class="st">&quot;2016/05/01&quot;</span>,<span class="st">&quot;2016/06/01&quot;</span>)
 dates
 <span class="co">#&gt; [1] &quot;2016/01/01&quot; &quot;2016/02/01&quot; &quot;2016/03/01&quot; &quot;2016/04/01&quot; &quot;2016/05/01&quot;</span>
@@ -1212,42 +1214,36 @@ trans.dates
 <span class="co">#&gt; [1] &quot;2016-01-01&quot; &quot;2016-02-01&quot; &quot;2016-03-01&quot; &quot;2016-04-01&quot; &quot;2016-05-01&quot;</span>
 <span class="co">#&gt; [6] &quot;2016-06-01&quot;</span>
 <span class="kw">class</span>(trans.dates)
-<span class="co">#&gt; [1] &quot;Date&quot;</span>
-
-trans.dates[<span class="dv">303</span>]-trans.dates[<span class="dv">301</span>]
-<span class="co">#&gt; Time difference of NA days</span>
-
-dates2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2016-01-01&quot;</span>,<span class="st">&quot;2016-02-01&quot;</span>,<span class="st">&quot;2016-03-01&quot;</span>,<span class="st">&quot;2016-04-01&quot;</span>,<span class="st">&quot;2016-05-01&quot;</span>,<span class="st">&quot;2016-06-01&quot;</span>)
+<span class="co">#&gt; [1] &quot;Date&quot;</span></code></pre></div>
+<p><code>Date</code>형 일때의 장점은 계산이 가능하다는 것입니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trans.dates[<span class="dv">3</span>]-trans.dates[<span class="dv">1</span>]
+<span class="co">#&gt; Time difference of 60 days</span></code></pre></div>
+<p>다른 모양의 <code>character</code>도 되는지 한번 보겠습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dates2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2016-01-01&quot;</span>,<span class="st">&quot;2016-02-01&quot;</span>,<span class="st">&quot;2016-03-01&quot;</span>,<span class="st">&quot;2016-04-01&quot;</span>,<span class="st">&quot;2016-05-01&quot;</span>,<span class="st">&quot;2016-06-01&quot;</span>)
 trans.dates2 &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dates2)
 trans.dates2
 <span class="co">#&gt; [1] &quot;2016-01-01&quot; &quot;2016-02-01&quot; &quot;2016-03-01&quot; &quot;2016-04-01&quot; &quot;2016-05-01&quot;</span>
 <span class="co">#&gt; [6] &quot;2016-06-01&quot;</span>
 <span class="kw">class</span>(trans.dates2)
 <span class="co">#&gt; [1] &quot;Date&quot;</span></code></pre></div>
+<p>어려운 모양은 인식하지 못합니다. 그래서 일부러 양식을 알려주면 R이 고칠 수 있는데요.</p>
 <pre><code>&gt; as.Date(&quot;2016년 4월 5일&quot;)
 ## Error in charToDate(x) : 문자열이 표준서식을 따르지 않습니다</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.Date</span>(<span class="st">&quot;2016년 4월 5일&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%Y년 %m월 %d일&quot;</span>)
-<span class="co">#&gt; [1] &quot;2016-04-05&quot;</span>
-
-<span class="co"># 양식 참고</span>
-<span class="co"># http://www.stat.berkeley.edu/classes/s133/dates.html</span>
-
-<span class="kw">as.Date</span>(<span class="dv">34519</span>, <span class="dt">origin=</span><span class="st">&quot;1900-01-01&quot;</span>)
-<span class="co">#&gt; [1] &quot;1994-07-06&quot;</span>
-
-<span class="co"># 시간 자료형</span>
+<span class="co">#&gt; [1] &quot;2016-04-05&quot;</span></code></pre></div>
+<p>양식은 저도 다 외우지 못하고 매번 검색해서 사용합니다.</p>
+<p><a href="http://www.stat.berkeley.edu/classes/s133/dates.html" class="uri">http://www.stat.berkeley.edu/classes/s133/dates.html</a></p>
+<p>하지만 year의 y(4자 Y, 2자 y), month의 m, day의 d 로 생각하시면 우선 해결되고 나머지는 위에 링크를 참고해 보시면 좋을 것 같습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.Date</span>(<span class="dv">34519</span>, <span class="dt">origin=</span><span class="st">&quot;1900-01-01&quot;</span>)
+<span class="co">#&gt; [1] &quot;1994-07-06&quot;</span></code></pre></div>
+<p>시간은 <code>POSIXct</code>와 <code>POSIXlt</code> 두 가지로 준비되어 있습니다. 분석에 적용하는데 있어 특별히 구분해서 사용하지 않아서, 하나를 선택하셨다면 일관되게 한 가지만 계속 사용하시면 좋을 것 같습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 시간 자료형</span>
 <span class="kw">as.POSIXct</span>(<span class="st">&quot;2017-04-12 12:00:00&quot;</span>)
 <span class="co">#&gt; [1] &quot;2017-04-12 12:00:00 KST&quot;</span>
 <span class="kw">as.POSIXlt</span>(<span class="st">&quot;2017-04-12 12:00:00&quot;</span>)
-<span class="co">#&gt; [1] &quot;2017-04-12 12:00:00 KST&quot;</span>
-
-<span class="kw">library</span>(lubridate)
-<span class="co">#&gt; 필요한 패키지를 로딩중입니다: methods</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;lubridate&#39;</span>
-<span class="co">#&gt; The following object is masked from &#39;package:base&#39;:</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     date</span>
+<span class="co">#&gt; [1] &quot;2017-04-12 12:00:00 KST&quot;</span></code></pre></div>
+<p>날짜와 시간을 다루는 패키지로 유명한 <code>lubridate</code>가 있습니다. 아래 여러 코드의 실행결과를 보시면 그 유연한 기능에 감탄하시게 될 겁니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridate)
 
 <span class="kw">ymd</span>(<span class="st">&quot;2017-05-05&quot;</span>)
 <span class="co">#&gt; [1] &quot;2017-05-05&quot;</span>
