@@ -89,7 +89,7 @@ print(4)
 
 ```{r}
 library(readr)
-sd<-read_csv("./data/RecomData/제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
+sd<-read_csv("./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
 names(sd)[1]<-"고객번호"
 sd<-data.frame(sd)
 
@@ -351,9 +351,9 @@ identical(myLoop(myMat),apply(myMat, 2, mean))
 
 `?apply`를 통해 중간의 숫자가 어떤 의미를 가지는지 확인해 보세요. 1은 같은 행끼리의 계산을, 2는 같은 열끼리의 계산을 의미합니다. `apply`는 3가지 옵션을 가지는데, 첫 번째는 데이터, 두 번째는 계산의 방향, 세 번째는 계산에 사용할 함수입니다. 함수부분은 다양한 함수를 사용할 수 있습니다.
 ```{r}
-apply(mymat,2,class)
-apply(mymat,2,sum) 
-apply(mymat,2,quantile) 
+apply(myMat,2,class)
+apply(myMat,2,sum) 
+apply(myMat,2,quantile) 
 ```
 
 자주 사용하는 평균이나 합 같은 경우는 함수로도 구현되어 있습니다. `rowMeans`, `colMeans`, `rowSums`, `colSums`가 그것 입니다. 각각 `apply`로 어떻게 하면 되는지 생각해 보세요.

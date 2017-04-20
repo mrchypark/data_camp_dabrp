@@ -6,8 +6,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3.14 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -34,6 +35,7 @@
   
 <link rel="prev" href="index.html">
 <link rel="next" href="rstudio.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -95,7 +97,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
-
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -181,7 +182,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="for-apply.html"><a href="for-apply.html#introduce-apply"><i class="fa fa-check"></i><b>3.3</b> apply류의 함수들</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="for-apply.html"><a href="for-apply.html#apply"><i class="fa fa-check"></i><b>3.3.1</b> apply</a></li>
 <li class="chapter" data-level="3.3.2" data-path="for-apply.html"><a href="for-apply.html#apply-applys"><i class="fa fa-check"></i><b>3.3.2</b> *apply {#applys}</a></li>
-<li class="chapter" data-level="3.3.3" data-path="for-apply.html"><a href="for-apply.html#aggregate"><i class="fa fa-check"></i><b>3.3.3</b> aggregate</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>4</b> 데이터 원본/의존성의 개념과 SQL 문법 익히기</a><ul>
@@ -248,7 +248,7 @@ edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
 <span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span><span class="kw">list</span>(<span class="dt">to =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, <span class="dt">scaleFactor =</span> <span class="dv">1</span>))) %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">visLayout</span>(<span class="dt">randomSeed =</span> -<span class="fl">0.9261698</span>*<span class="dv">10000</span>)</code></pre></div>
 <div id="htmlwidget-14d5992801777f4abbc5" style="width:100%;height:355.968px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-14d5992801777f4abbc5">{"x":{"nodes":{"id":[1,2,3,4,5,6,7],"label":["1. <eb>뜲<ec>씠<ed>꽣 <ed>솗蹂<b4>","2. <eb>뜲<ec>씠<ed>꽣 <ec>젙<ec>젣","3. 遺꾩꽍","<eb>뜲<ec>씠<ed>꽣 <ed>빖<eb>뱾留<81>","遺꾩꽍","寃곌낵 寃利<9d>","4. <ec>떆媛곹솕"],"shape":["box","box","box","box","box","box","box"],"font.size":[25,25,25,25,25,25,25]},"edges":{"from":[1,2,3,4,5,3,6],"to":[2,3,7,5,6,4,4],"dashes":[false,false,false,false,false,true,false],"length":[100,100,100,100,100,100,100]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1}}},"layout":{"randomSeed":-9261.698}},"groups":null,"width":"100%","height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-14d5992801777f4abbc5">{"x":{"nodes":{"id":[1,2,3,4,5,6,7],"label":["1. 데이터 확보","2. 데이터 정제","3. 분석","데이터 핸들링","분석","결과 검증","4. 시각화"],"shape":["box","box","box","box","box","box","box"],"font.size":[25,25,25,25,25,25,25]},"edges":{"from":[1,2,3,4,5,3,6],"to":[2,3,7,5,6,4,4],"dashes":[false,false,false,false,false,true,false],"length":[100,100,100,100,100,100,100]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1}}},"layout":{"randomSeed":-9261.698}},"groups":null,"width":"100%","height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null},"evals":[],"jsHooks":[]}</script>
 <p>위 표는 <a href="http://hadley.nz/">해들리 위컴</a>의 <a href="http://r4ds.had.co.nz/">R for Data Science</a>에 소개에 작성된 표이기도 합니다. 각각 Import, Tidy, Transform, Visualise, Model, Communicate라고 되어 있는 것을 제 상황에 맞게 각색하였습니다.</p>
 <p><strong>데이터 확보</strong>는 분석 목적에 맞는 데이터를 확보하는 것입니다. 보통 기업인의 입장에서 기업 내부에서 생산, 관리되고 있는 데이터, 외부에서 찾아야 하는 데이터, 없기 때문에 실험등을 통해 생산해야 하는 데이터 정도로 데이터를 나눌 수 있습니다. 이 때 내부 데이터를 사용하기 위해서는 두 가지 진입장벽이 있는데, 정책적인 접근 권한과 데이터를 다룰 줄 아는 능력입니다. 이 후 과정에서 데이터를 다루고, 그것으로 통계적 분석을 거쳐 필요한 결과물을 만드는 것에서 가장 보편적인 도구는 엑셀입니다. 데부분은 엑셀을 잘 사용하는 것으로 해결할 수 있습니다. 하지만 데이터가 커지고, 통계적 분석에 대한 수요가 높아지면서 R에 대한 관심으로 이어지고 있는 상황입니다.</p>
 <p><strong>데이터 정제</strong>는 <a href="http://hadley.nz/">해들리 위컴</a>이 이야기한 Tidy data를 만드는 과정에 해당합니다. 이것을 위해서 Tidy data에 대해서 이야기 해야 하는데 그건 6장에서 다루려고 합니다. 간단하게는 컴퓨터에게 일을 시키기 좋은 상태로 데이터를 정리하는 것을 뜻합니다. 시간이 많이 드는 과정입니다.</p>
@@ -432,7 +432,7 @@ edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
 </tr>
 </tbody>
 </table>
-<p>이 책은 <a href="https://rcoholic.github.io/">박찬엽</a>이 목요일, 4월 20, 2017 오후 5:04:03 KST에 마지막으로 업데이트 했습니다.</p>
+<p>이 책은 <a href="https://rcoholic.github.io/">박찬엽</a>이 Thursday, April 20, 2017 09:39:50 AM UTC에 마지막으로 업데이트 했습니다.</p>
 
 </div>
 </div>
@@ -442,9 +442,8 @@ edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
-  </div>
+<a href="rstudio.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>

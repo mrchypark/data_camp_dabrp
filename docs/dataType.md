@@ -315,8 +315,8 @@ matrix(1:3, nrow = 2, ncol = 3)
 #> [1,]    1    3    2
 #> [2,]    2    1    3
 matrix(1:4, nrow = 2, ncol = 3)
-#> Warning in matrix(1:4, nrow = 2, ncol = 3): 데이터의 길이[4]가 열의 개수[3]
-#> 의 배수가 되지 않습니다
+#> Warning in matrix(1:4, nrow = 2, ncol = 3): data length [4] is not a sub-
+#> multiple or multiple of the number of columns [3]
 #>      [,1] [,2] [,3]
 #> [1,]    1    3    1
 #> [2,]    2    4    2
@@ -542,8 +542,8 @@ factor(blood, labels = c("BT_A", "BT_AB", "BT_B", "BT_O"))
 blood <- c("B", "AB", "O", "A", "O", "O", "A", "B")
 blood_factor <- factor(blood)
 blood_factor[1] < blood_factor[2]
-#> Warning in Ops.factor(blood_factor[1], blood_factor[2]): 요인(factors)에 대
-#> 하여 의미있는 '<'가 아닙니다.
+#> Warning in Ops.factor(blood_factor[1], blood_factor[2]): '<' not meaningful
+#> for factors
 #> [1] NA
 ```
 
@@ -669,17 +669,17 @@ str(tem)
 #>   .. ..$ old   :List of 1
 #>   .. .. ..$ :'data.frame':	5 obs. of  5 variables:
 #>   .. .. .. ..$ age  : chr  "10" "20" "30" "40" ...
-#>   .. .. .. ..$ value: int  2 18 32 23 25
+#>   .. .. .. ..$ value: int  2 18 33 23 24
 #>   .. .. .. ..$ type : chr  "exact" "exact" "exact" "exact" ...
 #>   .. .. .. ..$ min  : logi  TRUE FALSE FALSE FALSE FALSE
 #>   .. .. .. ..$ max  : logi  FALSE FALSE TRUE FALSE FALSE
 #>   .. ..$ empty : logi FALSE
 #>   ..$ count         :'data.frame':	1 obs. of  5 variables:
-#>   .. ..$ comment         : int 1232
-#>   .. ..$ reply           : int 552
-#>   .. ..$ exposeCount     : int 1272
-#>   .. ..$ delCommentByUser: int 298
-#>   .. ..$ total           : int 1784
+#>   .. ..$ comment         : int 1135
+#>   .. ..$ reply           : int 522
+#>   .. ..$ exposeCount     : int 1193
+#>   .. ..$ delCommentByUser: int 411
+#>   .. ..$ total           : int 1657
 #>   ..$ config        :'data.frame':	1 obs. of  73 variables:
 #>   .. ..$ useSnsLogin                : logi TRUE
 #>   .. ..$ lineFeedOn                 : logi FALSE
@@ -761,10 +761,10 @@ str(tem)
 #>   ..$ bestList      :List of 1
 #>   .. ..$ : list()
 #>   ..$ notice        :'data.frame':	1 obs. of  4 variables:
-#>   .. ..$ noticeNo: int 10
-#>   .. ..$ title   : chr "댓글정렬옵션 '공감비율순' 베타 서비스 안내"
-#>   .. ..$ content : chr "안녕하세요, 네이버 뉴스입니다.\r<br> \r<br>뉴스 댓글 순서를 더 다양한 방식으로 선택해 볼 수 있도록  \r<br>우선 경제, 사회 섹션 "| __truncated__
-#>   .. ..$ regTime : chr "2017-02-01T14:42:53+0900"
+#>   .. ..$ noticeNo: int 11
+#>   .. ..$ title   : chr "공직선거법에 따른 댓글작성 제한 안내"
+#>   .. ..$ content : chr "안녕하세요, 네이버 뉴스입니다.\r<br> \r<br>공직선거법 제82조 6에 따라 선거운동기간 동안 \r<br>선거 페이지에 반영된 기사 및 일부"| __truncated__
+#>   .. ..$ regTime : chr "2017-04-17T01:33:45+0900"
 #>   ..$ userInfo      :'data.frame':	1 obs. of  0 variables
 #>   ..$ pageModel     :'data.frame':	1 obs. of  16 variables:
 #>   .. ..$ page          : int 1
@@ -772,9 +772,9 @@ str(tem)
 #>   .. ..$ indexSize     : int 10
 #>   .. ..$ startRow      : int 1
 #>   .. ..$ endRow        : int 10
-#>   .. ..$ totalRows     : int 1232
+#>   .. ..$ totalRows     : int 1135
 #>   .. ..$ startIndex    : int 0
-#>   .. ..$ totalPages    : int 124
+#>   .. ..$ totalPages    : int 114
 #>   .. ..$ firstPage     : int 1
 #>   .. ..$ prevPage      : int 0
 #>   .. ..$ nextPage      : int 2
@@ -789,10 +789,10 @@ str(tem)
 #>   .. .. ..$ objectId        : chr  "news437,0000152054" "news437,0000152054" "news437,0000152054" "news437,0000152054" ...
 #>   .. .. ..$ categoryId      : chr  "*" "*" "*" "*" ...
 #>   .. .. ..$ templateId      : chr  "default" "view" "view" "view_politics" ...
-#>   .. .. ..$ commentNo       : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032
-#>   .. .. ..$ parentCommentNo : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032
+#>   .. .. ..$ commentNo       : int  895990872 895990402 895994572 895993542 895994142 895995292 895997652 895994952 895990032 895994472
+#>   .. .. ..$ parentCommentNo : int  895990872 895990402 895994572 895993542 895994142 895995292 895997652 895994952 895990032 895994472
 #>   .. .. ..$ replyLevel      : int  1 1 1 1 1 1 1 1 1 1
-#>   .. .. ..$ replyCount      : int  52 34 16 31 15 8 4 1 1 10
+#>   .. .. ..$ replyCount      : int  48 32 14 27 6 3 0 1 10 3
 #>   .. .. ..$ replyPreviewNo  : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ replyList       : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ imageCount      : int  0 0 0 0 0 0 0 0 0 0
@@ -817,8 +817,8 @@ str(tem)
 #>   .. .. ..$ modTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:05:58+0000" "2017-04-12T12:04:44+0000" ...
 #>   .. .. ..$ regTime         : chr  "2017-04-12T21:00:55+0900" "2017-04-12T21:00:21+0900" "2017-04-12T21:05:58+0900" "2017-04-12T21:04:44+0900" ...
 #>   .. .. ..$ regTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:05:58+0000" "2017-04-12T12:04:44+0000" ...
-#>   .. .. ..$ sympathyCount   : int  2297 1854 1594 1865 1354 619 481 458 414 454
-#>   .. .. ..$ antipathyCount  : int  68 96 38 151 29 36 11 5 10 34
+#>   .. .. ..$ sympathyCount   : int  2358 1907 1642 1914 644 493 470 428 466 418
+#>   .. .. ..$ antipathyCount  : int  70 100 38 152 37 11 5 10 34 23
 #>   .. .. ..$ userBlind       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ hideReplyButton : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ status          : int  0 0 0 0 0 0 0 0 0 0
@@ -845,12 +845,12 @@ str(tem)
 #>   .. .. ..$ expose          : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
 #>   .. .. ..$ profileUserId   : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ containText     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
-#>   .. .. ..$ maskedUserId    : chr  "ssan****" "zamp****" "yhan****" "tjto****" ...
 #>   .. .. ..$ validateBanWords: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+#>   .. .. ..$ maskedUserId    : chr  "ssan****" "zamp****" "yhan****" "tjto****" ...
 #>   .. .. ..$ maskedUserName  : chr  "ss****" "za****" "yh****" "tj****" ...
-#>   .. .. ..$ virtual         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ exposeByCountry : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
-#>  $ date   : chr "2017-04-13T09:14:04+0000"
+#>   .. .. ..$ virtual         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+#>  $ date   : chr "2017-04-20T09:35:35+0000"
 ```
 
 `JSON`을 전문적으로 다루기 위한 [패키지][307]도 있으니 확인해 보세요.
@@ -1249,15 +1249,21 @@ as.Date(34519, origin="1900-01-01")
 ```r
 # 시간 자료형
 as.POSIXct("2017-04-12 12:00:00")
-#> [1] "2017-04-12 12:00:00 KST"
+#> [1] "2017-04-12 12:00:00 UTC"
 as.POSIXlt("2017-04-12 12:00:00")
-#> [1] "2017-04-12 12:00:00 KST"
+#> [1] "2017-04-12 12:00:00 UTC"
 ```
 
 날짜와 시간을 다루는 패키지로 유명한 `lubridate`가 있습니다. 아래 여러 코드의 실행결과를 보시면 그 유연한 기능에 감탄하시게 될 겁니다.
 
 ```r
 library(lubridate)
+#> Loading required package: methods
+#> 
+#> Attaching package: 'lubridate'
+#> The following object is masked from 'package:base':
+#> 
+#>     date
 
 ymd("2017-05-05")
 #> [1] "2017-05-05"

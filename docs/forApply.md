@@ -18,8 +18,8 @@ print(2)
 
 ```r
 if(c(T,F,F,F)){print(1)}
-#> Warning in if (c(T, F, F, F)) {: length > 1 이라는 조건이 있고, 첫번째 요소
-#> 만이 사용될 것입니다
+#> Warning in if (c(T, F, F, F)) {: the condition has length > 1 and only the
+#> first element will be used
 #> [1] 1
 print(2)
 #> [1] 2
@@ -113,10 +113,10 @@ print(4)
 
 ```r
 library(readr)
-sd<-read_csv("./data/RecomData/제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
+sd<-read_csv("./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
 #> Parsed with column specification:
 #> cols(
-#>   `<U+FEFF>고객번호` = col_character(),
+#>   고객번호 = col_character(),
 #>   멤버십명 = col_character(),
 #>   가입년월 = col_integer()
 #> )
@@ -171,11 +171,11 @@ print(1)
 ```r
 err<-try(noObj)
 err
-#> [1] "Error in try(noObj) : 객체 'noObj'를 찾을 수 없습니다\n"
+#> [1] "Error in try(noObj) : object 'noObj' not found\n"
 #> attr(,"class")
 #> [1] "try-error"
 #> attr(,"condition")
-#> <simpleError in doTryCatch(return(expr), name, parentenv, handler): 객체 'noObj'를 찾을 수 없습니다>
+#> <simpleError in doTryCatch(return(expr), name, parentenv, handler): object 'noObj' not found>
 class(err)
 #> [1] "try-error"
 ```
@@ -375,7 +375,7 @@ X
 library(ggplot2)
 library(dplyr)
 #> 
-#> 다음의 패키지를 부착합니다: 'dplyr'
+#> Attaching package: 'dplyr'
 #> The following objects are masked from 'package:stats':
 #> 
 #>     filter, lag
@@ -417,8 +417,8 @@ tm<-1000000
 X<-as.data.frame(matrix(1:tm, ncol=4, dimnames=list(seq(1:(tm/4)), c("a", "b", "c", "d"))))
 ifelseTime<-system.time(X$e <- ifelse(X$a == 0, -999, X$b/X$c))
 ifelseTime
-#>  사용자  시스템 elapsed 
-#>    0.03    0.00    0.03
+#>    user  system elapsed 
+#>   0.020   0.000   0.023
 ```
 
 <img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />
@@ -429,11 +429,235 @@ ifelseTime
 
 ### apply
 
+`apply` 함수에 대해서 알아보겠습니다. `apply`는 행이나 열 방향의 데이터를 한 번에 계산하는데 사용합니다. 
+
+```r
+set.seed(1)
+( myMat <- matrix(round(rnorm(16,10),2),4,4) )
+#>       [,1]  [,2]  [,3]  [,4]
+#> [1,]  9.37 10.33 10.58  9.38
+#> [2,] 10.18  9.18  9.69  7.79
+#> [3,]  9.16 10.49 11.51 11.12
+#> [4,] 11.60 10.74 10.39  9.96
+```
+
+위의 `mymat`에서 각 열의 평균을 구하고 싶으면 이렇게 하면 됩니다.
+
+```r
+mean(myMat[,1])
+#> [1] 10.1
+mean(myMat[,2])
+#> [1] 10.2
+mean(myMat[,3])
+#> [1] 10.5
+mean(myMat[,4])
+#> [1] 9.56
+```
+
+우리는 `for`를 배웠으니 좀 고쳐 봅시다.
+
+```r
+for(i in 1:4){
+  mean(myMat[,i])
+}
+```
+
+이게 또 데이터가 따로따로라 `c`도 해줘야 하는 군요.
+
+```r
+myMean <- c(
+  mean(myMat[,1]),
+  mean(myMat[,2]),
+  mean(myMat[,3]),
+  mean(myMat[,4])
+)
+myMean
+#> [1] 10.08 10.19 10.54  9.56
+```
+
+`for`를 사용하면 이렇게 됩니다.
+
+
+```r
+myMean <- c()
+for(i in 1:4){
+  myMean<-c(myMean,mean(myMat[,i]))
+}
+myMean
+#> [1] 10.08 10.19 10.54  9.56
+```
+
+여기서 함수화도 많이 진행하는 것 같더군요.
+
+```r
+myLoop <- function(somemat) {
+  myMean <- c()
+  for(i in 1:ncol(somemat)){
+    myMean<-c(myMean,mean(myMat[,i]))
+  }
+  return(myMean)
+}
+
+myLoop(myMat)
+#> [1] 10.08 10.19 10.54  9.56
+```
+
+근데 이제 열방향 mean 함수를 만드는게 끝났네요. 행방향을 진행하려면 똑같은걸 더 만들어야 합니다. 한 함수에 합쳐서 옵션으로 줘도 좋을 것 같군요. 한번 만들어 보세요.
+
+하지만 `apply`는 이 걸 한줄에 할 수 있게 해줍니다.
+
+```r
+apply(myMat, 2, mean)
+#> [1] 10.08 10.19 10.54  9.56
+```
+
+위에 결과와 비교해 보세요. 위에서 사용한 `identical` 함수로 두 결과를 비교해 보겠습니다.
+
+```r
+identical(myLoop(myMat),apply(myMat, 2, mean))
+#> [1] TRUE
+```
+
+`?apply`를 통해 중간의 숫자가 어떤 의미를 가지는지 확인해 보세요. 1은 같은 행끼리의 계산을, 2는 같은 열끼리의 계산을 의미합니다. `apply`는 3가지 옵션을 가지는데, 첫 번째는 데이터, 두 번째는 계산의 방향, 세 번째는 계산에 사용할 함수입니다. 함수부분은 다양한 함수를 사용할 수 있습니다.
+
+```r
+apply(myMat,2,class)
+#> [1] "numeric" "numeric" "numeric" "numeric"
+apply(myMat,2,sum) 
+#> [1] 40.3 40.7 42.2 38.2
+apply(myMat,2,quantile) 
+#>       [,1]  [,2]  [,3]  [,4]
+#> 0%    9.16  9.18  9.69  7.79
+#> 25%   9.32 10.04 10.21  8.98
+#> 50%   9.77 10.41 10.48  9.67
+#> 75%  10.54 10.55 10.81 10.25
+#> 100% 11.60 10.74 11.51 11.12
+```
+
+자주 사용하는 평균이나 합 같은 경우는 함수로도 구현되어 있습니다. `rowMeans`, `colMeans`, `rowSums`, `colSums`가 그것 입니다. 각각 `apply`로 어떻게 하면 되는지 생각해 보세요.
+
+`apply`에 적용하는 함수 안에 데이터만 들어가는 함수 이외에 다른 옵션을 지정해야 할 수 있습니다. `apply`는 `,`를 이용해서 다음 옵션으로 사용하는 함수 안의 옵션을 작성할 수 있습니다.
+
+```r
+myMat[1,4]<-NA
+apply(myMat,2,sum)
+#> [1] 40.3 40.7 42.2   NA
+apply(myMat,2,sum, na.rm = TRUE)
+#> [1] 40.3 40.7 42.2 28.9
+```
+
+`apply`에서 계산에 사용할 함수는 사용자가 만들어서 진행할 수도 있고, 임시로 만들 수도 있습니다.
+
+```r
+naSum <- function(x){
+  return(sum(x,na.rm = TRUE))
+}
+
+apply(myMat,2,naSum)
+#> [1] 40.3 40.7 42.2 28.9
+apply(myMat,2,function(x) sum(x,na.rm = TRUE))
+#> [1] 40.3 40.7 42.2 28.9
+```
+
+만들어야 할 함수가 복잡하지 않으면 저는 임시로 작성하는 방법을 사용하는 편입니다.
+
 ### *apply {#applys}
 
-### aggregate
+`apply`는 `lapply`, `tapply`, `sapply`, `mapply` 등의 `apply-family`를 가지고 있습니다. 
 
+우선 `lapply`부터 살펴보겠습니다. 앞에 `l`이 붙으면서 `list` 자료형에 대해 `apply`의 역할을 수행하는 함수라는 의미가 붙었습니다. 결과도 `list`로 나옵니다.
+
+```r
+(listData <- list(a = 1, b = 1:3, c = 10:100) )
+#> $a
+#> [1] 1
+#> 
+#> $b
+#> [1] 1 2 3
+#> 
+#> $c
+#>  [1]  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+#> [18]  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
+#> [35]  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+#> [52]  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77
+#> [69]  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94
+#> [86]  95  96  97  98  99 100
+lapply(listData, length) 
+#> $a
+#> [1] 1
+#> 
+#> $b
+#> [1] 3
+#> 
+#> $c
+#> [1] 91
+lapply(listData, sum)
+#> $a
+#> [1] 1
+#> 
+#> $b
+#> [1] 6
+#> 
+#> $c
+#> [1] 5005
+```
+
+`list` 자료형은 사용하시면서 느끼시겠지만 다른 곳에 사용하기 불편한 점이 있습니다. 그래서 다시 `list`를 푸는 방법으로 `unlist`를 사용하는데요. `?unlist`를 입력해서 내용을 확인해보세요.
+
+
+```r
+(listData <- list(a = 1, b = 1:3, c = 10:100) )
+#> $a
+#> [1] 1
+#> 
+#> $b
+#> [1] 1 2 3
+#> 
+#> $c
+#>  [1]  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+#> [18]  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
+#> [35]  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+#> [52]  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77
+#> [69]  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94
+#> [86]  95  96  97  98  99 100
+unlist(lapply(listData, length))
+#>  a  b  c 
+#>  1  3 91
+unlist(lapply(listData, sum))
+#>    a    b    c 
+#>    1    6 5005
+```
+
+그런데 입력을 `list`로 받는 것은 어쩔수 없다고 쳐도, 결과물은 위처럼 `vector`로 받는 것이 편한 경우가 많습니다. `unlist(lapply(데이터,함수))`는 `sapply`와 같은 동작을 합니다.
+
+```r
+(listData <- list(a = 1, b = 1:3, c = 10:100) )
+#> $a
+#> [1] 1
+#> 
+#> $b
+#> [1] 1 2 3
+#> 
+#> $c
+#>  [1]  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+#> [18]  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
+#> [35]  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+#> [52]  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77
+#> [69]  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94
+#> [86]  95  96  97  98  99 100
+sapply(listData, length)
+#>  a  b  c 
+#>  1  3 91
+sapply(listData, sum)
+#>    a    b    c 
+#>    1    6 5005
+```
+
+이외에도 `list안에 list`까지 계산하는 `rapply`, 지정한 이름으로 실행할 수 있는 `tapply` 등이 있습니다만, 거의 `apply`나 `sapply`만 사용한 것 같습니다.
+
+더 궁금하신 사항은 [여기][404]를 참고해 주세요.
 
 [401]: https://github.com/forkonlp/N2H4/blob/master/R/getContent.R
 [402]: https://github.com/forkonlp/N2H4/wiki/%EC%82%AC%EC%9A%A9-%EC%98%88%EC%8B%9C
 [403]: https://www.facebook.com/groups/krstudy/permalink/767170710123870/
+[404]: https://nsaunders.wordpress.com/2010/08/20/a-brief-introduction-to-apply-in-r/
