@@ -181,7 +181,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="for-apply.html"><a href="for-apply.html#introduce-apply"><i class="fa fa-check"></i><b>3.3</b> apply류의 함수들</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="for-apply.html"><a href="for-apply.html#apply"><i class="fa fa-check"></i><b>3.3.1</b> apply</a></li>
-<li class="chapter" data-level="3.3.2" data-path="for-apply.html"><a href="for-apply.html#apply-applys"><i class="fa fa-check"></i><b>3.3.2</b> *apply {#applys}</a></li>
+<li class="chapter" data-level="3.3.2" data-path="for-apply.html"><a href="for-apply.html#applys"><i class="fa fa-check"></i><b>3.3.2</b> apply-family</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>4</b> 데이터 원본/의존성의 개념과 SQL 문법 익히기</a><ul>
@@ -662,8 +662,8 @@ myMean
 <span class="co">#&gt; [1] 40.3 40.7 42.2 28.9</span></code></pre></div>
 <p>만들어야 할 함수가 복잡하지 않으면 저는 임시로 작성하는 방법을 사용하는 편입니다.</p>
 </div>
-<div id="apply-applys" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> *apply {#applys}</h3>
+<div id="applys" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> apply-family</h3>
 <p><code>apply</code>는 <code>lapply</code>, <code>tapply</code>, <code>sapply</code>, <code>mapply</code> 등의 <code>apply-family</code>를 가지고 있습니다.</p>
 <p>우선 <code>lapply</code>부터 살펴보겠습니다. 앞에 <code>l</code>이 붙으면서 <code>list</code> 자료형에 대해 <code>apply</code>의 역할을 수행하는 함수라는 의미가 붙었습니다. 결과도 <code>list</code>로 나옵니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span>:<span class="dv">100</span>) )

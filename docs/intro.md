@@ -87,7 +87,7 @@ visNetwork    *    1.0.3     2016-12-22   CRAN (R 3.3.3)
 withr              1.0.2     2016-06-20   CRAN (R 3.3.3) 
 yaml               2.1.14    2016-11-12   CRAN (R 3.3.3) 
 
- 이 책은 [박찬엽][123]이 Thursday, April 20, 2017 09:39:50 AM UTC에 마지막으로 업데이트 했습니다.
+ 이 책은 [박찬엽][123]이 Thursday, April 20, 2017 09:42:42 AM UTC에 마지막으로 업데이트 했습니다.
 
 [101]: http://hadley.nz/
 [102]: http://scienceon.hani.co.kr/?document_srl=396048

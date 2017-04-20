@@ -561,7 +561,7 @@ apply(myMat,2,function(x) sum(x,na.rm = TRUE))
 
 만들어야 할 함수가 복잡하지 않으면 저는 임시로 작성하는 방법을 사용하는 편입니다.
 
-### *apply {#applys}
+### apply-family {#applys}
 
 `apply`는 `lapply`, `tapply`, `sapply`, `mapply` 등의 `apply-family`를 가지고 있습니다. 
 
