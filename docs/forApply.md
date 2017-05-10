@@ -418,7 +418,7 @@ X<-as.data.frame(matrix(1:tm, ncol=4, dimnames=list(seq(1:(tm/4)), c("a", "b", "
 ifelseTime<-system.time(X$e <- ifelse(X$a == 0, -999, X$b/X$c))
 ifelseTime
 #>    user  system elapsed 
-#>   0.020   0.000   0.023
+#>   0.020   0.000   0.025
 ```
 
 <img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />
