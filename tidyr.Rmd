@@ -1,5 +1,357 @@
 # tidy data 개념과 dplyr+tidyr로 데이터 다루기 {#tidyr}
 
-## tidy data {#tidy-data}
+ 데이터 분석을 어렵게 하는 여러 이유들이 있습니다. 이게 개발 커뮤니티에서 말하는 [기술 부채][601]와 같은 개념이지 않나 생각이 들어 데이터 부채라는 표현을 사용해 보았습니다. 여러 데이터 관련 구루들이 강조하는 바, 데이터 분석의 대부분의 시간(약 80%)은 데이터 수집과 전처리, 정제에 사용됩니다. 계륵 같은 일이죠. [garbage in, garbage out; GIGO][602] 이니까요. 데이터가 많지 않았던 시대에는 처리에 시간을 쏟는 것이 너무 당연한 일이었습니다. 하지만 데이터 생성을 설계할 수 있는 입장(서비스 제공자, 마케터 등)에서는 저 시간은 명확하게 비용, 즉 데이터 부채가 되는 것입니다.
 
-## tidyverse
+ 이 데이터 부채가 쌓이는 것을 처음부터 막을 수 있도록 데이터가 저장되는 방식에 대해 제안된 개념이 있는데 그것이 [tidy data][603]입니다. tidy data란 개념은 [Hadley Wickham][604]이 제안했습니다.
+
+## 단정한 데이터 {#tidy-data}
+
+ 이것에 대해 본인이 직접 [장문의 설명][605]을 한 것도 있고 R 한글 형태소 분석 패키지인 konlp을 만드신 고감자님의 [한글 설명][606], MS의 데이터 과학자이시자 헬로우 데이터과학의 저자이신 김진영님의 [도서 블로그][607]에도 너무 잘 설명되어 있습니다. 추가로 더 내용이 필요하시면 참고하시기 바랍니다.
+ 먼저 tidy data의 개념이 필요한 이유는 컴퓨터에게 분석을 시켜야(!) 하기 때문입니다. 그래서 tidy data는 사람이 눈으로 이해하기에는 적절하지 않을 수 있습니다. 이 곳이 진입장벽이 되기도 하는데, 현재 사용하고 있는 엑셀을 바로 R에 넣고 사용하고 싶은데, 잘 안되는 경우가 많습니다. 그것은 엑셀 파일내 데이터를 사람이 "보기 좋게" 위치했기 때문입니다. 
+그럼 이제  tidy data의 세 가지 조건을 원문(1)과 고감자님 번역(2), 김진영님 번역(3)순으로 살펴보겠습니다.
+
+1.1 Each variable forms a column.
+1.2 각 변수는 개별의 열(column)으로 존재한다.  
+1.3 각 열에는 개별 속성이 들어간다. 
+
+2.1 Each observation forms a row.
+2.2 각 관측치는 행(row)를 구성한다.  
+2.3 각 행에는 개별 관찰 항목이 들어간다.
+
+3.1 Each type of observational unit forms a table.
+3.2 각 테이블은 단 하나의 관측기준에 의해서 조직된 데이터를 저장한다.
+3.3 각 테이블에는 단일 유형의 데이터가 들어간다.
+
+![tidydata](http://r4ds.had.co.nz/images/tidy-1.png)
+
+1번을 보기 전에 2번을 먼저 보겠습니다.(2>1>3 순으로 쉬워요.) 2번은 단순합니다. 하나의 데이터가 한 줄(행)을 구성해야 한다는 것입니다. 설문지를 예로 들면 한명의 설문 결과가 한 줄로써 저장되는 것이죠. Each observation(개별 관찰)은 하나의 관찰 결과(=설문지 하나)를 뜻합니다. `sql`이나 `data.frame`에서 보셨듯 `row`는 조건으로 데이터를 `filter`할 수 있는 공간입니다. 그렇기 때문에 각 `row`는 개별 데이터를 의미합니다.
+
+1번은 2번과 같은 하나가 들어가는 개념이긴 합니다만 하나의 variable, 변수, 개별 속성이라는 점이 조금 어렵습니다. 설문지 예시는 쉽습니다. 하나의 문항이라고 이해하면 되거든요. 그런데 variable이라는게 뭔지를 아는 것이 저는 조금 어려웠습니다. 찾아보니 영어상은 변수, 변할수 있는 수(여기서는 수보다는 값이라고 이해하시면 좋습니다.)인데 그 변수를 대표하는 이름이 컬럼명이라고 생각하면 좋더군요. 
+
+그런데 컬럼이 변수에 속하는 값으로 구성되는 경우가 있습니다. 예를들어 날짜가 컬럼명에 들어간 경우죠. 이렇게 생긴 데이터를 [wide form][608]이라고 합니다. 날짜는 변수에 들어갈 값이기 때문에 컬럼명을 날짜(date, datetime, when 등)로 정하고 컬럼에 속하는 cell에 날짜가 들어가는 형태로 구성하는 것이 tidy data의 조건을 충족하는 셈이 됩니다.
+
+3번은 단일 테이블이 어떻게 구성되어야 하는지를 알려주는 조건입니다. 김진영님의 번역이 좀 이해하기 쉬운 것 같습니다. 테이블 하나에 하나의 데이터가 들어가야 된다는 뜻인데요, 아래 dplyr과 tidyr을 배우면서 예시들도 같이 보겠습니다.
+
+## dplyr + tidyr
+
+`dplyr`은 `plyr` 패키지의 `data.frame` 전용이라는 의미를 가지고 있습니다. `plyr`은 데이터의 [분해 - 적용 - 재조립 전략][610]을 실행할 수 있는 [패키지][609]입니다. 이 전략을 `data.frame` 형태에서 실행하기 위해서 여러 명령어들을 제공합니다. `잘 정돈된 데이터 프레임`은 [분해 - 적용 - 재조립 전략][610]을 실행하기 쉬우며 데이터를 잘 정돈하기 위해 `tidyr` 패키지를 함께 사용할 수 있습니다. 최근 `ggplot2`, `dplyr`, `tidyr` 등 tidy data의 개념과 같은 맥락에 있는 패키지들이 하나로 모여 `tidyverse` 패키지가 되었습니다.
+
+```{r}
+library(tidyverse)
+```
+
+### pipe 연산자 %>% {#pipe-operator}
+
+`%>%`는 함수의 사용 방향을 바꿔서 읽고 이해하기 쉽게 만든 연산자입니다.
+```
+g(f(y)) == y %>% f() %>% g()
+```
+
+이렇게 사용하고 `tidyverse` 패키지 전반적으로 사용하는 방식입니다.   
+`.`으로 앞의 변수의 위치를 지정할 수도 있고, 괄호 안에 작성할 것이 없을 때는 괄호를 생략할 수도 있습니다.
+```
+g(f(x,y,z)) == y %>% f(x, . , z) %>% g
+```
+
+
+### dplyr 명령어 소개 {#dplyr-functions}
+
+`dplyr`에는 행에 조건을 줘서 부분을 불러오는 `filter()`, 필요한 컬럼만 선택하는 `select()`, 새로운 컬럼을 계산하는 `mutate()`, 조건에 따라 재정렬 할 수 있는 `arrange()`, `group_by()`와 함께 써서 요약값을 계산할 수 있는 `summarise()`가 있습니다. `group_by()`는 `mutate()`, `filter()`와도 사용할 수 있습니다.
+
+```{r}
+library(nycflights13)
+flights
+```
+
+첫번째 `filter()`를 사용해 보겠습니다.
+```{r}
+filter(flights, month == 1, day == 1)
+jan1 <- filter(flights, month == 1, day == 1)
+(dec25 <- filter(flights, month == 12, day == 25))
+filter(flights, month = 1)
+```
+
+![logical](http://r4ds.had.co.nz/diagrams/transform-logical.png)
+
+```{r}
+filter(flights, month == 11 | month == 12)
+nov_dec <- filter(flights, month %in% c(11, 12))
+filter(flights, !(arr_delay > 120 | dep_delay > 120))
+filter(flights, arr_delay <= 120, dep_delay <= 120)
+```
+
+`arrange()`는 조건을 바탕으로 정렬을 다시 해줍니다.
+```{r}
+arrange(flights, year, month, day)
+arrange(flights, desc(arr_delay))
+df <- tibble(x = c(5, 2, NA))
+arrange(df, x)
+arrange(df, desc(x))
+```
+
+`select()`는 컬럼을 선택하는 함수라고 했습니다.
+```{r}
+select(flights, year, month, day)
+select(flights, year:day)
+select(flights, -(year:day))
+```
+
+`select`와 함께 사용하는 함수로 `starts_with("abc")`, `ends_with("xyz")`, `contains("ijk")`, `matches("(.)\\1")`, `num_range("x", 1:3)`등을 들 수 있습니다. `?select`를 실행해서 자세한 사항을 확인해보세요.
+
+`rename()`은 컬럼의 이름을 바꾸는 함수고, `everything()`은 선택한 것 이외에 전부를 뜻합니다.
+```{r}
+rename(flights, tail_num = tailnum)
+select(flights, time_hour, air_time, everything())
+```
+
+`mutate()`는 새로운 변수 계산을 위해서 필요합니다.
+```{r}
+flights_sml <- select(flights, 
+  year:day, 
+  ends_with("delay"), 
+  distance, 
+  air_time
+)
+mutate(flights_sml,
+  gain = arr_delay - dep_delay,
+  speed = distance / air_time * 60
+)
+mutate(flights_sml,
+  gain = arr_delay - dep_delay,
+  hours = air_time / 60,
+  gain_per_hour = gain / hours
+)
+transmute(flights,
+  gain = arr_delay - dep_delay,
+  hours = air_time / 60,
+  gain_per_hour = gain / hours
+)
+```
+
+특별히 `mutate()`와 함께 사용하는 함수중에 `lag()`와 `lead()`를 소개할까 합니다.
+```{r}
+(x <- 1:10)
+lag(x)
+lead(x)
+```
+
+`mutate()`가 각 행에 대한 계산 결과를 하나의 컬럼으로 만들어 주는 것이라면 `summarise()`는 일정 조건(대부분 `group_by()`를 이용한 그룹화)에 해당하는 계산을 수행해줍니다.
+```{r}
+summarise(flights, delay = mean(dep_delay, na.rm = TRUE))
+
+by_day <- group_by(flights, year, month, day)
+summarise(by_day, delay = mean(dep_delay, na.rm = TRUE))
+
+daily <- group_by(flights, year, month, day)
+(per_day   <- summarise(daily, flights = n()))
+(per_month <- summarise(per_day, flights = sum(flights)))
+(per_year  <- summarise(per_month, flights = sum(flights)))
+
+daily %>% 
+  ungroup() %>% 
+  summarise(flights = n())
+
+```
+
+`group_by()`를 `mutate()`, `filter()`와도 사용할 수 있다고 했습니다.
+```{r}
+flights_sml %>% 
+  group_by(year, month, day) %>%
+  filter(rank(desc(arr_delay)) < 10)
+
+popular_dests <- flights %>% 
+  group_by(dest) %>% 
+  filter(n() > 365)
+popular_dests
+
+popular_dests %>% 
+  filter(arr_delay > 0) %>% 
+  mutate(prop_delay = arr_delay / sum(arr_delay)) %>% 
+  select(year:day, dest, arr_delay, prop_delay)
+```
+
+### tidyr 명령어 소개 {#tidyr-functions}
+
+`tidyr`에는 `long form`을 `wide form`으로 바꿔주는 `spread()`, 반대로 `wide form`을 `long form`으로 바꿔주는 `gather()`, 여러 의미를 지닌 데이터를 특정 글자를 기준으로 분리해 주는 `seperate()`, 그 반대로 합치는 `unite()`, 데이터를 분리하는 폼을 지정해 줄 수 있는 `extract()`가 있습니다.
+
+우선 내장된 데이터를 소개하겠습니다.
+```{r}
+table1
+table2
+table3
+table4a
+table4b
+```
+
+이제 많이 사용하게 될 `gather()` 함수를 보겠습니다.
+```{r}
+table4a
+table4a %>% 
+  gather(`1999`, `2000`, key = "year", value = "cases")
+```
+![gather](http://r4ds.had.co.nz/images/tidy-9.png)
+
+이번엔 반대과정인 `spread()`를 보겠습니다.
+```{r}
+table2
+spread(table2, key = type, value = count)
+```
+![spread](http://r4ds.had.co.nz/images/tidy-8.png)
+
+한 셀에 여러 값이 있어서 나눠야 할 때는 `seperate()`를 사용합니다. `sep`옵션을 주지 않아도, 간단한 것은 알아서 나눠줍니다.
+```{r}
+table3
+table3 %>% 
+  separate(rate, into = c("cases", "population"))
+
+table3 %>% 
+  separate(rate, into = c("cases", "population"), convert = TRUE)
+
+table3 %>% 
+  separate(year, into = c("century", "year"), sep = 2)
+```
+
+`unite()`는 합쳐주는 `seperate()`와는 반대의 기능을 가진 함수입니다.
+```{r}
+table5 %>% 
+  unite(new, century, year)
+
+table5 %>% 
+  unite(new, century, year, sep = "")
+```
+
+### dplyr과 join {#dplyr&join}
+
+`dplyr`에는 `join()` 기능도 있습니다. 데이터를 먼저 소개하겠습니다.
+```{r}
+airlines
+airports
+planes
+weather
+```
+
+`%>%`와 `join()` 명령어로 쉽게 데이터를 합칠 수 있습니다.
+```{r}
+flights2 <- flights %>% 
+  select(year:day, hour, origin, dest, tailnum, carrier)
+flights2
+flights2 %>%
+  select(-origin, -dest) %>% 
+  left_join(airlines, by = "carrier")
+
+flights2 %>%
+  select(-origin, -dest) %>% 
+  mutate(name = airlines$name[match(carrier, airlines$carrier)])
+```
+
+`key`를 선정해주는 것과 아닌 것이 어떻게 다른지 봐주세요.
+```{r}
+flights2 %>% 
+  left_join(weather)
+
+flights2 %>% 
+  left_join(planes, by = "tailnum")
+```
+
+왼쪽 테이블과 오른쪽 테이블의 어떤 `key`를 기준으로 `join()`할 건지 지정할 수 있습니다. 
+```{r}
+flights2 %>% 
+  left_join(airports, c("dest" = "faa"))
+
+flights2 %>% 
+  left_join(airports, c("origin" = "faa"))
+```
+
+`join()` 함수는 `base::merge()`, `SQL`과 비교할 수 있습니다.
+```
+inner_join(x, y) == merge(x, y)
+left_join(x, y)  == merge(x, y, all.x = TRUE)
+right_join(x, y) == merge(x, y, all.y = TRUE),
+full_join(x, y)  == merge(x, y, all.x = TRUE, all.y = TRUE)
+
+inner_join(x, y, by = "z") == SELECT * FROM x INNER JOIN y ON x.z = y.z
+left_join(x, y, by = "z")  == SELECT * FROM x LEFT OUTER JOIN y ON x.z = y.z
+right_join(x, y, by = "z") == SELECT * FROM x RIGHT OUTER JOIN y ON x.z = y.z
+full_join(x, y, by = "z")  == SELECT * FROM x FULL OUTER JOIN y ON x.z = y.z
+```
+
+### dplyr과 SQL {#dplyr-sql}
+
+`dplyr`은 데이터베이스에게 `SQL` 쿼리를 사용하는 것처럼 사용할 수 있습니다. [이곳][611]에 잘 설명되어 있으니 참고하시기 바랍니다.
+```{r}
+library(dplyr)
+library(RSQLite)
+library(RMySQL)
+sqlite_db = src_sqlite('sqlite_db.sqlite3', create = T)
+copy_to(sqlite_db, mtcars)
+
+src_tbls(sqlite_db)
+tbl(sqlite_db, 'mtcars')
+tbl(sqlite_db, sql('SELECT * FROM mtcars'))
+
+iris_db = tbl(sqlite_db, 'mtcars')
+iris_db %>% filter(mpg > 20)
+
+sql_db = src_mysql(dbname="bank",user = "root",password = "XXXXX")
+sql_db
+```
+
+## data.table
+
+`data.table`은 지금까지와는 조금 다른 문법을 가지고 있습니다. `fread`와 `fwrite`이라는 강력한 `IO`함수를 가지고 있으며 `data.table`은 패키지 명이면서 `data.frame`과 호환되는 자료형이기도 합니다. 자세한 내용은 [여기][612]를 참고해 주세요.
+```{r}
+library(data.table)
+url<-"https://github.com/arunsrinivasan/flights/wiki/NYCflights14/flights14.csv"
+download.file(url,destfile = "./data/flights14.csv")
+system.time(flights <- read.csv("./data/flights14.csv"))
+system.time(flights <- fread("./data/flights14.csv"))
+flights
+dim(flights)
+
+ans <- flights[origin == "JFK" & month == 6L]
+head(ans)
+
+ans <- flights[1:2]
+ans
+
+ans <- flights[order(origin, -dest)]
+head(ans)
+
+ans <- flights[, arr_delay]
+head(ans)
+
+ans <- flights[, .(arr_delay, dep_delay)]
+head(ans)
+
+ans <- flights[, .(delay_arr = arr_delay, delay_dep = dep_delay)]
+head(ans)
+
+flights[, sum((arr_delay + dep_delay) < 0)]
+
+flights[origin == "JFK" & month == 6L,
+	       .(m_arr = mean(arr_delay), m_dep = mean(dep_delay))]
+
+flights[origin == "JFK" & month == 6L, length(dest)]
+
+flights[, .(.N), by = .(origin)]
+
+flights[carrier == "AA", .N, by = origin]
+
+flights[carrier == "AA", .N, by = .(origin,dest)]
+
+flights[carrier == "AA", .N, by = .(origin, dest)][order(origin, -dest)][1:10,]
+```
+
+
+[601]: http://jinson.tistory.com/entry/%ED%95%9C%EA%B8%80%ED%99%94-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-3-%EA%B8%B0%EC%88%A0%EB%B6%80%EC%B1%84
+[602]: https://brunch.co.kr/@mrchypark/1
+[603]: http://vita.had.co.nz/papers/tidy-data.html
+[604]: http://hadley.nz/
+[605]: https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html
+[606]: http://freesearch.pe.kr/archives/3942
+[607]: http://www.hellodatascience.com/?p=287
+[608]: http://www.theanalysisfactor.com/wide-and-long-data/
+[609]: http://plyr.had.co.nz/
+[610]: https://www.jstatsoft.org/article/view/v040i01
+[611]: http://lumiamitie.github.io/r/dplyr-advanced-databases/
+[612]: https://github.com/Rdatatable/data.table/wiki/Getting-started
