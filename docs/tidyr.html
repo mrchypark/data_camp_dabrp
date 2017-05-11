@@ -351,6 +351,20 @@ jan1 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
 nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month %in%<span class="st"> </span><span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">12</span>))
+nov_dec
+<span class="co">#&gt; # A tibble: 55,403 × 19</span>
+<span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
+<span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
+<span class="co">#&gt; 1  2013    11     1        5           2359         6      352</span>
+<span class="co">#&gt; 2  2013    11     1       35           2250       105      123</span>
+<span class="co">#&gt; 3  2013    11     1      455            500        -5      641</span>
+<span class="co">#&gt; 4  2013    11     1      539            545        -6      856</span>
+<span class="co">#&gt; 5  2013    11     1      542            545        -3      831</span>
+<span class="co">#&gt; 6  2013    11     1      549            600       -11      912</span>
+<span class="co">#&gt; # ... with 5.54e+04 more rows, and 12 more variables:</span>
+<span class="co">#&gt; #   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,</span>
+<span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
 <span class="kw">filter</span>(flights, !(arr_delay &gt;<span class="st"> </span><span class="dv">120</span> |<span class="st"> </span>dep_delay &gt;<span class="st"> </span><span class="dv">120</span>))
 <span class="co">#&gt; # A tibble: 316,050 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>

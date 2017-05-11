@@ -75,6 +75,7 @@ jan1 <- filter(flights, month == 1, day == 1)
 ```{r}
 filter(flights, month == 11 | month == 12)
 nov_dec <- filter(flights, month %in% c(11, 12))
+nov_dec
 filter(flights, !(arr_delay > 120 | dep_delay > 120))
 filter(flights, arr_delay <= 120, dep_delay <= 120)
 ```

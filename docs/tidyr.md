@@ -141,6 +141,20 @@ filter(flights, month == 11 | month == 12)
 #> #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 nov_dec <- filter(flights, month %in% c(11, 12))
+nov_dec
+#> # A tibble: 55,403 × 19
+#>    year month   day dep_time sched_dep_time dep_delay arr_time
+#>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
+#> 1  2013    11     1        5           2359         6      352
+#> 2  2013    11     1       35           2250       105      123
+#> 3  2013    11     1      455            500        -5      641
+#> 4  2013    11     1      539            545        -6      856
+#> 5  2013    11     1      542            545        -3      831
+#> 6  2013    11     1      549            600       -11      912
+#> # ... with 5.54e+04 more rows, and 12 more variables:
+#> #   sched_arr_time <int>, arr_delay <dbl>, carrier <chr>, flight <int>,
+#> #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
+#> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 filter(flights, !(arr_delay > 120 | dep_delay > 120))
 #> # A tibble: 316,050 × 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
