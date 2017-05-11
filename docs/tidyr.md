@@ -20,7 +20,7 @@
 2.3 각 행에는 개별 관찰 항목이 들어간다.
 
 3.1 Each type of observational unit forms a table.  
-3.2 각 테이블은 단 하나의 관측기준에 의해서 조직된 데이터를 저장한다.
+3.2 각 테이블은 단 하나의 관측기준에 의해서 조직된 데이터를 저장한다.  
 3.3 각 테이블에는 단일 유형의 데이터가 들어간다.
 
 ![tidydata](http://r4ds.had.co.nz/images/tidy-1.png)
