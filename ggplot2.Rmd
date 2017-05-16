@@ -1,4 +1,50 @@
 # 보고용 차트를 위한 ggplot2 사용하기 {#ggplot}
 
-## test
+## ggplot2
 
+### geoms, guides, plot
+
+### creation
+
+### geoms
+
+### scales
+
+### guides
+
+### coords
+
+### facets
+
+### themes
+
+## 지도 시각화 {#map-vis}
+
+### ggmap
+
+#### naver map
+
+### Kormaps
+
+#### sp
+
+## ggplot extensions
+
+### 페이지 소개
+
+### 
+ggsci 색상
+ggthemes 테마
+ggally 기능
+ggExtra 마진
+ggrepel 가독성
+
+ggfortify 분석 결과 
+
+gganimate gif
+ggiraph 동적문서
+ggedit gui
+
+## extrafont
+
+한글 깨짐 + 폰트 변경을 위한 패키지
