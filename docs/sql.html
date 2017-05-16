@@ -197,11 +197,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.1" data-path="sql.html"><a href="sql.html#crud"><i class="fa fa-check"></i><b>4.3.1</b> CRUD와 데이터베이스</a></li>
 <li class="chapter" data-level="4.3.2" data-path="sql.html"><a href="sql.html#read"><i class="fa fa-check"></i><b>4.3.2</b> Read 문법</a></li>
 <li class="chapter" data-level="4.3.3" data-path="sql.html"><a href="sql.html#join"><i class="fa fa-check"></i><b>4.3.3</b> Join</a></li>
+<li class="chapter" data-level="4.3.4" data-path="sql.html"><a href="sql.html#practice"><i class="fa fa-check"></i><b>4.3.4</b> 실습</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>5</b> tidy data 개념과 dplyr+tidyr로 데이터 다루기</a><ul>
-<li class="chapter" data-level="5.1" data-path="tidyr.html"><a href="tidyr.html#tidy-data"><i class="fa fa-check"></i><b>5.1</b> tidy data</a></li>
-<li class="chapter" data-level="5.2" data-path="tidyr.html"><a href="tidyr.html#tidyverse"><i class="fa fa-check"></i><b>5.2</b> tidyverse</a></li>
+<li class="chapter" data-level="5.1" data-path="tidyr.html"><a href="tidyr.html#tidy-data"><i class="fa fa-check"></i><b>5.1</b> 단정한 데이터</a></li>
+<li class="chapter" data-level="5.2" data-path="tidyr.html"><a href="tidyr.html#dplyr-tidyr"><i class="fa fa-check"></i><b>5.2</b> dplyr + tidyr</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="tidyr.html"><a href="tidyr.html#pipe-operator"><i class="fa fa-check"></i><b>5.2.1</b> pipe 연산자 %&gt;%</a></li>
+<li class="chapter" data-level="5.2.2" data-path="tidyr.html"><a href="tidyr.html#dplyr-functions"><i class="fa fa-check"></i><b>5.2.2</b> dplyr 명령어 소개</a></li>
+<li class="chapter" data-level="5.2.3" data-path="tidyr.html"><a href="tidyr.html#tidyr-functions"><i class="fa fa-check"></i><b>5.2.3</b> tidyr 명령어 소개</a></li>
+<li class="chapter" data-level="5.2.4" data-path="tidyr.html"><a href="tidyr.html#dplyr-join-dplyrjoin"><i class="fa fa-check"></i><b>5.2.4</b> dplyr과 join {#dplyr&amp;join}</a></li>
+<li class="chapter" data-level="5.2.5" data-path="tidyr.html"><a href="tidyr.html#dplyr-sql"><i class="fa fa-check"></i><b>5.2.5</b> dplyr과 SQL</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
 <li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
@@ -308,11 +316,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="read" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Read 문법</h3>
 <p>위에서 잠깐 언급 했듯 <code>read</code>는 데이터를 불러오는 행위를 뜻합니다. 우선 read의 기본 형식은 아래와 같습니다.</p>
-<pre><code>SELECT [ALL | DISTINCT] 컬럼명 [,컬럼명...]
-FROM 테이블명 [,테이블명...]
-[WHERE 조건식]
-[GROUP BY 컬럼명[,컬럼명...] [HAVING 조건식]]
-[ORDER BY 컬럼명[,컬럼명...]]</code></pre>
 <p>하나하나 살펴 보겠습니다.</p>
 <ol style="list-style-type: decimal">
 <li><p><code>select</code>는 <code>column</code>을 선택하는 구문입니다. 기존에 있는 데이터를 기준으로 어떤 <code>column</code>을 선택할꺼냐를 묻는 곳으로 전체가 필요하면 <code>*</code>를 사용합니다.</p></li>
@@ -323,6 +326,32 @@ FROM 테이블명 [,테이블명...]
 <li><p>하나 더 <code>as</code>는 길게 만들어진 무엇을 줄여서 쉽게 작성하기 위해서 사용합니다. <code>column</code>명이나 <code>table</code>명에서 많이 사용합니다.</p></li>
 </ol>
 <p>위에 있는 내용 중에 중요한 개념이 하나 더 있습니다. 그것은 <code>join</code>인데요. <code>table</code>끼리 합칠 때 사용합니다.</p>
+<p>그럼 <code>data frame</code>이랑 기능을 맞춰 보겠습니다. R에서 변수 <code>train</code>에 데이터가 있다고 할때,</p>
+<pre><code># for R
+train
+
+# for db
+select * from train</code></pre>
+<p>그럼 <code>column</code>을 선택하는 것은 어떻게 하나요?</p>
+<pre><code># for R
+train[,c(&quot;fecha_dato&quot;,&quot;age&quot;)]
+
+# for db
+select fecha_dato, age from train</code></pre>
+<p>이제 <code>row</code>에 조건을 줄 수도 있겠네요?</p>
+<pre><code># for R
+train[train$fecha_dato &gt; 2016-06-28 ,c(&quot;fecha_dato&quot;,&quot;age&quot;)]
+
+# for db
+select fecha_dato, age from train where train.fecha_dato &gt; 2016-07-28</code></pre>
+<p>각 성별에 나이 평균도 구할 수 있습니다.</p>
+<pre><code># for R
+data&lt;-train[,c(&quot;sexo&quot;,&quot;age&quot;)]
+mean(data[data$sexo==&quot;F&quot;,&quot;age&quot;])
+mean(data[data$sexo==&quot;M&quot;,&quot;age&quot;])
+
+# for db
+select sexo, avg(age) from train group by sexo</code></pre>
 </div>
 <div id="join" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Join</h3>
@@ -361,8 +390,13 @@ from A left join B on A.key = b.key;</code></pre>
 from A left join B on A.key = b.key
 where B.key is NULL;</code></pre>
 <p><code>where</code>에는 데이터에 대한 조건이 들어간다고 설명드렸죠. 이건 B.key가 NULL 인 조건만 데이터를 사용하겠다는 뜻입니다. 그러니까 양쪽 테이블에 모두 있는 데이터는 사용하지 않겠다는 뜻입니다. 반대로 말하면 B 테이블에도 있는 데이터를 빼고 순수하게 A 테이블에만 있는 데이터를 사용하겠다는 뜻입니다.</p>
-
 </div>
+</div>
+<div id="practice" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> 실습</h3>
+<p>실습은 <a href="https://github.com/mrchypark/dabrp_classnote">github</a>을 클론하셔서 <code>codeForclass4.R</code> 파일을 확인하시면 됩니다.<br />
+작은 파일은 저장소에 함께 있고, 큰 파일은 코드내에서 다운로드 받도록 작성했습니다.</p>
+
 </div>
 </div>
 </div>

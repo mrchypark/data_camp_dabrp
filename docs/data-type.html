@@ -197,11 +197,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.1" data-path="sql.html"><a href="sql.html#crud"><i class="fa fa-check"></i><b>4.3.1</b> CRUD와 데이터베이스</a></li>
 <li class="chapter" data-level="4.3.2" data-path="sql.html"><a href="sql.html#read"><i class="fa fa-check"></i><b>4.3.2</b> Read 문법</a></li>
 <li class="chapter" data-level="4.3.3" data-path="sql.html"><a href="sql.html#join"><i class="fa fa-check"></i><b>4.3.3</b> Join</a></li>
+<li class="chapter" data-level="4.3.4" data-path="sql.html"><a href="sql.html#practice"><i class="fa fa-check"></i><b>4.3.4</b> 실습</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>5</b> tidy data 개념과 dplyr+tidyr로 데이터 다루기</a><ul>
-<li class="chapter" data-level="5.1" data-path="tidyr.html"><a href="tidyr.html#tidy-data"><i class="fa fa-check"></i><b>5.1</b> tidy data</a></li>
-<li class="chapter" data-level="5.2" data-path="tidyr.html"><a href="tidyr.html#tidyverse"><i class="fa fa-check"></i><b>5.2</b> tidyverse</a></li>
+<li class="chapter" data-level="5.1" data-path="tidyr.html"><a href="tidyr.html#tidy-data"><i class="fa fa-check"></i><b>5.1</b> 단정한 데이터</a></li>
+<li class="chapter" data-level="5.2" data-path="tidyr.html"><a href="tidyr.html#dplyr-tidyr"><i class="fa fa-check"></i><b>5.2</b> dplyr + tidyr</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="tidyr.html"><a href="tidyr.html#pipe-operator"><i class="fa fa-check"></i><b>5.2.1</b> pipe 연산자 %&gt;%</a></li>
+<li class="chapter" data-level="5.2.2" data-path="tidyr.html"><a href="tidyr.html#dplyr-functions"><i class="fa fa-check"></i><b>5.2.2</b> dplyr 명령어 소개</a></li>
+<li class="chapter" data-level="5.2.3" data-path="tidyr.html"><a href="tidyr.html#tidyr-functions"><i class="fa fa-check"></i><b>5.2.3</b> tidyr 명령어 소개</a></li>
+<li class="chapter" data-level="5.2.4" data-path="tidyr.html"><a href="tidyr.html#dplyr-join-dplyrjoin"><i class="fa fa-check"></i><b>5.2.4</b> dplyr과 join {#dplyr&amp;join}</a></li>
+<li class="chapter" data-level="5.2.5" data-path="tidyr.html"><a href="tidyr.html#dplyr-sql"><i class="fa fa-check"></i><b>5.2.5</b> dplyr과 SQL</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
 <li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
@@ -721,26 +729,26 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;  $ message: chr &quot;요청을 성공적으로 처리하였습니다.&quot;</span>
 <span class="co">#&gt;  $ lang   : chr &quot;ko&quot;</span>
 <span class="co">#&gt;  $ country: chr &quot;KR&quot;</span>
-<span class="co">#&gt;  $ result :&#39;data.frame&#39;: 1 obs. of  10 variables:</span>
+<span class="co">#&gt;  $ result :&#39;data.frame&#39;: 1 obs. of  9 variables:</span>
 <span class="co">#&gt;   ..$ sort          : chr &quot;FAVORITE&quot;</span>
 <span class="co">#&gt;   ..$ graph         :&#39;data.frame&#39;:   1 obs. of  3 variables:</span>
 <span class="co">#&gt;   .. ..$ gender:&#39;data.frame&#39;:    1 obs. of  2 variables:</span>
-<span class="co">#&gt;   .. .. ..$ male  : int 73</span>
-<span class="co">#&gt;   .. .. ..$ female: int 27</span>
+<span class="co">#&gt;   .. .. ..$ male  : int 74</span>
+<span class="co">#&gt;   .. .. ..$ female: int 26</span>
 <span class="co">#&gt;   .. ..$ old   :List of 1</span>
 <span class="co">#&gt;   .. .. ..$ :&#39;data.frame&#39;:   5 obs. of  5 variables:</span>
 <span class="co">#&gt;   .. .. .. ..$ age  : chr  &quot;10&quot; &quot;20&quot; &quot;30&quot; &quot;40&quot; ...</span>
-<span class="co">#&gt;   .. .. .. ..$ value: int  2 18 33 23 24</span>
+<span class="co">#&gt;   .. .. .. ..$ value: int  2 18 34 24 22</span>
 <span class="co">#&gt;   .. .. .. ..$ type : chr  &quot;exact&quot; &quot;exact&quot; &quot;exact&quot; &quot;exact&quot; ...</span>
 <span class="co">#&gt;   .. .. .. ..$ min  : logi  TRUE FALSE FALSE FALSE FALSE</span>
 <span class="co">#&gt;   .. .. .. ..$ max  : logi  FALSE FALSE TRUE FALSE FALSE</span>
 <span class="co">#&gt;   .. ..$ empty : logi FALSE</span>
 <span class="co">#&gt;   ..$ count         :&#39;data.frame&#39;:   1 obs. of  5 variables:</span>
-<span class="co">#&gt;   .. ..$ comment         : int 1135</span>
-<span class="co">#&gt;   .. ..$ reply           : int 522</span>
-<span class="co">#&gt;   .. ..$ exposeCount     : int 1193</span>
-<span class="co">#&gt;   .. ..$ delCommentByUser: int 411</span>
-<span class="co">#&gt;   .. ..$ total           : int 1657</span>
+<span class="co">#&gt;   .. ..$ comment         : int 1076</span>
+<span class="co">#&gt;   .. ..$ reply           : int 493</span>
+<span class="co">#&gt;   .. ..$ exposeCount     : int 1143</span>
+<span class="co">#&gt;   .. ..$ delCommentByUser: int 470</span>
+<span class="co">#&gt;   .. ..$ total           : int 1569</span>
 <span class="co">#&gt;   ..$ config        :&#39;data.frame&#39;:   1 obs. of  73 variables:</span>
 <span class="co">#&gt;   .. ..$ useSnsLogin                : logi TRUE</span>
 <span class="co">#&gt;   .. ..$ lineFeedOn                 : logi FALSE</span>
@@ -821,11 +829,6 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;   .. ..$ status: chr &quot;COMMENT_ON&quot;</span>
 <span class="co">#&gt;   ..$ bestList      :List of 1</span>
 <span class="co">#&gt;   .. ..$ : list()</span>
-<span class="co">#&gt;   ..$ notice        :&#39;data.frame&#39;:   1 obs. of  4 variables:</span>
-<span class="co">#&gt;   .. ..$ noticeNo: int 11</span>
-<span class="co">#&gt;   .. ..$ title   : chr &quot;공직선거법에 따른 댓글작성 제한 안내&quot;</span>
-<span class="co">#&gt;   .. ..$ content : chr &quot;안녕하세요, 네이버 뉴스입니다.\r&lt;br&gt; \r&lt;br&gt;공직선거법 제82조 6에 따라 선거운동기간 동안 \r&lt;br&gt;선거 페이지에 반영된 기사 및 일부&quot;| __truncated__</span>
-<span class="co">#&gt;   .. ..$ regTime : chr &quot;2017-04-17T01:33:45+0900&quot;</span>
 <span class="co">#&gt;   ..$ userInfo      :&#39;data.frame&#39;:   1 obs. of  0 variables</span>
 <span class="co">#&gt;   ..$ pageModel     :&#39;data.frame&#39;:   1 obs. of  16 variables:</span>
 <span class="co">#&gt;   .. ..$ page          : int 1</span>
@@ -833,9 +836,9 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;   .. ..$ indexSize     : int 10</span>
 <span class="co">#&gt;   .. ..$ startRow      : int 1</span>
 <span class="co">#&gt;   .. ..$ endRow        : int 10</span>
-<span class="co">#&gt;   .. ..$ totalRows     : int 1135</span>
+<span class="co">#&gt;   .. ..$ totalRows     : int 1076</span>
 <span class="co">#&gt;   .. ..$ startIndex    : int 0</span>
-<span class="co">#&gt;   .. ..$ totalPages    : int 114</span>
+<span class="co">#&gt;   .. ..$ totalPages    : int 108</span>
 <span class="co">#&gt;   .. ..$ firstPage     : int 1</span>
 <span class="co">#&gt;   .. ..$ prevPage      : int 0</span>
 <span class="co">#&gt;   .. ..$ nextPage      : int 2</span>
@@ -849,11 +852,11 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;   .. .. ..$ ticket          : chr  &quot;news&quot; &quot;news&quot; &quot;news&quot; &quot;news&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ objectId        : chr  &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; &quot;news437,0000152054&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ categoryId      : chr  &quot;*&quot; &quot;*&quot; &quot;*&quot; &quot;*&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ templateId      : chr  &quot;default&quot; &quot;view&quot; &quot;view&quot; &quot;view_politics&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ commentNo       : int  895990872 895990402 895994572 895993542 895994142 895995292 895997652 895994952 895990032 895994472</span>
-<span class="co">#&gt;   .. .. ..$ parentCommentNo : int  895990872 895990402 895994572 895993542 895994142 895995292 895997652 895994952 895990032 895994472</span>
+<span class="co">#&gt;   .. .. ..$ templateId      : chr  &quot;default&quot; &quot;view&quot; &quot;view_politics&quot; &quot;default&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ commentNo       : int  895990872 895990402 895993542 895994142 895997652 895994952 895998652 895990312 896000632 895993642</span>
+<span class="co">#&gt;   .. .. ..$ parentCommentNo : int  895990872 895990402 895993542 895994142 895997652 895994952 895998652 895990312 896000632 895993642</span>
 <span class="co">#&gt;   .. .. ..$ replyLevel      : int  1 1 1 1 1 1 1 1 1 1</span>
-<span class="co">#&gt;   .. .. ..$ replyCount      : int  48 32 14 27 6 3 0 1 10 3</span>
+<span class="co">#&gt;   .. .. ..$ replyCount      : int  48 29 25 6 0 1 3 4 0 0</span>
 <span class="co">#&gt;   .. .. ..$ replyPreviewNo  : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;   .. .. ..$ replyList       : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;   .. .. ..$ imageCount      : int  0 0 0 0 0 0 0 0 0 0</span>
@@ -865,21 +868,21 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;   .. .. ..$ stickerId       : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;   .. .. ..$ sticker         : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;   .. .. ..$ sortValue       : num  1.49e+12 1.49e+12 1.49e+12 1.49e+12 1.49e+12 ...</span>
-<span class="co">#&gt;   .. .. ..$ contents        : chr  &quot;국회의원에게 권력을 나눠주느니 차라리 대통령중심제 해라. 각당 원내대표들이 돌아가며 총리 해먹는 꼴 못본다&quot; &quot;4년 중임제가 답이다&quot; &quot;대통령제하에서도 지금 이렇게 난장판을 만들고 있는 국개의원들에게 나라를 맡기라고요? 농담이겠지~ 사사건건 대통령이 일 못하게 방&quot;| __truncated__ &quot;의원내각제는 진짜로 박지원 상왕 만들자는 개헌이지&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ userIdNo        : chr  &quot;oCJq&quot; &quot;5qcIZ&quot; &quot;6mKW&quot; &quot;9oKyX&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ contents        : chr  &quot;국회의원에게 권력을 나눠주느니 차라리 대통령중심제 해라. 각당 원내대표들이 돌아가며 총리 해먹는 꼴 못본다&quot; &quot;4년 중임제가 답이다&quot; &quot;의원내각제는 진짜로 박지원 상왕 만들자는 개헌이지&quot; &quot;박지원이 그렇게 개헌 개헌 하더니만...안후보 대통령만들고 나면 총리자리 달라고 하겠네 ㅎㅎ&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userIdNo        : chr  &quot;oCJq&quot; &quot;5qcIZ&quot; &quot;9oKyX&quot; &quot;6U92Q&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ lang            : chr  &quot;ko&quot; &quot;ko&quot; &quot;ko&quot; &quot;ko&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ country         : chr  &quot;KR&quot; &quot;KR&quot; &quot;KR&quot; &quot;KR&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ idType          : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ idProvider      : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ userName        : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;yhan****&quot; &quot;tjto****&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ userProfileImage: chr  &quot;http://profile.phinf.naver.net/47661/c2300c203d789c4761cb7256042c54e1434afc037bc9e510593d610b89108090.jpg&quot; &quot;http://profile.phinf.naver.net/27148/f77ca3b0a86973c627361a946e9ae3a198c8557fd608f07ead8df1f060808693.jpg&quot; &quot;http://profile.phinf.naver.net/45703/ba160172fc0d0e4a1b3e3c71fb92811a65220334ed0a3d80cabe21b205e13951.jpg&quot; &quot;http://profile.phinf.naver.net/43378/842d4ba6140c89c75e27abf1f0a48910de3c4f95bac6fe9e7347cbbf831e6f42.jpg&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userName        : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;tjto****&quot; &quot;hb12****&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ userProfileImage: chr  &quot;http://profile.phinf.naver.net/47661/c2300c203d789c4761cb7256042c54e1434afc037bc9e510593d610b89108090.jpg&quot; &quot;http://profile.phinf.naver.net/27148/f77ca3b0a86973c627361a946e9ae3a198c8557fd608f07ead8df1f060808693.jpg&quot; &quot;http://profile.phinf.naver.net/43378/842d4ba6140c89c75e27abf1f0a48910de3c4f95bac6fe9e7347cbbf831e6f42.jpg&quot; &quot;http://profile.phinf.naver.net/46045/e902b85b86479646dd8db2c3b95857cbe4dcd058ea7fb0c36592ecdf6107350d.jpg&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ profileType     : chr  &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; &quot;naver&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ modTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:05:58+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ modTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:05:58+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ regTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:05:58+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ regTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:05:58+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ sympathyCount   : int  2358 1907 1642 1914 644 493 470 428 466 418</span>
-<span class="co">#&gt;   .. .. ..$ antipathyCount  : int  70 100 38 152 37 11 5 10 34 23</span>
+<span class="co">#&gt;   .. .. ..$ modTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; &quot;2017-04-12T21:05:26+0900&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ modTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; &quot;2017-04-12T12:05:26+0000&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ regTime         : chr  &quot;2017-04-12T21:00:55+0900&quot; &quot;2017-04-12T21:00:21+0900&quot; &quot;2017-04-12T21:04:44+0900&quot; &quot;2017-04-12T21:05:26+0900&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ regTimeGmt      : chr  &quot;2017-04-12T12:00:55+0000&quot; &quot;2017-04-12T12:00:21+0000&quot; &quot;2017-04-12T12:04:44+0000&quot; &quot;2017-04-12T12:05:26+0000&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ sympathyCount   : int  2360 1907 1914 645 470 428 446 404 294 262</span>
+<span class="co">#&gt;   .. .. ..$ antipathyCount  : int  70 100 152 37 5 10 39 34 7 4</span>
 <span class="co">#&gt;   .. .. ..$ userBlind       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
 <span class="co">#&gt;   .. .. ..$ hideReplyButton : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
 <span class="co">#&gt;   .. .. ..$ status          : int  0 0 0 0 0 0 0 0 0 0</span>
@@ -907,11 +910,11 @@ tem&lt;-<span class="kw">getComment</span>(url)
 <span class="co">#&gt;   .. .. ..$ profileUserId   : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;   .. .. ..$ containText     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...</span>
 <span class="co">#&gt;   .. .. ..$ validateBanWords: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
-<span class="co">#&gt;   .. .. ..$ maskedUserId    : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;yhan****&quot; &quot;tjto****&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ maskedUserName  : chr  &quot;ss****&quot; &quot;za****&quot; &quot;yh****&quot; &quot;tj****&quot; ...</span>
-<span class="co">#&gt;   .. .. ..$ exposeByCountry : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;   .. .. ..$ maskedUserId    : chr  &quot;ssan****&quot; &quot;zamp****&quot; &quot;tjto****&quot; &quot;hb12****&quot; ...</span>
+<span class="co">#&gt;   .. .. ..$ maskedUserName  : chr  &quot;ss****&quot; &quot;za****&quot; &quot;tj****&quot; &quot;hb****&quot; ...</span>
 <span class="co">#&gt;   .. .. ..$ virtual         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
-<span class="co">#&gt;  $ date   : chr &quot;2017-04-20T09:35:35+0000&quot;</span></code></pre></div>
+<span class="co">#&gt;   .. .. ..$ exposeByCountry : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
+<span class="co">#&gt;  $ date   : chr &quot;2017-05-10T22:01:45+0000&quot;</span></code></pre></div>
 <p><code>JSON</code>을 전문적으로 다루기 위한 <a href="https://github.com/jeremystan/tidyjson">패키지</a>도 있으니 확인해 보세요.</p>
 </div>
 <div id="list-subset" class="section level3">

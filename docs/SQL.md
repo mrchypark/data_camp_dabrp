@@ -71,13 +71,8 @@
 ### Read 문법 {#read}
 
 위에서 잠깐 언급 했듯 `read`는 데이터를 불러오는 행위를 뜻합니다. 우선 read의 기본 형식은 아래와 같습니다.
-```
-SELECT [ALL | DISTINCT] 컬럼명 [,컬럼명...]
-FROM 테이블명 [,테이블명...]
-[WHERE 조건식]
-[GROUP BY 컬럼명[,컬럼명...] [HAVING 조건식]]
-[ORDER BY 컬럼명[,컬럼명...]]
-```
+
+
 
 하나하나 살펴 보겠습니다.
 
@@ -94,6 +89,48 @@ FROM 테이블명 [,테이블명...]
 6. 하나 더 `as`는 길게 만들어진 무엇을 줄여서 쉽게 작성하기 위해서 사용합니다. `column`명이나 `table`명에서 많이 사용합니다.
 
 위에 있는 내용 중에 중요한 개념이 하나 더 있습니다. 그것은 `join`인데요. `table`끼리 합칠 때 사용합니다.
+
+그럼 `data frame`이랑 기능을 맞춰 보겠습니다. R에서 변수 `train`에 데이터가 있다고 할때,
+
+```
+# for R
+train
+
+# for db
+select * from train
+```
+
+그럼 `column`을 선택하는 것은 어떻게 하나요?
+
+```
+# for R
+train[,c("fecha_dato","age")]
+
+# for db
+select fecha_dato, age from train
+```
+
+이제 `row`에 조건을 줄 수도 있겠네요?
+
+```
+# for R
+train[train$fecha_dato > 2016-06-28 ,c("fecha_dato","age")]
+
+# for db
+select fecha_dato, age from train where train.fecha_dato > 2016-07-28
+```
+
+각 성별에 나이 평균도 구할 수 있습니다.
+
+```
+# for R
+data<-train[,c("sexo","age")]
+mean(data[data$sexo=="F","age"])
+mean(data[data$sexo=="M","age"])
+
+# for db
+select sexo, avg(age) from train group by sexo
+```
 
 ### Join {#join}
 
@@ -157,4 +194,10 @@ where B.key is NULL;
 
 `where`에는 데이터에 대한 조건이 들어간다고 설명드렸죠. 이건 B.key가 NULL 인 조건만 데이터를 사용하겠다는 뜻입니다. 그러니까 양쪽 테이블에 모두 있는 데이터는 사용하지 않겠다는 뜻입니다. 반대로 말하면 B 테이블에도 있는 데이터를 빼고 순수하게 A 테이블에만 있는 데이터를 사용하겠다는 뜻입니다.
 
+### 실습 {#practice}
 
+실습은 [github][501]을 클론하셔서 `codeForclass4.R` 파일을 확인하시면 됩니다.  
+작은 파일은 저장소에 함께 있고, 큰 파일은 코드내에서 다운로드 받도록 작성했습니다.
+
+
+[501]: https://github.com/mrchypark/dabrp_classnote
