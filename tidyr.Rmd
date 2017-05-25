@@ -59,6 +59,7 @@ g(f(x,y,z)) == y %>% f(x, . , z) %>% g
 `dplyr`에는 행에 조건을 줘서 부분을 불러오는 `filter()`, 필요한 컬럼만 선택하는 `select()`, 새로운 컬럼을 계산하는 `mutate()`, 조건에 따라 재정렬 할 수 있는 `arrange()`, `group_by()`와 함께 써서 요약값을 계산할 수 있는 `summarise()`가 있습니다. `group_by()`는 `mutate()`, `filter()`와도 사용할 수 있습니다.
 
 ```{r}
+if(!require(nycflights13)) install.packages("nycflights13")
 library(nycflights13)
 flights
 ```

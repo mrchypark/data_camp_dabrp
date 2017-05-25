@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="knitr.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="dabrp.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>1</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
+<li class="chapter" data-level="1.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>1.1</b> Markdown 문법</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="knitr.html"><a href="knitr.html#markdown-exp"><i class="fa fa-check"></i><b>1.1.1</b> 마크다운이란</a></li>
+<li class="chapter" data-level="1.1.2" data-path="knitr.html"><a href="knitr.html#syntax"><i class="fa fa-check"></i><b>1.1.2</b> 문법 소개</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="1.html"><a href="1.html"><i class="fa fa-check"></i><b>2</b> 제목1</a><ul>
+<li class="chapter" data-level="2.1" data-path="1.html"><a href="1.html#2"><i class="fa fa-check"></i><b>2.1</b> 제목2</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="1.html"><a href="1.html#3"><i class="fa fa-check"></i><b>2.1.1</b> 제목3</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="1.html"><a href="1.html#rmd"><i class="fa fa-check"></i><b>2.2</b> Rmd로 문서 작성</a></li>
+<li class="chapter" data-level="2.3" data-path="1.html"><a href="1.html#scheduler"><i class="fa fa-check"></i><b>2.3</b> 스케줄러</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="1.html"><a href="1.html#scheduler"><i class="fa fa-check"></i><b>2.3.1</b> windows 작업 스케줄러</a></li>
+<li class="chapter" data-level="2.3.2" data-path="1.html"><a href="1.html#launch"><i class="fa fa-check"></i><b>2.3.2</b> mac 작업 스케줄러</a></li>
+<li class="chapter" data-level="2.3.3" data-path="1.html"><a href="1.html#crontab"><i class="fa fa-check"></i><b>2.3.3</b> linux 작업 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="1.html"><a href="1.html#bookdown"><i class="fa fa-check"></i><b>2.4</b> bookdown</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="1" class="section level1">
+<h1><span class="header-section-number">2</span> 제목1</h1>
+<div id="2" class="section level2">
+<h2><span class="header-section-number">2.1</span> 제목2</h2>
+<div id="3" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> 제목3</h3>
+<div id="4" class="section level4">
+<h4><span class="header-section-number">2.1.1.1</span> 제목4</h4>
+<div id="5" class="section level5">
+<h5><span class="header-section-number">2.1.1.1.1</span> 제목5</h5>
+<div id="6" class="section level6">
+<h6><span class="header-section-number">2.1.1.1.1.1</span> 제목6</h6>
+</div>
+</div>
+</div>
+<div id="section-2.1.1.2" class="section level4">
+<h4><span class="header-section-number">2.1.1.2</span> 인용</h4>
+<p>인용은 인용 속에 인용, 인용 속에 인용이 가능한 구조입니다. 보통 왼쪽에 세로줄이 있는 형태로 뫼부에 보여줍니다.</p>
+<pre><code>&gt; ### 제일 바깥의 인용
+&gt;&gt; ** 인용의 인용 **
+                     인용의 인용의 인용_
+&gt;&gt;인용의 인용</code></pre>
+<blockquote>
+<h3 id="--"><span class="header-section-number">2.1.1.2</span> 제일 바깥의 인용</h3>
+<blockquote>
+<p>** 인용의 인용 ** 인용의 인용의 인용_ 인용의 인용</p>
+</blockquote>
+</blockquote>
+</div>
+<div id="blod-italic" class="section level4">
+<h4><span class="header-section-number">2.1.1.3</span> blod &amp; italic</h4>
+<pre><code>이것은 **굵은 글씨** 입니다.
+이것은 __굵은 글씨__ 입니다.
+
+이것은 *기울여 쓰기* 입니다.
+이것은 _기울여 쓰기_ 입니다.
+
+이것은 ***강조하며 기울여 쓰기*** 입니다.
+이것은 ___강조하며 기울여 쓰기___ 입니다.</code></pre>
+<p>이것은 <strong>굵은 글씨</strong> 입니다. 이것은 <strong>굵은 글씨</strong> 입니다.</p>
+<p>이것은 <em>기울여 쓰기</em> 입니다. 이것은 <em>기울여 쓰기</em> 입니다.</p>
+<p>이것은 <strong><em>강조하며 기울여 쓰기</em></strong> 입니다. 이것은 <strong><em>강조하며 기울여 쓰기</em></strong> 입니다.</p>
+</div>
+<div id="links" class="section level4">
+<h4><span class="header-section-number">2.1.1.4</span> links</h4>
+<pre><code>이것은 [링크](http://www.example.com) 입니다.
+이것은 [링크](http://www.example.com &quot;설명문구 생략가능&quot;) 입니다.
+이것은 [구글 링크][1] 입니다.
+이것은 [마이크로소프트 링크][b] 입니다.
+이것은 [애플 링크][three] 입니다.
+ 
+[1]: https://www.google.co.kr &quot;구글&quot;
+[b]: https://www.microsoft.com/ko-kr/ &quot;마이크로소프트&quot;
+[three]: http://www.apple.com/kr/ &quot;애플&quot;
+</code></pre>
+<p>이것은 <a href="http://www.example.com">링크</a> 입니다. 이것은 <a href="http://www.example.com" title="설명문구 생략가능">링크</a> 입니다. 이것은 <a href="https://www.google.co.kr" title="구글">구글 링크</a> 입니다. 이것은 <a href="https://www.microsoft.com/ko-kr/" title="마이크로소프트">마이크로소프트 링크</a> 입니다. 이것은 <a href="http://www.apple.com/kr/" title="애플">애플 링크</a> 입니다.</p>
+<pre><code>1. ![깃헙](https://guides.github.com/images/logo@2x.png &quot;설명문구 생략가능&quot;)
+2. ![깃허브][imgGithub]
+ 
+[imgGithub]: https://www.google.co.kr/images/nav_logo242.png &quot;설명문구 생략가능&quot;
+</code></pre>
+<ol style="list-style-type: decimal">
+<li><img src="https://guides.github.com/images/logo@2x.png" title="설명문구 생략가능" alt="깃헙" /></li>
+<li><img src="https://www.google.co.kr/images/nav_logo242.png" title="fig:설명문구 생략가능" alt="깃허브" /></li>
+</ol>
+<pre><code>1. 번호1
+2. 번호2
+3. 번호3</code></pre>
+<ol style="list-style-type: decimal">
+<li>번호1</li>
+<li>번호2</li>
+<li>번호3</li>
+</ol>
+</div>
+<div id="section-2.1.1.5" class="section level4">
+<h4><span class="header-section-number">2.1.1.5</span> 수식</h4>
+<p><code>LaTex</code>은 수식을 입력하는 규칙이 규정되어 있습니다. 이를 활용해서 <code>$$ 수식문법 $$</code> 의 규칙으로 복잡한 수식을 작성할 수 있습니다.</p>
+<pre><code>$$
+\left|\sum_{i=1}^n a_ib_i\right|
+\le
+\left(\sum_{i=1}^n a_i^2\right)^{1/2}
+\left(\sum_{i=1}^n b_i^2\right)^{1/2}
+$$</code></pre>
+<p><span class="math display">\[
+\left|\sum_{i=1}^n a_ib_i\right|
+\le
+\left(\sum_{i=1}^n a_i^2\right)^{1/2}
+\left(\sum_{i=1}^n b_i^2\right)^{1/2}
+\]</span></p>
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="rmd" class="section level2">
+<h2><span class="header-section-number">2.2</span> Rmd로 문서 작성</h2>
+<p>Rmd는 위에서 설명한 <code>markdown</code>문법을 활용하여 R의 명령문과 조합해서 문서를 작성하기 위한 하나의 양식입니다.</p>
+<p>inline R code text작성시 text중간 중간에 R문법이 들어가게 된다면, 탭키위에 키로 다음과 같이 입력하고 <code>r</code> 안에 연산하고자 하는 r 코드을 쓰면 된다.</p>
+<p>예를 들어 1 + 1 = 2 로 입력하면 1+1=2로 나타날 것이다.</p>
+<p><a href="https://github.com/rstudio/rmarkdown">rmarkdown</a></p>
+<p><a href="https://www.rstudio.com/wp-content/uploads/2016/02/rmarkdown-cheatsheet-kr.pdf">cheatsheet</a> , <a href="http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style">style</a></p>
+</div>
+<div id="scheduler" class="section level2">
+<h2><span class="header-section-number">2.3</span> 스케줄러</h2>
+<div id="scheduler" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> windows 작업 스케줄러</h3>
+</div>
+<div id="launch" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> mac 작업 스케줄러</h3>
+</div>
+<div id="crontab" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> linux 작업 스케줄러</h3>
+</div>
+</div>
+<div id="bookdown" class="section level2">
+<h2><span class="header-section-number">2.4</span> bookdown</h2>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="knitr.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": true,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mrchypark/data_camp_dabrp/edit/master/%s",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
