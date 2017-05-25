@@ -71,6 +71,8 @@ g(f(x,y,z)) == y %>% f(x, . , z) %>% g
 
 
 ```r
+if(!require(nycflights13)) install.packages("nycflights13")
+#> 필요한 패키지를 로딩중입니다: nycflights13
 library(nycflights13)
 flights
 #> # A tibble: 336,776 × 19
@@ -867,7 +869,7 @@ library(dplyr)
 library(RSQLite)
 library(RMySQL)
 #> 
-#> Attaching package: 'RMySQL'
+#> 다음의 패키지를 부착합니다: 'RMySQL'
 #> The following object is masked from 'package:RSQLite':
 #> 
 #>     isIdCurrent
@@ -947,7 +949,7 @@ library(data.table)
 #> Please library(dtplyr)!
 #> -------------------------------------------------------------------------
 #> 
-#> Attaching package: 'data.table'
+#> 다음의 패키지를 부착합니다: 'data.table'
 #> The following objects are masked from 'package:dplyr':
 #> 
 #>     between, first, last
@@ -958,11 +960,11 @@ url<-"https://github.com/arunsrinivasan/flights/wiki/NYCflights14/flights14.csv"
 dir.create("./data",showWarnings = F)
 download.file(url,destfile = "./data/flights14.csv")
 system.time(flights <- read.csv("./data/flights14.csv"))
-#>    user  system elapsed 
-#>    2.22    0.06    2.31
+#>  사용자  시스템 elapsed 
+#>    3.75    0.08    4.45
 system.time(flights <- fread("./data/flights14.csv"))
-#>    user  system elapsed 
-#>   0.240   0.000   0.235
+#>  사용자  시스템 elapsed 
+#>    0.43    0.01    0.54
 flights
 #>         year month day dep_time dep_delay arr_time arr_delay cancelled
 #>      1: 2014     1   1      914        14     1238        13         0

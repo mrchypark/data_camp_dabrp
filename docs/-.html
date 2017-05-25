@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="index.html">
 <link rel="next" href="rstudio.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -97,6 +95,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -212,12 +211,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
-<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
+<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>7</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
-<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a></li>
-<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd로 문서 작성</a></li>
-<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a></li>
+<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="knitr.html"><a href="knitr.html#markdown-exp"><i class="fa fa-check"></i><b>7.1.1</b> 마크다운이란</a></li>
+<li class="chapter" data-level="7.1.2" data-path="knitr.html"><a href="knitr.html#syntax"><i class="fa fa-check"></i><b>7.1.2</b> 문법 소개</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd 양식으로 문서 작성</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="knitr.html"><a href="knitr.html#r-code--"><i class="fa fa-check"></i><b>7.2.1</b> R code 실행 결과</a></li>
+<li class="chapter" data-level="7.2.2" data-path="knitr.html"><a href="knitr.html#yaml---"><i class="fa fa-check"></i><b>7.2.2</b> YAML 해더를 이용한 출력물</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="knitr.html"><a href="knitr.html#taskscheduler"><i class="fa fa-check"></i><b>7.3.1</b> windows 작업 스케줄러</a></li>
+<li class="chapter" data-level="7.3.2" data-path="knitr.html"><a href="knitr.html#crontab"><i class="fa fa-check"></i><b>7.3.2</b> linux 작업 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="knitr.html"><a href="knitr.html#bookdown"><i class="fa fa-check"></i><b>7.4</b> bookdown</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
 <li class="chapter" data-level="" data-path="eba788ecb998eba9b0.html"><a href="eba788ecb998eba9b0.html"><i class="fa fa-check"></i>마치며</a></li>
@@ -246,16 +255,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>데이터 과학을 진행하는데에는 아래의 과정을 따릅니다.</p>
 <p><em>공부를 위해 작성하는 자료니 만큼 자료를 생산하는 모든 코드는 숨기지 않고 같이 출력하겠습니다.</em></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;visNetwork&quot;</span>)
-nodes &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="dv">1</span>:<span class="dv">7</span>,<span class="dt">label=</span><span class="kw">c</span>(<span class="st">&quot;1. 데이터 확보&quot;</span>,<span class="st">&quot;2. 데이터 정제&quot;</span>,
+nodes &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">7</span>,<span class="dt">label=</span><span class="kw">c</span>(<span class="st">&quot;1. 데이터 확보&quot;</span>,<span class="st">&quot;2. 데이터 정제&quot;</span>,
                                      <span class="st">&quot;3. 분석&quot;</span>,<span class="st">&quot;데이터 핸들링&quot;</span>,<span class="st">&quot;분석&quot;</span>,<span class="st">&quot;결과 검증&quot;</span>,<span class="st">&quot;4. 시각화&quot;</span>),
                     <span class="dt">shape=</span><span class="st">&quot;box&quot;</span>, <span class="dt">font.size=</span><span class="dv">25</span>)
 edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">from =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>), 
                     <span class="dt">to =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">4</span>),
                     <span class="dt">dashes =</span> <span class="kw">c</span>(F,F,F,F,F,T,F),
                     <span class="dt">length=</span><span class="dv">100</span>)
-<span class="kw">visNetwork</span>(nodes, edges, <span class="dt">width =</span> <span class="st">&quot;100%&quot;</span>) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span><span class="kw">list</span>(<span class="dt">to =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, <span class="dt">scaleFactor =</span> <span class="dv">1</span>))) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">visLayout</span>(<span class="dt">randomSeed =</span> -<span class="fl">0.9261698</span>*<span class="dv">10000</span>)</code></pre></div>
+<span class="kw">visNetwork</span>(nodes, edges, <span class="dt">width =</span> <span class="st">&quot;100%&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span><span class="kw">list</span>(<span class="dt">to =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, <span class="dt">scaleFactor =</span> <span class="dv">1</span>))) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">visLayout</span>(<span class="dt">randomSeed =</span> <span class="op">-</span><span class="fl">0.9261698</span><span class="op">*</span><span class="dv">10000</span>)</code></pre></div>
 <div id="htmlwidget-14d5992801777f4abbc5" style="width:100%;height:355.968px;" class="visNetwork html-widget"></div>
 <script type="application/json" data-for="htmlwidget-14d5992801777f4abbc5">{"x":{"nodes":{"id":[1,2,3,4,5,6,7],"label":["1. 데이터 확보","2. 데이터 정제","3. 분석","데이터 핸들링","분석","결과 검증","4. 시각화"],"shape":["box","box","box","box","box","box","box"],"font.size":[25,25,25,25,25,25,25]},"edges":{"from":[1,2,3,4,5,3,6],"to":[2,3,7,5,6,4,4],"dashes":[false,false,false,false,false,true,false],"length":[100,100,100,100,100,100,100]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":{"to":{"enabled":true,"scaleFactor":1}}},"layout":{"randomSeed":-9261.698}},"groups":null,"width":"100%","height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null},"evals":[],"jsHooks":[]}</script>
 <p>위 표는 <a href="http://hadley.nz/">해들리 위컴</a>의 <a href="http://r4ds.had.co.nz/">R for Data Science</a>에 소개에 작성된 표이기도 합니다. 각각 Import, Tidy, Transform, Visualise, Model, Communicate라고 되어 있는 것을 제 상황에 맞게 각색하였습니다.</p>
@@ -441,7 +450,7 @@ edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
 </tr>
 </tbody>
 </table>
-<p>이 책은 <a href="https://rcoholic.github.io/">박찬엽</a>이 Thursday, May 11, 2017 10:09:21 AM UTC에 마지막으로 업데이트 했습니다.</p>
+<p>이 책은 <a href="https://rcoholic.github.io/">박찬엽</a>이 목요일, 5월 25, 2017 오후 6:39:46 KST에 마지막으로 업데이트 했습니다.</p>
 
 </div>
 </div>
@@ -451,8 +460,9 @@ edges &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rstudio.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -481,6 +491,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

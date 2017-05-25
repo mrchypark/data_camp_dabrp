@@ -309,10 +309,10 @@ output:
 
 #### YAML params
 
-`YAML`이 데이터 양식이라고 설명을 드렸습니다. 그래서 `Rmd`내부에서 접근할 수 있는 데이터를 `params`라는 이름으로 미리 작성해 둘 수 있습니다.
+`YAML`이 데이터 양식이라고 설명을 드렸습니다. 그래서 `Rmd`내부에서 접근할 수 있는 데이터를 `params`라는 이름으로 미리 작성해 둘 수 있습니다. 지금은 inline 코드를 양쪽에 `-`로 처리 했습니다.
 ```
 ---
-title: `r params$chapter` 테스트 해더
+title: -r params$chapter- 테스트 해더
 params:
   chapter: 5
 author: 박찬엽

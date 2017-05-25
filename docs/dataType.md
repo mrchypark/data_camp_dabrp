@@ -315,8 +315,8 @@ matrix(1:3, nrow = 2, ncol = 3)
 #> [1,]    1    3    2
 #> [2,]    2    1    3
 matrix(1:4, nrow = 2, ncol = 3)
-#> Warning in matrix(1:4, nrow = 2, ncol = 3): data length [4] is not a sub-
-#> multiple or multiple of the number of columns [3]
+#> Warning in matrix(1:4, nrow = 2, ncol = 3): 데이터의 길이[4]가 열의 개수[3]
+#> 의 배수가 되지 않습니다
 #>      [,1] [,2] [,3]
 #> [1,]    1    3    1
 #> [2,]    2    4    2
@@ -542,8 +542,8 @@ factor(blood, labels = c("BT_A", "BT_AB", "BT_B", "BT_O"))
 blood <- c("B", "AB", "O", "A", "O", "O", "A", "B")
 blood_factor <- factor(blood)
 blood_factor[1] < blood_factor[2]
-#> Warning in Ops.factor(blood_factor[1], blood_factor[2]): '<' not meaningful
-#> for factors
+#> Warning in Ops.factor(blood_factor[1], blood_factor[2]): 요인(factors)에 대
+#> 하여 의미있는 '<'가 아닙니다.
 #> [1] NA
 ```
 
@@ -660,26 +660,26 @@ str(tem)
 #>  $ message: chr "요청을 성공적으로 처리하였습니다."
 #>  $ lang   : chr "ko"
 #>  $ country: chr "KR"
-#>  $ result :'data.frame':	1 obs. of  9 variables:
+#>  $ result :'data.frame':	1 obs. of  10 variables:
 #>   ..$ sort          : chr "FAVORITE"
 #>   ..$ graph         :'data.frame':	1 obs. of  3 variables:
 #>   .. ..$ gender:'data.frame':	1 obs. of  2 variables:
-#>   .. .. ..$ male  : int 74
-#>   .. .. ..$ female: int 26
+#>   .. .. ..$ male  : int 73
+#>   .. .. ..$ female: int 27
 #>   .. ..$ old   :List of 1
 #>   .. .. ..$ :'data.frame':	5 obs. of  5 variables:
 #>   .. .. .. ..$ age  : chr  "10" "20" "30" "40" ...
-#>   .. .. .. ..$ value: int  2 18 34 24 22
+#>   .. .. .. ..$ value: int  2 18 32 23 25
 #>   .. .. .. ..$ type : chr  "exact" "exact" "exact" "exact" ...
 #>   .. .. .. ..$ min  : logi  TRUE FALSE FALSE FALSE FALSE
 #>   .. .. .. ..$ max  : logi  FALSE FALSE TRUE FALSE FALSE
 #>   .. ..$ empty : logi FALSE
 #>   ..$ count         :'data.frame':	1 obs. of  5 variables:
-#>   .. ..$ comment         : int 1076
-#>   .. ..$ reply           : int 493
-#>   .. ..$ exposeCount     : int 1143
-#>   .. ..$ delCommentByUser: int 470
-#>   .. ..$ total           : int 1569
+#>   .. ..$ comment         : int 1232
+#>   .. ..$ reply           : int 552
+#>   .. ..$ exposeCount     : int 1272
+#>   .. ..$ delCommentByUser: int 298
+#>   .. ..$ total           : int 1784
 #>   ..$ config        :'data.frame':	1 obs. of  73 variables:
 #>   .. ..$ useSnsLogin                : logi TRUE
 #>   .. ..$ lineFeedOn                 : logi FALSE
@@ -760,6 +760,11 @@ str(tem)
 #>   .. ..$ status: chr "COMMENT_ON"
 #>   ..$ bestList      :List of 1
 #>   .. ..$ : list()
+#>   ..$ notice        :'data.frame':	1 obs. of  4 variables:
+#>   .. ..$ noticeNo: int 10
+#>   .. ..$ title   : chr "댓글정렬옵션 '공감비율순' 베타 서비스 안내"
+#>   .. ..$ content : chr "안녕하세요, 네이버 뉴스입니다.\r<br> \r<br>뉴스 댓글 순서를 더 다양한 방식으로 선택해 볼 수 있도록  \r<br>우선 경제, 사회 섹션 "| __truncated__
+#>   .. ..$ regTime : chr "2017-02-01T14:42:53+0900"
 #>   ..$ userInfo      :'data.frame':	1 obs. of  0 variables
 #>   ..$ pageModel     :'data.frame':	1 obs. of  16 variables:
 #>   .. ..$ page          : int 1
@@ -767,9 +772,9 @@ str(tem)
 #>   .. ..$ indexSize     : int 10
 #>   .. ..$ startRow      : int 1
 #>   .. ..$ endRow        : int 10
-#>   .. ..$ totalRows     : int 1076
+#>   .. ..$ totalRows     : int 1232
 #>   .. ..$ startIndex    : int 0
-#>   .. ..$ totalPages    : int 108
+#>   .. ..$ totalPages    : int 124
 #>   .. ..$ firstPage     : int 1
 #>   .. ..$ prevPage      : int 0
 #>   .. ..$ nextPage      : int 2
@@ -783,11 +788,11 @@ str(tem)
 #>   .. .. ..$ ticket          : chr  "news" "news" "news" "news" ...
 #>   .. .. ..$ objectId        : chr  "news437,0000152054" "news437,0000152054" "news437,0000152054" "news437,0000152054" ...
 #>   .. .. ..$ categoryId      : chr  "*" "*" "*" "*" ...
-#>   .. .. ..$ templateId      : chr  "default" "view" "view_politics" "default" ...
-#>   .. .. ..$ commentNo       : int  895990872 895990402 895993542 895994142 895997652 895994952 895998652 895990312 896000632 895993642
-#>   .. .. ..$ parentCommentNo : int  895990872 895990402 895993542 895994142 895997652 895994952 895998652 895990312 896000632 895993642
+#>   .. .. ..$ templateId      : chr  "default" "view" "view" "view_politics" ...
+#>   .. .. ..$ commentNo       : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032
+#>   .. .. ..$ parentCommentNo : int  895990872 895990402 895994572 895993542 895991062 895994142 895995292 895997652 895994952 895990032
 #>   .. .. ..$ replyLevel      : int  1 1 1 1 1 1 1 1 1 1
-#>   .. .. ..$ replyCount      : int  48 29 25 6 0 1 3 4 0 0
+#>   .. .. ..$ replyCount      : int  52 34 16 31 15 8 4 1 1 10
 #>   .. .. ..$ replyPreviewNo  : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ replyList       : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ imageCount      : int  0 0 0 0 0 0 0 0 0 0
@@ -799,21 +804,21 @@ str(tem)
 #>   .. .. ..$ stickerId       : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ sticker         : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ sortValue       : num  1.49e+12 1.49e+12 1.49e+12 1.49e+12 1.49e+12 ...
-#>   .. .. ..$ contents        : chr  "국회의원에게 권력을 나눠주느니 차라리 대통령중심제 해라. 각당 원내대표들이 돌아가며 총리 해먹는 꼴 못본다" "4년 중임제가 답이다" "의원내각제는 진짜로 박지원 상왕 만들자는 개헌이지" "박지원이 그렇게 개헌 개헌 하더니만...안후보 대통령만들고 나면 총리자리 달라고 하겠네 ㅎㅎ" ...
-#>   .. .. ..$ userIdNo        : chr  "oCJq" "5qcIZ" "9oKyX" "6U92Q" ...
+#>   .. .. ..$ contents        : chr  "국회의원에게 권력을 나눠주느니 차라리 대통령중심제 해라. 각당 원내대표들이 돌아가며 총리 해먹는 꼴 못본다" "4년 중임제가 답이다" "대통령제하에서도 지금 이렇게 난장판을 만들고 있는 국개의원들에게 나라를 맡기라고요? 농담이겠지~ 사사건건 대통령이 일 못하게 방"| __truncated__ "의원내각제는 진짜로 박지원 상왕 만들자는 개헌이지" ...
+#>   .. .. ..$ userIdNo        : chr  "oCJq" "5qcIZ" "6mKW" "9oKyX" ...
 #>   .. .. ..$ lang            : chr  "ko" "ko" "ko" "ko" ...
 #>   .. .. ..$ country         : chr  "KR" "KR" "KR" "KR" ...
 #>   .. .. ..$ idType          : chr  "naver" "naver" "naver" "naver" ...
 #>   .. .. ..$ idProvider      : chr  "naver" "naver" "naver" "naver" ...
-#>   .. .. ..$ userName        : chr  "ssan****" "zamp****" "tjto****" "hb12****" ...
-#>   .. .. ..$ userProfileImage: chr  "http://profile.phinf.naver.net/47661/c2300c203d789c4761cb7256042c54e1434afc037bc9e510593d610b89108090.jpg" "http://profile.phinf.naver.net/27148/f77ca3b0a86973c627361a946e9ae3a198c8557fd608f07ead8df1f060808693.jpg" "http://profile.phinf.naver.net/43378/842d4ba6140c89c75e27abf1f0a48910de3c4f95bac6fe9e7347cbbf831e6f42.jpg" "http://profile.phinf.naver.net/46045/e902b85b86479646dd8db2c3b95857cbe4dcd058ea7fb0c36592ecdf6107350d.jpg" ...
+#>   .. .. ..$ userName        : chr  "ssan****" "zamp****" "yhan****" "tjto****" ...
+#>   .. .. ..$ userProfileImage: chr  "http://profile.phinf.naver.net/47661/c2300c203d789c4761cb7256042c54e1434afc037bc9e510593d610b89108090.jpg" "http://profile.phinf.naver.net/27148/f77ca3b0a86973c627361a946e9ae3a198c8557fd608f07ead8df1f060808693.jpg" "http://profile.phinf.naver.net/45703/ba160172fc0d0e4a1b3e3c71fb92811a65220334ed0a3d80cabe21b205e13951.jpg" "http://profile.phinf.naver.net/43378/842d4ba6140c89c75e27abf1f0a48910de3c4f95bac6fe9e7347cbbf831e6f42.jpg" ...
 #>   .. .. ..$ profileType     : chr  "naver" "naver" "naver" "naver" ...
-#>   .. .. ..$ modTime         : chr  "2017-04-12T21:00:55+0900" "2017-04-12T21:00:21+0900" "2017-04-12T21:04:44+0900" "2017-04-12T21:05:26+0900" ...
-#>   .. .. ..$ modTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:04:44+0000" "2017-04-12T12:05:26+0000" ...
-#>   .. .. ..$ regTime         : chr  "2017-04-12T21:00:55+0900" "2017-04-12T21:00:21+0900" "2017-04-12T21:04:44+0900" "2017-04-12T21:05:26+0900" ...
-#>   .. .. ..$ regTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:04:44+0000" "2017-04-12T12:05:26+0000" ...
-#>   .. .. ..$ sympathyCount   : int  2360 1907 1914 645 470 428 446 404 294 262
-#>   .. .. ..$ antipathyCount  : int  70 100 152 37 5 10 39 34 7 4
+#>   .. .. ..$ modTime         : chr  "2017-04-12T21:00:55+0900" "2017-04-12T21:00:21+0900" "2017-04-12T21:05:58+0900" "2017-04-12T21:04:44+0900" ...
+#>   .. .. ..$ modTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:05:58+0000" "2017-04-12T12:04:44+0000" ...
+#>   .. .. ..$ regTime         : chr  "2017-04-12T21:00:55+0900" "2017-04-12T21:00:21+0900" "2017-04-12T21:05:58+0900" "2017-04-12T21:04:44+0900" ...
+#>   .. .. ..$ regTimeGmt      : chr  "2017-04-12T12:00:55+0000" "2017-04-12T12:00:21+0000" "2017-04-12T12:05:58+0000" "2017-04-12T12:04:44+0000" ...
+#>   .. .. ..$ sympathyCount   : int  2297 1854 1594 1865 1354 619 481 458 414 454
+#>   .. .. ..$ antipathyCount  : int  68 96 38 151 29 36 11 5 10 34
 #>   .. .. ..$ userBlind       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ hideReplyButton : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ status          : int  0 0 0 0 0 0 0 0 0 0
@@ -840,12 +845,12 @@ str(tem)
 #>   .. .. ..$ expose          : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
 #>   .. .. ..$ profileUserId   : logi  NA NA NA NA NA NA ...
 #>   .. .. ..$ containText     : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
+#>   .. .. ..$ maskedUserId    : chr  "ssan****" "zamp****" "yhan****" "tjto****" ...
 #>   .. .. ..$ validateBanWords: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
-#>   .. .. ..$ maskedUserId    : chr  "ssan****" "zamp****" "tjto****" "hb12****" ...
-#>   .. .. ..$ maskedUserName  : chr  "ss****" "za****" "tj****" "hb****" ...
+#>   .. .. ..$ maskedUserName  : chr  "ss****" "za****" "yh****" "tj****" ...
 #>   .. .. ..$ virtual         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
 #>   .. .. ..$ exposeByCountry : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
-#>  $ date   : chr "2017-05-10T22:01:45+0000"
+#>  $ date   : chr "2017-04-13T09:14:04+0000"
 ```
 
 `JSON`을 전문적으로 다루기 위한 [패키지][307]도 있으니 확인해 보세요.
@@ -1244,21 +1249,15 @@ as.Date(34519, origin="1900-01-01")
 ```r
 # 시간 자료형
 as.POSIXct("2017-04-12 12:00:00")
-#> [1] "2017-04-12 12:00:00 UTC"
+#> [1] "2017-04-12 12:00:00 KST"
 as.POSIXlt("2017-04-12 12:00:00")
-#> [1] "2017-04-12 12:00:00 UTC"
+#> [1] "2017-04-12 12:00:00 KST"
 ```
 
 날짜와 시간을 다루는 패키지로 유명한 `lubridate`가 있습니다. 아래 여러 코드의 실행결과를 보시면 그 유연한 기능에 감탄하시게 될 겁니다.
 
 ```r
 library(lubridate)
-#> Loading required package: methods
-#> 
-#> Attaching package: 'lubridate'
-#> The following object is masked from 'package:base':
-#> 
-#>     date
 
 ymd("2017-05-05")
 #> [1] "2017-05-05"

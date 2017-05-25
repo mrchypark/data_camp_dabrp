@@ -18,8 +18,8 @@ print(2)
 
 ```r
 if(c(T,F,F,F)){print(1)}
-#> Warning in if (c(T, F, F, F)) {: the condition has length > 1 and only the
-#> first element will be used
+#> Warning in if (c(T, F, F, F)) {: length > 1 이라는 조건이 있고, 첫번째 요소
+#> 만이 사용될 것입니다
 #> [1] 1
 print(2)
 #> [1] 2
@@ -116,7 +116,7 @@ library(readr)
 sd<-read_csv("./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
 #> Parsed with column specification:
 #> cols(
-#>   고객번호 = col_character(),
+#>   `<U+FEFF>고객번호` = col_character(),
 #>   멤버십명 = col_character(),
 #>   가입년월 = col_integer()
 #> )
@@ -171,11 +171,11 @@ print(1)
 ```r
 err<-try(noObj)
 err
-#> [1] "Error in try(noObj) : object 'noObj' not found\n"
+#> [1] "Error in try(noObj) : 객체 'noObj'를 찾을 수 없습니다\n"
 #> attr(,"class")
 #> [1] "try-error"
 #> attr(,"condition")
-#> <simpleError in doTryCatch(return(expr), name, parentenv, handler): object 'noObj' not found>
+#> <simpleError in doTryCatch(return(expr), name, parentenv, handler): 객체 'noObj'를 찾을 수 없습니다>
 class(err)
 #> [1] "try-error"
 ```
@@ -375,7 +375,7 @@ X
 library(ggplot2)
 library(dplyr)
 #> 
-#> Attaching package: 'dplyr'
+#> 다음의 패키지를 부착합니다: 'dplyr'
 #> The following objects are masked from 'package:stats':
 #> 
 #>     filter, lag
@@ -417,8 +417,8 @@ tm<-1000000
 X<-as.data.frame(matrix(1:tm, ncol=4, dimnames=list(seq(1:(tm/4)), c("a", "b", "c", "d"))))
 ifelseTime<-system.time(X$e <- ifelse(X$a == 0, -999, X$b/X$c))
 ifelseTime
-#>    user  system elapsed 
-#>   0.020   0.000   0.025
+#>  사용자  시스템 elapsed 
+#>    0.03    0.00    0.03
 ```
 
 <img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />

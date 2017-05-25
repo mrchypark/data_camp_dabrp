@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -35,7 +34,6 @@
   
 
 <link rel="next" href="-.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -97,6 +95,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -212,12 +211,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
-<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
+<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>7</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
-<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a></li>
-<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd로 문서 작성</a></li>
-<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a></li>
+<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="knitr.html"><a href="knitr.html#markdown-exp"><i class="fa fa-check"></i><b>7.1.1</b> 마크다운이란</a></li>
+<li class="chapter" data-level="7.1.2" data-path="knitr.html"><a href="knitr.html#syntax"><i class="fa fa-check"></i><b>7.1.2</b> 문법 소개</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd 양식으로 문서 작성</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="knitr.html"><a href="knitr.html#r-code--"><i class="fa fa-check"></i><b>7.2.1</b> R code 실행 결과</a></li>
+<li class="chapter" data-level="7.2.2" data-path="knitr.html"><a href="knitr.html#yaml---"><i class="fa fa-check"></i><b>7.2.2</b> YAML 해더를 이용한 출력물</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="knitr.html"><a href="knitr.html#taskscheduler"><i class="fa fa-check"></i><b>7.3.1</b> windows 작업 스케줄러</a></li>
+<li class="chapter" data-level="7.3.2" data-path="knitr.html"><a href="knitr.html#crontab"><i class="fa fa-check"></i><b>7.3.2</b> linux 작업 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="knitr.html"><a href="knitr.html#bookdown"><i class="fa fa-check"></i><b>7.4</b> bookdown</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
 <li class="chapter" data-level="" data-path="eba788ecb998eba9b0.html"><a href="eba788ecb998eba9b0.html"><i class="fa fa-check"></i>마치며</a></li>
@@ -245,7 +254,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="eba8b8eba6aceba790" class="section level1 unnumbered">
 <h1>머리말</h1>
-<p>이 책은 <a href="http://www.fastcampus.co.kr">패스트캠퍼스</a>의 <a href="http://www.fastcampus.co.kr/category_data_camp/">데이터 사이언스 캠프</a> 코스의 <a href="http://www.fastcampus.co.kr/data_camp_dabrp/">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a>의 수업용으로 제작되었습니다. 수업에 대해 더 자세히 알고 싶으신 분은 <a href="http://www.fastcampus.co.kr/data_camp_dabrp_instructor_1/">강사 인터뷰</a>를 참고하세요.</p>
+<p>이 책은 <a href="https://www.google.co.kr" title="구글">패스트캠퍼스</a>의 <a href="http://www.fastcampus.co.kr/category_data_camp/">데이터 사이언스 캠프</a> 코스의 <a href="http://www.fastcampus.co.kr/data_camp_dabrp/">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</a>의 수업용으로 제작되었습니다. 수업에 대해 더 자세히 알고 싶으신 분은 <a href="http://www.fastcampus.co.kr/data_camp_dabrp_instructor_1/">강사 인터뷰</a>를 참고하세요.</p>
 <p>책은<br />
 1. R의 IDE로 사실상 표준인 <a href="http://www.rstudio.org/">RStudio</a>에 사용하기 좋은 기능 소개<br />
 2. 대부분의 에러 문제를 해결할 수 있는 기초 자료형에 대한 이해<br />
@@ -268,8 +277,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 
-<a href="-.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="-.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -298,6 +308,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

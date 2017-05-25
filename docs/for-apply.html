@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="data-type.html">
 <link rel="next" href="sql.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -97,6 +95,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -212,12 +211,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
-<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
+<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>7</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
-<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a></li>
-<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd로 문서 작성</a></li>
-<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a></li>
+<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="knitr.html"><a href="knitr.html#markdown-exp"><i class="fa fa-check"></i><b>7.1.1</b> 마크다운이란</a></li>
+<li class="chapter" data-level="7.1.2" data-path="knitr.html"><a href="knitr.html#syntax"><i class="fa fa-check"></i><b>7.1.2</b> 문법 소개</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd 양식으로 문서 작성</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="knitr.html"><a href="knitr.html#r-code--"><i class="fa fa-check"></i><b>7.2.1</b> R code 실행 결과</a></li>
+<li class="chapter" data-level="7.2.2" data-path="knitr.html"><a href="knitr.html#yaml---"><i class="fa fa-check"></i><b>7.2.2</b> YAML 해더를 이용한 출력물</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="knitr.html"><a href="knitr.html#taskscheduler"><i class="fa fa-check"></i><b>7.3.1</b> windows 작업 스케줄러</a></li>
+<li class="chapter" data-level="7.3.2" data-path="knitr.html"><a href="knitr.html#crontab"><i class="fa fa-check"></i><b>7.3.2</b> linux 작업 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="knitr.html"><a href="knitr.html#bookdown"><i class="fa fa-check"></i><b>7.4</b> bookdown</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
 <li class="chapter" data-level="" data-path="eba788ecb998eba9b0.html"><a href="eba788ecb998eba9b0.html"><i class="fa fa-check"></i>마치며</a></li>
@@ -245,14 +254,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="if" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> if</h3>
 <p><code>if</code>는 <code>if (조건) {조건이 true 이면 실행할 부분}</code>으로 구성됩니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if(<span class="ot">TRUE</span>){<span class="kw">print</span>(<span class="dv">1</span>)}
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="ot">TRUE</span>){<span class="kw">print</span>(<span class="dv">1</span>)}
 <span class="co">#&gt; [1] 1</span>
 <span class="kw">print</span>(<span class="dv">2</span>)
 <span class="co">#&gt; [1] 2</span></code></pre></div>
 <p>조건은 결과가 하나의 <code>logical</code> 값으로 나와야 하고 여러 개의 <code>logical</code> 값이면 맨 앞의 값만 사용한다는 <code>warning</code>을 같이 출력합니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if(<span class="kw">c</span>(T,F,F,F)){<span class="kw">print</span>(<span class="dv">1</span>)}
-<span class="co">#&gt; Warning in if (c(T, F, F, F)) {: the condition has length &gt; 1 and only the</span>
-<span class="co">#&gt; first element will be used</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="kw">c</span>(T,F,F,F)){<span class="kw">print</span>(<span class="dv">1</span>)}
+<span class="co">#&gt; Warning in if (c(T, F, F, F)) {: length &gt; 1 이라는 조건이 있고, 첫번째 요소</span>
+<span class="co">#&gt; 만이 사용될 것입니다</span>
 <span class="co">#&gt; [1] 1</span>
 <span class="kw">print</span>(<span class="dv">2</span>)
 <span class="co">#&gt; [1] 2</span></code></pre></div>
@@ -264,7 +273,7 @@ if ( x &gt; 0 ){
 </code></pre>
 <p>이제까지 조건이라고 말하는 것이 있었는데, 조건이란 <code>TRUE</code>, <code>FALSE</code>로 결과가 나오는 표현 전부를 뜻합니다. 제가 <code>if</code>문에서 나올 만한 예시를 준비했습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">c</span>()
-if(<span class="kw">identical</span>(x,<span class="kw">c</span>())){<span class="kw">print</span>(<span class="st">&quot;x has no data.&quot;</span>)}
+<span class="cf">if</span>(<span class="kw">identical</span>(x,<span class="kw">c</span>())){<span class="kw">print</span>(<span class="st">&quot;x has no data.&quot;</span>)}
 <span class="co">#&gt; [1] &quot;x has no data.&quot;</span>
 <span class="kw">print</span>(<span class="st">&quot;if part done.&quot;</span>)
 <span class="co">#&gt; [1] &quot;if part done.&quot;</span>
@@ -273,7 +282,7 @@ if(<span class="kw">identical</span>(x,<span class="kw">c</span>())){<span class
 
 y&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
 z&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
-if(<span class="kw">length</span>(y)==<span class="kw">length</span>(z)){
+<span class="cf">if</span>(<span class="kw">length</span>(y)<span class="op">==</span><span class="kw">length</span>(z)){
   tem&lt;-<span class="kw">data.frame</span>(y,z)
   <span class="kw">print</span>(tem)
 }
@@ -294,9 +303,9 @@ if(<span class="kw">length</span>(y)==<span class="kw">length</span>(z)){
 <div id="else" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> else</h3>
 <p>영어 표현을 보면 생각하기 쉬우시겠지만 <code>if(조건){조건이 true 이면 실행할 부분}</code> 이후에 사용해서 조건이 <code>false</code>면 실행할 부분을 작성하는데 사용합니다. <code>if (조건) {조건이 true 이면 실행할 부분} else {조건이 false 면 실행할 부분}</code>으로 구성됩니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if(<span class="ot">TRUE</span>){
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="ot">TRUE</span>){
   <span class="kw">print</span>(<span class="dv">1</span>)
-} else {
+} <span class="cf">else</span> {
   <span class="kw">print</span>(<span class="dv">3</span>)
 }
 <span class="co">#&gt; [1] 1</span>
@@ -305,12 +314,12 @@ if(<span class="kw">length</span>(y)==<span class="kw">length</span>(z)){
 <p><code>else</code>는 앞에 <code>if</code>가 조건을 작성했기 때문에 추가적인 조건을 작성하지는 않습니다. 여러 if 조건을 사용하고 그 이후에 else를 사용할 수도 있습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="dv">1</span>
 
-if(x&lt;<span class="dv">0</span>){
+<span class="cf">if</span>(x<span class="op">&lt;</span><span class="dv">0</span>){
   <span class="kw">print</span>(<span class="dv">1</span>)
 } 
-if(x&gt;<span class="dv">10</span>) {
+<span class="cf">if</span>(x<span class="op">&gt;</span><span class="dv">10</span>) {
   <span class="kw">print</span>(<span class="dv">3</span>)
-} else {
+} <span class="cf">else</span> {
   <span class="kw">print</span>(<span class="dv">2</span>)
 }
 <span class="co">#&gt; [1] 2</span>
@@ -325,7 +334,7 @@ if(x&gt;<span class="dv">10</span>) {
 sd&lt;-<span class="kw">read_csv</span>(<span class="st">&quot;./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt&quot;</span>)
 <span class="co">#&gt; Parsed with column specification:</span>
 <span class="co">#&gt; cols(</span>
-<span class="co">#&gt;   고객번호 = col_character(),</span>
+<span class="co">#&gt;   `&lt;U+FEFF&gt;고객번호` = col_character(),</span>
 <span class="co">#&gt;   멤버십명 = col_character(),</span>
 <span class="co">#&gt;   가입년월 = col_integer()</span>
 <span class="co">#&gt; )</span>
@@ -346,7 +355,7 @@ sd&lt;-<span class="kw">data.frame</span>(sd)
 <span class="co">#&gt;                                        3rd Qu.:201504  </span>
 <span class="co">#&gt;                                        Max.   :201512</span>
 
-sd$<span class="st">&quot;최근고객&quot;</span>&lt;-<span class="kw">ifelse</span>(sd$<span class="st">&quot;가입년월&quot;</span>&gt;<span class="kw">mean</span>(sd$<span class="st">&quot;가입년월&quot;</span>),<span class="st">&quot;최근&quot;</span>,<span class="st">&quot;최근아님&quot;</span>)
+sd<span class="op">$</span><span class="st">&quot;최근고객&quot;</span>&lt;-<span class="kw">ifelse</span>(sd<span class="op">$</span><span class="st">&quot;가입년월&quot;</span><span class="op">&gt;</span><span class="kw">mean</span>(sd<span class="op">$</span><span class="st">&quot;가입년월&quot;</span>),<span class="st">&quot;최근&quot;</span>,<span class="st">&quot;최근아님&quot;</span>)
 <span class="kw">head</span>(sd)
 <span class="co">#&gt;   고객번호 멤버십명 가입년월 최근고객</span>
 <span class="co">#&gt; 1    00011 하이마트   201512     최근</span>
@@ -369,11 +378,11 @@ print(1)
 <p>콘솔에서 실행하면 <code>try(noObj)</code>에서 에러가 발생합니다. 하지만 멈추는 것이 아니라 다음 코드를 실행하는 것이 그냥 <code>noObj</code>를 코드에 작성한 것과 차이점입니다. <code>try</code>를 입력해 보시면 <code>silect</code> 옵션이 있는데 <code>TRUE</code>로 해주면 에러 출력도 하지 않습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">err&lt;-<span class="kw">try</span>(noObj)
 err
-<span class="co">#&gt; [1] &quot;Error in try(noObj) : object &#39;noObj&#39; not found\n&quot;</span>
+<span class="co">#&gt; [1] &quot;Error in try(noObj) : 객체 &#39;noObj&#39;를 찾을 수 없습니다\n&quot;</span>
 <span class="co">#&gt; attr(,&quot;class&quot;)</span>
 <span class="co">#&gt; [1] &quot;try-error&quot;</span>
 <span class="co">#&gt; attr(,&quot;condition&quot;)</span>
-<span class="co">#&gt; &lt;simpleError in doTryCatch(return(expr), name, parentenv, handler): object &#39;noObj&#39; not found&gt;</span>
+<span class="co">#&gt; &lt;simpleError in doTryCatch(return(expr), name, parentenv, handler): 객체 &#39;noObj&#39;를 찾을 수 없습니다&gt;</span>
 <span class="kw">class</span>(err)
 <span class="co">#&gt; [1] &quot;try-error&quot;</span></code></pre></div>
 <p>위와 같은 식으로 <code>try(함수)</code>를 변수에 선언하면 <code>class(변수)</code>를 통해 조건문을 활용해서 에러가 발생했을 때를 직접적으로 우회할 수 있습니다.</p>
@@ -389,12 +398,12 @@ err
 <h3><span class="header-section-number">3.2.2</span> break</h3>
 <p><code>break</code>는 말 그대로 멈추라는 명령입니다. <code>break</code>는 독특하게 뒤에 <code>()</code>를 붙이지 않고 활용하는 함수로 조건문이나 반복문 안에 쓰여서 조건문과 반복문을 멈추는 역할을 합니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="dv">1</span>
-repeat(
-  if(x&gt;<span class="dv">10</span>){
-    break
-  } else {
+<span class="cf">repeat</span>(
+  <span class="cf">if</span>(x<span class="op">&gt;</span><span class="dv">10</span>){
+    <span class="cf">break</span>
+  } <span class="cf">else</span> {
   <span class="kw">print</span>(x)
-  x&lt;-x<span class="dv">+1</span>
+  x&lt;-x<span class="op">+</span><span class="dv">1</span>
   }
 )
 <span class="co">#&gt; [1] 1</span>
@@ -412,9 +421,9 @@ repeat(
 <h3><span class="header-section-number">3.2.3</span> while</h3>
 <p>사실 <code>repeat</code>문은 사용법이 조금 길이서 잘 사용하지 않습니다. 기능적인 대체는 <code>while</code>문으로 가능한데, <code>while</code>은 <code>while(조건){조건이 true인 동안 할 것}</code>으로 구성됩니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="dv">1</span>
-while(x&lt;<span class="dv">10</span>){
+<span class="cf">while</span>(x<span class="op">&lt;</span><span class="dv">10</span>){
   <span class="kw">print</span>(x)
-  x&lt;-x<span class="dv">+1</span>
+  x&lt;-x<span class="op">+</span><span class="dv">1</span>
 }
 <span class="co">#&gt; [1] 1</span>
 <span class="co">#&gt; [1] 2</span>
@@ -427,12 +436,12 @@ while(x&lt;<span class="dv">10</span>){
 <span class="co">#&gt; [1] 9</span></code></pre></div>
 <p>위의 코드가 아까 <code>repeat</code>으로 만든 식과 같은 결과를 보여줍니다. 안의 조건이 달라서 이해가 어려우실 수 있어서 <code>repeat</code>을 다시 작성해보겠습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="dv">1</span>
-repeat(
-  if(x&lt;<span class="dv">10</span>){
+<span class="cf">repeat</span>(
+  <span class="cf">if</span>(x<span class="op">&lt;</span><span class="dv">10</span>){
     <span class="kw">print</span>(x)
-    x&lt;-x<span class="dv">+1</span>
-  } else {
-    break
+    x&lt;-x<span class="op">+</span><span class="dv">1</span>
+  } <span class="cf">else</span> {
+    <span class="cf">break</span>
   }
 )
 <span class="co">#&gt; [1] 1</span>
@@ -449,7 +458,7 @@ repeat(
 <div id="for" class="section level3">
 <h3><span class="header-section-number">3.2.4</span> for</h3>
 <p><code>for</code>는 반복하는 내용을 쉽게 다루기 위해서 준비되어 있습니다. 예를 들어서 위에서 <code>while</code>로 작성된 것을 <code>for</code>로 다시 작성해 보겠습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for(x in <span class="dv">1</span>:<span class="dv">9</span>){
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span>(x <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">9</span>){
   <span class="kw">print</span>(x)
 }
 <span class="co">#&gt; [1] 1</span>
@@ -462,9 +471,9 @@ repeat(
 <span class="co">#&gt; [1] 8</span>
 <span class="co">#&gt; [1] 9</span></code></pre></div>
 <p><code>while</code>에 비해 훨씬 간결해 졌습니다. 이해하기도 좋구요. <code>for(반복에 사용할 변수 in 반복에 사용할 변수에 넣을 데이터를 가지는 벡터){반복 실행할 내용 - 반복에 사용할 변수를 활용함}</code>의 형태로 사용합니다. 말로 풀어 쓰려니 오히려 어려워 보이는 것 같네요. 몇 가지 예시를 더 들어 보겠습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">head</span>(sd$<span class="st">&quot;고객번호&quot;</span>)
-for(cNum in data){
-  <span class="kw">print</span>(sd[sd$<span class="st">&quot;고객번호&quot;</span>==cNum,])
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">head</span>(sd<span class="op">$</span><span class="st">&quot;고객번호&quot;</span>)
+<span class="cf">for</span>(cNum <span class="cf">in</span> data){
+  <span class="kw">print</span>(sd[sd<span class="op">$</span><span class="st">&quot;고객번호&quot;</span><span class="op">==</span>cNum,])
 }
 <span class="co">#&gt;   고객번호 멤버십명 가입년월 최근고객</span>
 <span class="co">#&gt; 1    00011 하이마트   201512     최근</span>
@@ -483,10 +492,10 @@ for(cNum in data){
 <div id="next" class="section level3">
 <h3><span class="header-section-number">3.2.5</span> next</h3>
 <p>에러에 대해 우회하는 것에 대해서 조건문을 주는 방법을 설명드렸었습니다. <code>next</code>는 <code>break</code>와 비슷하지만 조건문이나 반복문을 멈추는 것이 아니라 다음 번으로 넘기는 역할을 합니다. 예를 들면 아래와 같습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">head</span>(sd$<span class="st">&quot;고객번호&quot;</span>)
-for(cNum in data){
-  if(sd[sd$<span class="st">&quot;고객번호&quot;</span>==cNum,<span class="st">&quot;최근고객&quot;</span>]==<span class="st">&quot;최근&quot;</span>){next}
-  <span class="kw">print</span>(sd[sd$<span class="st">&quot;고객번호&quot;</span>==cNum,])
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">head</span>(sd<span class="op">$</span><span class="st">&quot;고객번호&quot;</span>)
+<span class="cf">for</span>(cNum <span class="cf">in</span> data){
+  <span class="cf">if</span>(sd[sd<span class="op">$</span><span class="st">&quot;고객번호&quot;</span><span class="op">==</span>cNum,<span class="st">&quot;최근고객&quot;</span>]<span class="op">==</span><span class="st">&quot;최근&quot;</span>){<span class="cf">next</span>}
+  <span class="kw">print</span>(sd[sd<span class="op">$</span><span class="st">&quot;고객번호&quot;</span><span class="op">==</span>cNum,])
 }
 <span class="co">#&gt;   고객번호 멤버십명 가입년월 최근고객</span>
 <span class="co">#&gt; 3    00037 하이마트   201306 최근아님</span>
@@ -499,16 +508,16 @@ for(cNum in data){
 <p>출력된 내용을 보면 <code>sd[sd$&quot;고객번호&quot;==cNum,&quot;최근고객&quot;]==&quot;최근&quot;</code>일 때 다음 줄에 있는 <code>print</code>를 하지 않고 <code>다음(next)</code>으로 넘어간 것을 확인할 수 있습니다. 이걸 통해서 조건에 따라 그 아래 내용을 실행하지 않고 다음번 반복으로 넘기는 것이 가능합니다.</p>
 <p><a href="https://github.com/forkonlp/N2H4/wiki/%EC%82%AC%EC%9A%A9-%EC%98%88%EC%8B%9C">N2H4</a>의 사용예시에는 <code>next</code>를 사용하지 않고 <code>while</code>을 사용했는데, 크롤링 특성상 요청이 일부 실패도 할 수 있기 때문에 추가적인 시도를 하기 위해서 사용했습니다. 데이터를 전부 가져오는 것이 많이 중요하지 않다면 <code>next</code>를 사용하는 것이 더 간편하고 빠르게 작성하는 방법이 될 것 같습니다.</p>
 <p>지금 예시를 눈으로 보여드리기 위해 <code>for</code>문 안을 <code>print</code>로 계속 채우고 있는데, <code>print</code>의 위치에 수행하고자 하는 함수를 작성하시면 됩니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">64</span>, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span>:<span class="dv">16</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">64</span>, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">16</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
 
-X$a[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">10</span>)]&lt;-<span class="dv">0</span>
+X<span class="op">$</span>a[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">10</span>)]&lt;-<span class="dv">0</span>
 
 
-for (i in <span class="dv">1</span>:<span class="kw">nrow</span>(X)){
-  if (X$a[i]==<span class="dv">0</span>) {
-      X$e[i]&lt;-(-<span class="dv">999</span>) 
-    } else {
-      X$e[i]&lt;-X$b[i]/X$c[i]
+<span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(X)){
+  <span class="cf">if</span> (X<span class="op">$</span>a[i]<span class="op">==</span><span class="dv">0</span>) {
+      X<span class="op">$</span>e[i]&lt;-(<span class="op">-</span><span class="dv">999</span>) 
+    } <span class="cf">else</span> {
+      X<span class="op">$</span>e[i]&lt;-X<span class="op">$</span>b[i]<span class="op">/</span>X<span class="op">$</span>c[i]
     }
 }
 X
@@ -534,7 +543,7 @@ X
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(dplyr)
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: &#39;dplyr&#39;</span>
+<span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;dplyr&#39;</span>
 <span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     filter, lag</span>
@@ -545,22 +554,22 @@ X
 
 times&lt;-<span class="kw">c</span>(<span class="dv">100</span>,<span class="dv">1000</span>,<span class="dv">10000</span>,<span class="dv">30000</span>,<span class="dv">50000</span>,<span class="dv">100000</span>)
 tData&lt;-<span class="kw">c</span>()
-for(tm in times){
+<span class="cf">for</span>(tm <span class="cf">in</span> times){
 
-  X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span>:tm, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span>:(tm/<span class="dv">4</span>)), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
+  X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span>tm, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span>(tm<span class="op">/</span><span class="dv">4</span>)), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
   
-  X$a[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">10</span>)]&lt;-<span class="dv">0</span>
+  X<span class="op">$</span>a[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">10</span>)]&lt;-<span class="dv">0</span>
   
   forTime&lt;-<span class="kw">system.time</span>(
-    for (i in <span class="dv">1</span>:<span class="kw">nrow</span>(X)){
-      if (X$a[i]==<span class="dv">0</span>) {
-          X$e[i]&lt;-(-<span class="dv">999</span>) 
-        } else {
-          X$e[i]&lt;-X$b[i]/X$c[i]
+    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(X)){
+      <span class="cf">if</span> (X<span class="op">$</span>a[i]<span class="op">==</span><span class="dv">0</span>) {
+          X<span class="op">$</span>e[i]&lt;-(<span class="op">-</span><span class="dv">999</span>) 
+        } <span class="cf">else</span> {
+          X<span class="op">$</span>e[i]&lt;-X<span class="op">$</span>b[i]<span class="op">/</span>X<span class="op">$</span>c[i]
         }
     }
   )
-  ifelseTime&lt;-<span class="kw">system.time</span>(X$e &lt;-<span class="st"> </span><span class="kw">ifelse</span>(X$a ==<span class="st"> </span><span class="dv">0</span>, -<span class="dv">999</span>, X$b/X$c))
+  ifelseTime&lt;-<span class="kw">system.time</span>(X<span class="op">$</span>e &lt;-<span class="st"> </span><span class="kw">ifelse</span>(X<span class="op">$</span>a <span class="op">==</span><span class="st"> </span><span class="dv">0</span>, <span class="op">-</span><span class="dv">999</span>, X<span class="op">$</span>b<span class="op">/</span>X<span class="op">$</span>c))
   
   forTime&lt;-<span class="kw">cbind</span>(<span class="kw">data.frame</span>(tm,<span class="dt">cate=</span><span class="st">&quot;forTime&quot;</span>),<span class="kw">t</span>(<span class="kw">as.matrix</span>(forTime)))
   ifelseTime&lt;-<span class="kw">cbind</span>(<span class="kw">data.frame</span>(tm,<span class="dt">cate=</span><span class="st">&quot;ifelseTime&quot;</span>),<span class="kw">t</span>(<span class="kw">as.matrix</span>(ifelseTime)))
@@ -568,16 +577,16 @@ for(tm in times){
   
 }
 
-tData&lt;-tData %&gt;%<span class="st"> </span><span class="kw">select</span>(tm:elapsed) %&gt;%<span class="st"> </span><span class="kw">gather</span>(tm,cate)
+tData&lt;-tData <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(tm<span class="op">:</span>elapsed) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(tm,cate)
 <span class="kw">names</span>(tData)&lt;-<span class="kw">c</span>(<span class="st">&quot;iter&quot;</span>,<span class="st">&quot;cate&quot;</span>,<span class="st">&quot;timeName&quot;</span>,<span class="st">&quot;time&quot;</span>)
-<span class="kw">ggplot</span>(tData,<span class="kw">aes</span>(<span class="dt">x=</span>iter,<span class="dt">y=</span>time,<span class="dt">fill=</span>cate,<span class="dt">color=</span>cate)) +<span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)
+<span class="kw">ggplot</span>(tData,<span class="kw">aes</span>(<span class="dt">x=</span>iter,<span class="dt">y=</span>time,<span class="dt">fill=</span>cate,<span class="dt">color=</span>cate)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>)
 
 tm&lt;-<span class="dv">1000000</span>
-X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span>:tm, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span>:(tm/<span class="dv">4</span>)), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
-ifelseTime&lt;-<span class="kw">system.time</span>(X$e &lt;-<span class="st"> </span><span class="kw">ifelse</span>(X$a ==<span class="st"> </span><span class="dv">0</span>, -<span class="dv">999</span>, X$b/X$c))
+X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span>tm, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span>(tm<span class="op">/</span><span class="dv">4</span>)), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>))))
+ifelseTime&lt;-<span class="kw">system.time</span>(X<span class="op">$</span>e &lt;-<span class="st"> </span><span class="kw">ifelse</span>(X<span class="op">$</span>a <span class="op">==</span><span class="st"> </span><span class="dv">0</span>, <span class="op">-</span><span class="dv">999</span>, X<span class="op">$</span>b<span class="op">/</span>X<span class="op">$</span>c))
 ifelseTime
-<span class="co">#&gt;    user  system elapsed </span>
-<span class="co">#&gt;   0.020   0.000   0.025</span></code></pre></div>
+<span class="co">#&gt;  사용자  시스템 elapsed </span>
+<span class="co">#&gt;    0.03    0.00    0.03</span></code></pre></div>
 <p><img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>이렇게 <code>for</code>를 사용하지 않고 다른 방법을 사용하는 것으로 벡터연산이 있습니다. 이름이 중요하진 않으니 R이 감당할 수 있는 수준의 데이터를 <code>apply</code>를 통해서 다루는 법을 알아보겠습니다.</p>
 </div>
@@ -604,7 +613,7 @@ ifelseTime
 <span class="kw">mean</span>(myMat[,<span class="dv">4</span>])
 <span class="co">#&gt; [1] 9.56</span></code></pre></div>
 <p>우리는 <code>for</code>를 배웠으니 좀 고쳐 봅시다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for(i in <span class="dv">1</span>:<span class="dv">4</span>){
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>){
   <span class="kw">mean</span>(myMat[,i])
 }</code></pre></div>
 <p>이게 또 데이터가 따로따로라 <code>c</code>도 해줘야 하는 군요.</p>
@@ -618,15 +627,15 @@ myMean
 <span class="co">#&gt; [1] 10.08 10.19 10.54  9.56</span></code></pre></div>
 <p><code>for</code>를 사용하면 이렇게 됩니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myMean &lt;-<span class="st"> </span><span class="kw">c</span>()
-for(i in <span class="dv">1</span>:<span class="dv">4</span>){
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>){
   myMean&lt;-<span class="kw">c</span>(myMean,<span class="kw">mean</span>(myMat[,i]))
 }
 myMean
 <span class="co">#&gt; [1] 10.08 10.19 10.54  9.56</span></code></pre></div>
 <p>여기서 함수화도 많이 진행하는 것 같더군요.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myLoop &lt;-<span class="st"> </span>function(somemat) {
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myLoop &lt;-<span class="st"> </span><span class="cf">function</span>(somemat) {
   myMean &lt;-<span class="st"> </span><span class="kw">c</span>()
-  for(i in <span class="dv">1</span>:<span class="kw">ncol</span>(somemat)){
+  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(somemat)){
     myMean&lt;-<span class="kw">c</span>(myMean,<span class="kw">mean</span>(myMat[,i]))
   }
   <span class="kw">return</span>(myMean)
@@ -661,13 +670,13 @@ myMean
 <span class="kw">apply</span>(myMat,<span class="dv">2</span>,sum, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
 <span class="co">#&gt; [1] 40.3 40.7 42.2 28.9</span></code></pre></div>
 <p><code>apply</code>에서 계산에 사용할 함수는 사용자가 만들어서 진행할 수도 있고, 임시로 만들 수도 있습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">naSum &lt;-<span class="st"> </span>function(x){
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">naSum &lt;-<span class="st"> </span><span class="cf">function</span>(x){
   <span class="kw">return</span>(<span class="kw">sum</span>(x,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
 }
 
 <span class="kw">apply</span>(myMat,<span class="dv">2</span>,naSum)
 <span class="co">#&gt; [1] 40.3 40.7 42.2 28.9</span>
-<span class="kw">apply</span>(myMat,<span class="dv">2</span>,function(x) <span class="kw">sum</span>(x,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
+<span class="kw">apply</span>(myMat,<span class="dv">2</span>,<span class="cf">function</span>(x) <span class="kw">sum</span>(x,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>))
 <span class="co">#&gt; [1] 40.3 40.7 42.2 28.9</span></code></pre></div>
 <p>만들어야 할 함수가 복잡하지 않으면 저는 임시로 작성하는 방법을 사용하는 편입니다.</p>
 </div>
@@ -675,7 +684,7 @@ myMean
 <h3><span class="header-section-number">3.3.2</span> apply-family</h3>
 <p><code>apply</code>는 <code>lapply</code>, <code>tapply</code>, <code>sapply</code>, <code>mapply</code> 등의 <code>apply-family</code>를 가지고 있습니다.</p>
 <p>우선 <code>lapply</code>부터 살펴보겠습니다. 앞에 <code>l</code>이 붙으면서 <code>list</code> 자료형에 대해 <code>apply</code>의 역할을 수행하는 함수라는 의미가 붙었습니다. 결과도 <code>list</code>로 나옵니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span>:<span class="dv">100</span>) )
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">100</span>) )
 <span class="co">#&gt; $a</span>
 <span class="co">#&gt; [1] 1</span>
 <span class="co">#&gt; </span>
@@ -708,7 +717,7 @@ myMean
 <span class="co">#&gt; $c</span>
 <span class="co">#&gt; [1] 5005</span></code></pre></div>
 <p><code>list</code> 자료형은 사용하시면서 느끼시겠지만 다른 곳에 사용하기 불편한 점이 있습니다. 그래서 다시 <code>list</code>를 푸는 방법으로 <code>unlist</code>를 사용하는데요. <code>?unlist</code>를 입력해서 내용을 확인해보세요.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span>:<span class="dv">100</span>) )
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">100</span>) )
 <span class="co">#&gt; $a</span>
 <span class="co">#&gt; [1] 1</span>
 <span class="co">#&gt; </span>
@@ -729,7 +738,7 @@ myMean
 <span class="co">#&gt;    a    b    c </span>
 <span class="co">#&gt;    1    6 5005</span></code></pre></div>
 <p>그런데 입력을 <code>list</code>로 받는 것은 어쩔수 없다고 쳐도, 결과물은 위처럼 <code>vector</code>로 받는 것이 편한 경우가 많습니다. <code>unlist(lapply(데이터,함수))</code>는 <code>sapply</code>와 같은 동작을 합니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span>:<span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span>:<span class="dv">100</span>) )
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(listData &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">c =</span> <span class="dv">10</span><span class="op">:</span><span class="dv">100</span>) )
 <span class="co">#&gt; $a</span>
 <span class="co">#&gt; [1] 1</span>
 <span class="co">#&gt; </span>
@@ -761,8 +770,9 @@ myMean
         </div>
       </div>
 <a href="data-type.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sql.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="sql.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -791,6 +801,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="sql.html">
 <link rel="next" href="ggplot.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -97,6 +95,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -212,12 +211,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="tidyr.html"><a href="tidyr.html#data.table"><i class="fa fa-check"></i><b>5.3</b> data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>6</b> 보고용 차트를 위한 ggplot2 사용하기</a><ul>
-<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#test"><i class="fa fa-check"></i><b>6.1</b> test</a></li>
+<li class="chapter" data-level="6.1" data-path="ggplot.html"><a href="ggplot.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="knitr.html"><a href="knitr.html"><i class="fa fa-check"></i><b>7</b> 정기 보고서 자동 작성을 위해 knitr로 문서화하고 스케줄러로 자동화하기</a><ul>
-<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a></li>
-<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd로 문서 작성</a></li>
-<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a></li>
+<li class="chapter" data-level="7.1" data-path="knitr.html"><a href="knitr.html#markdown"><i class="fa fa-check"></i><b>7.1</b> Markdown 문법</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="knitr.html"><a href="knitr.html#markdown-exp"><i class="fa fa-check"></i><b>7.1.1</b> 마크다운이란</a></li>
+<li class="chapter" data-level="7.1.2" data-path="knitr.html"><a href="knitr.html#syntax"><i class="fa fa-check"></i><b>7.1.2</b> 문법 소개</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="knitr.html"><a href="knitr.html#rmd"><i class="fa fa-check"></i><b>7.2</b> Rmd 양식으로 문서 작성</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="knitr.html"><a href="knitr.html#r-code--"><i class="fa fa-check"></i><b>7.2.1</b> R code 실행 결과</a></li>
+<li class="chapter" data-level="7.2.2" data-path="knitr.html"><a href="knitr.html#yaml---"><i class="fa fa-check"></i><b>7.2.2</b> YAML 해더를 이용한 출력물</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="knitr.html"><a href="knitr.html#scheduler"><i class="fa fa-check"></i><b>7.3</b> 스케줄러</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="knitr.html"><a href="knitr.html#taskscheduler"><i class="fa fa-check"></i><b>7.3.1</b> windows 작업 스케줄러</a></li>
+<li class="chapter" data-level="7.3.2" data-path="knitr.html"><a href="knitr.html#crontab"><i class="fa fa-check"></i><b>7.3.2</b> linux 작업 스케줄러</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="knitr.html"><a href="knitr.html#bookdown"><i class="fa fa-check"></i><b>7.4</b> bookdown</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
 <li class="chapter" data-level="" data-path="eba788ecb998eba9b0.html"><a href="eba788ecb998eba9b0.html"><i class="fa fa-check"></i>마치며</a></li>
@@ -287,7 +296,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="dplyr-functions" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> dplyr 명령어 소개</h3>
 <p><code>dplyr</code>에는 행에 조건을 줘서 부분을 불러오는 <code>filter()</code>, 필요한 컬럼만 선택하는 <code>select()</code>, 새로운 컬럼을 계산하는 <code>mutate()</code>, 조건에 따라 재정렬 할 수 있는 <code>arrange()</code>, <code>group_by()</code>와 함께 써서 요약값을 계산할 수 있는 <code>summarise()</code>가 있습니다. <code>group_by()</code>는 <code>mutate()</code>, <code>filter()</code>와도 사용할 수 있습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(nycflights13)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(nycflights13)) <span class="kw">install.packages</span>(<span class="st">&quot;nycflights13&quot;</span>)
+<span class="co">#&gt; 필요한 패키지를 로딩중입니다: nycflights13</span>
+<span class="kw">library</span>(nycflights13)
 flights
 <span class="co">#&gt; # A tibble: 336,776 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
@@ -303,7 +314,7 @@ flights
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span></code></pre></div>
 <p>첫번째 <code>filter()</code>를 사용해 보겠습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(flights, month ==<span class="st"> </span><span class="dv">1</span>, day ==<span class="st"> </span><span class="dv">1</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(flights, month <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, day <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)
 <span class="co">#&gt; # A tibble: 842 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
@@ -317,8 +328,8 @@ flights
 <span class="co">#&gt; #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,</span>
 <span class="co">#&gt; #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
-jan1 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month ==<span class="st"> </span><span class="dv">1</span>, day ==<span class="st"> </span><span class="dv">1</span>)
-(dec25 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month ==<span class="st"> </span><span class="dv">12</span>, day ==<span class="st"> </span><span class="dv">25</span>))
+jan1 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, day <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)
+(dec25 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month <span class="op">==</span><span class="st"> </span><span class="dv">12</span>, day <span class="op">==</span><span class="st"> </span><span class="dv">25</span>))
 <span class="co">#&gt; # A tibble: 719 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
@@ -336,7 +347,7 @@ jan1 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month
 <img src="http://r4ds.had.co.nz/diagrams/transform-logical.png" alt="logical" />
 <p class="caption">logical</p>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(flights, month ==<span class="st"> </span><span class="dv">11</span> |<span class="st"> </span>month ==<span class="st"> </span><span class="dv">12</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(flights, month <span class="op">==</span><span class="st"> </span><span class="dv">11</span> <span class="op">|</span><span class="st"> </span>month <span class="op">==</span><span class="st"> </span><span class="dv">12</span>)
 <span class="co">#&gt; # A tibble: 55,403 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
@@ -350,7 +361,7 @@ jan1 &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month
 <span class="co">#&gt; #   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,</span>
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
-nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month %in%<span class="st"> </span><span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">12</span>))
+nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">12</span>))
 nov_dec
 <span class="co">#&gt; # A tibble: 55,403 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
@@ -365,7 +376,7 @@ nov_dec
 <span class="co">#&gt; #   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,</span>
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
-<span class="kw">filter</span>(flights, !(arr_delay &gt;<span class="st"> </span><span class="dv">120</span> |<span class="st"> </span>dep_delay &gt;<span class="st"> </span><span class="dv">120</span>))
+<span class="kw">filter</span>(flights, <span class="op">!</span>(arr_delay <span class="op">&gt;</span><span class="st"> </span><span class="dv">120</span> <span class="op">|</span><span class="st"> </span>dep_delay <span class="op">&gt;</span><span class="st"> </span><span class="dv">120</span>))
 <span class="co">#&gt; # A tibble: 316,050 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
@@ -379,7 +390,7 @@ nov_dec
 <span class="co">#&gt; #   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,</span>
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
-<span class="kw">filter</span>(flights, arr_delay &lt;=<span class="st"> </span><span class="dv">120</span>, dep_delay &lt;=<span class="st"> </span><span class="dv">120</span>)
+<span class="kw">filter</span>(flights, arr_delay <span class="op">&lt;=</span><span class="st"> </span><span class="dv">120</span>, dep_delay <span class="op">&lt;=</span><span class="st"> </span><span class="dv">120</span>)
 <span class="co">#&gt; # A tibble: 316,050 × 19</span>
 <span class="co">#&gt;    year month   day dep_time sched_dep_time dep_delay arr_time</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
@@ -449,7 +460,7 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; 5  2013     1     1</span>
 <span class="co">#&gt; 6  2013     1     1</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span>
-<span class="kw">select</span>(flights, year:day)
+<span class="kw">select</span>(flights, year<span class="op">:</span>day)
 <span class="co">#&gt; # A tibble: 336,776 × 3</span>
 <span class="co">#&gt;    year month   day</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
@@ -460,7 +471,7 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; 5  2013     1     1</span>
 <span class="co">#&gt; 6  2013     1     1</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span>
-<span class="kw">select</span>(flights, -(year:day))
+<span class="kw">select</span>(flights, <span class="op">-</span>(year<span class="op">:</span>day))
 <span class="co">#&gt; # A tibble: 336,776 × 16</span>
 <span class="co">#&gt;   dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay</span>
 <span class="co">#&gt;      &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;</span>
@@ -505,14 +516,14 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</span></code></pre></div>
 <p><code>mutate()</code>는 새로운 변수 계산을 위해서 필요합니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_sml &lt;-<span class="st"> </span><span class="kw">select</span>(flights, 
-  year:day, 
+  year<span class="op">:</span>day, 
   <span class="kw">ends_with</span>(<span class="st">&quot;delay&quot;</span>), 
   distance, 
   air_time
 )
 <span class="kw">mutate</span>(flights_sml,
-  <span class="dt">gain =</span> arr_delay -<span class="st"> </span>dep_delay,
-  <span class="dt">speed =</span> distance /<span class="st"> </span>air_time *<span class="st"> </span><span class="dv">60</span>
+  <span class="dt">gain =</span> arr_delay <span class="op">-</span><span class="st"> </span>dep_delay,
+  <span class="dt">speed =</span> distance <span class="op">/</span><span class="st"> </span>air_time <span class="op">*</span><span class="st"> </span><span class="dv">60</span>
 )
 <span class="co">#&gt; # A tibble: 336,776 × 9</span>
 <span class="co">#&gt;    year month   day dep_delay arr_delay distance air_time  gain speed</span>
@@ -525,9 +536,9 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; 6  2013     1     1        -4        12      719      150    16   288</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span>
 <span class="kw">mutate</span>(flights_sml,
-  <span class="dt">gain =</span> arr_delay -<span class="st"> </span>dep_delay,
-  <span class="dt">hours =</span> air_time /<span class="st"> </span><span class="dv">60</span>,
-  <span class="dt">gain_per_hour =</span> gain /<span class="st"> </span>hours
+  <span class="dt">gain =</span> arr_delay <span class="op">-</span><span class="st"> </span>dep_delay,
+  <span class="dt">hours =</span> air_time <span class="op">/</span><span class="st"> </span><span class="dv">60</span>,
+  <span class="dt">gain_per_hour =</span> gain <span class="op">/</span><span class="st"> </span>hours
 )
 <span class="co">#&gt; # A tibble: 336,776 × 10</span>
 <span class="co">#&gt;    year month   day dep_delay arr_delay distance air_time  gain hours</span>
@@ -540,9 +551,9 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; 6  2013     1     1        -4        12      719      150    16  2.50</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows, and 1 more variables: gain_per_hour &lt;dbl&gt;</span>
 <span class="kw">transmute</span>(flights,
-  <span class="dt">gain =</span> arr_delay -<span class="st"> </span>dep_delay,
-  <span class="dt">hours =</span> air_time /<span class="st"> </span><span class="dv">60</span>,
-  <span class="dt">gain_per_hour =</span> gain /<span class="st"> </span>hours
+  <span class="dt">gain =</span> arr_delay <span class="op">-</span><span class="st"> </span>dep_delay,
+  <span class="dt">hours =</span> air_time <span class="op">/</span><span class="st"> </span><span class="dv">60</span>,
+  <span class="dt">gain_per_hour =</span> gain <span class="op">/</span><span class="st"> </span>hours
 )
 <span class="co">#&gt; # A tibble: 336,776 × 3</span>
 <span class="co">#&gt;    gain hours gain_per_hour</span>
@@ -555,7 +566,7 @@ df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt"
 <span class="co">#&gt; 6    16  2.50          6.40</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span></code></pre></div>
 <p>특별히 <code>mutate()</code>와 함께 사용하는 함수중에 <code>lag()</code>와 <code>lead()</code>를 소개할까 합니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(x &lt;-<span class="st"> </span><span class="dv">1</span>:<span class="dv">10</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)
 <span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span>
 <span class="kw">lag</span>(x)
 <span class="co">#&gt;  [1] NA  1  2  3  4  5  6  7  8  9</span>
@@ -616,17 +627,17 @@ daily &lt;-<span class="st"> </span><span class="kw">group_by</span>(flights, ye
 <span class="co">#&gt;   &lt;int&gt;   &lt;int&gt;</span>
 <span class="co">#&gt; 1  2013  336776</span>
 
-daily %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">ungroup</span>() %&gt;%<span class="st"> </span>
+daily <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">summarise</span>(<span class="dt">flights =</span> <span class="kw">n</span>())
 <span class="co">#&gt; # A tibble: 1 × 1</span>
 <span class="co">#&gt;   flights</span>
 <span class="co">#&gt;     &lt;int&gt;</span>
 <span class="co">#&gt; 1  336776</span></code></pre></div>
 <p><code>group_by()</code>를 <code>mutate()</code>, <code>filter()</code>와도 사용할 수 있다고 했습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_sml %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(year, month, day) %&gt;%
-<span class="st">  </span><span class="kw">filter</span>(<span class="kw">rank</span>(<span class="kw">desc</span>(arr_delay)) &lt;<span class="st"> </span><span class="dv">10</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights_sml <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(year, month, day) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">rank</span>(<span class="kw">desc</span>(arr_delay)) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>)
 <span class="co">#&gt; Source: local data frame [3,306 x 7]</span>
 <span class="co">#&gt; Groups: year, month, day [365]</span>
 <span class="co">#&gt; </span>
@@ -640,9 +651,9 @@ daily %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 6  2013     1     1       255       250      589      115</span>
 <span class="co">#&gt; # ... with 3,300 more rows</span>
 
-popular_dests &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(dest) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(<span class="kw">n</span>() &gt;<span class="st"> </span><span class="dv">365</span>)
+popular_dests &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;</span><span class="st"> </span><span class="dv">365</span>)
 popular_dests
 <span class="co">#&gt; Source: local data frame [332,577 x 19]</span>
 <span class="co">#&gt; Groups: dest [77]</span>
@@ -660,10 +671,10 @@ popular_dests
 <span class="co">#&gt; #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
 
-popular_dests %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">filter</span>(arr_delay &gt;<span class="st"> </span><span class="dv">0</span>) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop_delay =</span> arr_delay /<span class="st"> </span><span class="kw">sum</span>(arr_delay)) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(year:day, dest, arr_delay, prop_delay)
+popular_dests <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(arr_delay <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop_delay =</span> arr_delay <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(arr_delay)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(year<span class="op">:</span>day, dest, arr_delay, prop_delay)
 <span class="co">#&gt; Source: local data frame [131,106 x 6]</span>
 <span class="co">#&gt; Groups: dest [77]</span>
 <span class="co">#&gt; </span>
@@ -734,7 +745,7 @@ table4b
 <span class="co">#&gt; 1 Afghanistan    745   2666</span>
 <span class="co">#&gt; 2      Brazil  37737  80488</span>
 <span class="co">#&gt; 3       China 212258 213766</span>
-table4a %&gt;%<span class="st"> </span>
+table4a <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">gather</span>(<span class="st">`</span><span class="dt">1999</span><span class="st">`</span>, <span class="st">`</span><span class="dt">2000</span><span class="st">`</span>, <span class="dt">key =</span> <span class="st">&quot;year&quot;</span>, <span class="dt">value =</span> <span class="st">&quot;cases&quot;</span>)
 <span class="co">#&gt; # A tibble: 6 × 3</span>
 <span class="co">#&gt;       country  year  cases</span>
@@ -786,7 +797,7 @@ table4a %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 4      Brazil  2000   80488/174504898</span>
 <span class="co">#&gt; 5       China  1999 212258/1272915272</span>
 <span class="co">#&gt; 6       China  2000 213766/1280428583</span>
-table3 %&gt;%<span class="st"> </span>
+table3 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">separate</span>(rate, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;cases&quot;</span>, <span class="st">&quot;population&quot;</span>))
 <span class="co">#&gt; # A tibble: 6 × 4</span>
 <span class="co">#&gt;       country  year  cases population</span>
@@ -798,7 +809,7 @@ table3 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 5       China  1999 212258 1272915272</span>
 <span class="co">#&gt; 6       China  2000 213766 1280428583</span>
 
-table3 %&gt;%<span class="st"> </span>
+table3 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">separate</span>(rate, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;cases&quot;</span>, <span class="st">&quot;population&quot;</span>), <span class="dt">convert =</span> <span class="ot">TRUE</span>)
 <span class="co">#&gt; # A tibble: 6 × 4</span>
 <span class="co">#&gt;       country  year  cases population</span>
@@ -810,7 +821,7 @@ table3 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 5       China  1999 212258 1272915272</span>
 <span class="co">#&gt; 6       China  2000 213766 1280428583</span>
 
-table3 %&gt;%<span class="st"> </span>
+table3 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">separate</span>(year, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;century&quot;</span>, <span class="st">&quot;year&quot;</span>), <span class="dt">sep =</span> <span class="dv">2</span>)
 <span class="co">#&gt; # A tibble: 6 × 4</span>
 <span class="co">#&gt;       country century  year              rate</span>
@@ -822,7 +833,7 @@ table3 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 5       China      19    99 212258/1272915272</span>
 <span class="co">#&gt; 6       China      20    00 213766/1280428583</span></code></pre></div>
 <p><code>unite()</code>는 합쳐주는 <code>seperate()</code>와는 반대의 기능을 가진 함수입니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table5 %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table5 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">unite</span>(new, century, year)
 <span class="co">#&gt; # A tibble: 6 × 3</span>
 <span class="co">#&gt;       country   new              rate</span>
@@ -834,7 +845,7 @@ table3 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; 5       China 19_99 212258/1272915272</span>
 <span class="co">#&gt; 6       China 20_00 213766/1280428583</span>
 
-table5 %&gt;%<span class="st"> </span>
+table5 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">unite</span>(new, century, year, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
 <span class="co">#&gt; # A tibble: 6 × 3</span>
 <span class="co">#&gt;       country   new              rate</span>
@@ -896,8 +907,8 @@ weather
 <span class="co">#&gt; # ... with 2.612e+04 more rows, and 5 more variables: wind_gust &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   precip &lt;dbl&gt;, pressure &lt;dbl&gt;, visib &lt;dbl&gt;, time_hour &lt;dttm&gt;</span></code></pre></div>
 <p><code>%&gt;%</code>와 <code>join()</code> 명령어로 쉽게 데이터를 합칠 수 있습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 &lt;-<span class="st"> </span>flights %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">select</span>(year:day, hour, origin, dest, tailnum, carrier)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(year<span class="op">:</span>day, hour, origin, dest, tailnum, carrier)
 flights2
 <span class="co">#&gt; # A tibble: 336,776 × 8</span>
 <span class="co">#&gt;    year month   day  hour origin  dest tailnum carrier</span>
@@ -909,8 +920,8 @@ flights2
 <span class="co">#&gt; 5  2013     1     1     6    LGA   ATL  N668DN      DL</span>
 <span class="co">#&gt; 6  2013     1     1     5    EWR   ORD  N39463      UA</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span>
-flights2 %&gt;%
-<span class="st">  </span><span class="kw">select</span>(-origin, -dest) %&gt;%<span class="st"> </span>
+flights2 <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>origin, <span class="op">-</span>dest) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">left_join</span>(airlines, <span class="dt">by =</span> <span class="st">&quot;carrier&quot;</span>)
 <span class="co">#&gt; # A tibble: 336,776 × 7</span>
 <span class="co">#&gt;    year month   day  hour tailnum carrier                   name</span>
@@ -923,9 +934,9 @@ flights2 %&gt;%
 <span class="co">#&gt; 6  2013     1     1     5  N39463      UA  United Air Lines Inc.</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span>
 
-flights2 %&gt;%
-<span class="st">  </span><span class="kw">select</span>(-origin, -dest) %&gt;%<span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">name =</span> airlines$name[<span class="kw">match</span>(carrier, airlines$carrier)])
+flights2 <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>origin, <span class="op">-</span>dest) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">name =</span> airlines<span class="op">$</span>name[<span class="kw">match</span>(carrier, airlines<span class="op">$</span>carrier)])
 <span class="co">#&gt; # A tibble: 336,776 × 7</span>
 <span class="co">#&gt;    year month   day  hour tailnum carrier                   name</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt;   &lt;chr&gt;   &lt;chr&gt;                  &lt;chr&gt;</span>
@@ -937,7 +948,7 @@ flights2 %&gt;%
 <span class="co">#&gt; 6  2013     1     1     5  N39463      UA  United Air Lines Inc.</span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows</span></code></pre></div>
 <p><code>key</code>를 선정해주는 것과 아닌 것이 어떻게 다른지 봐주세요.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">left_join</span>(weather)
 <span class="co">#&gt; Joining, by = c(&quot;year&quot;, &quot;month&quot;, &quot;day&quot;, &quot;hour&quot;, &quot;origin&quot;)</span>
 <span class="co">#&gt; # A tibble: 336,776 × 18</span>
@@ -953,7 +964,7 @@ flights2 %&gt;%
 <span class="co">#&gt; #   wind_speed &lt;dbl&gt;, wind_gust &lt;dbl&gt;, precip &lt;dbl&gt;, pressure &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   visib &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
 
-flights2 %&gt;%<span class="st"> </span>
+flights2 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">left_join</span>(planes, <span class="dt">by =</span> <span class="st">&quot;tailnum&quot;</span>)
 <span class="co">#&gt; # A tibble: 336,776 × 16</span>
 <span class="co">#&gt;   year.x month   day  hour origin  dest tailnum carrier year.y</span>
@@ -968,7 +979,7 @@ flights2 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; #   manufacturer &lt;chr&gt;, model &lt;chr&gt;, engines &lt;int&gt;, seats &lt;int&gt;,</span>
 <span class="co">#&gt; #   speed &lt;int&gt;, engine &lt;chr&gt;</span></code></pre></div>
 <p>왼쪽 테이블과 오른쪽 테이블의 어떤 <code>key</code>를 기준으로 <code>join()</code>할 건지 지정할 수 있습니다.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights2 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">left_join</span>(airports, <span class="kw">c</span>(<span class="st">&quot;dest&quot;</span> =<span class="st"> &quot;faa&quot;</span>))
 <span class="co">#&gt; # A tibble: 336,776 × 15</span>
 <span class="co">#&gt;    year month   day  hour origin  dest tailnum carrier</span>
@@ -982,7 +993,7 @@ flights2 %&gt;%<span class="st"> </span>
 <span class="co">#&gt; # ... with 3.368e+05 more rows, and 7 more variables: name &lt;chr&gt;,</span>
 <span class="co">#&gt; #   lat &lt;dbl&gt;, lon &lt;dbl&gt;, alt &lt;int&gt;, tz &lt;dbl&gt;, dst &lt;chr&gt;, tzone &lt;chr&gt;</span>
 
-flights2 %&gt;%<span class="st"> </span>
+flights2 <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">left_join</span>(airports, <span class="kw">c</span>(<span class="st">&quot;origin&quot;</span> =<span class="st"> &quot;faa&quot;</span>))
 <span class="co">#&gt; # A tibble: 336,776 × 15</span>
 <span class="co">#&gt;    year month   day  hour origin  dest tailnum carrier                name</span>
@@ -1013,7 +1024,7 @@ full_join(x, y, by = &quot;z&quot;)  == SELECT * FROM x FULL OUTER JOIN y ON x.z
 <span class="kw">library</span>(RSQLite)
 <span class="kw">library</span>(RMySQL)
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: &#39;RMySQL&#39;</span>
+<span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;RMySQL&#39;</span>
 <span class="co">#&gt; The following object is masked from &#39;package:RSQLite&#39;:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     isIdCurrent</span>
@@ -1062,7 +1073,7 @@ sqlite_db =<span class="st"> </span><span class="kw">src_sqlite</span>(<span cla
 <span class="co">#&gt; # ... with more rows</span>
 
 iris_db =<span class="st"> </span><span class="kw">tbl</span>(sqlite_db, <span class="st">&#39;mtcars&#39;</span>)
-iris_db %&gt;%<span class="st"> </span><span class="kw">filter</span>(mpg &gt;<span class="st"> </span><span class="dv">20</span>)
+iris_db <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(mpg <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>)
 <span class="co">#&gt; Source:   query [?? x 11]</span>
 <span class="co">#&gt; Database: sqlite 3.11.1 [sqlite_db.sqlite3]</span>
 <span class="co">#&gt; </span>
@@ -1088,7 +1099,7 @@ sql_db</code></pre>
 <span class="co">#&gt; Please library(dtplyr)!</span>
 <span class="co">#&gt; -------------------------------------------------------------------------</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: &#39;data.table&#39;</span>
+<span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;data.table&#39;</span>
 <span class="co">#&gt; The following objects are masked from &#39;package:dplyr&#39;:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     between, first, last</span>
@@ -1099,11 +1110,11 @@ url&lt;-<span class="st">&quot;https://github.com/arunsrinivasan/flights/wiki/NY
 <span class="kw">dir.create</span>(<span class="st">&quot;./data&quot;</span>,<span class="dt">showWarnings =</span> F)
 <span class="kw">download.file</span>(url,<span class="dt">destfile =</span> <span class="st">&quot;./data/flights14.csv&quot;</span>)
 <span class="kw">system.time</span>(flights &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;./data/flights14.csv&quot;</span>))
-<span class="co">#&gt;    user  system elapsed </span>
-<span class="co">#&gt;    2.22    0.06    2.31</span>
+<span class="co">#&gt;  사용자  시스템 elapsed </span>
+<span class="co">#&gt;    3.75    0.08    4.45</span>
 <span class="kw">system.time</span>(flights &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="st">&quot;./data/flights14.csv&quot;</span>))
-<span class="co">#&gt;    user  system elapsed </span>
-<span class="co">#&gt;   0.240   0.000   0.235</span>
+<span class="co">#&gt;  사용자  시스템 elapsed </span>
+<span class="co">#&gt;    0.43    0.01    0.54</span>
 flights
 <span class="co">#&gt;         year month day dep_time dep_delay arr_time arr_delay cancelled</span>
 <span class="co">#&gt;      1: 2014     1   1      914        14     1238        13         0</span>
@@ -1132,7 +1143,7 @@ flights
 <span class="kw">dim</span>(flights)
 <span class="co">#&gt; [1] 253316     17</span>
 
-ans &lt;-<span class="st"> </span>flights[origin ==<span class="st"> &quot;JFK&quot;</span> &amp;<span class="st"> </span>month ==<span class="st"> </span>6L]
+ans &lt;-<span class="st"> </span>flights[origin <span class="op">==</span><span class="st"> &quot;JFK&quot;</span> <span class="op">&amp;</span><span class="st"> </span>month <span class="op">==</span><span class="st"> </span>6L]
 <span class="kw">head</span>(ans)
 <span class="co">#&gt;    year month day dep_time dep_delay arr_time arr_delay cancelled carrier</span>
 <span class="co">#&gt; 1: 2014     6   1      851        -9     1205        -5         0      AA</span>
@@ -1149,7 +1160,7 @@ ans &lt;-<span class="st"> </span>flights[origin ==<span class="st"> &quot;JFK&q
 <span class="co">#&gt; 5:  N790AA     21    JFK  LAX      326     2475   18  41</span>
 <span class="co">#&gt; 6:  N785AA    117    JFK  LAX      329     2475   14  54</span>
 
-ans &lt;-<span class="st"> </span>flights[<span class="dv">1</span>:<span class="dv">2</span>]
+ans &lt;-<span class="st"> </span>flights[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]
 ans
 <span class="co">#&gt;    year month day dep_time dep_delay arr_time arr_delay cancelled carrier</span>
 <span class="co">#&gt; 1: 2014     1   1      914        14     1238        13         0      AA</span>
@@ -1158,7 +1169,7 @@ ans
 <span class="co">#&gt; 1:  N338AA      1    JFK  LAX      359     2475    9  14</span>
 <span class="co">#&gt; 2:  N335AA      3    JFK  LAX      363     2475   11  57</span>
 
-ans &lt;-<span class="st"> </span>flights[<span class="kw">order</span>(origin, -dest)]
+ans &lt;-<span class="st"> </span>flights[<span class="kw">order</span>(origin, <span class="op">-</span>dest)]
 <span class="kw">head</span>(ans)
 <span class="co">#&gt;    year month day dep_time dep_delay arr_time arr_delay cancelled carrier</span>
 <span class="co">#&gt; 1: 2014     1   5      836         6     1151        49         0      EV</span>
@@ -1199,15 +1210,15 @@ ans &lt;-<span class="st"> </span>flights[, .(<span class="dt">delay_arr =</span
 <span class="co">#&gt; 5:         1         2</span>
 <span class="co">#&gt; 6:         0         4</span>
 
-flights[, <span class="kw">sum</span>((arr_delay +<span class="st"> </span>dep_delay) &lt;<span class="st"> </span><span class="dv">0</span>)]
+flights[, <span class="kw">sum</span>((arr_delay <span class="op">+</span><span class="st"> </span>dep_delay) <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>)]
 <span class="co">#&gt; [1] 141814</span>
 
-flights[origin ==<span class="st"> &quot;JFK&quot;</span> &amp;<span class="st"> </span>month ==<span class="st"> </span>6L,
+flights[origin <span class="op">==</span><span class="st"> &quot;JFK&quot;</span> <span class="op">&amp;</span><span class="st"> </span>month <span class="op">==</span><span class="st"> </span>6L,
            .(<span class="dt">m_arr =</span> <span class="kw">mean</span>(arr_delay), <span class="dt">m_dep =</span> <span class="kw">mean</span>(dep_delay))]
 <span class="co">#&gt;    m_arr m_dep</span>
 <span class="co">#&gt; 1:  5.84  9.81</span>
 
-flights[origin ==<span class="st"> &quot;JFK&quot;</span> &amp;<span class="st"> </span>month ==<span class="st"> </span>6L, <span class="kw">length</span>(dest)]
+flights[origin <span class="op">==</span><span class="st"> &quot;JFK&quot;</span> <span class="op">&amp;</span><span class="st"> </span>month <span class="op">==</span><span class="st"> </span>6L, <span class="kw">length</span>(dest)]
 <span class="co">#&gt; [1] 8422</span>
 
 flights[, .(.N), by =<span class="st"> </span>.(origin)]
@@ -1216,13 +1227,13 @@ flights[, .(.N), by =<span class="st"> </span>.(origin)]
 <span class="co">#&gt; 2:    LGA 84433</span>
 <span class="co">#&gt; 3:    EWR 87400</span>
 
-flights[carrier ==<span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>origin]
+flights[carrier <span class="op">==</span><span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>origin]
 <span class="co">#&gt;    origin     N</span>
 <span class="co">#&gt; 1:    JFK 11923</span>
 <span class="co">#&gt; 2:    LGA 11730</span>
 <span class="co">#&gt; 3:    EWR  2649</span>
 
-flights[carrier ==<span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>.(origin,dest)]
+flights[carrier <span class="op">==</span><span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>.(origin,dest)]
 <span class="co">#&gt;     origin dest    N</span>
 <span class="co">#&gt;  1:    JFK  LAX 3387</span>
 <span class="co">#&gt;  2:    LGA  PBI  245</span>
@@ -1250,7 +1261,7 @@ flights[carrier ==<span class="st"> &quot;AA&quot;</span>, .N, by =<span class="
 <span class="co">#&gt; 24:    EWR  PHX  121</span>
 <span class="co">#&gt;     origin dest    N</span>
 
-flights[carrier ==<span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>.(origin, dest)][<span class="kw">order</span>(origin, -dest)][<span class="dv">1</span>:<span class="dv">10</span>,]
+flights[carrier <span class="op">==</span><span class="st"> &quot;AA&quot;</span>, .N, by =<span class="st"> </span>.(origin, dest)][<span class="kw">order</span>(origin, <span class="op">-</span>dest)][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,]
 <span class="co">#&gt;     origin dest    N</span>
 <span class="co">#&gt;  1:    EWR  PHX  121</span>
 <span class="co">#&gt;  2:    EWR  MIA  848</span>
@@ -1271,8 +1282,9 @@ flights[carrier ==<span class="st"> &quot;AA&quot;</span>, .N, by =<span class="
         </div>
       </div>
 <a href="sql.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ggplot.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="ggplot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -1301,6 +1313,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
