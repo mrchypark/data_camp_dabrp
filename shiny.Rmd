@@ -1,2 +1,38 @@
 # shiny 패키지를 활용한 인터렉티프 웹 만들기 {#shiny}
 
+## shiny {#shiny-intro}
+
+[shiny][901]는 데이터 분석 시각화 도구인 `R`을 사용해서 한걸음 더 나아가 웹 어플리케이션을 제작할 수 있게 해주는 패키지 입니다. 웹 사이트라고도 할 수 있을 것 같은데요, 그래서 `shiny`를 잘 사용하기 위해서는 웹 어플리케이션 제작에 대한 사전 지식이 있는 것이 매우 도움이 됩니다. 하지만 없다고 해서 어렵다기 보단, 디테일한 제작을 위해서는 조금 더 공부하면 좋다 정도로 보시면 될 것 같습니다.
+
+우선 shiny는 `ui`라고 불리는 화면, `server`라고 불리는 데이터 처리 및 관리, 그 안에 입출력과 `render`와 배포로 구성되어 있습니다. 
+
+### shiny의 화면
+
+`ui`라고 말하는 화면은 실제로 사용자가 보는 화면을 뜻합니다. shiny에서는 크게 `titlePanel`과 `sidebarPanel`, `mainPanal`의 세 가지로 구성되어 있습니다.
+![shiny-ui](https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-ui.png)
+
+### shiny의 서버
+
+
+### shiny의 입출력
+
+
+
+### shiny의 배포
+
+`shiny`는 `shiny-server`를 통해서 동작합니다. `shiny-server`는 `shiny app`이 동작할 수 있는 서버를 의미합니다. 오픈소스와 기업용 솔루션이 모두 준비되어 있으며 실습에는 <http://www.shinyapps.io/>를 이용해 보겠습니다. 
+
+
+## shiny의 입출력 
+
+### input output
+
+### 반응형
+
+## shiny의 화면
+
+## shiny의 서버
+
+
+
+[901]: http://shiny.rstudio.com/
