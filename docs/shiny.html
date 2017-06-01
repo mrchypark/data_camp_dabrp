@@ -228,7 +228,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="7.4" data-path="knitr.html"><a href="knitr.html#bookdown"><i class="fa fa-check"></i><b>7.4</b> bookdown</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a></li>
+<li class="chapter" data-level="8" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>8</b> shiny 패키지를 활용한 인터렉티프 웹 만들기</a><ul>
+<li class="chapter" data-level="8.1" data-path="shiny.html"><a href="shiny.html#shiny-intro"><i class="fa fa-check"></i><b>8.1</b> shiny</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="shiny.html"><a href="shiny.html#shiny-"><i class="fa fa-check"></i><b>8.1.1</b> shiny의 화면</a></li>
+<li class="chapter" data-level="8.1.2" data-path="shiny.html"><a href="shiny.html#shiny-"><i class="fa fa-check"></i><b>8.1.2</b> shiny의 서버</a></li>
+<li class="chapter" data-level="8.1.3" data-path="shiny.html"><a href="shiny.html#shiny-"><i class="fa fa-check"></i><b>8.1.3</b> shiny의 입출력</a></li>
+<li class="chapter" data-level="8.1.4" data-path="shiny.html"><a href="shiny.html#shiny-"><i class="fa fa-check"></i><b>8.1.4</b> shiny의 배포</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="shiny.html"><a href="shiny.html#shiny--1"><i class="fa fa-check"></i><b>8.2</b> shiny의 입출력</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="shiny.html"><a href="shiny.html#output"><i class="fa fa-check"></i><b>8.2.1</b> output$</a></li>
+<li class="chapter" data-level="8.2.2" data-path="shiny.html"><a href="shiny.html#render"><i class="fa fa-check"></i><b>8.2.2</b> render*({})</a></li>
+<li class="chapter" data-level="8.2.3" data-path="shiny.html"><a href="shiny.html#input"><i class="fa fa-check"></i><b>8.2.3</b> input$</a></li>
+<li class="chapter" data-level="8.2.4" data-path="shiny.html"><a href="shiny.html#shiny---"><i class="fa fa-check"></i><b>8.2.4</b> shiny 앱 작성 구조</a></li>
+<li class="chapter" data-level="8.2.5" data-path="-.html"><a href="-.html#-"><i class="fa fa-check"></i><b>8.2.5</b> 반응형 함수들</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="shiny.html"><a href="shiny.html#encoding-"><i class="fa fa-check"></i><b>8.3</b> encoding 문제</a></li>
+<li class="chapter" data-level="8.4" data-path="shiny.html"><a href="shiny.html#shiny--js--"><i class="fa fa-check"></i><b>8.4</b> shiny가 지원하는 js 패키지들의 활용</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="shiny.html"><a href="shiny.html#--leaflet"><i class="fa fa-check"></i><b>8.4.1</b> 지도를 지원하는 leaflet</a></li>
+<li class="chapter" data-level="8.4.2" data-path="shiny.html"><a href="shiny.html#----ggiraph"><i class="fa fa-check"></i><b>8.4.2</b> 마우스 이벤트를 추가적으로 지원하는 ggiraph</a></li>
+<li class="chapter" data-level="8.4.3" data-path="shiny.html"><a href="shiny.html#-network---visnetwork"><i class="fa fa-check"></i><b>8.4.3</b> 상호작용 network 화면을 만드는 visNetwork</a></li>
+<li class="chapter" data-level="8.4.4" data-path="shiny.html"><a href="shiny.html#dashboard-shiny---shinydashboard"><i class="fa fa-check"></i><b>8.4.4</b> dashboard를 shiny로 만들어 보자 shinydashboard</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="eba788ecb998eba9b0.html"><a href="eba788ecb998eba9b0.html"><i class="fa fa-check"></i>마치며</a></li>
 </ul>
 
@@ -249,7 +270,300 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="shiny" class="section level1">
 <h1><span class="header-section-number">8</span> shiny 패키지를 활용한 인터렉티프 웹 만들기</h1>
+<div id="shiny-intro" class="section level2">
+<h2><span class="header-section-number">8.1</span> shiny</h2>
+<p><a href="http://shiny.rstudio.com/">shiny</a>는 데이터 분석 시각화 도구인 <code>R</code>을 사용해서 한걸음 더 나아가 웹 어플리케이션을 제작할 수 있게 해주는 패키지 입니다. 웹 사이트라고도 할 수 있을 것 같은데요, 그래서 <code>shiny</code>를 잘 사용하기 위해서는 웹 어플리케이션 제작에 대한 사전 지식이 있는 것이 매우 도움이 됩니다. 하지만 없다고 해서 어렵다기 보단, 디테일한 제작을 위해서는 조금 더 공부하면 좋다 정도로 보시면 될 것 같습니다.</p>
+<p>우선 shiny는 <code>ui</code>라고 불리는 화면, <code>server</code>라고 불리는 데이터 처리 및 관리, 그 안에 입출력과 <code>render</code>와 배포로 구성되어 있습니다.</p>
+<div id="shiny-" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> shiny의 화면</h3>
+<p><code>ui</code>라고 말하는 화면은 실제로 사용자가 보는 화면을 뜻합니다. shiny에서는 크게 <code>titlePanel</code>과 <code>sidebarPanel</code>, <code>mainPanal</code>의 세 가지로 구성되어 있습니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-ui.png" alt="shiny-ui" /></p>
+<p>이렇게 지정함으로써 <code>html</code>에 대해 잘 몰라도 사용할 수 있게 <code>shiny</code>가 구성되어 있습니다.</p>
+</div>
+<div id="shiny-" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> shiny의 서버</h3>
+<p><code>shiny</code>에서의 <code>server</code>는 실제 서버가 브라우저와 통신하는 과정 전체를 간단하게 만들어주는 역할을 합니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-app-architecture.png" alt="ui_server" /></p>
+<p>화면에서 사용자가 동작하는 것에 대해서 받을 수 있는 <code>input</code>을 서버에서 데이터나 그림 조작에 사용을 하고 웹 기술이 이해할 수 있게 <code>render</code>하여 <code>output</code>으로 화면에 다시 보내주는 형태로 <code>shiny</code>가 동작합니다.</p>
+</div>
+<div id="shiny-" class="section level3">
+<h3><span class="header-section-number">8.1.3</span> shiny의 입출력</h3>
+<p><code>shiny</code>는 다른 <code>R</code> 패키지와는 다르게 강제하는 변수가 3개 있습니다. 그것은 <code>input</code>, <code>output</code>, <code>session</code> 입니다. 각각 객체로써 존재하고 이번에는 <code>input</code>과 <code>output</code>으로 데이터를 <code>ui</code>와 <code>server</code>가 교환하는 방법을 소개하겠습니다. 각각의 객체는 <code>*Input</code> 함수와 <code>*Output</code> 함수로 데이터를 입력 받아 저장합니다. <code>*Output</code> 함수는 <code>render*</code> 함수로 선언됩니다.</p>
+</div>
+<div id="shiny-" class="section level3">
+<h3><span class="header-section-number">8.1.4</span> shiny의 배포</h3>
+<p><code>shiny</code>는 <code>shiny-server</code>를 통해서 동작합니다. <code>shiny-server</code>는 <code>shiny app</code>이 동작할 수 있는 서버를 의미합니다. 오픈소스와 기업용 솔루션이 모두 준비되어 있으며 실습에는 <a href="http://www.shinyapps.io/" class="uri">http://www.shinyapps.io/</a>를 이용해 보겠습니다.</p>
+</div>
+</div>
+<div id="shiny--1" class="section level2">
+<h2><span class="header-section-number">8.2</span> shiny의 입출력</h2>
+<p><code>shiny</code>는 웹 기술을 <code>R</code>로 사용할 수 있게 만드는 덕분에 <code>render</code>라는 과정이 필요합니다. 그래서 <code>render</code> 환경에서 변수들이 관리되어야 합니다. 입출력은 <code>input</code> 변수와 <code>output</code> 변수로 관리합니다. 이 두 가지는 <code>render</code> 밖에서 관리되는 변수로 다르게 취급해야 합니다.</p>
+<div id="output" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> output$</h3>
+<p><code>output</code> 변수는 <code>list</code>라고 이해하시면 좋을 것 같습니다. <code>list</code>인 <code>output</code> 변수는 <code>output$</code>뒤에 변수명을 작성함으로써 <code>output</code> 객체에 필요한 결과물을 전달합니다. 만약에 화면에 보여줘야할 것의 이름을 <code>sample</code>이라고 하면 <code>output$sample</code>에 필요한 내용을 선언하는 것으로 진행합니다.</p>
+<pre><code>...
 
+output$sample &lt;- randerPlot({ ...plot()... })
+...</code></pre>
+<p>위 코드는 <code>server</code>쪽 코드에서 작성합니다. 위 예시는 <code>plot</code>함수로 만들어지는 이미지를 <code>output$sample</code>에 저장하는 것을 뜻합니다. 그럼 <code>ui</code>쪽에서 이걸 어디에다 위치하게 하는지를 결정하는 함수에서 사용할 수 있습니다. 이때는 <code>plotOutput</code> 함수를 사용합니다.</p>
+<pre><code>...
+plotOutput(&quot;sample&quot;)
+...</code></pre>
+<p>함수명이 <code>Output</code> 이고, <code>&quot;</code>로 변수명을 감싸며, <code>output$</code> 문법을 사용하지 않고 컬럼명인 <code>sample</code>만 사용한다는 점을 주목해 주세요. <code>server</code>쪽 코드에서 <code>output$</code>에 컬럼명의 형태로 저장한 <code>R</code>의 결과물을 <code>ui</code>쪽 코드에서 <code>*Output</code> 함수에서 <code>&quot;</code>로 감싼 글자의 형태로 컬럼명만 작성해서 사용합니다. 그럼 이제 위해서 <code>output$sample</code>에 선언할 때 사용한 <code>render*({})</code>에 대해서 알아보겠습니다.</p>
+</div>
+<div id="render" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> render*({})</h3>
+<p><code>Rmd</code> 때 <code>render</code>라는 과정을 거쳐서 <code>Rmd</code>를 <code>md</code>로, <code>md</code>를 <code>html</code>로 바꾸는 것을 알아봤었습니다. <code>shiny</code>에서도 같은 과정이 필요합니다. 그래서 <code>render*({ })</code>함수가 필요합니다. 예시로 보겠습니다.</p>
+<pre><code>...
+output$sample &lt;- randerPlot({ 
+                              
+  plot(faithful)
+
+})
+...</code></pre>
+<p><code>render*({ })</code> 함수 안에는 <code>plot</code> 함수가 <code>R</code> 문법으로 작성되어 있습니다. 그리고 <code>render*({ })</code>의 특이한 점은 <code>()</code> 안에 <code>{}</code>가 또 있다는 점입니다. 여기서는 <code>({ })</code> 안쪽은 <code>R</code>의 세계이고, 그 바깥은 웹의 세계라고 이해하겠습니다. 그래서 이런게 가능합니다.</p>
+<pre><code>...
+output$sample &lt;- randerPlot({ 
+  
+  data &lt;- faithful[faithful$eruptions &gt;3, ]
+  plot(data)
+
+})
+...</code></pre>
+<p><code>R</code>의 세계 내에서 처리하는 것은 계속 사용할 수 있어서 <code>data</code> 변수에 선언한 내용을 <code>plot</code>함수가 사용할 수 있습니다. 여기서 <code>input$</code>이 활용될 때 반응형으로 작성할 수 있는 것입니다.</p>
+</div>
+<div id="input" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> input$</h3>
+<p><code>intput$</code>은 <code>output$</code>과 같이 웹의 세계에 있는 변수입니다. 그래서 <code>*Input()</code> 함수들을 통해서 <code>input$</code>의 컬럼 이름으로 웹 페이지 내에서 얻을 수 있는 데이터를 <code>R</code>의 세계에서 사용할 수 있게 해줍니다. 우선 <code>input$</code>에 웹의 세계의 데이터를 <code>R</code>의 세계로 가져와 보겠습니다.</p>
+<pre><code>sliderInput(&quot;sdata1&quot;, &quot;슬라이더 입력:&quot;, min=50, max=150, value=100)</code></pre>
+<p>위의 코드는 <code>sliderInput()</code>이라는 <code>*Input()</code> 패밀리 함수를 통해서 <code>input$sdata1</code>이라는 곳에 웹 데이터를 저장하는 것을 뜻합니다. <code>*Input()</code> 패밀리 함수는 같은 규칙을 가지는데 <code>입력형태명Input()</code>의 함수명을 가지고, 첫번째 인자는 <code>input$</code> 뒤로 붙을 컬럼명, 두번째 인자는 화면에 보여줄 글자를 의미합니다. 나머지 인자는 입력형태에 따라 다양하게 달라집니다. <code>shiny</code>에서 지원하는 입력형태는 <a href="http://shiny.rstudio.com/gallery/widget-gallery.html">이곳</a>을 확인해 주세요.</p>
+</div>
+<div id="shiny---" class="section level3">
+<h3><span class="header-section-number">8.2.4</span> shiny 앱 작성 구조</h3>
+<p>이제 <code>input</code>하나를 받고 <code>output</code> 하나를 출력하는 <code>shiny</code> 앱을 작성할 준비가 되었습니다. 이제 간단한 <code>sample</code>을 통해 작성된 코드를 확인해 보고 같이 작성을 진행해 보겠습니다. <code>shiny</code>는 그 복잡함 때문에 여러 사례를 풍부하게 제공하는 몇 안되는 패키지 입니다. 사례 참고만 잘 하셔도 멋진 반응형 웹을 만들 수 있습니다.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+<span class="co">#&gt; 필요한 패키지를 로딩중입니다: methods</span>
+<span class="kw">runExample</span>()
+<span class="co">#&gt; Valid examples are &quot;01_hello&quot;, &quot;02_text&quot;, &quot;03_reactivity&quot;, &quot;04_mpg&quot;, &quot;05_sliders&quot;, &quot;06_tabsets&quot;, &quot;07_widgets&quot;, &quot;08_html&quot;, &quot;09_upload&quot;, &quot;10_download&quot;, &quot;11_timer&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rvest)
+<span class="co">#&gt; 필요한 패키지를 로딩중입니다: xml2</span>
+url&lt;-<span class="st">&quot;https://github.com/rstudio/shiny-examples&quot;</span>
+tem&lt;-<span class="st"> </span><span class="kw">read_html</span>(url)
+fold&lt;-tem <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;tr td span a.js-navigation-open&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>html_text
+cnt &lt;-<span class="st"> </span><span class="kw">grep</span>(<span class="st">&quot;^[0-9]&quot;</span>,fold) <span class="op">%&gt;%</span><span class="st"> </span>length</code></pre></div>
+<p>위 코드는 실행해 볼 수 있는 예제를 보여줍니다. 아래처럼 실행하시면 바로 실행되는 <code>shiny</code> 앱 예제를 확인하 실 수 있습니다. <a href="https://github.com/rstudio/shiny-examples">shiny github</a>에는 예제 <code>repo</code>가 있고, 활용할 수 있는 예제는 2017-06-01 기준 109개 입니다.</p>
+<pre><code>runExample(&quot;01_hello&quot;)</code></pre>
+<p>위를 실행해 보시면 아래와 같은 화면이 나옵니다. 예제는 코드도 함께 볼 수 있게 되어 있어서 공부하기 좋습니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-example-01.png" alt="shiny-example-01" /></p>
+<p>우선 서버쪽 부터 보겠습니다.</p>
+<pre><code># shiny 패키지를 불러옵니다.
+library(shiny)
+
+# server를 function으로 선언합니다. 웹의 세계에서 사용할 변수는 input과 output 입니다.
+function(input, output) {
+
+# 웹의 세계의 변수인 output에 list 컬럼인 distPlot을 선언합니다.
+# 그 선언을 renderPlot({})으로 해서 distPlot이 plot()으로 작성한 그림이라는 것을 이해합니다.
+# renderPlot({ ... }) 함수 안에 R의 세계에서 hist() 함수의 결과가 나오게 작성합니다.
+# 이때 input$bin으로 웹에서 사용자가 주는 데이터를 활용할 것입니다.
+# bin은 경계라는 뜻으로 연속형 변수를 histogram을 그릴 때 얼마나 구간을 나눌 것인지를 결정합니다.
+# ?hist를 통해 어떤 그림을 그리는 함수인지를 확인해 보세요.
+# ?seq를 통해 어떤 결과물을 만드는 함수인지 확인해 보세요.
+
+  output$distPlot &lt;- renderPlot({
+    x    &lt;- faithful[, 2]  # Old Faithful Geyser data
+    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
+
+    # draw the histogram with the specified number of bins
+    hist(x, breaks = bins, col = &#39;darkgray&#39;, border = &#39;white&#39;)
+  })
+
+}</code></pre>
+<p>위에 코드에서 <code>input$bins</code>가 <code>render*({})</code> 함수 안에서 사용됬습니다. <code>output$</code>은 웹의 세계에서 사용하지만 <code>input$</code>은 <code>R</code>의 세계에서 사용합니다. 이부분은 <code>reactive({})</code> 함수에서 추가적으로 다루기로 하겠습니다. 이제 <code>ui</code>쪽 코드를 확인해 보겠습니다.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-example-02.png" alt="shiny-example-02" />
+<p class="caption">shiny-example-02</p>
+</div>
+<pre><code># shiny 패키지를 불러옵니다.
+ibrary(shiny)
+
+# fluidPage는 shiny의 페이지를 보여주는 핵심 기능입니다. titlePanel, sidebarPanal, mainPanel로 구성되어 있습니다.
+# titlePanel은 제목을 작성하는 곳입니다.
+# sidebarPanel은 전체 화면을 3등분해서 왼쪽을 뜻합니다.
+# mainPanel은 전체 화면을 3등분해서 오른쪽을 뜻합니다.
+fluidPage(
+
+  # Application title
+  titlePanel(&quot;Hello Shiny!&quot;),
+
+  # Sidebar with a slider input for the number of bins
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(&quot;bins&quot;,
+                  &quot;Number of bins:&quot;,
+                  min = 1,
+                  max = 50,
+                  value = 30)
+    ),
+
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput(&quot;distPlot&quot;)
+    )
+  )
+)</code></pre>
+<p><code>shiny</code>의 전체 화면 구성 기능은 <a href="http://shiny.rstudio.com/articles/layout-guide.html">이곳</a>를 참고하세요. 그리고 이것은 <a href="http://bootstrapk.com/">bootstrap</a>을 사용하여 만들었습니다. 그래서 <a href="http://bootstrapk.com/">bootstrap</a>의 화면 구성에 대한 개념을 이해하시면 더 쉽게 다양한 세부 조작이 가능합니다. <code>fluid</code>라고 작성하는 모든 부분은 화면의 크기에 반응하여 적절하게 변화한다는 뜻입니다. <a href="http://bootswatch.com/">bootswatch</a>에서 제공하는 테마를 바로 적용해서 사용할 수 있습니다.</p>
+<pre><code>fluidPage(theme = &quot;Journal&quot;,
+                  
+  titlePanel(&quot;태마를 바꿀 수 있습니다.&quot;)
+)
+</code></pre>
+<p>이제 코드를 다시 보면 <code>sliderInput</code>을 통해서 <code>input$bins</code> 데이터를 웹의 세상에서 받아오는 것을 볼 수있습니다. 지금 기본 값으로 <code>30</code>을 기록해 두었지만, 웹의 세상에서 변화시켜주는 것에 따라 <code>input$bins</code>의 데이터가 변해서 <code>server</code>에서 <code>input$bins</code>의 형태로 그 데이터를 사용할 수 있습니다.</p>
+<blockquote>
+<p>웹의 세상이나 <code>R</code>의 세상이란 말은 정확한 표현은 아니지만 이해를 돕기 위해서 활용했습니다.</p>
+</blockquote>
+<p>그리고 <code>ui</code>에서는 웹의 세계로 나온 <code>output$distPlot</code>을 <code>plotOutput()</code> 함수로 웹 페이지에 위치시킬 수 있습니다. <code>output$distPlot</code>은 현재 <code>mainPanel</code>에 위치해 있네요. 위치의 세부적인 조정은 <a href="http://shiny.rstudio.com/articles/layout-guide.html">이곳</a>을 참고하세요.</p>
+<p><code>shiny</code>는 대부분의 <code>html tag</code>를 지원합니다. <code>html</code>에 대한 사전 지식이 있으시면 활용하시는데 도움이 됩니다. 추가적인 내용은 <a href="http://shiny.rstudio.com/articles/html-tags.html">이곳</a>을 참고하세요.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(tags)
+<span class="co">#&gt;   [1] &quot;a&quot;           &quot;abbr&quot;        &quot;address&quot;     &quot;area&quot;        &quot;article&quot;    </span>
+<span class="co">#&gt;   [6] &quot;aside&quot;       &quot;audio&quot;       &quot;b&quot;           &quot;base&quot;        &quot;bdi&quot;        </span>
+<span class="co">#&gt;  [11] &quot;bdo&quot;         &quot;blockquote&quot;  &quot;body&quot;        &quot;br&quot;          &quot;button&quot;     </span>
+<span class="co">#&gt;  [16] &quot;canvas&quot;      &quot;caption&quot;     &quot;cite&quot;        &quot;code&quot;        &quot;col&quot;        </span>
+<span class="co">#&gt;  [21] &quot;colgroup&quot;    &quot;command&quot;     &quot;data&quot;        &quot;datalist&quot;    &quot;dd&quot;         </span>
+<span class="co">#&gt;  [26] &quot;del&quot;         &quot;details&quot;     &quot;dfn&quot;         &quot;div&quot;         &quot;dl&quot;         </span>
+<span class="co">#&gt;  [31] &quot;dt&quot;          &quot;em&quot;          &quot;embed&quot;       &quot;eventsource&quot; &quot;fieldset&quot;   </span>
+<span class="co">#&gt;  [36] &quot;figcaption&quot;  &quot;figure&quot;      &quot;footer&quot;      &quot;form&quot;        &quot;h1&quot;         </span>
+<span class="co">#&gt;  [41] &quot;h2&quot;          &quot;h3&quot;          &quot;h4&quot;          &quot;h5&quot;          &quot;h6&quot;         </span>
+<span class="co">#&gt;  [46] &quot;head&quot;        &quot;header&quot;      &quot;hgroup&quot;      &quot;hr&quot;          &quot;html&quot;       </span>
+<span class="co">#&gt;  [51] &quot;i&quot;           &quot;iframe&quot;      &quot;img&quot;         &quot;input&quot;       &quot;ins&quot;        </span>
+<span class="co">#&gt;  [56] &quot;kbd&quot;         &quot;keygen&quot;      &quot;label&quot;       &quot;legend&quot;      &quot;li&quot;         </span>
+<span class="co">#&gt;  [61] &quot;link&quot;        &quot;mark&quot;        &quot;map&quot;         &quot;menu&quot;        &quot;meta&quot;       </span>
+<span class="co">#&gt;  [66] &quot;meter&quot;       &quot;nav&quot;         &quot;noscript&quot;    &quot;object&quot;      &quot;ol&quot;         </span>
+<span class="co">#&gt;  [71] &quot;optgroup&quot;    &quot;option&quot;      &quot;output&quot;      &quot;p&quot;           &quot;param&quot;      </span>
+<span class="co">#&gt;  [76] &quot;pre&quot;         &quot;progress&quot;    &quot;q&quot;           &quot;ruby&quot;        &quot;rp&quot;         </span>
+<span class="co">#&gt;  [81] &quot;rt&quot;          &quot;s&quot;           &quot;samp&quot;        &quot;script&quot;      &quot;section&quot;    </span>
+<span class="co">#&gt;  [86] &quot;select&quot;      &quot;small&quot;       &quot;source&quot;      &quot;span&quot;        &quot;strong&quot;     </span>
+<span class="co">#&gt;  [91] &quot;style&quot;       &quot;sub&quot;         &quot;summary&quot;     &quot;sup&quot;         &quot;table&quot;      </span>
+<span class="co">#&gt;  [96] &quot;tbody&quot;       &quot;td&quot;          &quot;textarea&quot;    &quot;tfoot&quot;       &quot;th&quot;         </span>
+<span class="co">#&gt; [101] &quot;thead&quot;       &quot;time&quot;        &quot;title&quot;       &quot;tr&quot;          &quot;track&quot;      </span>
+<span class="co">#&gt; [106] &quot;u&quot;           &quot;ul&quot;          &quot;var&quot;         &quot;video&quot;       &quot;wbr&quot;</span></code></pre></div>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">8.2.5</span> 반응형 함수들</h3>
+<p>위에서 <code>shiny</code> 코드들을 소개할 때 웹의 세상과 <code>R</code>의 세상으로 설명한 부분이 기억나실 겁니다. 이것은 웹의 세상의 데이터를 <code>R</code>의 세상으로 데려와서 여러 처리에 사용하고, 결과를 다시 웹의 세상으로 보내는 과정을 설명하면서 사용했습니다. 이 때 <code>input$</code>은 <code>R</code>의 세상에 있었고, <code>output$</code>은 웹의 세상에 있었습니다. <code>render*({})</code>함수를 통해서 <code>R</code>의 세상의 결과물을 <code>output$</code>에 전달한다고도 했구요. 이 과정에서 <code>render*({})</code> 함수는 목적이 결과물을 전달하는데 있습니다. <code>input$</code>을 이용해서 계산하는 과정이 간단한 것들은 <code>render*({})</code> 함수 내부에 포함되어도 큰 문제가 되지 않지만, 계산을 여러 <code>output$</code>에서 사용한다면 고치는 것을 고려해 볼 수있습니다.</p>
+<p>개발에서는 반복되는 부분을 최대한 줄이거나 합치려는 경향이 있는데 2가지 장점이 있습니다. 하나는 효율화가 가능하구요, 다른 하나는 가독성이 좋아집니다.</p>
+<p>우선 겹쳐서 사용하는 사례를 보겠습니다.</p>
+<pre><code>library(shiny)
+
+ui&lt;-fluidPage(
+  titlePanel(&quot;test&quot;),
+  sidebarPanel(
+    selectInput(&quot;dataSelect&quot;,&quot;데이터셋 선택 :&quot;, choices=list(&quot;mtcars&quot;,&quot;sleep&quot;,&quot;iris&quot;,&quot;co2&quot;))
+  ),
+  mainPanel(
+    verbatimTextOutput(&quot;out1&quot;),
+    verbatimTextOutput(&quot;out2&quot;)
+  )
+)
+server&lt;-function(input, output){
+  output$out1 &lt;- renderPrint({
+    summary(get(input$dataSelect))
+  })
+  output$out2 &lt;- renderPrint({
+    str(get(input$dataSelect))
+  })
+  
+}
+
+shinyApp(ui,server)</code></pre>
+<p>?get으로 어떤 동작을 하는 함수인지 확인하세요. 데이터셋을 불러오는 역할을 하는데, <code>renderPrint({})</code>가 두 번 있으면서 <code>get</code>함수가 각각 실행되어 같은 연산을 두 번하는 효과가 발생하였습니다. 그렇다면 그 동작을 한번만 하게끔 바꿔보겠습니다.</p>
+<pre><code>library(shiny)
+
+ui&lt;-fluidPage(
+  titlePanel(&quot;test&quot;),
+  sidebarPanel(
+    selectInput(&quot;dataSelect&quot;,&quot;데이터셋 선택 :&quot;, choices=list(&quot;mtcars&quot;,&quot;sleep&quot;,&quot;iris&quot;,&quot;co2&quot;))
+  ),
+  mainPanel(
+    verbatimTextOutput(&quot;out1&quot;),
+    verbatimTextOutput(&quot;out2&quot;)
+  )
+)
+server&lt;-function(input, output){
+
+  selectedData&lt;-get(input$dataSelect)
+  
+  output$out1 &lt;- renderPrint({
+    summary(selectedData)
+  })
+  output$out2 &lt;- renderPrint({
+    str(selectedData)
+  })
+  
+}
+
+shinyApp(ui,server)</code></pre>
+<p><code>get</code>함수로 데이터를 부르는 부분을 앞으로 빼내고, 선언한 <code>selectedData</code>를 <code>summary</code>와 <code>str</code>함수로 사용하였습니다. 실행해 보시면 에러가 나는 것을 확인할 수 있습니다. 웹의 세상에서 <code>R</code>의 세상 문법으로 작성해서 생기는 문제인데요. 에러코드를 함께 보겠습니다.</p>
+<pre><code>Error in .getReactiveEnvironment()$currentContext() : 
+  Operation not allowed without an active reactive context. (You tried to do something that can only be done from inside a reactive expression or observer.)</code></pre>
+<p><code>reactive context</code>라는게 눈에 띄는데요. 이것이 <code>R</code>의 세상 문법이 동작하는 공간입니다.</p>
+<pre><code>selectedData&lt;-get(input$dataSelect)</code></pre>
+<p>위에 코드는 <code>R</code> 문법으로 이루어져 있는데, 이것을 웹의 세상에서 작성했기 때문에 생기는 것이죠. 그럼 <code>R</code>의 세상 문법으로 작성할 수 있게 <code>render*({})</code>와 같은 환경을 제공하는 함수를 사용해 보겠습니다.</p>
+<pre><code>library(shiny)
+
+ui&lt;-fluidPage(
+  titlePanel(&quot;test&quot;),
+  sidebarPanel(
+    selectInput(&quot;dataSelect&quot;,&quot;데이터셋 선택 :&quot;, choices=list(&quot;mtcars&quot;,&quot;sleep&quot;,&quot;iris&quot;,&quot;co2&quot;))
+  ),
+  mainPanel(
+    verbatimTextOutput(&quot;out1&quot;),
+    verbatimTextOutput(&quot;out2&quot;)
+  )
+)
+server&lt;-function(input, output){
+
+  selectedData&lt;-reactive({
+    get(input$dataSelect)
+  })
+  
+  output$out1 &lt;- renderPrint({
+    summary(selectedData())
+  })
+  output$out2 &lt;- renderPrint({
+    str(selectedData())
+  })
+  
+}
+
+shinyApp(ui,server)</code></pre>
+<p><code>reactive({})</code>는 그 내부를 <code>R</code>의 세상으로 만듬으로써 선언 받는 변수를 <code>함수화</code>하여 반응형 데이터의 특성을 유지한채로 <code>R</code>의 세상에서 사용할 수 있게 해줍니다. <code>함수화</code>라는 부분을 잘 보셔야 하는데, <code>selectedData</code>가 변수가 아니라 뒤에 <code>()</code>가 붙은 함수라는 사실을 확인하세요. 웹의 세상에 있는 <code>selectedData</code>는 변수를 선언한 것이 아니라 <code>R</code>의 세상에서 사용할 수 있게 <code>함수화</code>하여 함수로써 선언하였습니다. 이런 <code>R</code>의 세상과 웹의 세상을 넘나드는 부분을 관장하는 함수에는 <code>render*({})</code>, <code>reactive({})</code>, <code>isolate({})</code>, <code>observeEvent({})</code>, <code>eventReactive({})</code>, <code>reactiveValues({})</code>, <code>observe({})</code>가 있습니다. 앞에 두 개는 예시를 들어 설명을 했구요.</p>
+<p><code>isolate({})</code> 은 즉각적인 반응이 아니라 어떤 다른 사용자의 입력(ex&gt; action 버튼)을 인지하여 그 때 <code>input</code>에 해당하는 부분을 확인하여 결과물을 만듭니다. <code>render*({})</code>함수 내부에서 사용합니다.<br />
+<code>observeEvent({})</code>와 <code>eventReactive({})</code>는 위에 처럼 어떤 <code>input</code>을 인지하여 동작합니다. <code>observeEvent({})</code>는 서버 부분에서 실행해야 할 것들을 담당하기 때문에 선언의 형태가 아니라 독립적으로 작성됩니다. 예를 들어 서버에 파일을 저장한다거나, 로그로 남기는 글자를 출력하거나 할 때 사용합니다. <code>eventReactive({})</code>는 <code>reactive({})</code>와 같이 웹의 세상의 변수에 선언하면서 <code>함수화</code>하여 <code>R</code>의 세상에서 반응형 데이터로써 사용할 수 있습니다.<br />
+<code>reactiveValues({})</code>는 <code>input$</code>이나 <code>output$</code>과 같은 역할을 하는 변수를 만드는 함수입니다. <code>observe({})</code>는 <code>observeEvent({})</code>와 <code>eventReactive({})</code>의 근간이 되는 함수로, <code>input$</code>의 입력을 인지하는 역할을 합니다.</p>
+</div>
+</div>
+<div id="encoding-" class="section level2">
+<h2><span class="header-section-number">8.3</span> encoding 문제</h2>
+<p><a href="http://shiny.rstudio.com/gallery/unicode-characters.html">이곳</a>를 참고하세요. 이런 문제의 대부분은 중국어도 같이 가지고 있어서 중국쪽의 해결책이 많이 도움이 됩니다. 일본어 역시 마찬가지입니다.</p>
+</div>
+<div id="shiny--js--" class="section level2">
+<h2><span class="header-section-number">8.4</span> shiny가 지원하는 js 패키지들의 활용</h2>
+<div id="--leaflet" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> 지도를 지원하는 leaflet</h3>
+<p><a href="http://leafletjs.com/">leaflet</a>은 <code>javascript</code> 언어로 이루어진 지도에 대한 패키지입니다. <code>shiny</code>는 <a href="http://www.htmlwidgets.org/">htmlwidget</a>을 이용해서 <code>javascript</code>를 <code>R</code>로 변환하여 사용하는 것이 매우 많습니다. <code>leaflet</code> 역시 마찬가지로 <a href="https://rstudio.github.io/leaflet/">이곳</a>에 상세한 코드 예시들과 함께 소개가 준비되어 있습니다.</p>
+</div>
+<div id="----ggiraph" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> 마우스 이벤트를 추가적으로 지원하는 ggiraph</h3>
+<p><a href="http://davidgohel.github.io/ggiraph/">ggiraph</a>는 <code>ggplot</code>의 <code>geom</code>계 함수들에게 뒤에 <code>_interactive</code>를 붙여 활용함으로써 조금더 표가 사용자와 상호작용 할 수 있는 부분을 추가해줍니다. 효과로는 <code>click</code>, <code>hover</code>, <code>zoom</code>, <code>data_id</code> 등이 있습니다.</p>
+</div>
+<div id="-network---visnetwork" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> 상호작용 network 화면을 만드는 visNetwork</h3>
+<p><a href="http://datastorm-open.github.io/visNetwork/">visNetwork</a>는 네트워크 시각화를 위한 패키지로 상호작용에 대해 유연하게 작성할 수 있게 설계되었습니다. <code>node</code>와 <code>edge</code>, <code>group</code>에 대한 개념만 이해하시면 멋진 네트워크 시각화 화면을 만들어 볼 수 있습니다.</p>
+</div>
+<div id="dashboard-shiny---shinydashboard" class="section level3">
+<h3><span class="header-section-number">8.4.4</span> dashboard를 shiny로 만들어 보자 shinydashboard</h3>
+<p><a href="https://rstudio.github.io/shinydashboard/">shinydashboard</a>는 대쉬보드를 <code>shiny</code>로 제작할 수 있게 대쉬보드 제작 프레임워크인 <a href="https://github.com/almasaeed2010/AdminLTE">AdminLTE</a>을 기반으로 작성했습니다. 유료 템플릿을 판매하는 기반을 가진 오픈소스인 만큼 프레임워크의 질이 <code>product ready</code> 수준이라 사용하기 매우 좋습니다.</p>
+
+</div>
+</div>
 </div>
             </section>
 
