@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4.9 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="박찬엽">
 
 
-<meta name="date" content="2017-04-06">
+<meta name="date" content="2017-08-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,10 +34,31 @@
   
 
 
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
-<link rel="stylesheet" href="C:/Users/mrchypark/Documents/project/data_camp_dabrp/libs/dabrp.css" type="text/css" />
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47822682-14', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<link rel="stylesheet" href="dabrp.css" type="text/css" />
 </head>
 
 <body>
@@ -71,10 +92,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section-header">
+<div id="header">
 <h1 class="title">실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</h1>
 <h4 class="author"><em>박찬엽</em></h4>
-<h4 class="date"><em>2017-04-06</em></h4>
+<h4 class="date"><em>2017-08-20</em></h4>
 </div>
 <div id="eba8b8eba6aceba790" class="section level1 unnumbered">
 <h1>머리말</h1>
@@ -94,6 +115,20 @@
 <p>이 책은 그 중 2단계인 정제와 4단계인 시각화에 초점이 맞춰져 있습니다. 계속 업데이트되므로 정보 챕터 하단에 업데이트 날짜를 확인하세요.</p>
 <p>저작물 라이선스로 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">크리에이티브 커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))</a>를 따릅니다.</p>
 </div>
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'mrchypark';
+    var disqus_developer = 0;
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://mrchypark.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
             </section>
 
           </div>
@@ -103,8 +138,15 @@
 
     </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": true,
 "fontsettings": {

@@ -5,7 +5,11 @@ author: "박찬엽"
 date: "2017-08-20"
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
-documentclass: book
+output:
+  bookdown::gitbook:
+    includes:
+      in_header: google_analytics.html
+      after_body: disqus.html
 ---
 # 머리말 {-}
 
