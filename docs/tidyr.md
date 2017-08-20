@@ -40,15 +40,25 @@
 
 ```r
 library(tidyverse)
-#> Loading tidyverse: ggplot2
-#> Loading tidyverse: tibble
-#> Loading tidyverse: tidyr
-#> Loading tidyverse: readr
-#> Loading tidyverse: purrr
-#> Loading tidyverse: dplyr
-#> Conflicts with tidy packages ----------------------------------------------
-#> filter(): dplyr, stats
-#> lag():    dplyr, stats
+#> + ggplot2 2.2.1        Date: 2017-08-20
+#> + tibble  1.3.3           R: 3.4.0
+#> + tidyr   0.6.3          OS: Windows 10 x64
+#> + readr   1.1.1         GUI: RTerm
+#> + purrr   0.2.3      Locale: Korean_Korea.949
+#> + dplyr   0.7.2          TZ: Asia/Seoul
+#> + stringr 1.2.0      
+#> + forcats 0.2.0
+#> Warning: 패키지 'ggplot2'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'tibble'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'tidyr'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'readr'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'purrr'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'dplyr'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'stringr'는 R 버전 3.4.1에서 작성되었습니다
+#> Warning: 패키지 'forcats'는 R 버전 3.4.1에서 작성되었습니다
+#> ─ Conflicts ──────────────────────────
+#> * filter(),  from dplyr, masks stats::filter()
+#> * lag(),     from dplyr, masks stats::lag()
 ```
 
 ### pipe 연산자 %>% {#pipe-operator}
@@ -75,7 +85,7 @@ if(!require(nycflights13)) install.packages("nycflights13")
 #> 필요한 패키지를 로딩중입니다: nycflights13
 library(nycflights13)
 flights
-#> # A tibble: 336,776 × 19
+#> # A tibble: 336,776 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -94,7 +104,7 @@ flights
 
 ```r
 filter(flights, month == 1, day == 1)
-#> # A tibble: 842 × 19
+#> # A tibble: 842 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -109,7 +119,7 @@ filter(flights, month == 1, day == 1)
 #> #   minute <dbl>, time_hour <dttm>
 jan1 <- filter(flights, month == 1, day == 1)
 (dec25 <- filter(flights, month == 12, day == 25))
-#> # A tibble: 719 × 19
+#> # A tibble: 719 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013    12    25      456            500        -4      649
@@ -129,7 +139,7 @@ jan1 <- filter(flights, month == 1, day == 1)
 
 ```r
 filter(flights, month == 11 | month == 12)
-#> # A tibble: 55,403 × 19
+#> # A tibble: 55,403 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013    11     1        5           2359         6      352
@@ -144,7 +154,7 @@ filter(flights, month == 11 | month == 12)
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 nov_dec <- filter(flights, month %in% c(11, 12))
 nov_dec
-#> # A tibble: 55,403 × 19
+#> # A tibble: 55,403 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013    11     1        5           2359         6      352
@@ -158,7 +168,7 @@ nov_dec
 #> #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 filter(flights, !(arr_delay > 120 | dep_delay > 120))
-#> # A tibble: 316,050 × 19
+#> # A tibble: 316,050 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -172,7 +182,7 @@ filter(flights, !(arr_delay > 120 | dep_delay > 120))
 #> #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 filter(flights, arr_delay <= 120, dep_delay <= 120)
-#> # A tibble: 316,050 × 19
+#> # A tibble: 316,050 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -191,7 +201,7 @@ filter(flights, arr_delay <= 120, dep_delay <= 120)
 
 ```r
 arrange(flights, year, month, day)
-#> # A tibble: 336,776 × 19
+#> # A tibble: 336,776 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -205,7 +215,7 @@ arrange(flights, year, month, day)
 #> #   tailnum <chr>, origin <chr>, dest <chr>, air_time <dbl>,
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 arrange(flights, desc(arr_delay))
-#> # A tibble: 336,776 × 19
+#> # A tibble: 336,776 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     9      641            900      1301     1242
@@ -220,14 +230,14 @@ arrange(flights, desc(arr_delay))
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 df <- tibble(x = c(5, 2, NA))
 arrange(df, x)
-#> # A tibble: 3 × 1
+#> # A tibble: 3 x 1
 #>       x
 #>   <dbl>
 #> 1     2
 #> 2     5
 #> 3    NA
 arrange(df, desc(x))
-#> # A tibble: 3 × 1
+#> # A tibble: 3 x 1
 #>       x
 #>   <dbl>
 #> 1     5
@@ -239,7 +249,7 @@ arrange(df, desc(x))
 
 ```r
 select(flights, year, month, day)
-#> # A tibble: 336,776 × 3
+#> # A tibble: 336,776 x 3
 #>    year month   day
 #>   <int> <int> <int>
 #> 1  2013     1     1
@@ -250,7 +260,7 @@ select(flights, year, month, day)
 #> 6  2013     1     1
 #> # ... with 3.368e+05 more rows
 select(flights, year:day)
-#> # A tibble: 336,776 × 3
+#> # A tibble: 336,776 x 3
 #>    year month   day
 #>   <int> <int> <int>
 #> 1  2013     1     1
@@ -261,7 +271,7 @@ select(flights, year:day)
 #> 6  2013     1     1
 #> # ... with 3.368e+05 more rows
 select(flights, -(year:day))
-#> # A tibble: 336,776 × 16
+#> # A tibble: 336,776 x 16
 #>   dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay
 #>      <int>          <int>     <dbl>    <int>          <int>     <dbl>
 #> 1      517            515         2      830            819        11
@@ -281,7 +291,7 @@ select(flights, -(year:day))
 
 ```r
 rename(flights, tail_num = tailnum)
-#> # A tibble: 336,776 × 19
+#> # A tibble: 336,776 x 19
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -295,7 +305,7 @@ rename(flights, tail_num = tailnum)
 #> #   tail_num <chr>, origin <chr>, dest <chr>, air_time <dbl>,
 #> #   distance <dbl>, hour <dbl>, minute <dbl>, time_hour <dttm>
 select(flights, time_hour, air_time, everything())
-#> # A tibble: 336,776 × 19
+#> # A tibble: 336,776 x 19
 #>             time_hour air_time  year month   day dep_time sched_dep_time
 #>                <dttm>    <dbl> <int> <int> <int>    <int>          <int>
 #> 1 2013-01-01 05:00:00      227  2013     1     1      517            515
@@ -323,7 +333,7 @@ mutate(flights_sml,
   gain = arr_delay - dep_delay,
   speed = distance / air_time * 60
 )
-#> # A tibble: 336,776 × 9
+#> # A tibble: 336,776 x 9
 #>    year month   day dep_delay arr_delay distance air_time  gain speed
 #>   <int> <int> <int>     <dbl>     <dbl>    <dbl>    <dbl> <dbl> <dbl>
 #> 1  2013     1     1         2        11     1400      227     9   370
@@ -338,7 +348,7 @@ mutate(flights_sml,
   hours = air_time / 60,
   gain_per_hour = gain / hours
 )
-#> # A tibble: 336,776 × 10
+#> # A tibble: 336,776 x 10
 #>    year month   day dep_delay arr_delay distance air_time  gain hours
 #>   <int> <int> <int>     <dbl>     <dbl>    <dbl>    <dbl> <dbl> <dbl>
 #> 1  2013     1     1         2        11     1400      227     9  3.78
@@ -353,7 +363,7 @@ transmute(flights,
   hours = air_time / 60,
   gain_per_hour = gain / hours
 )
-#> # A tibble: 336,776 × 3
+#> # A tibble: 336,776 x 3
 #>    gain hours gain_per_hour
 #>   <dbl> <dbl>         <dbl>
 #> 1     9  3.78          2.38
@@ -380,16 +390,15 @@ lead(x)
 
 ```r
 summarise(flights, delay = mean(dep_delay, na.rm = TRUE))
-#> # A tibble: 1 × 1
+#> # A tibble: 1 x 1
 #>   delay
 #>   <dbl>
 #> 1  12.6
 
 by_day <- group_by(flights, year, month, day)
 summarise(by_day, delay = mean(dep_delay, na.rm = TRUE))
-#> Source: local data frame [365 x 4]
-#> Groups: year, month [?]
-#> 
+#> # A tibble: 365 x 4
+#> # Groups:   year, month [?]
 #>    year month   day delay
 #>   <int> <int> <int> <dbl>
 #> 1  2013     1     1 11.55
@@ -402,9 +411,8 @@ summarise(by_day, delay = mean(dep_delay, na.rm = TRUE))
 
 daily <- group_by(flights, year, month, day)
 (per_day   <- summarise(daily, flights = n()))
-#> Source: local data frame [365 x 4]
-#> Groups: year, month [?]
-#> 
+#> # A tibble: 365 x 4
+#> # Groups:   year, month [?]
 #>    year month   day flights
 #>   <int> <int> <int>   <int>
 #> 1  2013     1     1     842
@@ -415,9 +423,8 @@ daily <- group_by(flights, year, month, day)
 #> 6  2013     1     6     832
 #> # ... with 359 more rows
 (per_month <- summarise(per_day, flights = sum(flights)))
-#> Source: local data frame [12 x 3]
-#> Groups: year [?]
-#> 
+#> # A tibble: 12 x 3
+#> # Groups:   year [?]
 #>    year month flights
 #>   <int> <int>   <int>
 #> 1  2013     1   27004
@@ -428,7 +435,7 @@ daily <- group_by(flights, year, month, day)
 #> 6  2013     6   28243
 #> # ... with 6 more rows
 (per_year  <- summarise(per_month, flights = sum(flights)))
-#> # A tibble: 1 × 2
+#> # A tibble: 1 x 2
 #>    year flights
 #>   <int>   <int>
 #> 1  2013  336776
@@ -436,7 +443,7 @@ daily <- group_by(flights, year, month, day)
 daily %>% 
   ungroup() %>% 
   summarise(flights = n())
-#> # A tibble: 1 × 1
+#> # A tibble: 1 x 1
 #>   flights
 #>     <int>
 #> 1  336776
@@ -448,9 +455,8 @@ daily %>%
 flights_sml %>% 
   group_by(year, month, day) %>%
   filter(rank(desc(arr_delay)) < 10)
-#> Source: local data frame [3,306 x 7]
-#> Groups: year, month, day [365]
-#> 
+#> # A tibble: 3,306 x 7
+#> # Groups:   year, month, day [365]
 #>    year month   day dep_delay arr_delay distance air_time
 #>   <int> <int> <int>     <dbl>     <dbl>    <dbl>    <dbl>
 #> 1  2013     1     1       853       851      184       41
@@ -465,9 +471,8 @@ popular_dests <- flights %>%
   group_by(dest) %>% 
   filter(n() > 365)
 popular_dests
-#> Source: local data frame [332,577 x 19]
-#> Groups: dest [77]
-#> 
+#> # A tibble: 332,577 x 19
+#> # Groups:   dest [77]
 #>    year month   day dep_time sched_dep_time dep_delay arr_time
 #>   <int> <int> <int>    <int>          <int>     <dbl>    <int>
 #> 1  2013     1     1      517            515         2      830
@@ -485,9 +490,8 @@ popular_dests %>%
   filter(arr_delay > 0) %>% 
   mutate(prop_delay = arr_delay / sum(arr_delay)) %>% 
   select(year:day, dest, arr_delay, prop_delay)
-#> Source: local data frame [131,106 x 6]
-#> Groups: dest [77]
-#> 
+#> # A tibble: 131,106 x 6
+#> # Groups:   dest [77]
 #>    year month   day  dest arr_delay prop_delay
 #>   <int> <int> <int> <chr>     <dbl>      <dbl>
 #> 1  2013     1     1   IAH        11   1.11e-04
@@ -507,7 +511,7 @@ popular_dests %>%
 
 ```r
 table1
-#> # A tibble: 6 × 4
+#> # A tibble: 6 x 4
 #>       country  year  cases population
 #>         <chr> <int>  <int>      <int>
 #> 1 Afghanistan  1999    745   19987071
@@ -517,7 +521,7 @@ table1
 #> 5       China  1999 212258 1272915272
 #> 6       China  2000 213766 1280428583
 table2
-#> # A tibble: 12 × 4
+#> # A tibble: 12 x 4
 #>       country  year       type     count
 #>         <chr> <int>      <chr>     <int>
 #> 1 Afghanistan  1999      cases       745
@@ -528,7 +532,7 @@ table2
 #> 6      Brazil  1999 population 172006362
 #> # ... with 6 more rows
 table3
-#> # A tibble: 6 × 3
+#> # A tibble: 6 x 3
 #>       country  year              rate
 #> *       <chr> <int>             <chr>
 #> 1 Afghanistan  1999      745/19987071
@@ -538,14 +542,14 @@ table3
 #> 5       China  1999 212258/1272915272
 #> 6       China  2000 213766/1280428583
 table4a
-#> # A tibble: 3 × 3
+#> # A tibble: 3 x 3
 #>       country `1999` `2000`
 #> *       <chr>  <int>  <int>
 #> 1 Afghanistan    745   2666
 #> 2      Brazil  37737  80488
 #> 3       China 212258 213766
 table4b
-#> # A tibble: 3 × 3
+#> # A tibble: 3 x 3
 #>       country     `1999`     `2000`
 #> *       <chr>      <int>      <int>
 #> 1 Afghanistan   19987071   20595360
@@ -557,7 +561,7 @@ table4b
 
 ```r
 table4a
-#> # A tibble: 3 × 3
+#> # A tibble: 3 x 3
 #>       country `1999` `2000`
 #> *       <chr>  <int>  <int>
 #> 1 Afghanistan    745   2666
@@ -565,7 +569,7 @@ table4a
 #> 3       China 212258 213766
 table4a %>% 
   gather(`1999`, `2000`, key = "year", value = "cases")
-#> # A tibble: 6 × 3
+#> # A tibble: 6 x 3
 #>       country  year  cases
 #>         <chr> <chr>  <int>
 #> 1 Afghanistan  1999    745
@@ -581,7 +585,7 @@ table4a %>%
 
 ```r
 table2
-#> # A tibble: 12 × 4
+#> # A tibble: 12 x 4
 #>       country  year       type     count
 #>         <chr> <int>      <chr>     <int>
 #> 1 Afghanistan  1999      cases       745
@@ -592,7 +596,7 @@ table2
 #> 6      Brazil  1999 population 172006362
 #> # ... with 6 more rows
 spread(table2, key = type, value = count)
-#> # A tibble: 6 × 4
+#> # A tibble: 6 x 4
 #>       country  year  cases population
 #> *       <chr> <int>  <int>      <int>
 #> 1 Afghanistan  1999    745   19987071
@@ -608,7 +612,7 @@ spread(table2, key = type, value = count)
 
 ```r
 table3
-#> # A tibble: 6 × 3
+#> # A tibble: 6 x 3
 #>       country  year              rate
 #> *       <chr> <int>             <chr>
 #> 1 Afghanistan  1999      745/19987071
@@ -619,7 +623,7 @@ table3
 #> 6       China  2000 213766/1280428583
 table3 %>% 
   separate(rate, into = c("cases", "population"))
-#> # A tibble: 6 × 4
+#> # A tibble: 6 x 4
 #>       country  year  cases population
 #> *       <chr> <int>  <chr>      <chr>
 #> 1 Afghanistan  1999    745   19987071
@@ -631,7 +635,7 @@ table3 %>%
 
 table3 %>% 
   separate(rate, into = c("cases", "population"), convert = TRUE)
-#> # A tibble: 6 × 4
+#> # A tibble: 6 x 4
 #>       country  year  cases population
 #> *       <chr> <int>  <int>      <int>
 #> 1 Afghanistan  1999    745   19987071
@@ -643,7 +647,7 @@ table3 %>%
 
 table3 %>% 
   separate(year, into = c("century", "year"), sep = 2)
-#> # A tibble: 6 × 4
+#> # A tibble: 6 x 4
 #>       country century  year              rate
 #> *       <chr>   <chr> <chr>             <chr>
 #> 1 Afghanistan      19    99      745/19987071
@@ -659,7 +663,7 @@ table3 %>%
 ```r
 table5 %>% 
   unite(new, century, year)
-#> # A tibble: 6 × 3
+#> # A tibble: 6 x 3
 #>       country   new              rate
 #> *       <chr> <chr>             <chr>
 #> 1 Afghanistan 19_99      745/19987071
@@ -671,7 +675,7 @@ table5 %>%
 
 table5 %>% 
   unite(new, century, year, sep = "")
-#> # A tibble: 6 × 3
+#> # A tibble: 6 x 3
 #>       country   new              rate
 #> *       <chr> <chr>             <chr>
 #> 1 Afghanistan  1999      745/19987071
@@ -688,7 +692,7 @@ table5 %>%
 
 ```r
 airlines
-#> # A tibble: 16 × 2
+#> # A tibble: 16 x 2
 #>   carrier                     name
 #>     <chr>                    <chr>
 #> 1      9E        Endeavor Air Inc.
@@ -699,7 +703,7 @@ airlines
 #> 6      EV ExpressJet Airlines Inc.
 #> # ... with 10 more rows
 airports
-#> # A tibble: 1,458 × 8
+#> # A tibble: 1,458 x 8
 #>     faa                           name   lat   lon   alt    tz   dst
 #>   <chr>                          <chr> <dbl> <dbl> <int> <dbl> <chr>
 #> 1   04G              Lansdowne Airport  41.1 -80.6  1044    -5     A
@@ -710,7 +714,7 @@ airports
 #> 6   0A9 Elizabethton Municipal Airport  36.4 -82.2  1593    -5     A
 #> # ... with 1,452 more rows, and 1 more variables: tzone <chr>
 planes
-#> # A tibble: 3,322 × 9
+#> # A tibble: 3,322 x 9
 #>   tailnum  year                    type     manufacturer     model engines
 #>     <chr> <int>                   <chr>            <chr>     <chr>   <int>
 #> 1  N10156  2004 Fixed wing multi engine          EMBRAER EMB-145XR       2
@@ -722,7 +726,7 @@ planes
 #> # ... with 3,316 more rows, and 3 more variables: seats <int>,
 #> #   speed <int>, engine <chr>
 weather
-#> # A tibble: 26,130 × 15
+#> # A tibble: 26,130 x 15
 #>   origin  year month   day  hour  temp  dewp humid wind_dir wind_speed
 #>    <chr> <dbl> <dbl> <int> <int> <dbl> <dbl> <dbl>    <dbl>      <dbl>
 #> 1    EWR  2013     1     1     0  37.0  21.9  54.0      230       10.4
@@ -741,7 +745,7 @@ weather
 flights2 <- flights %>% 
   select(year:day, hour, origin, dest, tailnum, carrier)
 flights2
-#> # A tibble: 336,776 × 8
+#> # A tibble: 336,776 x 8
 #>    year month   day  hour origin  dest tailnum carrier
 #>   <int> <int> <int> <dbl>  <chr> <chr>   <chr>   <chr>
 #> 1  2013     1     1     5    EWR   IAH  N14228      UA
@@ -754,7 +758,7 @@ flights2
 flights2 %>%
   select(-origin, -dest) %>% 
   left_join(airlines, by = "carrier")
-#> # A tibble: 336,776 × 7
+#> # A tibble: 336,776 x 7
 #>    year month   day  hour tailnum carrier                   name
 #>   <int> <int> <int> <dbl>   <chr>   <chr>                  <chr>
 #> 1  2013     1     1     5  N14228      UA  United Air Lines Inc.
@@ -768,7 +772,7 @@ flights2 %>%
 flights2 %>%
   select(-origin, -dest) %>% 
   mutate(name = airlines$name[match(carrier, airlines$carrier)])
-#> # A tibble: 336,776 × 7
+#> # A tibble: 336,776 x 7
 #>    year month   day  hour tailnum carrier                   name
 #>   <int> <int> <int> <dbl>   <chr>   <chr>                  <chr>
 #> 1  2013     1     1     5  N14228      UA  United Air Lines Inc.
@@ -786,7 +790,7 @@ flights2 %>%
 flights2 %>% 
   left_join(weather)
 #> Joining, by = c("year", "month", "day", "hour", "origin")
-#> # A tibble: 336,776 × 18
+#> # A tibble: 336,776 x 18
 #>    year month   day  hour origin  dest tailnum carrier  temp  dewp humid
 #>   <dbl> <dbl> <int> <dbl>  <chr> <chr>   <chr>   <chr> <dbl> <dbl> <dbl>
 #> 1  2013     1     1     5    EWR   IAH  N14228      UA    NA    NA    NA
@@ -801,7 +805,7 @@ flights2 %>%
 
 flights2 %>% 
   left_join(planes, by = "tailnum")
-#> # A tibble: 336,776 × 16
+#> # A tibble: 336,776 x 16
 #>   year.x month   day  hour origin  dest tailnum carrier year.y
 #>    <int> <int> <int> <dbl>  <chr> <chr>   <chr>   <chr>  <int>
 #> 1   2013     1     1     5    EWR   IAH  N14228      UA   1999
@@ -820,7 +824,7 @@ flights2 %>%
 ```r
 flights2 %>% 
   left_join(airports, c("dest" = "faa"))
-#> # A tibble: 336,776 × 15
+#> # A tibble: 336,776 x 15
 #>    year month   day  hour origin  dest tailnum carrier
 #>   <int> <int> <int> <dbl>  <chr> <chr>   <chr>   <chr>
 #> 1  2013     1     1     5    EWR   IAH  N14228      UA
@@ -834,7 +838,7 @@ flights2 %>%
 
 flights2 %>% 
   left_join(airports, c("origin" = "faa"))
-#> # A tibble: 336,776 × 15
+#> # A tibble: 336,776 x 15
 #>    year month   day  hour origin  dest tailnum carrier                name
 #>   <int> <int> <int> <dbl>  <chr> <chr>   <chr>   <chr>               <chr>
 #> 1  2013     1     1     5    EWR   IAH  N14228      UA Newark Liberty Intl
@@ -868,6 +872,8 @@ full_join(x, y, by = "z")  == SELECT * FROM x FULL OUTER JOIN y ON x.z = y.z
 library(dplyr)
 library(RSQLite)
 library(RMySQL)
+#> 필요한 패키지를 로딩중입니다: DBI
+#> 필요한 패키지를 로딩중입니다: methods
 #> 
 #> 다음의 패키지를 부착합니다: 'RMySQL'
 #> The following object is masked from 'package:RSQLite':
@@ -875,25 +881,13 @@ library(RMySQL)
 #>     isIdCurrent
 sqlite_db = src_sqlite('sqlite_db.sqlite3', create = T)
 copy_to(sqlite_db, mtcars)
-#> Source:   query [?? x 11]
-#> Database: sqlite 3.11.1 [sqlite_db.sqlite3]
-#> 
-#>     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-#>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1  21.0     6   160   110  3.90  2.62  16.5     0     1     4     4
-#> 2  21.0     6   160   110  3.90  2.88  17.0     0     1     4     4
-#> 3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
-#> 4  21.4     6   258   110  3.08  3.21  19.4     1     0     3     1
-#> 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
-#> 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
-#> # ... with more rows
 
 src_tbls(sqlite_db)
-#> [1] "mtcars"       "sqlite_stat1"
+#> [1] "mtcars"       "sqlite_stat1" "sqlite_stat4"
 tbl(sqlite_db, 'mtcars')
-#> Source:   query [?? x 11]
-#> Database: sqlite 3.11.1 [sqlite_db.sqlite3]
-#> 
+#> # Source:   table<mtcars> [?? x 11]
+#> # Database: sqlite 3.19.3
+#> #   [C:\Users\mrchypark\Documents\project\data_camp_dabrp\sqlite_db.sqlite3]
 #>     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 #>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 #> 1  21.0     6   160   110  3.90  2.62  16.5     0     1     4     4
@@ -904,9 +898,9 @@ tbl(sqlite_db, 'mtcars')
 #> 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
 #> # ... with more rows
 tbl(sqlite_db, sql('SELECT * FROM mtcars'))
-#> Source:   query [?? x 11]
-#> Database: sqlite 3.11.1 [sqlite_db.sqlite3]
-#> 
+#> # Source:   SQL [?? x 11]
+#> # Database: sqlite 3.19.3
+#> #   [C:\Users\mrchypark\Documents\project\data_camp_dabrp\sqlite_db.sqlite3]
 #>     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 #>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 #> 1  21.0     6   160   110  3.90  2.62  16.5     0     1     4     4
@@ -919,9 +913,9 @@ tbl(sqlite_db, sql('SELECT * FROM mtcars'))
 
 iris_db = tbl(sqlite_db, 'mtcars')
 iris_db %>% filter(mpg > 20)
-#> Source:   query [?? x 11]
-#> Database: sqlite 3.11.1 [sqlite_db.sqlite3]
-#> 
+#> # Source:   lazy query [?? x 11]
+#> # Database: sqlite 3.19.3
+#> #   [C:\Users\mrchypark\Documents\project\data_camp_dabrp\sqlite_db.sqlite3]
 #>     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 #>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 #> 1  21.0     6   160   110  3.90  2.62  16.5     0     1     4     4
@@ -944,10 +938,6 @@ sql_db
 
 ```r
 library(data.table)
-#> -------------------------------------------------------------------------
-#> data.table + dplyr code now lives in dtplyr.
-#> Please library(dtplyr)!
-#> -------------------------------------------------------------------------
 #> 
 #> 다음의 패키지를 부착합니다: 'data.table'
 #> The following objects are masked from 'package:dplyr':
@@ -961,10 +951,10 @@ dir.create("./data",showWarnings = F)
 download.file(url,destfile = "./data/flights14.csv")
 system.time(flights <- read.csv("./data/flights14.csv"))
 #>  사용자  시스템 elapsed 
-#>    3.75    0.08    4.45
+#>    5.04    0.16    5.92
 system.time(flights <- fread("./data/flights14.csv"))
 #>  사용자  시스템 elapsed 
-#>    0.43    0.01    0.54
+#>    0.30    0.03    0.34
 flights
 #>         year month day dep_time dep_delay arr_time arr_delay cancelled
 #>      1: 2014     1   1      914        14     1238        13         0

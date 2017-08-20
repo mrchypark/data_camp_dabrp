@@ -121,7 +121,7 @@ fold<-tem %>% html_nodes("tr td span a.js-navigation-open") %>% html_text
 cnt <- grep("^[0-9]",fold) %>% length
 ```
 
-위 코드는 실행해 볼 수 있는 예제를 보여줍니다. 아래처럼 실행하시면 바로 실행되는 `shiny` 앱 예제를 확인하 실 수 있습니다. [shiny github][904]에는 예제 `repo`가 있고, 활용할 수 있는 예제는 2017-06-01 기준 109개 입니다.
+위 코드는 실행해 볼 수 있는 예제를 보여줍니다. 아래처럼 실행하시면 바로 실행되는 `shiny` 앱 예제를 확인하 실 수 있습니다. [shiny github][904]에는 예제 `repo`가 있고, 활용할 수 있는 예제는 2017-08-20 기준 110개 입니다.
 ```
 runExample("01_hello")
 ```

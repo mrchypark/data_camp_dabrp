@@ -9,7 +9,7 @@ documentclass: book
 ---
 # 머리말 {-}
 
-이 책은 [패스트캠퍼스][1]의 [데이터 사이언스 캠프][2] 코스의 [실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP][3]의 수업용으로 제작되었습니다. 수업에 대해 더 자세히 알고 싶으신 분은 [강사 인터뷰][4]를 참고하세요. 
+이 책은 [패스트캠퍼스][1000]의 [데이터 사이언스 캠프][2] 코스의 [실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP][3]의 수업용으로 제작되었습니다. 수업에 대해 더 자세히 알고 싶으신 분은 [강사 인터뷰][4]를 참고하세요. 
  
 책은  
   1. R의 IDE로 사실상 표준인 [RStudio][5]에 사용하기 좋은 기능 소개  
@@ -30,7 +30,7 @@ documentclass: book
 
  저작물 라이선스로 [크리에이티브 커먼즈 라이선스 4.0(저작자 표시-비영리-변경 금지(BY-NC-ND))][8]를 따릅니다.
 
-[1]: http://www.fastcampus.co.kr
+[1000]: http://www.fastcampus.co.kr
 [2]: http://www.fastcampus.co.kr/category_data_camp/
 [3]: http://www.fastcampus.co.kr/data_camp_dabrp/
 [4]: http://www.fastcampus.co.kr/data_camp_dabrp_instructor_1/

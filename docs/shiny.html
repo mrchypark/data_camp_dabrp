@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4.9 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -349,7 +349,7 @@ url&lt;-<span class="st">&quot;https://github.com/rstudio/shiny-examples&quot;</
 tem&lt;-<span class="st"> </span><span class="kw">read_html</span>(url)
 fold&lt;-tem <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;tr td span a.js-navigation-open&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>html_text
 cnt &lt;-<span class="st"> </span><span class="kw">grep</span>(<span class="st">&quot;^[0-9]&quot;</span>,fold) <span class="op">%&gt;%</span><span class="st"> </span>length</code></pre></div>
-<p>위 코드는 실행해 볼 수 있는 예제를 보여줍니다. 아래처럼 실행하시면 바로 실행되는 <code>shiny</code> 앱 예제를 확인하 실 수 있습니다. <a href="https://github.com/rstudio/shiny-examples">shiny github</a>에는 예제 <code>repo</code>가 있고, 활용할 수 있는 예제는 2017-06-01 기준 109개 입니다.</p>
+<p>위 코드는 실행해 볼 수 있는 예제를 보여줍니다. 아래처럼 실행하시면 바로 실행되는 <code>shiny</code> 앱 예제를 확인하 실 수 있습니다. <a href="https://github.com/rstudio/shiny-examples">shiny github</a>에는 예제 <code>repo</code>가 있고, 활용할 수 있는 예제는 2017-08-20 기준 110개 입니다.</p>
 <pre><code>runExample(&quot;01_hello&quot;)</code></pre>
 <p>위를 실행해 보시면 아래와 같은 화면이 나옵니다. 예제는 코드도 함께 볼 수 있게 되어 있어서 공부하기 좋습니다. <img src="https://raw.githubusercontent.com/mrchypark/data_camp_dabrp/master/images/shiny-example-01.png" alt="shiny-example-01" /></p>
 <p>우선 서버쪽 부터 보겠습니다.</p>
@@ -582,7 +582,7 @@ shinyApp(ui,server)</code></pre>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": true,
 "fontsettings": {

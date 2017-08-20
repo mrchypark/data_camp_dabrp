@@ -8,6 +8,8 @@ library(tidyverse)
 options(stringsAsFactors = F)
 ```
 
+
+
 ```
 # layers = data + mapping(aes) + geom + stat + position
 # ggplot = layers + scales + coordinate system

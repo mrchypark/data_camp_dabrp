@@ -113,10 +113,11 @@ print(4)
 
 ```r
 library(readr)
-sd<-read_csv("./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
+#> Warning: 패키지 'readr'는 R 버전 3.4.1에서 작성되었습니다
+sd<-read_csv("./data/membership.txt")
 #> Parsed with column specification:
 #> cols(
-#>   `<U+FEFF>고객번호` = col_character(),
+#>   고객번호 = col_character(),
 #>   멤버십명 = col_character(),
 #>   가입년월 = col_integer()
 #> )
@@ -373,7 +374,9 @@ X
 
 ```r
 library(ggplot2)
+#> Warning: 패키지 'ggplot2'는 R 버전 3.4.1에서 작성되었습니다
 library(dplyr)
+#> Warning: 패키지 'dplyr'는 R 버전 3.4.1에서 작성되었습니다
 #> 
 #> 다음의 패키지를 부착합니다: 'dplyr'
 #> The following objects are masked from 'package:stats':
@@ -383,6 +386,7 @@ library(dplyr)
 #> 
 #>     intersect, setdiff, setequal, union
 library(tidyr)
+#> Warning: 패키지 'tidyr'는 R 버전 3.4.1에서 작성되었습니다
 
 times<-c(100,1000,10000,30000,50000,100000)
 tData<-c()
@@ -418,7 +422,7 @@ X<-as.data.frame(matrix(1:tm, ncol=4, dimnames=list(seq(1:(tm/4)), c("a", "b", "
 ifelseTime<-system.time(X$e <- ifelse(X$a == 0, -999, X$b/X$c))
 ifelseTime
 #>  사용자  시스템 elapsed 
-#>    0.03    0.00    0.03
+#>    0.04    0.00    0.05
 ```
 
 <img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" />

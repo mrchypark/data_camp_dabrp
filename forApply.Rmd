@@ -89,7 +89,7 @@ print(4)
 
 ```{r}
 library(readr)
-sd<-read_csv("./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt")
+sd<-read_csv("./data/membership.txt")
 names(sd)[1]<-"고객번호"
 sd<-data.frame(sd)
 

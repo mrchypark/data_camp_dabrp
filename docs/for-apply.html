@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP</title>
   <meta name="description" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4.9 and GitBook 2.6.7">
 
   <meta property="og:title" content="실무 빅데이터 분석을 위한 SQL과 R의 활용 CAMP" />
   <meta property="og:type" content="book" />
@@ -352,10 +352,11 @@ z&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</sp
 <h3><span class="header-section-number">3.1.3</span> ifelse</h3>
 <p><code>ifelse</code>는 앞에 함수와는 다른 결과를 제공해서 사용하는 곳이 다릅니다. 우선 형태는 <code>ifelse(조건, 조건이 true일때 할 것, 조건이 false일때 할 것)</code>으로 구성됩니다. 그래서 기존의 데이터를 새로운 기준으로 조정해서 사용할 때 많이 사용합니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readr)
-sd&lt;-<span class="kw">read_csv</span>(<span class="st">&quot;./제3회 Big Data Competition-분석용데이터-05.멤버십여부.txt&quot;</span>)
+<span class="co">#&gt; Warning: 패키지 &#39;readr&#39;는 R 버전 3.4.1에서 작성되었습니다</span>
+sd&lt;-<span class="kw">read_csv</span>(<span class="st">&quot;./data/membership.txt&quot;</span>)
 <span class="co">#&gt; Parsed with column specification:</span>
 <span class="co">#&gt; cols(</span>
-<span class="co">#&gt;   `&lt;U+FEFF&gt;고객번호` = col_character(),</span>
+<span class="co">#&gt;   고객번호 = col_character(),</span>
 <span class="co">#&gt;   멤버십명 = col_character(),</span>
 <span class="co">#&gt;   가입년월 = col_integer()</span>
 <span class="co">#&gt; )</span>
@@ -562,7 +563,9 @@ X
 <p><code>ifelse</code> 함수에서 소개했던 질문쪽의 <code>for</code>로 작성된 코드입니다. <code>for</code>로 작성하는 것이 사실 생각하기 쉬운 방법이라고 생각합니다. 저는 심지어 처음에는 <code>for</code>로 작성하라고 권장합니다. 문제를 직접 겪고, 그 문제를 해결하는 방법을 찾으려할 때 그 방법이 더 몸에 남는 것 같습니다.</p>
 <p>아래 <code>apply</code>를 하기 전에 <code>for</code>와 <code>ifelse</code>가 얼마나 다른지 한 번 비교해 보겠습니다.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="co">#&gt; Warning: 패키지 &#39;ggplot2&#39;는 R 버전 3.4.1에서 작성되었습니다</span>
 <span class="kw">library</span>(dplyr)
+<span class="co">#&gt; Warning: 패키지 &#39;dplyr&#39;는 R 버전 3.4.1에서 작성되었습니다</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; 다음의 패키지를 부착합니다: &#39;dplyr&#39;</span>
 <span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span>
@@ -572,6 +575,7 @@ X
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     intersect, setdiff, setequal, union</span>
 <span class="kw">library</span>(tidyr)
+<span class="co">#&gt; Warning: 패키지 &#39;tidyr&#39;는 R 버전 3.4.1에서 작성되었습니다</span>
 
 times&lt;-<span class="kw">c</span>(<span class="dv">100</span>,<span class="dv">1000</span>,<span class="dv">10000</span>,<span class="dv">30000</span>,<span class="dv">50000</span>,<span class="dv">100000</span>)
 tData&lt;-<span class="kw">c</span>()
@@ -607,7 +611,7 @@ X&lt;-<span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span
 ifelseTime&lt;-<span class="kw">system.time</span>(X<span class="op">$</span>e &lt;-<span class="st"> </span><span class="kw">ifelse</span>(X<span class="op">$</span>a <span class="op">==</span><span class="st"> </span><span class="dv">0</span>, <span class="op">-</span><span class="dv">999</span>, X<span class="op">$</span>b<span class="op">/</span>X<span class="op">$</span>c))
 ifelseTime
 <span class="co">#&gt;  사용자  시스템 elapsed </span>
-<span class="co">#&gt;    0.03    0.00    0.03</span></code></pre></div>
+<span class="co">#&gt;    0.04    0.00    0.05</span></code></pre></div>
 <p><img src="forApply_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>이렇게 <code>for</code>를 사용하지 않고 다른 방법을 사용하는 것으로 벡터연산이 있습니다. 이름이 중요하진 않으니 R이 감당할 수 있는 수준의 데이터를 <code>apply</code>를 통해서 다루는 법을 알아보겠습니다.</p>
 </div>
@@ -802,7 +806,7 @@ myMean
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": true,
 "fontsettings": {

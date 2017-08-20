@@ -7,17 +7,21 @@
 ```r
 # 패키지 불러오기
 library(tidyverse)
-#> Loading tidyverse: ggplot2
-#> Loading tidyverse: tibble
-#> Loading tidyverse: tidyr
-#> Loading tidyverse: readr
-#> Loading tidyverse: purrr
-#> Loading tidyverse: dplyr
-#> Conflicts with tidy packages ----------------------------------------------
-#> filter(): dplyr, stats
-#> lag():    dplyr, stats
+#> + ggplot2 2.2.1        Date: 2017-08-20
+#> + tibble  1.3.3           R: 3.4.1
+#> + tidyr   0.6.3          OS: Windows 10 x64
+#> + readr   1.1.1         GUI: RTerm
+#> + purrr   0.2.3      Locale: Korean_Korea.949
+#> + dplyr   0.7.2          TZ: Asia/Seoul
+#> + stringr 1.2.0      
+#> + forcats 0.2.0
+#> ─ Conflicts ──────────────────────────
+#> * filter(),  from dplyr, masks stats::filter()
+#> * lag(),     from dplyr, masks stats::lag()
 options(stringsAsFactors = F)
 ```
+
+
 
 ```
 # layers = data + mapping(aes) + geom + stat + position
