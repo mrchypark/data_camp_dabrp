@@ -9,6 +9,7 @@ output:
   bookdown::gitbook:
     includes:
       in_header: google_analytics.html
+      after_body: disqus.html
 ---
 # 머리말 {-}
 
